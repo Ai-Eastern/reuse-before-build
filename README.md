@@ -19,7 +19,58 @@ Use them together when available: discover candidates first, then apply this Ski
 
 ## Install
 
-Copy this folder into an Agent Skills directory supported by your agent runtime. The required file is `SKILL.md`; the examples are optional reading material. No runtime dependency or script is required.
+The required file is `SKILL.md`; the examples are optional reading material. No runtime dependency or script is required.
+
+### Recommended: GitHub CLI
+
+Recent GitHub CLI versions can install Agent Skills for a selected host. From any terminal:
+
+```bash
+gh skill install Ai-Eastern/reuse-before-build --agent claude-code --scope user
+```
+
+Replace `claude-code` with `codex` or `github-copilot` when needed. Use `gh skill install --help` to see the host names supported by your installed GitHub CLI.
+
+### Native installation
+
+#### GitHub Copilot CLI
+
+```bash
+copilot skill add https://raw.githubusercontent.com/Ai-Eastern/reuse-before-build/main/SKILL.md
+copilot skill list
+```
+
+#### Claude Code (PowerShell)
+
+```powershell
+$skillDir = Join-Path $HOME '.claude\skills\reuse-before-build'
+New-Item -ItemType Directory -Force -Path $skillDir | Out-Null
+Invoke-WebRequest 'https://raw.githubusercontent.com/Ai-Eastern/reuse-before-build/main/SKILL.md' -OutFile (Join-Path $skillDir 'SKILL.md')
+```
+
+Restart Claude Code, then ask it to use `reuse-before-build` on a non-trivial task.
+
+#### Codex (PowerShell)
+
+```powershell
+$codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }
+$skillDir = Join-Path $codexRoot 'skills\reuse-before-build'
+New-Item -ItemType Directory -Force -Path $skillDir | Out-Null
+Invoke-WebRequest 'https://raw.githubusercontent.com/Ai-Eastern/reuse-before-build/main/SKILL.md' -OutFile (Join-Path $skillDir 'SKILL.md')
+```
+
+Restart Codex and confirm that the Skill is listed or triggered by a non-trivial coding request.
+
+### Manual installation
+
+Clone the repository, then copy the `reuse-before-build` folder into the skill directory used by your Agent. Keep `SKILL.md` at the root of that folder. The project examples and README do not need to be installed for the Skill to work.
+
+### Verify the installation
+
+- Confirm the installed folder contains `SKILL.md`.
+- Check that the YAML frontmatter contains `name: reuse-before-build`.
+- Ask the Agent to evaluate a task that could reuse an existing library or local module.
+- The response should contain `## Reuse Decision` and one of `Take`, `Borrow`, `Build`, `Blocked`, or `Needs human approval`.
 
 The workflow is standard-compatible and has been manually exercised in Codex, Claude Code, and GitHub Copilot CLI. The tests covered direct reuse, adaptation, new implementation, missing license evidence, approval-required risk, bounded edits, duplicate local work, and official examples. Claude Code produced the strongest evidence-backed results; Copilot CLI exposed network and instruction-following failure modes. Other agents may load it manually by attaching or pasting `SKILL.md`; only agents whose skill loaders recognize this format are considered verified. This is not a claim of support for every coding agent.
 
