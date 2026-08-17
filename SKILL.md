@@ -20,6 +20,14 @@ Trigger for new integrations, substantial features, infrastructure, data handlin
 5. Check source, version, license, maintenance signals, security posture, compatibility, integration cost, and evidence quality. Treat unknown license, unclear provenance, or insufficient evidence as a stop condition.
 6. Choose exactly one outcome: `Take`, `Borrow`, `Build`, `Blocked`, or `Needs human approval`.
 
+## Evidence integrity
+
+- Treat inaccessible pages, failed fetches, stale memory, search snippets, and unverified summaries as missing evidence.
+- If a required external fact cannot be verified, choose `Blocked`. Do not recommend `Take`, `Borrow`, or `Build` on the basis of an unverified license, maintenance status, provenance, or compatibility claim.
+- Do not infer a license from a project being “internal,” “open source,” or hosted on GitHub. Record the exact license file or say that no license evidence was found.
+- Do not turn a blocked external search into `Build` merely because a new implementation is possible. `Build` requires a completed relevant search or an explicit constraint that rules out external reuse; otherwise stop as `Blocked`.
+- Separate evidence from inference. Label compatibility, maintenance, and fit conclusions as inference unless a source or local test directly supports them.
+
 ## Decision thresholds
 
 - **Take**: An existing implementation meets the requirements with acceptable source, version, license, maintenance, compatibility, and verification evidence. Use it directly and cite the evidence.

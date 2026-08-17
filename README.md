@@ -43,6 +43,8 @@ See [examples/take-example.md](examples/take-example.md), [examples/borrow-examp
 | Missing or contradictory required evidence | Blocked | Stop and report |
 | Risk exceeds agent authority | Needs human approval | Stop and ask |
 
+If an external page cannot be fetched or a license, maintenance, provenance, or compatibility fact cannot be verified, stop at `Blocked`; do not fill the gap from memory or turn the failed search into `Build`.
+
 ## Limits
 
 This Skill does not automatically copy third-party code, download repositories, provide legal advice, replace security review, replace TDD or ADR processes, or maintain a real-time compatibility database. License checks are evidence gathering, not legal approval. Small local edits can use a lightweight local-search path.
