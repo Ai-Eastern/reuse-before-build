@@ -9,7 +9,7 @@ Use this workflow before coding a non-trivial feature. The goal is an evidence-b
 
 ## Trigger and scope
 
-Trigger for new integrations, substantial features, infrastructure, data handling, security-sensitive code, or work that sounds like “add a reusable component.” Do not force a full external search for a clearly scoped rename, typo fix, or small local edit; still inspect the local context.
+Trigger for new integrations, substantial features, infrastructure, data handling, security-sensitive code, or work that sounds like “add a reusable component.” Treat work as non-trivial when it adds a dependency, crosses module boundaries, changes a public/API contract, handles security or sensitive data, exceeds a small bounded edit, or has a plausible external implementation. Do not force a full external search for a clearly scoped rename, typo fix, or small local edit; still inspect the local context.
 
 ## Required gate
 
@@ -77,3 +77,5 @@ For `Take`, name the artifact and the verification plan. For `Borrow`, identify 
 ## Exceptions and verification
 
 For a small local change, give a brief local-search result and proceed if the change is clearly bounded. For every other task, verify the selected path with focused tests, an existing example, or a minimal reproduction before claiming success. Keep evidence separate from inference, and cite URLs or file paths where available.
+
+For non-trivial work, save the completed decision in the consuming project's decision or ADR records when that project has such a convention; this Skill does not require a decision-log directory in the Skill repository itself.

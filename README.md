@@ -1,14 +1,27 @@
 # reuse-before-build
 
-An evidence-backed Take / Borrow / Build workflow that helps coding agents check what already exists before creating another implementation.
+An evidence-based reuse decision gate for coding agents. It helps decide whether to Take, Borrow, Build, Block, or request human approval before creating another implementation.
 
 It addresses the repeated “build it again” problem: duplicate project code, overlooked official solutions, incompatible dependencies, and avoidable license or maintenance risk. It is a decision gate, not a generic prompt, because it requires concrete searches and a traceable outcome before implementation.
+
+## Relationship to reuse-before-generate
+
+`reuse-before-build` is independent and complementary to [`reuse-before-generate`](https://github.com/aradar46/reuse-before-generate). They solve different parts of the same workflow:
+
+| | reuse-before-generate | reuse-before-build |
+| --- | --- | --- |
+| Form | Runtime MCP tool | Agent Skill / decision workflow |
+| Main job | Find possible existing solutions | Evaluate evidence and choose an outcome |
+| Output | Candidate repositories or packages | Take / Borrow / Build / Blocked / Needs human approval |
+| Focus | Search across relevant registries | Provenance, license, maintenance, compatibility, fit, and verification |
+
+Use them together when available: discover candidates first, then apply this Skill's evidence gate. No integration, shared code, or dependency between the projects is assumed.
 
 ## Install
 
 Copy this folder into an Agent Skills directory supported by your agent runtime. The required file is `SKILL.md`; the examples are optional reading material. No runtime dependency or script is required.
 
-The workflow is standard-compatible and has been manually exercised in Codex against eight task scenarios covering direct reuse, adaptation, new implementation, missing license evidence, approval-required risk, bounded edits, duplicate local work, and official examples. It was also tested with Claude Code and GitHub Copilot CLI: Claude Code produced the strongest evidence-backed results, while Copilot CLI exposed network and instruction-following failure modes. Other agents may load it manually by attaching or pasting `SKILL.md`; only agents whose skill loaders recognize this format are considered verified. This is not a claim of support for every coding agent.
+The workflow is standard-compatible and has been manually exercised in Codex, Claude Code, and GitHub Copilot CLI. The tests covered direct reuse, adaptation, new implementation, missing license evidence, approval-required risk, bounded edits, duplicate local work, and official examples. Claude Code produced the strongest evidence-backed results; Copilot CLI exposed network and instruction-following failure modes. Other agents may load it manually by attaching or pasting `SKILL.md`; only agents whose skill loaders recognize this format are considered verified. This is not a claim of support for every coding agent.
 
 ## Workflow
 
