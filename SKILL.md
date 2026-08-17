@@ -20,6 +20,16 @@ Trigger for new integrations, substantial features, infrastructure, data handlin
 5. Check source, version, license, maintenance signals, security posture, compatibility, integration cost, and evidence quality. Treat unknown license, unclear provenance, or insufficient evidence as a stop condition.
 6. Choose exactly one outcome: `Take`, `Borrow`, `Build`, `Blocked`, or `Needs human approval`.
 
+## Bounded retrieval
+
+Use staged retrieval to control time, tokens, and noise:
+
+1. Start with at most **3 external candidates**. Expand to at most 5 only when the first pass cannot distinguish the decision; state why the expansion is needed.
+2. Fetch metadata first: exact URL, language, version or latest release, license, latest commit/update date, and a short description. Treat search snippets and model memory as discovery hints, not evidence.
+3. Deep-read documentation or README content only for the **1–2 most relevant candidates** after metadata screening. Do not crawl whole sites or unrelated repositories.
+4. Stop as soon as the evidence supports `Take` or `Borrow`. Stop as `Blocked` when a required fact cannot be verified. Do not keep searching just to make the report longer.
+5. Record the search scope in the evidence, for example: `3 candidates; metadata for 3; deep-read 1 official page`. If a tool call is cancelled or times out, report `Test interrupted — no final decision` rather than inventing a decision.
+
 ## Evidence integrity
 
 - Treat inaccessible pages, failed fetches, stale memory, search snippets, and unverified summaries as missing evidence.

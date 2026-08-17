@@ -19,6 +19,8 @@ The workflow is standard-compatible and has been manually exercised in Codex aga
 5. Output one decision: `Take`, `Borrow`, `Build`, `Blocked`, or `Needs human approval`.
 6. Implement only after the evidence supports the decision.
 
+External research is deliberately bounded: screen at most three candidates with metadata first, deep-read only the one or two strongest candidates, and stop when the evidence supports a decision or becomes insufficient. A cancelled or timed-out search is reported as interrupted, not converted into a decision.
+
 ### Take
 
 Use an existing implementation when it already satisfies the requirements with acceptable evidence. Verify the source, version, license, compatibility, and focused behavior.
