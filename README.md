@@ -8,7 +8,7 @@ It addresses the repeated “build it again” problem: duplicate project code, 
 
 Copy this folder into an Agent Skills directory supported by your agent runtime. The required file is `SKILL.md`; the examples are optional reading material. No runtime dependency or script is required.
 
-The workflow is standard-compatible and has been manually exercised in Codex against eight task scenarios covering direct reuse, adaptation, new implementation, missing license evidence, approval-required risk, bounded edits, duplicate local work, and official examples. Other agents may load it manually by attaching or pasting `SKILL.md`; only agents whose skill loaders recognize this format are considered verified. This is not a claim of support for every coding agent.
+The workflow is standard-compatible and has been manually exercised in Codex against eight task scenarios covering direct reuse, adaptation, new implementation, missing license evidence, approval-required risk, bounded edits, duplicate local work, and official examples. It was also tested with Claude Code and GitHub Copilot CLI: Claude Code produced the strongest evidence-backed results, while Copilot CLI exposed network and instruction-following failure modes. Other agents may load it manually by attaching or pasting `SKILL.md`; only agents whose skill loaders recognize this format are considered verified. This is not a claim of support for every coding agent.
 
 ## Workflow
 
