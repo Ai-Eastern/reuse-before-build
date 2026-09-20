@@ -2,6 +2,13 @@
 
 <h1 align="center">reuse-before-build</h1>
 
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0969da?style=flat-square&amp;labelColor=24343b" alt="License: MIT"></a>
+  <a href="https://agentskills.io/specification"><img src="https://img.shields.io/badge/Agent%20Skills-SKILL.md-2f6b4f?style=flat-square&amp;logo=markdown&amp;logoColor=white&amp;labelColor=24343b" alt="Agent Skills format: SKILL.md"></a>
+  <a href="https://github.com/Ai-Eastern/reuse-before-build/stargazers"><img src="https://img.shields.io/github/stars/Ai-Eastern/reuse-before-build?style=flat-square&amp;logo=github&amp;logoColor=white&amp;labelColor=24343b&amp;color=9a6700" alt="GitHub stars"></a>
+  <a href="https://github.com/Ai-Eastern/reuse-before-build/commits/main/"><img src="https://img.shields.io/github/last-commit/Ai-Eastern/reuse-before-build/main?style=flat-square&amp;labelColor=24343b&amp;color=2f6b4f" alt="Last commit on public main"></a>
+</p>
+
 <p align="center"><strong>复用已有代码，扩展现有测试，带着证据接续任务。</strong></p>
 <p align="center">一个自足的 <code>SKILL.md</code> · 无需服务 · 无运行时依赖</p>
 
