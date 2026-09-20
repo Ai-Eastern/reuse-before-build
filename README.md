@@ -11,19 +11,28 @@
 <p align="center"><strong>Reuse working code. Extend existing tests. Resume with evidence.</strong></p>
 <p align="center">One self-contained <code>SKILL.md</code> · No service · No runtime dependency</p>
 
-[中文](README.zh-CN.md) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Results](#recorded-results) · [Compatibility](docs/compatibility.md) · [MIT license](LICENSE)
+[中文](README.zh-CN.md) · [When to use it](#when-to-use-it) · [Quick start](#quick-start) · [Results](#recorded-results) · [Compatibility](docs/compatibility.md) · [MIT license](LICENSE)
 
-An Agent Skill that helps coding agents find existing work, check whether it fits, and choose **Take**, **Borrow**, or **Build** before implementing. When resuming a task, it uses saved engineering records to check what still holds before continuing.
+An Agent Skill that tells your coding agent to **check existing implementations before writing code, inspect existing coverage before adding tests, and verify saved records before resuming a task**. Once loaded, it guides the agent to make the smallest justified change and verify it using the project's existing tools.
 
-## Three places to stop starting over
+## What this looks like in practice
 
-| When you need to… | Start with what you already have |
-| --- | --- |
-| **Build a feature** | Inspect local modules and extension points before adding another implementation or dependency. |
-| **Cover a behavior** | Reuse the runner, fixtures, and assertions. Extend the closest useful test when coverage is missing. |
-| **Resume a task** | Read the saved goal, decisions, and evidence. Compare them with the current workspace, including uncommitted changes. |
+A recorded run on the small synthetic retry-service fixture explicitly loaded this skill:
 
-**Reuse test assets, not stale confidence.** A previous passing result describes an earlier state. Check the relevant code, tests, configuration, and environment; rerun affected checks when needed.
+```text
+Request   Cover the retry failure boundaries.
+Found     An existing retry function and test suite.
+Changed   Added 2 cases to the existing test file; production code unchanged.
+Verified  All 4 tests passed.
+```
+
+The result was a focused extension of the existing tests. Inspect the [actual diff](evals/results/2026-09-20/test-borrow.patch) and [test replay](evals/results/2026-09-20/test-borrow.tap). This is one observed example, not a guarantee for every task.
+
+## When to use it
+
+- **Tasks:** substantial features, dependency choices, test coverage gaps, or continuing unfinished engineering work. Small edits get a brief local check.
+- **Invocation:** select or mention `reuse-before-build` to request the workflow. Hosts that support automatic skill selection may also load it when the task matches its description. Automatic selection is not guaranteed for every task; use an explicit first invocation to check that it loads. See [host discovery guidance](docs/compatibility.md#verify-discovery-and-behavior).
+- **Resuming work:** have the agent save an engineering record before handoff, then provide its path to the next session. It checks the record against current code and test evidence. Installing the skill does not save the whole conversation or recover information that was never recorded.
 
 ## Quick start
 
