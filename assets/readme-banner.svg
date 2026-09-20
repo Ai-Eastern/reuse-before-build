@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Build on what already works.</title>
+  <desc id="desc">Reuse existing code, tests, and engineering decisions. Three connected blocks form a loop, representing work that carries forward.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#25363C" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="340" rx="16" fill="#112128"/>
+  <path d="M768 0H1184Q1200 0 1200 16V324Q1200 340 1184 340H768Z" fill="url(#grid)"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <circle cx="61" cy="51" r="5" fill="#ADEBC9"/>
+    <text x="78" y="57" fill="#ADEBC9" font-size="16" font-weight="600" letter-spacing="2">REUSE BEFORE BUILD</text>
+    <text x="56" y="145" fill="#F2F6F4" font-size="64" font-weight="700" letter-spacing="-2">Build on what</text>
+    <text x="56" y="218" fill="#ADEBC9" font-size="64" font-weight="700" letter-spacing="-2">already works.</text>
+    <path d="M58 266H650" stroke="#364B51"/>
+    <text x="58" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">CODE</text>
+    <circle cx="139" cy="295" r="2" fill="#66868A"/>
+    <text x="163" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">TESTS</text>
+    <circle cx="253" cy="295" r="2" fill="#66868A"/>
+    <text x="277" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">DECISIONS</text>
+  </g>
+  <path d="M905 102H1031Q1092 102 1092 163V177Q1092 238 1031 238H888" stroke="#ADEBC9" stroke-width="3"/>
+  <path d="M901 225L888 238L901 251" stroke="#ADEBC9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="815" y="71" width="100" height="66" rx="12" fill="#1B343C" stroke="#72918F" stroke-width="1.5"/>
+  <path d="M851 94L840 104L851 114M879 94L890 104L879 114M871 90L859 118" stroke="#ADEBC9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="960" y="141" width="100" height="66" rx="12" fill="#1B343C" stroke="#72918F" stroke-width="1.5"/>
+  <path d="M990 174L1003 186L1029 161" stroke="#ADEBC9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M915 105H929Q943 105 943 119V158Q943 174 960 174" stroke="#72918F" stroke-width="2"/>
+  <rect x="773" y="205" width="100" height="66" rx="12" fill="#1B343C" stroke="#72918F" stroke-width="1.5"/>
+  <path d="M802 224H844M802 237H834M802 250H824" stroke="#ADEBC9" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M815 238H758Q737 238 737 217V124Q737 104 758 104H796" stroke="#72918F" stroke-width="2"/>
+  <path d="M786 94L796 104L786 114" stroke="#72918F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

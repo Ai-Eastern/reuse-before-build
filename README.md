@@ -1,133 +1,108 @@
-# reuse-before-build
+![Build on what already works: reuse code, tests, and decisions.](assets/readme-banner.svg)
 
-**Help your coding agent reuse working code, useful tests, and past engineering decisions before starting over.**
+<h1 align="center">reuse-before-build</h1>
 
-An Agent Skill that checks what already exists, weighs the evidence, and chooses **Take**, **Borrow**, or **Build**. When evidence or permission is missing, it names the gap. After a handoff or context compaction, it reconnects earlier decisions and verification to the current code.
+<p align="center"><strong>Reuse working code. Extend existing tests. Resume with evidence.</strong></p>
+<p align="center">One self-contained <code>SKILL.md</code> · No service · No runtime dependency</p>
 
-**One self-contained `SKILL.md`. No service or runtime dependency.**
+[中文](README.zh-CN.md) · [Quick start](#quick-start) · [How it works](#how-it-works) · [Results](#recorded-results) · [Compatibility](docs/compatibility.md) · [MIT license](LICENSE)
 
-[中文](README.zh-CN.md) · [Quick start](#quick-start) · [Examples](#examples) · [Compatibility](docs/compatibility.md) · [Validation](docs/validation.md)
+An Agent Skill that helps coding agents find existing work, check whether it fits, and choose **Take**, **Borrow**, or **Build** before implementing. When resuming a task, it uses saved engineering records to check what still holds before continuing.
 
-> **Development preview:** this checkout contains unpublished changes. Installing from GitHub currently retrieves the older public `main`, not this revision. Use the local checkout instructions below to preview these changes.
+## Three places to stop starting over
 
-## What it helps with
-
-| Your task | What the skill looks for |
+| When you need to… | Start with what you already have |
 | --- | --- |
-| Add a feature | Existing modules, extension points, official solutions, and suitable libraries |
-| Add or fix tests | Existing fixtures, helpers, assertions, regression cases, and test commands |
-| Continue unfinished work | Relevant decisions, source references, and previous validation records; what has changed since they were recorded |
+| **Build a feature** | Inspect local modules and extension points before adding another implementation or dependency. |
+| **Cover a behavior** | Reuse the runner, fixtures, and assertions. Extend the closest useful test when coverage is missing. |
+| **Resume a task** | Read the saved goal, decisions, and evidence. Compare them with the current workspace, including uncommitted changes. |
 
-A past passing test is evidence about an earlier state. The skill checks whether it still applies and reruns the relevant check when needed. Recovery stays within the current project's engineering work.
-
-A recorded run on the small synthetic fixture produced this result:
-
-```text
-Task: cover retry failure boundaries.
-Decision: Borrow the existing test suite.
-Change: add 2 cases; production code unchanged.
-Verification: 4 tests passed.
-```
-
-Inspect the [actual diff and replay evidence](docs/validation.md#inspect-the-behavior-evidence). This is one bounded evaluation, not a general success-rate claim.
+**Reuse test assets, not stale confidence.** A previous passing result describes an earlier state. Check the relevant code, tests, configuration, and environment; rerun affected checks when needed.
 
 ## Quick start
 
-### Preview this checkout
+> **Development preview:** this revision is not yet on public `main`. To try these changes, install from a clean revised checkout or the supplied source archive.
 
-Obtain the complete revised checkout. Open a terminal in a **separate project** where you want to use it, replace the source path below with the checkout's absolute path, and run:
+From a **separate project** where you want to use the skill, replace the source path and run:
 
 ```bash
-npx skills@1.7.0 add "<absolute-path-to-revised-checkout>" --skill reuse-before-build --agent codex --copy -y
+npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-build --agent codex --copy -y
 ```
 
-This installs into the current project. Do not run `add .` from the skill source repository: the installer can skip a copy when its destination is inside its source. See [local installation details](docs/compatibility.md#optional-installer).
+The optional installer needs **Node.js ≥22.20.0**. The skill itself does not. Prefer a manual copy? Put `SKILL.md` and `LICENSE` in `.agents/skills/reuse-before-build/` for Codex; see [copy commands and other host paths](docs/compatibility.md#manual-installation).
 
-The optional installer requires **Node.js >=22.20.0**; installation was checked in an isolated Windows environment with Node.js 24.18.0. Using the skill itself does not require Node.js. See [installation evidence and limits](docs/validation.md).
+<details>
+<summary>Install the currently published GitHub version</summary>
 
-For the **currently published version**, run this from your target project:
+This retrieves the older public version, without the changes in this preview:
 
 ```bash
 npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
 
-For Claude Code, Copilot, Cursor, Gemini CLI, OpenCode, and Windsurf, see [host-specific paths and verification status](docs/compatibility.md). Prefer a project installation when trying the skill.
+</details>
 
-### Without Node.js
-
-The agent only needs `SKILL.md`; keep `LICENSE` beside it when redistributing. From your target project, these commands create a Codex project installation. Replace the example source path with your revised checkout's location.
-
-**PowerShell**
-
-```powershell
-$skillSource = 'C:\path\to\reuse-before-build'
-$skillDir = Join-Path (Get-Location) '.agents/skills/reuse-before-build'
-New-Item -ItemType Directory -Force -Path $skillDir | Out-Null
-Copy-Item -LiteralPath (Join-Path $skillSource 'SKILL.md'), (Join-Path $skillSource 'LICENSE') -Destination $skillDir
-```
-
-**POSIX shell**
-
-```sh
-skill_source=/path/to/reuse-before-build
-mkdir -p .agents/skills/reuse-before-build
-cp "$skill_source/SKILL.md" "$skill_source/LICENSE" .agents/skills/reuse-before-build/
-```
-
-Examples, templates, and evaluation assets are optional; the skill does not need them to operate. See [manual installation and updates](docs/compatibility.md#manual-installation).
-
-### Try it
-
-Open the target project in your agent, explicitly select or mention `reuse-before-build`, and send:
+Open the target project in your agent, select or mention `reuse-before-build`, and try a real task:
 
 ```text
-Use reuse-before-build for this task: add retry support to the existing HTTP client.
-First inspect the implementation, related tests, and relevant decision or
-validation records. Identify what can be reused and what needs fresh evidence.
-Return your reuse decision and the smallest next step before changing files.
+Use reuse-before-build to add retry support to the existing HTTP client.
+Check existing code, tests, and relevant decisions first.
+Before editing, show what can be reused, what needs verification,
+and the smallest next step.
 ```
 
-Replace the task with something relevant to your repository. A useful result cites actual files or sources, explains the choice, and identifies a focused verification step. Merely printing `Take` or `Build` does not demonstrate that the skill worked. If it does not load, follow the [discovery checks](docs/compatibility.md#troubleshooting).
+The response should cite actual files or sources and explain its choice. See [loading checks](docs/compatibility.md#troubleshooting) if the skill is absent, or use the included [practice project](evals/fixtures/retry-service/README.md).
 
-Want a small practice project? Use the included [retry-service fixture](evals/fixtures/retry-service/README.md) and [prepare an isolated scenario](evals/README.md) for test reuse or task resumption. Its optional checks use Node.js and Git; they are not required to use the skill.
+## How it works
 
-## What you get
+**Look locally → Check fit and evidence → Choose the smallest change → Verify.**
 
-| Decision | Meaning |
+Search starts with local code and tests, then standard library or platform capabilities, installed dependencies, and external candidates only when needed. Stop when the evidence is sufficient. Small edits get a brief local check.
+
+| Decision | What happens next |
 | --- | --- |
-| **Take** | Use an existing implementation or test asset directly |
-| **Borrow** | Adapt a useful pattern, with a clear adaptation boundary |
-| **Build** | Implement the smallest justified solution after checking reasonable reuse options |
-| **Blocked** | A fact needed for this decision is missing or contradictory |
-| **Needs human approval** | A known risk requires authority the agent does not have |
+| **Take** | Use existing work that fits, then run the relevant verification. |
+| **Borrow** | Adapt an existing implementation, test, or pattern; make the change boundary explicit. |
+| **Build** | Create the missing behavior after checking reasonable reuse options. |
 
-Search starts locally and expands only as the task needs. Small edits stay lightweight. Existing project records provide continuity; their claims must be checked against the current code and environment. The skill uses your agent's available file, search, and test tools.
+If the selected path lacks necessary evidence and has no verified alternative, report **Blocked**. If a specific next action exceeds existing authorization, report **Needs human approval**. One rejected candidate does not block another supported path.
 
-## Examples
+### Keep decisions useful across sessions
 
-These are **illustrative scenarios**, not claims that the described systems or tests were run:
+Before a handoff, preserve the task's goal, workspace state, reusable work, decisions, verification, and next step. Use the project's existing record or the optional [checkpoint template](templates/reuse-checkpoint.md), and provide its path to the next session.
 
-- [Reuse an existing HTTP client](examples/take-example.md)
-- [Extend a local queue and its tests](examples/borrow-example.md)
-- [Build a missing domain predicate](examples/build-example.md)
-- [Handle missing evidence](examples/blocked-example.md)
-- [Identify approval-required risk](examples/needs-approval-example.md)
+On resumption, check that record against the current request and workspace. Keep conclusions that still apply; revisit the ones affected by changes. A handoff summary does not grant new permissions. This depends on accessible records, not automatic memory or a universal compaction hook.
 
-These two guides point to the runnable fixture and recorded evaluations:
+## Recorded results
 
-- [Reuse test assets](examples/test-reuse-example.md)
-- [Resume from engineering records](examples/resume-example.md)
+Two fresh-context agent runs explicitly loaded the skill on a small synthetic retry-service fixture:
 
-For runnable checks, observed results, and their limits, use the [validation guide](docs/validation.md). Host documentation, successful installation, and successful agent behavior are recorded separately.
+| Scenario | Observed result | Evidence |
+| --- | --- | --- |
+| **Extend existing tests** | Added 2 cases to the existing suite; production code unchanged; **4/4 passed**. | [Diff](evals/results/2026-09-20/test-borrow.patch) · [Replay](evals/results/2026-09-20/test-borrow.tap) |
+| **Resume after source changed** | Detected stale passing evidence despite unchanged HEAD; reported **1 pass, 1 failure**; left the workspace unchanged. | [Receipt](evals/results/2026-09-20/dirty-resume.json) · [Replay](evals/results/2026-09-20/dirty-resume.tap) |
 
-## Scope and limits
+The second fixture deliberately contains a regression; detecting it is the expected outcome. These are two bounded observations, with no control run, success-rate estimate, or token-savings claim. See [setup, evidence, and remaining coverage](docs/validation.md).
 
-This is an instruction-based workflow: compliance depends on the host and model. It does not add tools, enforce a runtime policy, or guarantee lower cost. External research needs whatever network or search access your agent normally uses. Evidence checks do not replace security or legal review.
+## Use it with your agent
 
-The skill reuses and restores task-relevant engineering information. It does not index unrelated conversations or manage a global memory store. It preserves the user's task and existing authorization; installing it grants no additional permissions.
+Installation routes are documented for **Codex, Claude Code, GitHub Copilot CLI, Cursor, Gemini CLI, OpenCode, and Windsurf**. Evidence varies by host: documented format support, checked installation, and observed behavior are different claims.
 
-## Contributing and license
+The [compatibility guide](docs/compatibility.md) records each host's paths and verification status. The skill uses the file, search, and test tools already available in your agent.
 
-Useful contributions include reproducible decision failures, installation fixes, and host validation records. Include the skill revision, host and model versions, operating system, task, expected behavior, and a sanitized result. Keep the core skill self-contained and host-neutral; provide evidence for compatibility claims.
+## Explore and contribute
 
-[MIT](LICENSE). Preserve the copyright and license notice when redistributing.
+- **Start with an example:** [reuse code](examples/take-example.md), [adapt code](examples/borrow-example.md), [build a missing piece](examples/build-example.md), [reuse tests](examples/test-reuse-example.md), or [resume work](examples/resume-example.md).
+- **Inspect decision boundaries:** [missing evidence](examples/blocked-example.md) and [authorization boundaries](examples/needs-approval-example.md). These guides are illustrative; recorded runs are linked above.
+- **Help improve it:** [report a reproducible case](https://github.com/Ai-Eastern/reuse-before-build/issues/new/choose), check a host, or [run an evaluation](evals/README.md). Include the revision, host/model, task, expected result, and sanitized evidence.
+
+<details>
+<summary>Scope and limits</summary>
+
+This is an instruction workflow; behavior depends on the host and model. It adds no tools or runtime enforcement and does not guarantee lower cost. External research requires the agent's existing network access. Evidence checks do not replace security or legal review.
+
+Recovery covers the current task's engineering state. It does not index unrelated conversations, provide global memory, or grant additional permissions. Examples, templates, and evaluation assets are optional; the core instructions live in [SKILL.md](SKILL.md).
+
+</details>
+
+[MIT](LICENSE) · Preserve the copyright and license notice when redistributing.
