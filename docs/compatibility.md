@@ -16,9 +16,9 @@ The skill follows the [Agent Skills format](https://agentskills.io/specification
 
 Paths below are relative to the project root and end with `reuse-before-build/SKILL.md`. Choose one supported location; copying the same skill into several discovery locations can create ambiguity.
 
-| Host / surface | Documented project directory | Evidence for this revision | Official reference |
+| Host / surface | Documented project directory | Revision-scoped evidence | Official reference |
 | --- | --- | --- | --- |
-| Codex local app / CLI / IDE | `.agents/skills/` | `skills@1.7.0` project installation checked on Windows with Node.js 24.18.0; see validation for behavior evidence | [Codex skills](https://developers.openai.com/codex/skills/) |
+| Codex local app / CLI / IDE | `.agents/skills/` | Prior revision: `skills@1.7.0` project installation checked on Windows with Node.js 24.18.0; see [validation](validation.md) for dated behavior evidence | [Codex skills](https://developers.openai.com/codex/skills/) |
 | Claude Code local CLI | `.claude/skills/` | Format documented; current revision not runtime-tested in Claude Code | [Claude Code skills](https://code.claude.com/docs/en/skills) |
 | GitHub Copilot CLI | `.github/skills/` or `.agents/skills/` | Format documented; current revision not runtime-tested in Copilot CLI | [Copilot skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [CLI installation](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills) |
 | Cursor local agent | `.cursor/skills/` or `.agents/skills/` | Format documented; not runtime-tested | [Cursor skills](https://cursor.com/docs/skills) |

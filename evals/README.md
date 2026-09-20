@@ -59,3 +59,11 @@ and actual command outputs. Record the model and host where available.
 Results from one agent, host, or model do not establish support for another.
 These task inputs exercise recovery behavior; a plain Skill cannot guarantee
 that a host exposes or intercepts every real context-compaction event.
+
+## Architecture discovery
+
+The separate [architecture task](results/2026-09-21/architecture-task.md)
+uses a fresh empty workspace, an explicitly loaded Skill, and live public
+sources for a design-only request. It is outside the six fixture scenarios
+and is not prepared by `prepare.mjs`. See [validation](../docs/validation.md)
+for its recorded revision, evidence, and verification limits.

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none" role="img" aria-labelledby="title desc">
   <title id="title">Build on what already works.</title>
-  <desc id="desc">Reuse existing code, tests, and engineering decisions. Three connected blocks form a loop, representing work that carries forward.</desc>
+  <desc id="desc">Discover reusable projects before design. Carry code, tests, and engineering decisions forward.</desc>
   <defs>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M32 0H0V32" stroke="#25363C" stroke-width="1"/>
@@ -14,11 +14,11 @@
     <text x="56" y="145" fill="#F2F6F4" font-size="64" font-weight="700" letter-spacing="-2">Build on what</text>
     <text x="56" y="218" fill="#ADEBC9" font-size="64" font-weight="700" letter-spacing="-2">already works.</text>
     <path d="M58 266H650" stroke="#364B51"/>
-    <text x="58" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">CODE</text>
-    <circle cx="139" cy="295" r="2" fill="#66868A"/>
-    <text x="163" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">TESTS</text>
-    <circle cx="253" cy="295" r="2" fill="#66868A"/>
-    <text x="277" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">DECISIONS</text>
+    <text x="58" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">DISCOVER</text>
+    <circle cx="177" cy="295" r="2" fill="#66868A"/>
+    <text x="201" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">EVALUATE</text>
+    <circle cx="322" cy="295" r="2" fill="#66868A"/>
+    <text x="346" y="302" fill="#B9CBCF" font-size="19" letter-spacing="1">CARRY FORWARD</text>
   </g>
   <path d="M905 102H1031Q1092 102 1092 163V177Q1092 238 1031 238H888" stroke="#ADEBC9" stroke-width="3"/>
   <path d="M901 225L888 238L901 251" stroke="#ADEBC9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

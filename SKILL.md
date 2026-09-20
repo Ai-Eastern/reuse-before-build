@@ -1,16 +1,17 @@
 ---
 name: reuse-before-build
-description: Reuse existing code, tests, and evidence before implementing or resuming engineering work. Use for substantial changes, dependency choices, test coverage gaps, or handoffs that need existing implementation and decision context recovered. Small local edits take a brief local check. Not a general memory or agent-management system.
+description: Discover and evaluate reusable implementations before architecture design, technology selection, or substantial engineering changes. Search local assets and, when needed, GitHub and official sources; decide what to adopt, adapt, or build. Reuse tests and verified records when extending or resuming work. Small edits stay local.
 license: MIT
 ---
 
 # Reuse Before Build
 
-Find existing engineering work, check that it still applies, and fill only the gap. Reusable work includes implementations, tests and fixtures, verification records, and decisions with their supporting evidence.
+Find existing engineering work before committing to a design or implementation, check its fit, and fill only the gap. Reusable work includes external projects and components, local code, tests, verification records, and evidence-backed decisions.
 
 ## Choose the smallest useful path
 
 - **Small local edit:** inspect the affected code and relevant tests, then proceed. Do not require external research, a full decision report, or a checkpoint for a rename, typo, or similarly bounded change.
+- **Architecture or technology selection:** before choosing components for a new system or major module, check existing assets and research external candidates for unresolved capabilities. Let inspected implementations inform component boundaries and tradeoffs. Planning-only requests end with a design and verification plan, not code or installation.
 - **Implementation or test change:** use the reuse gate below. Changes involving dependencies, module boundaries, public contracts, sensitive behavior, or plausible existing implementations deserve this check.
 - **Resume or handoff:** restore the relevant engineering state first, then revisit only decisions affected by changed inputs. Do not treat a new conversation as a reason to restart all research.
 
@@ -18,11 +19,11 @@ These instructions are self-contained. Supporting examples and templates are opt
 
 ## Reuse gate
 
-1. Read the current request, applicable project instructions, affected source, test entrypoints, and dependency manifests. Identify the required behavior and acceptance conditions.
+1. Read the current request, applicable project instructions, and available source, test entrypoints, and manifests. Identify required behavior, architecture and environment constraints, and acceptance conditions; a new project may have no local implementation yet.
 2. Search in order: **local implementation and tests → standard library or platform capability → installed dependencies → external candidates**. Inspect real behavior and extension points, not just filenames. Stop when a path has sufficient evidence; a verified local fit does not require an external search.
 3. Compare the required behavior with each serious candidate's actual interface, inputs, outputs, runtime, and failure cases. For tests, inspect assertions, fixtures, and the execution path. Sharing a language or a test filename does not establish fit.
 4. Record only applicable evidence: exact path or URL, relevant symbol or field, version or revision, provenance and license scope, compatibility, maintenance where relevant, integration cost, and verification status. Explain `not applicable` instead of inventing release or maintenance metadata for a local helper.
-5. Choose one outcome for the scope being evaluated. Reuse a sound previous decision when its assumptions still hold; do not repeat the full gate for every file.
+5. Choose one outcome for the scope being evaluated. For architecture work, show which responsibilities an existing component can own, necessary adaptations, and remaining custom work; distinguish a source-backed proposal from runtime-verified integration. Reuse a sound previous decision when its assumptions still hold; do not repeat the full gate for every file.
 
 | Outcome | Required basis | Next action |
 | --- | --- | --- |
@@ -36,10 +37,10 @@ Check existing authorization before asking again. A blocked or approval-dependen
 
 ## Bounded external research
 
-Use external research only when earlier paths leave a material gap.
+Use external research when earlier paths leave a material gap, including before settling a new architecture or stack. Search GitHub repositories and official project or package sources using the required capabilities and environment constraints. Respect explicit local-only or offline scope.
 
 - Screen at most **3 initial candidates**; this is a ceiling, not a quota. Expand to at most 5 only with a stated reason. Merge aliases of the same artifact.
-- Inspect primary metadata first, then deep-read the **1–2 strongest candidates**. Search snippets and model recollection are discovery hints, not proof.
+- Inspect primary metadata first, then source, tests, and integration points in the **1–2 strongest candidates**. Separate adoptable components from reference-only design ideas. Stars, README claims, search snippets, and model recollection do not establish fit.
 - Stop when the evidence supports a decision. If a required source fails, try one relevant authoritative alternative when available; avoid repeated retries and unrelated searches.
 - Missing provenance or license evidence disqualifies that candidate from adoption. It need not block a different, verified candidate. Reject irrelevant candidates without researching every property.
 - An optional candidate lookup timing out does not invalidate a supported decision. If a required step is interrupted and no independent evidence supports a decision, report **`Interrupted — no final decision`**. Do not report an interrupted test as passed or as a demonstrated failure.

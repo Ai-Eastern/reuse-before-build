@@ -8,16 +8,30 @@
   <a href="https://github.com/Ai-Eastern/reuse-before-build/commits/main/"><img src="https://img.shields.io/github/last-commit/Ai-Eastern/reuse-before-build/main?style=flat-square&amp;labelColor=24343b&amp;color=2f6b4f" alt="Last commit on public main"></a>
 </p>
 
-<p align="center"><strong>复用已有代码，扩展现有测试，带着证据接续任务。</strong></p>
+<p align="center"><strong>发现已有实现，复用代码与测试，带着证据接续任务。</strong></p>
 <p align="center">一个自足的 <code>SKILL.md</code> · 无需服务 · 无运行时依赖</p>
 
 [English](README.md) · [何时使用](#何时使用) · [快速开始](#快速开始) · [实际结果](#实际结果) · [工具兼容](docs/compatibility.md) · [MIT 许可](LICENSE)
 
-让编码 Agent **写代码前先查已有实现，补测试前先查现有覆盖，接续任务前先核对历史记录**。加载后，它引导 Agent 只做有依据的必要改动，并用项目已有工具验证结果。
+让编码 Agent **在架构设计或新项目技术选型前，先发现已有实现**，再判断哪些可以 **Take · 直接复用、Borrow · 借鉴适配、Build · 自行补齐**。项目现有成果留下实质缺口时，它会检索 GitHub 和官方仓库，检查真实代码、兼容性、集成成本与许可范围，再提出方案。
+
+同一套流程也用于写代码前检查已有实现、补测试前检查现有覆盖、接续任务前核对历史证据。它引导 Agent 形成有依据的最小设计或改动，使用项目与宿主已经具备的工具开展工作。
 
 ## 用起来是什么效果
 
-下面是小型重试服务模拟项目中的一次实际评估，Agent 显式加载了此 Skill：
+**架构发现——流程示意，并非已执行的评估：**
+
+```text
+用户要求：为新服务设计持久化 webhook 投递。
+发现候选：在 GitHub 和官方仓库查找相关实现。
+检查依据：阅读核心代码、失败语义、集成要求和许可。
+形成决策：直接复用已核实的核心，借鉴适用模式，只补缺失部分。
+设计交付：说明复用边界如何影响架构，以及还有哪些检查未完成。
+```
+
+[架构示例](examples/architecture-reuse-example.md)展示了做出这些判断所需的约束与证据。仅要求架构设计时，交付物仍是设计，不代表授权安装依赖或编写实现代码。
+
+**测试复用——旧版本（2026-09-20）的实际观察：** 下面是小型重试服务模拟项目中的一次评估，Agent 显式加载了当时版本的 Skill：
 
 ```text
 用户要求：补齐重试失败边界的测试。
@@ -26,11 +40,11 @@ Agent 找到：已有的重试函数和测试套件。
 验证结果：4 个测试全部通过。
 ```
 
-最终交付是在现有测试上的针对性补充。可以查看[实际差异](evals/results/2026-09-20/test-borrow.patch)和[测试复核日志](evals/results/2026-09-20/test-borrow.tap)。这是一次已观察到的结果，不代表每个任务都能获得同样效果。
+最终交付是在现有测试上的针对性补充。可以查看[实际差异](evals/results/2026-09-20/test-borrow.patch)和[测试复核日志](evals/results/2026-09-20/test-borrow.tap)。这项观察对应当时版本，具体日期和范围见下方实际结果。
 
 ## 何时使用
 
-- **适用任务：** 开发较大功能、选择依赖、补齐测试覆盖，或接续未完成的工程任务。小改动只做简短的本地检查。
+- **适用任务：** 新项目架构与技术选型、开发较大功能、选择依赖、补齐测试覆盖，或接续未完成的工程任务。小改动只做简短的本地检查。
 - **如何调用：** 明确选择或提及 `reuse-before-build`，即可要求使用这套流程。支持自动选择 Skill 的宿主，也可能按任务与描述的匹配程度加载它；并非每次任务都保证自动调用，首次使用建议明确点名检查是否加载。详见[宿主加载说明](docs/compatibility.md#verify-discovery-and-behavior)。
 - **如何接续：** 交接前让 Agent 保存工程记录，下一会话提供记录路径；Agent 再将记录与当前代码、测试证据核对。安装 Skill 本身不会保存全部对话，也无法找回从未记录的信息。
 
@@ -65,13 +79,24 @@ npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-bu
 修改前说明：哪些成果可以复用、哪些结论需要验证，以及最小下一步。
 ```
 
+如果当前任务是架构设计：
+
+```text
+使用 reuse-before-build，为新项目设计持久化 webhook 投递。
+现有成果不足时，查找 GitHub 和官方仓库中的实现。
+说明哪些可以直接复用、借鉴适配或自行补齐，以及它们如何影响架构。
+本次只做设计，不安装依赖或编写实现代码。
+```
+
 结果应引用实际文件或来源，并解释选择。无法加载时参照[加载排查](docs/compatibility.md#troubleshooting)，也可以先用仓库中的[练习项目](evals/fixtures/retry-service/README.md)尝试。
 
 ## 工作方式
 
-**先找已有成果 → 核对适用性与证据 → 选择最小改动 → 验证。**
+**先找已有成果 → 核对适用性与证据 → 选择最小范围 → 验证。**
 
-按本地代码与测试、标准库或平台能力、已安装依赖的顺序检查，必要时再查外部候选。证据充分即可停止；小改动只做简短的本地检查。
+按本地代码与测试、标准库或平台能力、已安装依赖的顺序检查，必要时再查外部候选。架构设计或新项目选型存在实质缺口时，在确定组件与边界前查找 GitHub 和官方仓库中的实现。深入检查最合适候选的代码与契约，README 声明或搜索摘要不能证明适用。
+
+证据充分即可停止。现有成果已满足需求时，无需联网检索；检索也必须遵守用户限制。外部发现依赖宿主已有的检索工具和网络访问能力，Skill 不提供这些工具或权限。小改动只做简短的本地检查。
 
 | 决策 | 接下来做什么 |
 | --- | --- |
@@ -89,7 +114,9 @@ npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-bu
 
 ## 实际结果
 
-两个新上下文 Agent 在小型重试服务模拟项目中，显式加载 Skill 后完成了以下任务：
+**架构发现——2026-09-21，当前指令。** 一个新上下文 Agent 显式加载 Skill，为 Node.js/PostgreSQL 后台任务服务做选型，要求不增加 Redis。它初筛三个候选、深入检查两个，引用固定修订的源码提出组件边界和待执行的集成检查；未安装依赖、未运行运行时测试。可以查看[设计结果](evals/results/2026-09-21/architecture-result.md)、[来源](evals/results/2026-09-21/architecture-sources.json)和[复核记录](evals/results/2026-09-21/architecture-review.json)。这是一次有源码依据的设计建议，不代表部署已经验证。
+
+另外两个新上下文 Agent 在小型重试服务模拟项目中，显式加载了 **旧版本（2026-09-20）** 后完成以下任务。这两项任务尚未使用当前指令重跑：
 
 | 场景 | 实际观察 | 证据 |
 | --- | --- | --- |
@@ -106,7 +133,7 @@ npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-bu
 
 ## 示例与贡献
 
-- **从具体任务开始：** [复用代码](examples/take-example.md)、[适配代码](examples/borrow-example.md)、[补齐实现](examples/build-example.md)、[复用测试](examples/test-reuse-example.md)、[接续工作](examples/resume-example.md)。
+- **从具体任务开始：** [为架构发现已有实现](examples/architecture-reuse-example.md)、[复用代码](examples/take-example.md)、[适配代码](examples/borrow-example.md)、[补齐实现](examples/build-example.md)、[复用测试](examples/test-reuse-example.md)、[接续工作](examples/resume-example.md)。
 - **了解决策边界：** [证据不足](examples/blocked-example.md)、[授权边界](examples/needs-approval-example.md)。这些是说明性示例，实际运行记录见上方。
 - **帮助改进：** [提交可复现案例](https://github.com/Ai-Eastern/reuse-before-build/issues/new/choose)、验证一种工具，或[运行评估](evals/README.md)。附上修订、宿主与模型、任务、预期结果和脱敏证据。
 

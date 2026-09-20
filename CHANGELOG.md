@@ -2,6 +2,8 @@
 
 ## Unreleased — next minor release
 
+- Made architecture design and technology selection explicit entry points, with bounded GitHub and official-source discovery before selecting components.
+- Foregrounded external reuse in both READMEs and added an illustrative architecture workflow while retaining test reuse and task continuity.
 - Expanded reuse to test cases, fixtures, verification records, and evidence-backed decisions.
 - Added scoped checkpoints and recovery after handoffs or context loss, with workspace and authorization checks.
 - Distinguished historical verification from fresh runs and required rechecking only affected evidence.

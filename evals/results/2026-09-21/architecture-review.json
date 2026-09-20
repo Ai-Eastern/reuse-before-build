@@ -1,0 +1,35 @@
+{
+  "exported_at_utc": "2026-09-20T16:19:04.633814+00:00",
+  "skill_sha256": "75308a77e0357d058fa886f0125719ddb51f41ef04547850fd4195e261c224f7",
+  "invocation": "explicit Skill load in a fresh-context Codex desktop subagent",
+  "model_identifier": "not captured",
+  "task": "architecture-task.md",
+  "result": "architecture-result.md",
+  "sources": "architecture-sources.json",
+  "candidate_count": 3,
+  "deep_read_count": 2,
+  "result_type": "source-backed design proposal, not a runtime integration result",
+  "runtime_tests_run": 0,
+  "review": [
+    "Inspected the design and source receipt against the architecture-only task.",
+    "Workspace contains only the supplied Skill and two permitted output files; Skill hash is unchanged.",
+    "Spot-checked pinned pg-boss package.json, src/manager.ts, and test/transactionalWorkTest.ts through the GitHub API.",
+    "Design distinguishes database transactions from external-side-effect idempotency and lists unexecuted integration checks."
+  ],
+  "limits": [
+    "One instruction-scoped run, not OS-enforced isolation.",
+    "Source metadata is an agent-produced receipt, not a raw transcript of all tool calls.",
+    "Reviewer spot checks do not independently verify every upstream claim.",
+    "No runtime tests, without-skill control, automatic invocation test, or universal compatibility claim.",
+    "Earlier test-reuse and recovery evaluations were not repeated for this Skill hash."
+  ],
+  "export_transform": "Result source-filename reference linked to its exported name and trailing blank line removed; local workspace and Skill paths normalized in sources JSON. Findings unchanged.",
+  "raw_sha256": {
+    "result.md": "a83e006964c3930c3e7fe0180225cac1d0ad7144eecc8839e7bcbda1ca0347a5",
+    "sources.json": "64a3e3549f704c0d5ef8b9c20fbc74a96355309b24242b5a61d2cc613cc6ae77"
+  },
+  "exported_sha256": {
+    "architecture-result.md": "8d6d7785d36ee7d7f0578c7374b01603eef0446bbc8dc1d917bf29f8666db464",
+    "architecture-sources.json": "2a1f6f33445ed4f50e353765656886af04646fa8a790ef8dee4b6eb86baa0395"
+  }
+}

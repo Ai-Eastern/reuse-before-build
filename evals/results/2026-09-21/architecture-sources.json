@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "inspected_on": "2026-09-21",
+  "timezone": "Asia/Shanghai",
+  "task": "Architecture-only TypeScript/Node.js 22 PostgreSQL job service; delayed jobs, retry, multiple workers, idempotent effects; no Redis deployment",
+  "workspace": "<evaluation-workspace>",
+  "scope": {
+    "allowed_writes": [
+      "result.md",
+      "sources.json"
+    ],
+    "installations": 0,
+    "business_code_changes": 0,
+    "remote_resources_created": 0,
+    "database_connections": 0,
+    "runtime_tests_run": 0,
+    "parent_repository_inspected": false
+  },
+  "skill": {
+    "path": "<evaluation-workspace>/SKILL.md",
+    "name": "reuse-before-build",
+    "sha256": "75308A77E0357D058FA886F0125719DDB51F41EF04547850FD4195E261C224F7",
+    "status": "Read and explicitly applied architecture/selection path"
+  },
+  "search_scope": {
+    "local_files_initial": [
+      "SKILL.md"
+    ],
+    "local_application_and_tests": "none in assigned directory",
+    "installed_dependencies": "none in assigned directory; no global dependency discovery",
+    "order": [
+      "local",
+      "platform capabilities",
+      "installed dependencies absent",
+      "external"
+    ],
+    "initial_candidates": [
+      "pg-boss",
+      "graphile-worker",
+      "bullmq"
+    ],
+    "deep_candidates": [
+      "pg-boss",
+      "graphile-worker"
+    ],
+    "expanded_candidates": [],
+    "search_queries": [
+      "site.github.com/timgit/pg-boss Node 22 PostgreSQL",
+      "site.worker.graphile.org docs retries job_key transaction",
+      "site.postgresql.org docs SKIP LOCKED queue SELECT"
+    ],
+    "ignored_search_results": "Third-party search results were not used as decisive evidence."
+  },
+  "decision": {
+    "outcome": "Take",
+    "scope": "pg-boss queue infrastructure for architecture proposal",
+    "selected_package": "pg-boss@12.33.2",
+    "verification_level": "source-backed proposal; runtime integration not tested",
+    "inference": "Same-database transaction enqueue avoids a separate initial outbox relay; short SQL handlers may reuse transactional workers; external effects require application/downstream idempotency.",
+    "reconsider_if": [
+      "Existing application has substantial BullMQ API assets",
+      "Database-trigger-centric task production favors Graphile Worker",
+      "Target database/runtime incompatibility",
+      "Measured shared-database impact breaches agreed SLO"
+    ]
+  },
+  "sources": [
+    {
+      "id": "pg-npm",
+      "url": "https://registry.npmjs.org/pg-boss/12.33.2",
+      "kind": "official package metadata",
+      "observations": [
+        "version 12.33.2",
+        "engines.node >=22.12.0",
+        "MIT declaration",
+        "type module and dist declaration entry read from pinned package.json",
+        "npm test uses eslint and vitest; pretest generates Prisma artifacts and checks TypeScript/manifests"
+      ],
+      "retrieved_via": "https://registry.npmjs.org/pg-boss/latest",
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "integrity": "sha512-45Tdl1I0UxwDY6XxdFvB5H8QdB3FEKeiTOBrnj7/RznhX4yRTPk5shI+FjfrO4fWZVdTimrc5bulsoPaeCeu2w==",
+      "tarball_downloaded": false,
+      "attestation_verified": false
+    },
+    {
+      "id": "pg-commit",
+      "url": "https://api.github.com/repos/timgit/pg-boss/commits/8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "kind": "official commit metadata",
+      "observations": [
+        "commit timestamp 2026-09-18T16:03:18Z; message versioning"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72"
+    },
+    {
+      "id": "pg-tree",
+      "url": "https://api.github.com/repos/timgit/pg-boss/git/trees/8daa8ea242b6df327fa9514766bd5574df1c3e72?recursive=1",
+      "kind": "official file discovery",
+      "observations": [
+        "Located src, tests, license, package manifest; no repository clone"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72"
+    },
+    {
+      "id": "pg-manifest",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/package.json",
+      "kind": "pinned source",
+      "observations": [
+        "12.33.2; >=22.12.0; ESM; TypeScript declaration entry; scripts inspected"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72"
+    },
+    {
+      "id": "pg-license",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/LICENSE",
+      "kind": "pinned license",
+      "observations": [
+        "MIT text read; Tim Jones copyright; notice condition"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "scope": "Core repository license only; dependencies and optional dashboard/proxy not audited"
+    },
+    {
+      "id": "pg-readme",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/README.md",
+      "kind": "pinned documentation",
+      "observations": [
+        "PostgreSQL >=13",
+        "Node >=22.12 for require(esm)",
+        "Exactly-once README phrasing not interpreted as external-effect guarantee"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72"
+    },
+    {
+      "id": "pg-plans",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/src/plans.ts",
+      "kind": "pinned implementation",
+      "observations": [
+        "1852 default FOR UPDATE OF j SKIP LOCKED",
+        "1889-1898 state and database-time start_after filters",
+        "1933-2005 CTE selection and active transition",
+        "2392-2460 retry_limit and backoff+jitter calculation"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "coverage": "selected source excerpts, not exhaustive audit"
+    },
+    {
+      "id": "pg-manager",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/src/manager.ts",
+      "kind": "pinned implementation",
+      "observations": [
+        "537-545 transaction boundary describes claim outside handler transaction",
+        "604-625 beginTransaction and tx callback",
+        "651-678 complete/commit, rollback then fail",
+        "transaction timeout/heartbeat concerns located"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "coverage": "selected execution path"
+    },
+    {
+      "id": "pg-adapter-tests",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/test/adapterTest.ts",
+      "kind": "pinned test assertions",
+      "observations": [
+        "31-72 adapter transaction insertion/rollback assertions",
+        "427-462 public send with fromDrizzle(tx) and getJobById null after rollback"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "executed": false
+    },
+    {
+      "id": "pg-delay-tests",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/test/delayTest.ts",
+      "kind": "pinned test assertions",
+      "observations": [
+        "1-49 TestClock; integer delay first fetch falsy then due fetch truthy; ISO time example also read"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "executed": false
+    },
+    {
+      "id": "pg-retry-tests",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/test/retryTest.ts",
+      "kind": "pinned test assertions",
+      "observations": [
+        "9-24 same ID refetched after expiration and supervise",
+        "26-58 failure and fixed retry delay",
+        "61-90 retry backoff ranges and empty fetch before due"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "executed": false
+    },
+    {
+      "id": "pg-tx-tests",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/test/transactionalWorkTest.ts",
+      "kind": "pinned test assertions",
+      "observations": [
+        "39-63 handler write and completion commit",
+        "65-89 handler throw rolls side_effect insert back",
+        "91-112 active remains observable during handler",
+        "114-139 one retry yields two attempts",
+        "141-162 dead-letter retrieval after failure"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "executed": false
+    },
+    {
+      "id": "pg-multimaster-tests",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/test/multiMasterTest.ts",
+      "kind": "pinned test assertions",
+      "observations": [
+        "Full 58-line file read; parallel start and migration scenarios; not evidence of separate-process side-effect deduplication"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "executed": false
+    },
+    {
+      "id": "pg-concurrency-discovery",
+      "url": "https://github.com/timgit/pg-boss/blob/8daa8ea242b6df327fa9514766bd5574df1c3e72/test/concurrencyTest.ts",
+      "kind": "test discovery only",
+      "observations": [
+        "Test names for localConcurrency and worker notification located; this is not a verified cross-process test result"
+      ],
+      "revision": "8daa8ea242b6df327fa9514766bd5574df1c3e72",
+      "executed": false
+    },
+    {
+      "id": "gw-npm",
+      "url": "https://registry.npmjs.org/graphile-worker/0.18.0",
+      "kind": "official package metadata",
+      "observations": [
+        "0.18.0; node >=22.18.0; MIT declaration; Jest/setup scripts visible"
+      ],
+      "retrieved_via": "https://registry.npmjs.org/graphile-worker/latest",
+      "revision": "4cda192c5df254392a1dff350e5d73f7d2c18a85",
+      "tarball_downloaded": false
+    },
+    {
+      "id": "gw-commit",
+      "url": "https://api.github.com/repos/graphile/worker/commits/4cda192c5df254392a1dff350e5d73f7d2c18a85",
+      "kind": "official commit metadata",
+      "observations": [
+        "commit timestamp 2026-09-08T16:04:26Z; Version Packages (#631)"
+      ],
+      "revision": "4cda192c5df254392a1dff350e5d73f7d2c18a85"
+    },
+    {
+      "id": "gw-tree",
+      "url": "https://api.github.com/repos/graphile/worker/git/trees/4cda192c5df254392a1dff350e5d73f7d2c18a85?recursive=1",
+      "kind": "official file discovery",
+      "observations": [
+        "Located license, SQL runtime modules, worker utility tests"
+      ],
+      "revision": "4cda192c5df254392a1dff350e5d73f7d2c18a85"
+    },
+    {
+      "id": "gw-license",
+      "url": "https://github.com/graphile/worker/blob/4cda192c5df254392a1dff350e5d73f7d2c18a85/LICENSE.md",
+      "kind": "pinned license",
+      "observations": [
+        "MIT text read; Benjie Gillam copyright; notice condition"
+      ],
+      "revision": "4cda192c5df254392a1dff350e5d73f7d2c18a85",
+      "scope": "Core repository only"
+    },
+    {
+      "id": "gw-requirements",
+      "url": "https://worker.graphile.org/docs/requirements",
+      "kind": "official current documentation",
+      "observations": [
+        "PostgreSQL >=12; Node >=22.18; EOL versions may be dropped"
+      ],
+      "revision": "unversioned live documentation; read 2026-09-21"
+    },
+    {
+      "id": "gw-get",
+      "url": "https://github.com/graphile/worker/blob/4cda192c5df254392a1dff350e5d73f7d2c18a85/src/sql/getJobs.ts",
+      "kind": "pinned implementation",
+      "observations": [
+        "Named-queue locking strategy inspected",
+        "201-257 batch selects at most one task from each named queue; run_at <= current time; FOR UPDATE SKIP LOCKED; attempts increment and locked_by/locked_at set"
+      ],
+      "revision": "4cda192c5df254392a1dff350e5d73f7d2c18a85"
+    },
+    {
+      "id": "gw-fail",
+      "url": "https://github.com/graphile/worker/blob/4cda192c5df254392a1dff350e5d73f7d2c18a85/src/sql/failJobs.ts",
+      "kind": "pinned implementation",
+      "observations": [
+        "13-98 errors recorded, run_at increased with exp(least(attempts,10)); ownership filter and locks cleared"
+      ],
+      "revision": "4cda192c5df254392a1dff350e5d73f7d2c18a85"
+    },
+    {
+      "id": "gw-add-tests",
+      "url": "https://github.com/graphile/worker/blob/4cda192c5df254392a1dff350e5d73f7d2c18a85/__tests__/workerUtils.addJob.test.ts",
+      "kind": "pinned test assertions",
+      "observations": [
+        "50-74 repeated jobKey yields one pending row, final payload and revision=3",
+        "76-125 preserve_run_at and unsafe_dedupe assertions inspected"
+      ],
+      "revision": "4cda192c5df254392a1dff350e5d73f7d2c18a85",
+      "executed": false
+    },
+    {
+      "id": "gw-key",
+      "url": "https://worker.graphile.org/docs/job-key",
+      "kind": "official current documentation",
+      "observations": [
+        "Completed job records deleted; no permanent key log; locked same-key task can cause new task scheduling"
+      ],
+      "revision": "unversioned live documentation; read 2026-09-21"
+    },
+    {
+      "id": "gw-add-doc",
+      "url": "https://worker.graphile.org/docs/library/add-job",
+      "kind": "official documentation discovery",
+      "observations": [
+        "runAt, maxAttempts, jobKey, jobKeyMode interface"
+      ],
+      "revision": "unversioned; search output inspected"
+    },
+    {
+      "id": "gw-tasks-doc",
+      "url": "https://worker.graphile.org/docs/tasks",
+      "kind": "official documentation discovery",
+      "observations": [
+        "Tasks must await asynchronous effects; user owns any needed transaction"
+      ],
+      "revision": "unversioned; search output inspected"
+    },
+    {
+      "id": "bull-npm",
+      "url": "https://registry.npmjs.org/bullmq/6.3.8",
+      "kind": "official package metadata",
+      "observations": [
+        "6.3.8; node >=14.17.0; license field MIT; repository taskforcesh/bullmq"
+      ],
+      "retrieved_via": "https://registry.npmjs.org/bullmq/latest",
+      "revision": "48a550b39ce29f69e398dde6e3ce3c62c873b723",
+      "license_text_inspected": false,
+      "tarball_downloaded": false
+    },
+    {
+      "id": "bull-postgres",
+      "url": "https://docs.bullmq.io/guide/postgresql",
+      "kind": "official documentation, screening only",
+      "observations": [
+        "Optional PostgreSQL backend via createPostgresBackend",
+        "PostgreSQL >=13, 14+ recommended",
+        "Explicit migrations; schema downgrade unsupported",
+        "Pool plus separate LISTEN connection",
+        "Redis remains default and described as most battle-tested"
+      ],
+      "revision": "unversioned live documentation; read 2026-09-21",
+      "backend_source_and_tests_inspected": false,
+      "adoption_status": "deferred; not rejected as Redis-only"
+    },
+    {
+      "id": "bull-overview",
+      "url": "https://docs.bullmq.io/",
+      "kind": "official documentation discovery",
+      "observations": [
+        "Overview still emphasizes Redis; navigation exposed official PostgreSQL backend, which was then inspected"
+      ],
+      "revision": "unversioned"
+    },
+    {
+      "id": "node-timers",
+      "url": "https://nodejs.org/download/release/v22.18.0/docs/api/timers.html",
+      "kind": "official versioned platform documentation",
+      "observations": [
+        "Timers belong to Node event loop; setTimeout exact execution timing and ordering not guaranteed; overly large delay is clamped"
+      ],
+      "revision": "Node.js v22.18.0",
+      "inference": "A timer alone is not a durable multi-worker job store"
+    },
+    {
+      "id": "postgres-select",
+      "url": "https://www.postgresql.org/docs/18/sql-select.html",
+      "kind": "official versioned platform documentation",
+      "observations": [
+        "SKIP LOCKED is suitable for queue-like consumers while offering an inconsistent view; row locking does not remove table-level lock requirements"
+      ],
+      "revision": "PostgreSQL 18 documentation",
+      "target_database_version_known": false
+    }
+  ],
+  "actual_checks": [
+    {
+      "check": "Read specified SKILL.md",
+      "result": "success"
+    },
+    {
+      "check": "List only assigned directory and SHA256 Skill",
+      "result": "only SKILL.md initially; hash recorded"
+    },
+    {
+      "check": "Browse official platform and candidate documentation",
+      "result": "success except first Node URL; replacement succeeded"
+    },
+    {
+      "check": "HTTP GET npm metadata, GitHub commit/tree metadata and selected raw source/license/tests",
+      "result": "success; source excerpts only; no execution"
+    },
+    {
+      "check": "Broad source excerpt collection",
+      "result": "Some tool output truncated; decisive sections were reread in bounded line ranges"
+    },
+    {
+      "check": "One source formatting command contained an unintended PowerShell 'text' command",
+      "result": "exit 1; corrected read-only command then succeeded; not a candidate or test failure"
+    },
+    {
+      "check": "Runtime integration/unit/load/fault tests",
+      "result": "not run"
+    },
+    {
+      "check": "Historical passing result reuse",
+      "result": "none"
+    },
+    {
+      "check": "Create report and evidence JSON",
+      "result": "only authorized result.md and sources.json written"
+    }
+  ],
+  "access_limitations": [
+    {
+      "url": "https://nodejs.org/docs/latest-v22.x/api/timers.html",
+      "tool": "web open",
+      "result": "not accessible via this tool",
+      "alternative": "https://nodejs.org/download/release/v22.18.0/docs/api/timers.html",
+      "alternative_result": "success",
+      "material_effect": "none"
+    },
+    {
+      "scope": "pg-boss, graphile-worker",
+      "result": "Pinned GitHub source and npm metadata accessible; published tarball contents/provenance not verified",
+      "material_effect": "Runtime/package integrity remains a future verification item"
+    }
+  ],
+  "uncertainties": [
+    "Actual PostgreSQL version, deployment permissions, pooler topology and database spare capacity",
+    "Actual Node.js 22 patch/minor, chosen database driver, ORM and module configuration",
+    "Job rate, payload size, duration, maximum schedule horizon, delay SLO and recovery budget",
+    "Real cross-process crash/reclaim behavior under target PostgreSQL configuration",
+    "Downstream idempotency key scope/retention, response-query semantics and real effect count",
+    "Published artifacts match inspected gitHead; package attestations/signatures not verified",
+    "Transitive dependency license/security audit not performed",
+    "BullMQ PostgreSQL implementation and tests not deeply inspected; package root license not read",
+    "No production reliability, capacity, migration safety or business exactly-once claim is established"
+  ],
+  "verification_plan": [
+    "Use isolated target-version PostgreSQL; verify Node/package compatibility, migration and privileges",
+    "Adapt existing upstream transaction enqueue, delay, retry and transactional handler assertions",
+    "Add application-specific operationId uniqueness and payload-fingerprint cases",
+    "Run at least two independent workers and inject failures at claim, commit, external success and acknowledgement boundaries",
+    "Check long-running/expired overlapping attempts, graceful stop, restart and connection exhaustion",
+    "Verify downstream idempotency and uncertain-response reconciliation against actual provider test environment",
+    "Measure queue delay and business-query impact under representative load before choosing capacity limits"
+  ]
+}

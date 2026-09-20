@@ -1,10 +1,49 @@
 # Validation and evidence
 
-Local evaluation recorded on **2026-09-20**, for the skill revision identified
-by its SHA-256 below. These observations do not imply a release tag,
-a remote CI result, or universal host compatibility.
+The test-reuse and recovery evaluations below were recorded on **2026-09-20**
+for the earlier skill revision identified by its SHA-256. The **2026-09-21**
+revision makes architecture and external-project discovery explicit; those
+earlier runs have not been repeated against the new instructions.
+These observations do not imply a release tag or universal host compatibility.
 
-The evaluated `SKILL.md` SHA-256 is:
+## Architecture discovery — 2026-09-21
+
+A fresh-context Codex desktop subagent explicitly loaded the architecture
+revision, identified by this `SKILL.md` SHA-256:
+
+```text
+75308a77e0357d058fa886f0125719ddb51f41ef04547850fd4195e261c224f7
+```
+
+The [task](../evals/results/2026-09-21/architecture-task.md) requested only a
+design for a Node.js 22/PostgreSQL background-job service with no added Redis.
+The empty workspace contained the Skill; no candidate names, parent history,
+or reviewer conclusions were supplied. The agent screened three external
+candidates, deep-read two, and produced component boundaries, tradeoffs,
+source references, and unexecuted integration checks. It distinguished
+database transaction guarantees from external-side-effect idempotency.
+
+- [Agent design](../evals/results/2026-09-21/architecture-result.md)
+- [Source and inspection receipt](../evals/results/2026-09-21/architecture-sources.json)
+- [Reviewer checks and export hashes](../evals/results/2026-09-21/architecture-review.json)
+
+The reviewer checked the result against the task, confirmed the unchanged
+Skill hash and two permitted workspace outputs, and spot-checked pinned
+upstream package, transaction implementation, and test sources through GitHub.
+The source receipt is agent-produced, not a full raw tool transcript; not
+every upstream claim was independently revalidated. No packages were installed,
+database connections opened, or runtime tests run. The model identifier was
+not captured. This is one explicitly invoked, source-backed design observation,
+not an automatic-trigger test, runtime compatibility proof, comparative
+benchmark, or guarantee of a particular architectural choice.
+
+Both format validators, local documentation links, the unchanged fixture's
+two baseline tests, and six English/Chinese README views were also checked.
+Those are structural checks, not additional agent behavior evaluations.
+
+## Earlier test and recovery evaluations — 2026-09-20
+
+The earlier evaluated `SKILL.md` SHA-256 is:
 
 ```text
 1b288be48c3b74a77d1fecc26abba3037b599613e13a2761128776e60b563c68
@@ -14,7 +53,7 @@ Environment: Windows, Node.js 24.18.0, Python 3.12.14, and Git for Windows
 2.55.0. The Python tools below are development checks, not skill runtime
 dependencies.
 
-## What was checked
+## Earlier revision: what was checked
 
 | Layer | Observed result | What it does not prove |
 | --- | --- | --- |
