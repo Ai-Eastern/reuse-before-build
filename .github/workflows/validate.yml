@@ -1,0 +1,39 @@
+name: Validate skill and examples
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Install the pinned reference validator
+        run: python -m pip install 'git+https://github.com/agentskills/agentskills@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref'
+      - name: Validate the standalone skill
+        run: |
+          mkdir -p "$RUNNER_TEMP/reuse-before-build"
+          cp SKILL.md "$RUNNER_TEMP/reuse-before-build/SKILL.md"
+          skills-ref validate "$RUNNER_TEMP/reuse-before-build"
+      - name: Check local documentation links
+        run: node scripts/check-links.mjs
+      - name: Run the example project's tests
+        working-directory: evals/fixtures/retry-service
+        run: node --test
+      - name: Prepare a reproducible recovery scenario
+        run: node evals/prepare.mjs 04-dirty-resume "$RUNNER_TEMP/reuse-dirty-eval"
+
+# These are format, documentation, fixture, and preparation checks.
+# They do not run an agent or establish provider compatibility.

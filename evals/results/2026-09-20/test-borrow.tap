@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: returns the first successful result without another attempt
+ok 1 - returns the first successful result without another attempt
+  ---
+  duration_ms: 0.7967
+  type: 'test'
+  ...
+# Subtest: the default permits two failures before a successful third attempt
+ok 2 - the default permits two failures before a successful third attempt
+  ---
+  duration_ms: 0.1397
+  type: 'test'
+  ...
+# Subtest: rejects with the exact final error after the configured number of attempts
+ok 3 - rejects with the exact final error after the configured number of attempts
+  ---
+  duration_ms: 0.2589
+  type: 'test'
+  ...
+# Subtest: rejects zero attempts without calling the operation
+ok 4 - rejects zero attempts without calling the operation
+  ---
+  duration_ms: 0.5034
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 76.9361

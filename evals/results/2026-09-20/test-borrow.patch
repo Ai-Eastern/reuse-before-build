@@ -1,0 +1,33 @@
+diff --git a/test/retry.test.mjs b/test/retry.test.mjs
+index 72f7de7..eba7fad 100644
+--- a/test/retry.test.mjs
++++ b/test/retry.test.mjs
+@@ -23,3 +23,28 @@ test('the default permits two failures before a successful third attempt', async
+   assert.equal(result, 'ready');
+   assert.deepEqual(seen, [1, 2, 3]);
+ });
++
++test('rejects with the exact final error after the configured number of attempts', async () => {
++  const seen = [];
++  const firstError = new Error('first failure');
++  const finalError = new Error('final failure');
++
++  await assert.rejects(retry(async (attempt) => {
++    seen.push(attempt);
++    throw attempt === 1 ? firstError : finalError;
++  }, { attempts: 2 }), (error) => {
++    assert.strictEqual(error, finalError);
++    return true;
++  });
++  assert.deepEqual(seen, [1, 2]);
++});
++
++test('rejects zero attempts without calling the operation', async () => {
++  let calls = 0;
++
++  await assert.rejects(retry(async () => {
++    calls += 1;
++    return 'ready';
++  }, { attempts: 0 }), RangeError);
++  assert.equal(calls, 0);
++});

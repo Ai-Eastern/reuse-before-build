@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased — next minor release
+
+- Expanded reuse to test cases, fixtures, verification records, and evidence-backed decisions.
+- Added scoped checkpoints and recovery after handoffs or context loss, with workspace and authorization checks.
+- Distinguished historical verification from fresh runs and required rechecking only affected evidence.
+- Allowed verified local reuse to finish without external research; limited candidate failures to their actual impact.
+- Rewrote illustrative examples to avoid unsupported license and test claims.
+- Added a runnable fixture, behavioral evaluation scenarios, and an optional checkpoint template.
+- Reworked English and Chinese onboarding and documented compatibility by evidence level.
+- Replaced the failing root-layout GitHub CLI recommendation with verified installation paths.
+
+These changes are local/unreleased until published. No tag or GitHub release is implied.
+
 ## 0.1.1 - 2026-08-17
 
 - Clarified the evidence-based decision-gate positioning.

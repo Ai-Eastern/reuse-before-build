@@ -1,26 +1,18 @@
-# Borrow example: job queue adapter
+# Borrow: extend a local queue test
 
-## Request
+Illustrative scenario, not a test receipt. The files below are hypothetical.
 
-“Add delayed background jobs using a durable queue.”
+**Request:** add delayed execution to an existing durable queue.
 
 ## Reuse Decision
 
-Decision: Borrow
+- **Decision:** Borrow.
+- **Scope:** extend the local queue and its tests.
+- **Evidence:** inspect `src/jobs/queue.ts::claimDue`, `test/jobs/queue.test.ts`, and the existing fake-clock fixture. In this scenario the local implementation supports persistence and acknowledgements but does not yet filter jobs by their due time. Verify the local code's license scope before reuse.
+- **Compatibility:** delayed execution needs explicit due-time behavior; retry and acknowledgement tests alone do not establish it.
+- **Reuse boundary:** retain the existing persistence, runner, fixtures, and retry tests. Extend the due-time predicate and its focused tests. No external package is selected or added.
+- **Tests:** add cases for before the due time, exactly at the due time, and persistence across restart. Retain existing retry and duplicate-delivery coverage.
+- **Verification:** planned; this document does not claim those tests have run.
+- **Next:** make the smallest change within the existing queue and execute the relevant suite.
 
-### Evidence
-
-- Project search: no durable queue implementation; an internal `JobHandler` interface can be reused.
-- GitHub / official search: the official Redis Streams consumer-group pattern matches delivery and retry needs, but its deployment and message schema do not match this service.
-- License: the referenced documentation and client library have an acceptable license for evaluation; confirm the selected package before adding it.
-- Maintenance: official documentation and the candidate client show current maintenance signals.
-- Compatibility: local deployment uses Redis, but the service requires its own idempotency key and tracing conventions.
-- Verification: a local integration test must cover retry, acknowledgement, and duplicate delivery.
-
-### Rationale
-
-Borrow the consumer-group workflow and failure semantics, not a repository’s application code. Adapt storage names, message schema, observability, and idempotency to local conventions.
-
-### Next step
-
-Confirm the package license and version, write the adapter behind `JobHandler`, and verify the three failure cases before rollout.
+If the inspected queue cannot provide the required persistence or time semantics, revisit the decision. If an external dependency becomes necessary, verify its actual version and license before adopting it.

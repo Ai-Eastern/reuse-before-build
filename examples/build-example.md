@@ -1,26 +1,17 @@
-# Build example: domain-specific policy evaluator
+# Build: a missing domain predicate
 
-## Request
+Illustrative scenario, not a test receipt. The paths and user constraint below are hypothetical.
 
-“Add a policy evaluator for our nested, time-bounded approval rules.”
+**Request:** implement the project's effective-date rule using local code only; the user explicitly excludes new dependencies and external code reuse for this task.
 
 ## Reuse Decision
 
-Decision: Build
+- **Decision:** Build.
+- **Scope:** the missing effective-date predicate, not a new rules framework.
+- **Evidence:** inspect `src/policy/approval.ts`, the domain's timestamp type, and `test/policy/approval.test.ts`. In this scenario the existing predicate checks approver identity but has no effective-date rule. The existing date parser is reusable; it does not itself implement the domain rule.
+- **Rejected alternatives:** the identity predicate does not evaluate time; the date parser supplies a timestamp but cannot decide approval eligibility. External implementations are excluded by the explicit task constraint, not by a failed search.
+- **Tests:** reuse the established test runner and domain fixtures; cover the specified start/end boundary and invalid dates.
+- **Verification:** planned, not executed.
+- **Next:** add the smallest domain predicate using the existing parser and run the affected tests.
 
-### Evidence
-
-- Project search: no policy evaluator, rule AST, or compatible extension point exists.
-- GitHub / official search: generic rule engines were reviewed, but none support the required nested approvals and effective-date semantics without replacing core domain behavior.
-- License: rejected candidates have no acceptable direct reuse path for this requirement; no third-party code will be copied.
-- Maintenance: irrelevant to the final decision because the candidates do not fit the domain semantics.
-- Compatibility: generic engines would introduce a second expression language and conflict with the service’s typed domain model.
-- Verification: define table-driven tests for precedence, effective dates, missing approvals, and denied access before implementation.
-
-### Rationale
-
-Take is not a fit and Borrow would preserve the wrong semantics while adding an unnecessary dependency. A small typed evaluator is the narrowest justified implementation.
-
-### Next step
-
-Write the domain cases and tests first, then implement the smallest evaluator behind a local interface.
+Without that explicit constraint, a non-trivial Build decision still needs a relevant completed search. Do not cite imaginary rule engines or treat a network outage as permission to build.

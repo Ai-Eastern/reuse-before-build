@@ -1,0 +1,39 @@
+{
+  "scenario": "04-dirty-resume",
+  "evaluatedBy": "Fresh-context in-session Codex subagent, explicitly instructed to load the copied SKILL.md",
+  "modelIdentifier": null,
+  "scope": "One synthetic task; not native discovery, automatic triggering, or real context compaction",
+  "skillSha256": "1b288be48c3b74a77d1fecc26abba3037b599613e13a2761128776e60b563c68",
+  "baseline": {
+    "startedAt": "2026-09-20T10:05:51.166Z",
+    "head": "1804f62baa16b9e483f51df95b0251a630c24dc7",
+    "branch": "eval-baseline",
+    "nodeVersion": "v24.18.0",
+    "exitCode": 0,
+    "inputHashes": {
+      "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+      "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+      "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+      "SKILL.md": "1b288be48c3b74a77d1fecc26abba3037b599613e13a2761128776e60b563c68"
+    }
+  },
+  "reviewerReplay": {
+    "checkedAt": "2026-09-20T10:11:50.832Z",
+    "command": "node --test --test-reporter=tap",
+    "cwd": "<fixture>",
+    "nodeVersion": "v24.18.0",
+    "exitCode": 1,
+    "tests": 2,
+    "pass": 1,
+    "fail": 1,
+    "head": "1804f62baa16b9e483f51df95b0251a630c24dc7",
+    "status": "M src/retry.mjs",
+    "inputHashes": {
+      "src/retry.mjs": "adfc49207c4d9a3669d50d18daeba11e13d36e9a4589f4e593253551fcedbb66",
+      "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+      "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+      "SKILL.md": "1b288be48c3b74a77d1fecc26abba3037b599613e13a2761128776e60b563c68"
+    }
+  },
+  "exportedLogNote": "Local absolute fixture paths are replaced with <fixture>; test output is otherwise unchanged. These files capture reviewer replay, not the evaluating agent entire tool trace."
+}

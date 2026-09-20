@@ -1,0 +1,11 @@
+diff --git a/src/retry.mjs b/src/retry.mjs
+index 361a423..f12f75e 100644
+--- a/src/retry.mjs
++++ b/src/retry.mjs
+@@ -1,5 +1,5 @@
+ // SPDX-License-Identifier: MIT
+-export async function retry(operation, { attempts = 3 } = {}) {
++export async function retry(operation, { attempts = 1 } = {}) {
+   if (!Number.isInteger(attempts) || attempts < 1) {
+     throw new RangeError('attempts must be a positive integer');
+   }

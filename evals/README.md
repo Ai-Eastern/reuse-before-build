@@ -1,0 +1,61 @@
+# Small behavior evaluations
+
+This directory contains one MIT project fixture, six agent task inputs, and
+a separate reviewer guide. It uses Node.js standard libraries and Git; it
+does not install dependencies or invoke a model CLI. It is a reproducible
+starting point for manual or agent evaluation, not a published success rate.
+
+Check the fixture directly:
+
+```sh
+cd evals/fixtures/retry-service
+node --test
+```
+
+Prepare one fresh isolated work directory from the repository root. Supply
+an absolute path whose parent already exists; the destination must not exist:
+
+```sh
+node evals/prepare.mjs 01-local-take /absolute/existing-parent/run-01
+```
+
+PowerShell example:
+
+```powershell
+node .\evals\prepare.mjs 04-dirty-resume 'D:\existing-work\run-04'
+```
+
+The script copies only the fixture, that scenario as `TASK.md`, the current
+repository `SKILL.md`, and the project license. It initializes a local Git
+baseline with command-scoped identity and disabled hooks. It never changes
+global Git configuration, writes to an implicit home directory, adds a
+remote, or launches an agent. The script refuses existing destinations and
+leaves partial output for inspection if preparation fails; retry with a new
+directory. No cleanup or overwrite command is provided.
+
+The script runs the baseline tests and records the real command, timestamps,
+exit code, Node version, HEAD, status, input hashes, and raw TAP in
+`.git/reuse-eval-baseline/`. For the dirty scenario, it then changes the
+working source without committing. For the timeout scenario, it records a
+real timed-out local Node process explicitly labeled as a lookup simulation.
+
+Give a fresh evaluating agent access only to the prepared directory, ask it
+to load that directory's `SKILL.md`, and supply its `TASK.md`. Do not give it
+`evals/reviewer.md`, this preparation script, prior reviewer conclusions, or
+other scenario inputs. Do not give it write access to the source repository.
+Use a fresh directory and context for each independent run.
+
+Available scenario IDs:
+
+- `01-local-take`
+- `02-small-edit`
+- `03-test-borrow`
+- `04-dirty-resume`
+- `05-optional-timeout`
+- `06-authority-resume`
+
+After the run, a separate reviewer uses [reviewer.md](reviewer.md), the diff,
+and actual command outputs. Record the model and host where available.
+Results from one agent, host, or model do not establish support for another.
+These task inputs exercise recovery behavior; a plain Skill cannot guarantee
+that a host exposes or intercepts every real context-compaction event.

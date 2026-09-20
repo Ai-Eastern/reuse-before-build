@@ -1,22 +1,16 @@
-# Blocked example: missing evidence
+# Blocked: required provenance is missing
+
+Illustrative scenario, not a record of a live repository lookup.
+
+**Request:** integrate a particular external image adapter. Local source and installed dependencies do not provide the required behavior.
 
 ## Reuse Decision
 
-Decision: Blocked
+- **Decision:** Blocked.
+- **Scope:** adopting the requested adapter.
+- **Evidence:** the required source and license cannot be inspected, and no authoritative alternative establishes them. Record the exact failed locations and actual tool errors in a real task; this example supplies none.
+- **Alternatives:** no verified substitute is available within the task's constraints.
+- **Verification:** integration has not been executed.
+- **Next:** obtain the missing source/license evidence or clarify the specific constraint. Continue independent, already-authorized preparation that does not require adopting the adapter.
 
-### Evidence
-
-- Project search: No local implementation of the requested image-processing adapter was found.
-- GitHub / official search: A candidate repository was found, but its source page and release metadata could not be fetched.
-- License: No authoritative license file was available. The repository hosting page alone is not license evidence.
-- Maintenance: Latest commit date could not be verified.
-- Compatibility: The candidate's supported runtime and API could not be verified.
-- Verification: No code was downloaded or executed.
-
-### Rationale
-
-The candidate may be useful, but the missing provenance, license, maintenance, and compatibility evidence prevents a safe Take or Borrow decision. Build is also premature because the external search was not completed successfully.
-
-### Next step
-
-Retry the authoritative source and package metadata in a network-enabled session. Do not begin implementation until the missing facts are verified or the user explicitly rules out external reuse.
+The candidate being hosted on GitHub would not establish permission to reuse it. If another candidate is sufficiently verified and permitted by the task, its adoption need not be blocked by this candidate's missing evidence. An optional lookup failure likewise does not invalidate a verified local solution.

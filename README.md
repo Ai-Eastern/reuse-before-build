@@ -1,120 +1,133 @@
 # reuse-before-build
 
-An evidence-based reuse decision gate for coding agents. It helps decide whether to Take, Borrow, Build, Block, or request human approval before creating another implementation.
+**Help your coding agent reuse working code, useful tests, and past engineering decisions before starting over.**
 
-It addresses the repeated “build it again” problem: duplicate project code, overlooked official solutions, incompatible dependencies, and avoidable license or maintenance risk. It is a decision gate, not a generic prompt, because it requires concrete searches and a traceable outcome before implementation.
+An Agent Skill that checks what already exists, weighs the evidence, and chooses **Take**, **Borrow**, or **Build**. When evidence or permission is missing, it names the gap. After a handoff or context compaction, it reconnects earlier decisions and verification to the current code.
 
-## Relationship to reuse-before-generate
+**One self-contained `SKILL.md`. No service or runtime dependency.**
 
-`reuse-before-build` is independent and complementary to [`reuse-before-generate`](https://github.com/aradar46/reuse-before-generate). They solve different parts of the same workflow:
+[中文](README.zh-CN.md) · [Quick start](#quick-start) · [Examples](#examples) · [Compatibility](docs/compatibility.md) · [Validation](docs/validation.md)
 
-| | reuse-before-generate | reuse-before-build |
-| --- | --- | --- |
-| Form | Runtime MCP tool | Agent Skill / decision workflow |
-| Main job | Find possible existing solutions | Evaluate evidence and choose an outcome |
-| Output | Candidate repositories or packages | Take / Borrow / Build / Blocked / Needs human approval |
-| Focus | Search across relevant registries | Provenance, license, maintenance, compatibility, fit, and verification |
+> **Development preview:** this checkout contains unpublished changes. Installing from GitHub currently retrieves the older public `main`, not this revision. Use the local checkout instructions below to preview these changes.
 
-Use them together when available: discover candidates first, then apply this Skill's evidence gate. No integration, shared code, or dependency between the projects is assumed.
+## What it helps with
 
-## Install
+| Your task | What the skill looks for |
+| --- | --- |
+| Add a feature | Existing modules, extension points, official solutions, and suitable libraries |
+| Add or fix tests | Existing fixtures, helpers, assertions, regression cases, and test commands |
+| Continue unfinished work | Relevant decisions, source references, and previous validation records; what has changed since they were recorded |
 
-The required file is `SKILL.md`; the examples are optional reading material. No runtime dependency or script is required.
+A past passing test is evidence about an earlier state. The skill checks whether it still applies and reruns the relevant check when needed. Recovery stays within the current project's engineering work.
 
-### Recommended: GitHub CLI
+A recorded run on the small synthetic fixture produced this result:
 
-Recent GitHub CLI versions can install Agent Skills for a selected host. From any terminal:
+```text
+Task: cover retry failure boundaries.
+Decision: Borrow the existing test suite.
+Change: add 2 cases; production code unchanged.
+Verification: 4 tests passed.
+```
+
+Inspect the [actual diff and replay evidence](docs/validation.md#inspect-the-behavior-evidence). This is one bounded evaluation, not a general success-rate claim.
+
+## Quick start
+
+### Preview this checkout
+
+Obtain the complete revised checkout. Open a terminal in a **separate project** where you want to use it, replace the source path below with the checkout's absolute path, and run:
 
 ```bash
-gh skill install Ai-Eastern/reuse-before-build --agent claude-code --scope user
+npx skills@1.7.0 add "<absolute-path-to-revised-checkout>" --skill reuse-before-build --agent codex --copy -y
 ```
 
-Replace `claude-code` with `codex` or `github-copilot` when needed. Use `gh skill install --help` to see the host names supported by your installed GitHub CLI.
+This installs into the current project. Do not run `add .` from the skill source repository: the installer can skip a copy when its destination is inside its source. See [local installation details](docs/compatibility.md#optional-installer).
 
-### Native installation
+The optional installer requires **Node.js >=22.20.0**; installation was checked in an isolated Windows environment with Node.js 24.18.0. Using the skill itself does not require Node.js. See [installation evidence and limits](docs/validation.md).
 
-#### GitHub Copilot CLI
+For the **currently published version**, run this from your target project:
 
 ```bash
-copilot skill add https://raw.githubusercontent.com/Ai-Eastern/reuse-before-build/main/SKILL.md
-copilot skill list
+npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
 
-#### Claude Code (PowerShell)
+For Claude Code, Copilot, Cursor, Gemini CLI, OpenCode, and Windsurf, see [host-specific paths and verification status](docs/compatibility.md). Prefer a project installation when trying the skill.
+
+### Without Node.js
+
+The agent only needs `SKILL.md`; keep `LICENSE` beside it when redistributing. From your target project, these commands create a Codex project installation. Replace the example source path with your revised checkout's location.
+
+**PowerShell**
 
 ```powershell
-$skillDir = Join-Path $HOME '.claude\skills\reuse-before-build'
+$skillSource = 'C:\path\to\reuse-before-build'
+$skillDir = Join-Path (Get-Location) '.agents/skills/reuse-before-build'
 New-Item -ItemType Directory -Force -Path $skillDir | Out-Null
-Invoke-WebRequest 'https://raw.githubusercontent.com/Ai-Eastern/reuse-before-build/main/SKILL.md' -OutFile (Join-Path $skillDir 'SKILL.md')
+Copy-Item -LiteralPath (Join-Path $skillSource 'SKILL.md'), (Join-Path $skillSource 'LICENSE') -Destination $skillDir
 ```
 
-Restart Claude Code, then ask it to use `reuse-before-build` on a non-trivial task.
+**POSIX shell**
 
-#### Codex (PowerShell)
-
-```powershell
-$codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $HOME '.codex' }
-$skillDir = Join-Path $codexRoot 'skills\reuse-before-build'
-New-Item -ItemType Directory -Force -Path $skillDir | Out-Null
-Invoke-WebRequest 'https://raw.githubusercontent.com/Ai-Eastern/reuse-before-build/main/SKILL.md' -OutFile (Join-Path $skillDir 'SKILL.md')
+```sh
+skill_source=/path/to/reuse-before-build
+mkdir -p .agents/skills/reuse-before-build
+cp "$skill_source/SKILL.md" "$skill_source/LICENSE" .agents/skills/reuse-before-build/
 ```
 
-Restart Codex and confirm that the Skill is listed or triggered by a non-trivial coding request.
+Examples, templates, and evaluation assets are optional; the skill does not need them to operate. See [manual installation and updates](docs/compatibility.md#manual-installation).
 
-### Manual installation
+### Try it
 
-Clone the repository, then copy the `reuse-before-build` folder into the skill directory used by your Agent. Keep `SKILL.md` at the root of that folder. The project examples and README do not need to be installed for the Skill to work.
+Open the target project in your agent, explicitly select or mention `reuse-before-build`, and send:
 
-### Verify the installation
+```text
+Use reuse-before-build for this task: add retry support to the existing HTTP client.
+First inspect the implementation, related tests, and relevant decision or
+validation records. Identify what can be reused and what needs fresh evidence.
+Return your reuse decision and the smallest next step before changing files.
+```
 
-- Confirm the installed folder contains `SKILL.md`.
-- Check that the YAML frontmatter contains `name: reuse-before-build`.
-- Ask the Agent to evaluate a task that could reuse an existing library or local module.
-- The response should contain `## Reuse Decision` and one of `Take`, `Borrow`, `Build`, `Blocked`, or `Needs human approval`.
+Replace the task with something relevant to your repository. A useful result cites actual files or sources, explains the choice, and identifies a focused verification step. Merely printing `Take` or `Build` does not demonstrate that the skill worked. If it does not load, follow the [discovery checks](docs/compatibility.md#troubleshooting).
 
-The workflow is standard-compatible and has been manually exercised in Codex, Claude Code, and GitHub Copilot CLI. The tests covered direct reuse, adaptation, new implementation, missing license evidence, approval-required risk, bounded edits, duplicate local work, and official examples. Claude Code produced the strongest evidence-backed results; Copilot CLI exposed network and instruction-following failure modes. Other agents may load it manually by attaching or pasting `SKILL.md`; only agents whose skill loaders recognize this format are considered verified. This is not a claim of support for every coding agent.
+Want a small practice project? Use the included [retry-service fixture](evals/fixtures/retry-service/README.md) and [prepare an isolated scenario](evals/README.md) for test reuse or task resumption. Its optional checks use Node.js and Git; they are not required to use the skill.
 
-## Workflow
+## What you get
 
-1. Read project rules, relevant source, tests, and manifests.
-2. Search the project for existing implementations and duplicates.
-3. For non-trivial work, search GitHub, official documentation, and package registries where relevant.
-4. Check provenance, version, license, maintenance, compatibility, integration cost, and verification evidence.
-5. Output one decision: `Take`, `Borrow`, `Build`, `Blocked`, or `Needs human approval`.
-6. Implement only after the evidence supports the decision.
+| Decision | Meaning |
+| --- | --- |
+| **Take** | Use an existing implementation or test asset directly |
+| **Borrow** | Adapt a useful pattern, with a clear adaptation boundary |
+| **Build** | Implement the smallest justified solution after checking reasonable reuse options |
+| **Blocked** | A fact needed for this decision is missing or contradictory |
+| **Needs human approval** | A known risk requires authority the agent does not have |
 
-External research is deliberately bounded: screen at most three candidates with metadata first, deep-read only the one or two strongest candidates, and stop when the evidence supports a decision or becomes insufficient. A cancelled or timed-out search is reported as interrupted, not converted into a decision.
+Search starts locally and expands only as the task needs. Small edits stay lightweight. Existing project records provide continuity; their claims must be checked against the current code and environment. The skill uses your agent's available file, search, and test tools.
 
-### Take
+## Examples
 
-Use an existing implementation when it already satisfies the requirements with acceptable evidence. Verify the source, version, license, compatibility, and focused behavior.
+These are **illustrative scenarios**, not claims that the described systems or tests were run:
 
-### Borrow
+- [Reuse an existing HTTP client](examples/take-example.md)
+- [Extend a local queue and its tests](examples/borrow-example.md)
+- [Build a missing domain predicate](examples/build-example.md)
+- [Handle missing evidence](examples/blocked-example.md)
+- [Identify approval-required risk](examples/needs-approval-example.md)
 
-Adapt a useful pattern when no direct fit exists. Name what is borrowed, what is not copied, and how local constraints change the design.
+These two guides point to the runnable fixture and recorded evaluations:
 
-### Build
+- [Reuse test assets](examples/test-reuse-example.md)
+- [Resume from engineering records](examples/resume-example.md)
 
-Create a new implementation only after local and relevant external searches show that Take and Borrow are not reasonable. Record rejected candidates and the smallest justified design.
+For runnable checks, observed results, and their limits, use the [validation guide](docs/validation.md). Host documentation, successful installation, and successful agent behavior are recorded separately.
 
-See [examples/take-example.md](examples/take-example.md), [examples/borrow-example.md](examples/borrow-example.md), and [examples/build-example.md](examples/build-example.md).
+## Scope and limits
 
-## Decision table
+This is an instruction-based workflow: compliance depends on the host and model. It does not add tools, enforce a runtime policy, or guarantee lower cost. External research needs whatever network or search access your agent normally uses. Evidence checks do not replace security or legal review.
 
-| Evidence | Decision | Action |
-| --- | --- | --- |
-| Direct fit, acceptable risk, verified | Take | Use and verify |
-| Useful pattern, local adaptation required | Borrow | Adapt with boundaries |
-| No reasonable fit after search | Build | Implement the smallest solution |
-| Missing or contradictory required evidence | Blocked | Stop and report |
-| Risk exceeds agent authority | Needs human approval | Stop and ask |
+The skill reuses and restores task-relevant engineering information. It does not index unrelated conversations or manage a global memory store. It preserves the user's task and existing authorization; installing it grants no additional permissions.
 
-If an external page cannot be fetched or a license, maintenance, provenance, or compatibility fact cannot be verified, stop at `Blocked`; do not fill the gap from memory or turn the failed search into `Build`.
+## Contributing and license
 
-## Limits
+Useful contributions include reproducible decision failures, installation fixes, and host validation records. Include the skill revision, host and model versions, operating system, task, expected behavior, and a sanitized result. Keep the core skill self-contained and host-neutral; provide evidence for compatibility claims.
 
-This Skill does not automatically copy third-party code, download repositories, provide legal advice, replace security review, replace TDD or ADR processes, or maintain a real-time compatibility database. License checks are evidence gathering, not legal approval. Small local edits can use a lightweight local-search path.
-
-## License and contribution
-
-MIT licensed. Contributions are welcome when they keep the workflow provider-neutral, concise, evidence-based, and useful across compatible Agent Skills runtimes. The canonical repository is the repository containing this file; if you redistribute it, preserve the MIT notice.
+[MIT](LICENSE). Preserve the copyright and license notice when redistributing.

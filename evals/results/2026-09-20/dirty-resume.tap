@@ -1,0 +1,36 @@
+TAP version 13
+# Subtest: returns the first successful result without another attempt
+ok 1 - returns the first successful result without another attempt
+  ---
+  duration_ms: 0.7671
+  type: 'test'
+  ...
+# Subtest: the default permits two failures before a successful third attempt
+not ok 2 - the default permits two failures before a successful third attempt
+  ---
+  duration_ms: 0.1677
+  type: 'test'
+  location: '<fixture>/test/retry.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: 'temporary failure'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    <fixture>/test/retry.test.mjs:20:28
+    retry (<fixture>/src/retry.mjs:9:20)
+    TestContext.<anonymous> (<fixture>/test/retry.test.mjs:18:24)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1325:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:911:18)
+    Test.postRun (node:internal/test_runner/test:1465:19)
+    Test.run (node:internal/test_runner/test:1390:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 1
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 82.7988
