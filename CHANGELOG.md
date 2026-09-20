@@ -2,6 +2,8 @@
 
 ## Unreleased — next minor release
 
+- Added distinguishable-input guidance for meaningful tests and an explicit provisional-candidate gate; recorded 17 GPT-5.6 Luna / medium runs, including initial failures, follow-ups, and the still-unreliable source/license inspection step.
+- Defined when to start, stop, and reopen candidate research; required direct reuse when existing assertions already cover the request.
 - Made architecture design and technology selection explicit entry points, with bounded GitHub and official-source discovery before selecting components.
 - Foregrounded external reuse in both READMEs and added an illustrative architecture workflow while retaining test reuse and task continuity.
 - Expanded reuse to test cases, fixtures, verification records, and evidence-backed decisions.
@@ -12,6 +14,7 @@
 - Added a runnable fixture, behavioral evaluation scenarios, and an optional checkpoint template.
 - Reworked English and Chinese onboarding and documented compatibility by evidence level.
 - Replaced the failing root-layout GitHub CLI recommendation with verified installation paths.
+- Clarified event-scoped external research and assertion-first test reuse, and recorded the bounded 2026-09-21 Luna search-timing evaluation without a universal causal or pass-rate claim.
 
 These changes are available on `main`. No tag or GitHub release is implied.
 

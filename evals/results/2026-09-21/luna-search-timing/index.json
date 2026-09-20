@@ -1,0 +1,186 @@
+[
+  {
+    "agent": "luna_small_control",
+    "case": "small-edit",
+    "arm": "control",
+    "changed_files": [
+      "README.md"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna_small_skill",
+    "case": "small-edit",
+    "arm": "skill",
+    "changed_files": [
+      "README.md"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna_covered_control",
+    "case": "covered-test",
+    "arm": "control",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_covered_skill",
+    "case": "covered-test",
+    "arm": "skill",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_gap_control",
+    "case": "test-gap",
+    "arm": "control",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_gap_skill",
+    "case": "test-gap",
+    "arm": "skill",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_failure_control",
+    "case": "local-failure",
+    "arm": "control",
+    "changed_files": [
+      "src/retry.mjs"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_failure_skill",
+    "case": "local-failure",
+    "arm": "skill",
+    "changed_files": [
+      "src/retry.mjs"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_resume_control",
+    "case": "unchanged-resume",
+    "arm": "control",
+    "changed_files": [],
+    "tool_calls": 3,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_resume_skill",
+    "case": "unchanged-resume",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_changed_control",
+    "case": "changed-requirement",
+    "arm": "control",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna_changed_skill",
+    "case": "changed-requirement",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [
+      3,
+      4
+    ],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna_covered_skill_v2",
+    "case": "covered-test",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 4,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_variant_control",
+    "case": "covered-variant",
+    "arm": "control",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_variant_skill_v2",
+    "case": "covered-variant",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_gap_skill_v3",
+    "case": "test-gap",
+    "arm": "skill",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna_changed_skill_v3",
+    "case": "changed-requirement",
+    "arm": "skill",
+    "changed_files": [
+      "context/design.md"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [
+      3
+    ],
+    "reviewer_exit": null
+  }
+]

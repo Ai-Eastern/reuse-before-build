@@ -1,0 +1,9 @@
+{
+  "purpose": "Reviewer-only mutation check; not a model trial and excluded from the 15-record count.",
+  "mutation": "retry retains the first caught error and throws it at the final attempt; attempt loop and call counts are unchanged.",
+  "source_sha256_before_mutation": "9E01F34637B70A59F157DF9D5FFC9A70B740466B09E1828902235F4EF91C46E8",
+  "mutated_source_sha256": "21A153C9131E713404112E6CCC5054B6D8F9FA18B91C0129B3C60D216C3CFD12",
+  "control": { "command": "node --test --test-reporter=tap control/test/retry.test.mjs", "exit_code": 1, "tests": 4, "pass": 3, "fail": 1, "failed_test": "throws the final error after exactly the configured attempts", "observed_error": "first failure" },
+  "skill": { "command": "node --test --test-reporter=tap skill/test/retry.test.mjs", "exit_code": 0, "tests": 4, "pass": 4, "fail": 0 },
+  "interpretation": "Control detects first-versus-final error identity; treatment misses the mutation because it throws the same finalError object on every attempt. Both preserve attempt count and zero-attempt behavior under the mutation."
+}

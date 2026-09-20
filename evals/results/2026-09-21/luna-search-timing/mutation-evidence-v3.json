@@ -1,0 +1,11 @@
+{
+  "purpose": "Reviewer-only mutation check for V3 test-gap treatment; excluded from model-run count.",
+  "source_test": "work/luna-timing-v3-20260921/test-gap/skill",
+  "source_sha256_before_mutation": "9E01F34637B70A59F157DF9D5FFC9A70B740466B09E1828902235F4EF91C46E8",
+  "test_sha256": "A5586A48E352C752B8C50AAA3E8CF826E42A41EFD5751C9EFAD8C81256D7054D",
+  "mutated_source_sha256": "21A153C9131E713404112E6CCC5054B6D8F9FA18B91C0129B3C60D216C3CFD12",
+  "mutation": "retry retains the first caught error and throws it at the final attempt; attempt loop and call counts are unchanged.",
+  "baseline": { "command": "node --test --test-reporter=tap test/retry.test.mjs", "exit_code": 0, "tests": 4, "pass": 4, "fail": 0 },
+  "mutated": { "command": "node --test --test-reporter=tap test/retry.test.mjs", "exit_code": 1, "tests": 4, "pass": 3, "fail": 1, "failed_test": "throws the last error after exhausting the configured attempts", "observed_actual": "first failure", "expected": "last failure" },
+  "interpretation": "V3 treatment detects the first-versus-last error mutation while preserving the other three tests; its baseline 4/4 matches the model claim."
+}

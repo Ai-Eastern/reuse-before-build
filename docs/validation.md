@@ -1,12 +1,12 @@
 # Validation and evidence
 
-The test-reuse and recovery evaluations below were recorded on **2026-09-20**
-for the earlier skill revision identified by its SHA-256. The **2026-09-21**
-revision makes architecture and external-project discovery explicit; those
-earlier runs have not been repeated against the new instructions.
-These observations do not imply a release tag or universal host compatibility.
+Evidence is tied to the evaluated Skill hash. This page retains the earlier
+2026-09-20 test/recovery runs, an earlier 2026-09-21 architecture run, and the
+new GPT-5.6 Luna / medium comparison. Follow-ups did not rerun every scenario
+on the final revision. These observations imply neither a release tag nor
+universal host compatibility.
 
-## Architecture discovery — 2026-09-21
+## Architecture discovery — 2026-09-21 (historical architecture revision)
 
 A fresh-context Codex desktop subagent explicitly loaded the architecture
 revision, identified by this `SKILL.md` SHA-256:
@@ -40,6 +40,31 @@ benchmark, or guarantee of a particular architectural choice.
 Both format validators, local documentation links, the unchanged fixture's
 two baseline tests, and six English/Chinese README views were also checked.
 Those are structural checks, not additional agent behavior evaluations.
+
+## Search timing and test reuse — 2026-09-21
+
+Seventeen fresh GPT-5.6 Luna / medium runs were verified against actual host
+runtime settings: six initial control/treatment pairs, three V2 follow-ups,
+and two V3 treatment-only follow-ups. The shared agent catalog means this
+compares the full Skill body with no full body, not a model without guidance.
+
+| Revision | Skill SHA-256 | Observations |
+| --- | --- | --- |
+| V1 | `591bb93753616250d04cd6635069015bb2f7ffa8a92e24154fda5482b4e1c355` | Both arms stayed local in five local scenarios. Both made a redundant coverage edit. Treatment searched after changed requirements but selected Borrow without source/license inspection. Its final-error test also failed to distinguish different errors. |
+| V2 | `9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4` | Original covered task and first-success transfer treatment runs reused tests without edits. Transfer control rewrote already-sufficient assertions. |
+| V3 (published with this report) | `a77d13420dddd2608d623941983c0b0e7dd5ab8dc9f7e44fa300d14425400534` | Test-gap follow-up used distinct errors and caught a reviewer-injected first-error defect. Architecture follow-up still skipped required source/license inspection despite the new explicit gate. |
+
+The V1 treatment's tests passed 4/4 even against a deliberately wrong
+first-error implementation. V3's tests passed 4/4 on the correct source and
+failed the relevant case on that mutant. Reviewer checks are separate from
+model trials. The other scenarios were not rerun on V3. Neither architecture
+trial validates package adoption or runtime integration. Do not infer a
+success rate, universal causal effect, or automatic activation.
+
+The [complete report](../evals/results/2026-09-21/luna-search-timing/REPORT.md)
+contains frozen instructions, input hashes, dispatches, observable actions,
+actual runtime settings, mutation receipts, and disclosed harness deviations.
+It preserves all runs, including failures; private reasoning is excluded.
 
 ## Earlier test and recovery evaluations — 2026-09-20
 
@@ -142,14 +167,13 @@ checkout or the distributed archive.
 ## CI and remaining coverage
 
 The [CI workflow](../.github/workflows/validate.yml) checks skill format,
-local links, the fixture, and recovery-scenario preparation. Action revisions
+local links, the fixture, recovery-scenario preparation, and paired timing inputs. Action revisions
 and the reference validator are pinned. Inspect [GitHub Actions runs](https://github.com/Ai-Eastern/reuse-before-build/actions/workflows/validate.yml)
-for the result associated with a particular commit. The local evaluation
-above predates the first remote run; local execution alone does not establish
-remote CI success.
+for the result associated with a particular commit. Local checks and model trials alone do not establish remote CI success.
 
-Behavior scenarios 01, 02, 05, and 06 have prepared inputs but were not run
-through fresh evaluating agents in this validation batch. The revised skill
+In the original six-scenario harness, scenarios 01, 02, 05, and 06 were not
+run through agents in the 2026-09-20 batch. The newer paired timing experiment
+uses separate scenario IDs and records its own executed set. The revised skill
 has not been behavior-tested in Claude Code, Copilot CLI, Cursor, Gemini
 CLI, OpenCode, or Windsurf. Automatic activation, real host compaction,
 cross-machine handoffs, and dynamic external-service checks remain outside

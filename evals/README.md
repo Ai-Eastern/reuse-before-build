@@ -1,5 +1,35 @@
 # Small behavior evaluations
 
+## Search-timing evaluation
+
+The current timing preparer requires Python 3.10+ and the standard library
+only. From the repository root, pass a **new absolute directory** whose parent
+already exists:
+
+```sh
+python evals/prepare-search-timing.py /absolute/existing-parent/luna-search-timing
+```
+
+PowerShell:
+
+```powershell
+python .\evals\prepare-search-timing.py 'D:\existing-work\luna-search-timing'
+```
+
+It creates exactly seven control/skill pairs, records shared inputs and the
+current `SKILL.md` hash, and launches no agents or model processes. Give each
+fresh model only its own workspace and `TASK.md`; treatment must load its
+local `SKILL.md`, while control must not load a Skill body. Use identical
+model/effort settings and permit public research in both arms. Keep the
+[reviewer rubric](search-timing-reviewer.md) away from the evaluated model.
+See the [recorded comparison](results/2026-09-21/luna-search-timing/REPORT.md)
+for dispatches and results; save new runs under a new dated location.
+The existing agent catalog is shared across arms, so the comparison is full
+Skill body versus no Skill body, not a no-guidance baseline.
+
+The six-scenario material below is historical and remains available for the
+earlier fixture evaluation.
+
 This directory contains one MIT project fixture, six agent task inputs, and
 a separate reviewer guide. It uses Node.js standard libraries and Git; it
 does not install dependencies or invoke a model CLI. It is a reproducible

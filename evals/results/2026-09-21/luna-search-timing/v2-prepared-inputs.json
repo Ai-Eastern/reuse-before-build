@@ -1,0 +1,221 @@
+{
+  "created_at_utc": "2026-09-20T16:38:04.222825+00:00",
+  "skill_sha256": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+  "cases": [
+    {
+      "id": "small-edit",
+      "task": "修正 README 中 staus 的拼写问题，仅处理这个文档问题。完成后说明改动和验证。",
+      "arms": {
+        "control": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\small-edit\\control",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "820c4fd75774c85512c2abb68eecf22b248145226db686f227d3b1c98f40d89d",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        },
+        "skill": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\small-edit\\skill",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "SKILL.md": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "820c4fd75774c85512c2abb68eecf22b248145226db686f227d3b1c98f40d89d",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        }
+      }
+    },
+    {
+      "id": "covered-test",
+      "task": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。",
+      "arms": {
+        "control": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\covered-test\\control",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "e2941b08b5864719198a4b8087376cd724f9d945c2dffa0ed24133e6017c9005",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        },
+        "skill": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\covered-test\\skill",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "SKILL.md": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "e2941b08b5864719198a4b8087376cd724f9d945c2dffa0ed24133e6017c9005",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        }
+      }
+    },
+    {
+      "id": "test-gap",
+      "task": "补齐 retry 的两个边界检查：所有尝试失败时应保留最后那个错误对象并停在配置次数；attempts 为 0 时应拒绝且不调用 operation。保持公共契约和生产代码不变，完成验证。",
+      "arms": {
+        "control": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\test-gap\\control",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "2a3808807256bc3a0bd979c322c682c3211641c409e78476d1bb24a53fa2c47d",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        },
+        "skill": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\test-gap\\skill",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "SKILL.md": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "2a3808807256bc3a0bd979c322c682c3211641c409e78476d1bb24a53fa2c47d",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        }
+      }
+    },
+    {
+      "id": "local-failure",
+      "task": "项目现有测试失败了。定位并修复回归，保持文档和测试定义的既有行为，完成验证。",
+      "arms": {
+        "control": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\local-failure\\control",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "src/retry.mjs": "1651368403705104195ab26ed6f6936786b8e3dd1e228d527f500240a445ca70",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "c93d6b1907b96fbd832d96f3e711f0b297275537ea94212aaa6b9f62000f76e6",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        },
+        "skill": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\local-failure\\skill",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "SKILL.md": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+            "src/retry.mjs": "1651368403705104195ab26ed6f6936786b8e3dd1e228d527f500240a445ca70",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "c93d6b1907b96fbd832d96f3e711f0b297275537ea94212aaa6b9f62000f76e6",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        }
+      }
+    },
+    {
+      "id": "unchanged-resume",
+      "task": "依据 context/checkpoint.md 接着完成这项任务，给出当前是否满足默认三次尝试要求的结论。本次只读，不修改项目文件。",
+      "arms": {
+        "control": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\unchanged-resume\\control",
+          "initial_hashes": {
+            "context/baseline.tap": "24dc9b2ef2646afd9704ffec44e98e782baeb76bf88c895426f94b28f3e1fac8",
+            "context/checkpoint.md": "28cd92684b7311a6e89853361312f74baf74bff115d82be53520fc5c292391e1",
+            "context/verification.json": "7a109e2a2fd1c19e452bc25d7fe6877a26fa0e9778899e4c4fa4d947e530dfa2",
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "79ed4dcb70382cd63c00b7aa80c053ca8712592e80eb008448d66767bb28049e",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        },
+        "skill": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\unchanged-resume\\skill",
+          "initial_hashes": {
+            "context/baseline.tap": "24dc9b2ef2646afd9704ffec44e98e782baeb76bf88c895426f94b28f3e1fac8",
+            "context/checkpoint.md": "28cd92684b7311a6e89853361312f74baf74bff115d82be53520fc5c292391e1",
+            "context/verification.json": "7a109e2a2fd1c19e452bc25d7fe6877a26fa0e9778899e4c4fa4d947e530dfa2",
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "SKILL.md": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "79ed4dcb70382cd63c00b7aa80c053ca8712592e80eb008448d66767bb28049e",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        }
+      }
+    },
+    {
+      "id": "changed-requirement",
+      "task": "继续这个项目，但需求已经改变：任务现在需要持久化、延迟执行、进程重启后恢复和多个 worker 消费。项目使用 Node.js 22，已有 PostgreSQL，不想再部署 Redis。请提出有依据的架构与组件选型，说明与旧决定的关系、可复用部分和待验证项。现在只做设计。",
+      "arms": {
+        "control": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\changed-requirement\\control",
+          "initial_hashes": {
+            "context/baseline.tap": "4ce56e42749325f78dd5d19df8e6728023d8b4bc689f3bb424915c05f5d37835",
+            "context/checkpoint.md": "28cd92684b7311a6e89853361312f74baf74bff115d82be53520fc5c292391e1",
+            "context/verification.json": "8646f2c97a01ee19449745a64a0c867e8a5f2f71a018b3624b9533268690f535",
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "8ec91b581b25e8bb536a6421e79ab951a666999697f64e208a1bae5dbc645035",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        },
+        "skill": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\changed-requirement\\skill",
+          "initial_hashes": {
+            "context/baseline.tap": "4ce56e42749325f78dd5d19df8e6728023d8b4bc689f3bb424915c05f5d37835",
+            "context/checkpoint.md": "28cd92684b7311a6e89853361312f74baf74bff115d82be53520fc5c292391e1",
+            "context/verification.json": "8646f2c97a01ee19449745a64a0c867e8a5f2f71a018b3624b9533268690f535",
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "SKILL.md": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "8ec91b581b25e8bb536a6421e79ab951a666999697f64e208a1bae5dbc645035",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        }
+      }
+    },
+    {
+      "id": "covered-variant",
+      "task": "给 retry 首次调用就成功时立即返回、不再调用 operation 的行为补足测试保障。给出可重复的验证结果，保持生产代码不变。",
+      "arms": {
+        "control": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\covered-variant\\control",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "dc364268a24dd651b44e13e3cebc0729e3c17613551e9d81974b9d69a9cc021b",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        },
+        "skill": {
+          "directory": "<task-workspace>\\work\\luna-timing-v2-20260921\\covered-variant\\skill",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "SKILL.md": "9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "TASK.md": "dc364268a24dd651b44e13e3cebc0729e3c17613551e9d81974b9d69a9cc021b",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "agent": "luna_variant_control",
+  "source_rollout_id": "01a0bfb0-cb4e-7bd0-a00d-3a8153989507",
+  "runtime_model": "gpt-5.6-luna",
+  "runtime_effort": "medium",
+  "batch": "luna-timing-v2-20260921",
+  "case": "covered-variant",
+  "arm": "control",
+  "skill_sha256": null,
+  "task": "给 retry 首次调用就成功时立即返回、不再调用 operation 的行为补足测试保障。给出可重复的验证结果，保持生产代码不变。\n",
+  "dispatch": {
+    "task_name": "luna_variant_control",
+    "fork_turns": "none",
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "medium",
+    "message": "gAAAAABqsAyAWdoOUfrgUCCq2_9riG32vp5aEp-_7f5Wg6T3IYBSAmN8zpAJUMROKF2tsLMFWtEmoccWY9ZsC3UUFfc4P3216H7Y_8GhfIYWfn7UxAi0XOOQKh_FgSVMQvfZwcA21TOOi8_FRCJwWdDzYh9ylN-ccT4E5miRVohIxAXDGF8TIsgK1tBVITUS_eZiYC5OgL0lO6dElxDRImNpvJWESZVrbWCdTXGUctpZg8aG0ZjDtpjyNsfSuMJLXGDfwQXr-SZCOJDcU9WGJIt_q4Zl7cadj9A_xMP0K8JXbR1Jz98bltGWSm08MVh9FrsDOxeTuZrqKu8H057qQWcTplED7IWoFouynj_qWSoB6L_qvBy1YMDVdYeUGC0YFzEhCg-q8dssPLu3ONfXAf-EE-qzv_VuSeJzAcKRvy16PRHxzi1gKS6R5TrLIJacG7nhpQnsWMkcRXjNNJ3MrZdvSs96wOrE0iCtmNTXQc0W2aRIgSHx9qktSQ58DwYMGWXarNsPYBhYIqGDm7PNRrh8CTqZhd2RiATEov49ZRUow7_Zy64yybsPDHDQUbKXUc3TnCQKle76I_hIYoDDQuquLVhyLzRn4nBpVHheJgsQBFzZhBF6BS4whEgV00HvU72MUAyUIHKojJ0tTNjQOUo7Dr_1R5iIEHyGtzQobUTnJ9979LMZoGQqoS6TdG8hnrGAlE1-GKGfz6BHIAQXjPzvnCIDlerLOtyizOZI7vU55_YLhO6CfP2EpBGb1WT1Pt6bnc8U04TMTFQRodPA07572xFiYltvfPlW_fctj-7bxx0GhIyGi9vC95WhUenJsAqOq-jEUOfpaLZnleVUGVxU3_fHS06L_rjEB5z-DXhIqitmm9VBL7hAvHbEbhXMSLWNnTwFW6QRsav150-NSb9Z2EmaJB32xdp__aZENJXrl1Bw8oDeys_Mw2T8WfS2IDzbNM6csSh1HBwULTEEOQbdA18rb9gqM0IXTH9z2hpsYRTwRws1Cf0WUAZbPjkD6pyj-7y7crfs6VPNzm-D73Emxh5aQ3NsbL9Tp2nAEDNJ0jXGl9aJirKZdq1msnkq8VWHN67AXeqhbNtawM_yy46yDmK-oOKBySyr6WSSGArVHzCxx4nUo8z2_nVTu6_vz5oMW5ryOMVc"
+  },
+  "runtime_settings": [
+    {
+      "timestamp": "2026-09-20T16:40:32.815Z",
+      "model": "gpt-5.6-luna",
+      "effort": "medium"
+    }
+  ],
+  "actions": [
+    {
+      "timestamp": "2026-09-20T16:40:37.897Z",
+      "payload": {
+        "type": "custom_tool_call",
+        "id": "ctc_0f9a8cb7410f55ab016ab00c86f80087d09e8f2f800457b755",
+        "status": "completed",
+        "call_id": "call_FHQizaRRDG9o1pO8n6GHcLVi",
+        "name": "exec",
+        "input": "const r = await tools.exec_command({cmd:\"Get-ChildItem -Force; Write-Output '--- TASK.md ---'; Get-Content -Raw TASK.md\",\"workdir\":\"<workspace>\",\"yield_time_ms\":10000,\"max_output_tokens\":12000}); text(r.output);\n"
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:40:38.272Z",
+      "payload": {
+        "type": "custom_tool_call_output",
+        "id": "ctco_01a0bfb0-ec80-73f2-85a3-558c9228b348",
+        "call_id": "call_FHQizaRRDG9o1pO8n6GHcLVi",
+        "output": [
+          {
+            "type": "input_text",
+            "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+          },
+          {
+            "type": "input_text",
+            "text": "\r\n    Directory: <task-workspace>\\work\\luna-timing-v2-20260921\\cov\r\nered-variant\\control\r\n\r\nMode                 LastWriteTime         Length Name\r\n----                 -------------         ------ ----\r\nd----           2026/9/20    17:59                src\r\nd----           2026/9/20    17:59                test\r\n-a---           2026/9/20    17:34           1088 LICENSE\r\n-a---           2026/9/20    17:59            929 README.md\r\n-a---           2026/9/21     0:40            164 TASK.md\r\n--- TASK.md ---\r\n给 retry 首次调用就成功时立即返回、不再调用 operation 的行为补足测试保障。给出可重复的验证结果，保持生产代码不变。\r\n\r\n\r\n"
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:40:43.318Z",
+      "payload": {
+        "type": "custom_tool_call",
+        "id": "ctc_0f9a8cb7410f55ab016ab00c8b175887d0a443956e115bf039",
+        "status": "completed",
+        "call_id": "call_Y12HiPUA7hRmwrCPnXngleZt",
+        "name": "exec",
+        "input": "const r = await tools.exec_command({cmd:\"rg --files; Write-Output '--- README ---'; Get-Content -Raw README.md; Write-Output '--- source ---'; Get-ChildItem src -Recurse | ForEach-Object { Write-Output ('### '+$_.FullName); Get-Content -Raw $_.FullName }; Write-Output '--- tests ---'; Get-ChildItem test -Recurse | ForEach-Object { Write-Output ('### '+$_.FullName); Get-Content -Raw $_.FullName }\",\"workdir\":\"<workspace>\",\"yield_time_ms\":10000,\"max_output_tokens\":20000}); text(r.output);\n"
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:40:43.707Z",
+      "payload": {
+        "type": "custom_tool_call_output",
+        "id": "ctco_01a0bfb1-01bb-7340-af01-4690dc31f29c",
+        "call_id": "call_Y12HiPUA7hRmwrCPnXngleZt",
+        "output": [
+          {
+            "type": "input_text",
+            "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+          },
+          {
+            "type": "input_text",
+            "text": "test\\retry.test.mjs\nTASK.md\nsrc\\status-service.mjs\nsrc\\retry.mjs\nREADME.md\nLICENSE\n--- README ---\r\n# Retry service fixture\n\nThis deliberately small project belongs to Reuse Before Build and uses its\nMIT license. It has no package dependencies. Use a maintained Node.js release\nwith the built-in test runner; no package installation is needed.\n\nRun the existing checks from this directory:\n\n```sh\nnode --test\n```\n\n`src/retry.mjs` exports `retry(operation, { attempts = 3 })`. It passes a\none-based attempt number to the operation, retries failures up to the limit,\nand throws the final error when all attempts fail. An invalid attempt limit\nrejects without invoking the operation.\n\n`src/status-service.mjs` exports `fetchStatus(readStatus)`. It currently calls\nthe supplied asynchronous reader once. Its reader takes no arguments.\n\nThe existing tests cover an immediate success and a third-attempt success.\nThey do not claim to cover every boundary or the service integration.\n\nThe service returns a staus value from its reader.\n\r\n--- source ---\r\n### <workspace>\\src\\retry.mjs\r\n// SPDX-License-Identifier: MIT\nexport async function retry(operation, { attempts = 3 } = {}) {\n  if (!Number.isInteger(attempts) || attempts < 1) {\n    throw new RangeError('attempts must be a positive integer');\n  }\n\n  for (let attempt = 1; attempt <= attempts; attempt += 1) {\n    try {\n      return await operation(attempt);\n    } catch (error) {\n      if (attempt === attempts) throw error;\n    }\n  }\n}\n\r\n### <workspace>\\src\\status-service.mjs\r\n// SPDX-License-Identifier: MIT\nexport async function fetchStatus(readStatus) {\n  return readStatus();\n}\n\r\n--- tests ---\r\n### <workspace>\\test\\retry.test.mjs\r\n// SPDX-License-Identifier: MIT\nimport assert from 'node:assert/strict';\nimport test from 'node:test';\nimport { retry } from '../src/retry.mjs';\n\ntest('returns the first successful result without another attempt', async () => {\n  const seen = [];\n  const result = await retry(async (attempt) => {\n    seen.push(attempt);\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.deepEqual(seen, [1]);\n});\n\ntest('the default permits two failures before a successful third attempt', async () => {\n  const seen = [];\n  const result = await retry(async (attempt) => {\n    seen.push(attempt);\n    if (attempt < 3) throw new Error('temporary failure');\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.deepEqual(seen, [1, 2, 3]);\n});\n\r\n"
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:40:48.938Z",
+      "payload": {
+        "type": "custom_tool_call",
+        "id": "ctc_0f9a8cb7410f55ab016ab00c923b8c87d0813c1a23ce03251f",
+        "status": "completed",
+        "call_id": "call_qVHahZ2W0Too73A6qwuYXRax",
+        "name": "exec",
+        "input": "const r = await tools.exec_command({cmd:\"git status --short; node --test\",\"workdir\":\"<workspace>\",\"yield_time_ms\":10000,\"max_output_tokens\":12000}); text(r.output);\n"
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:40:49.418Z",
+      "payload": {
+        "type": "custom_tool_call_output",
+        "id": "ctco_01a0bfb1-180a-78f0-954f-6ca0672744bd",
+        "call_id": "call_qVHahZ2W0Too73A6qwuYXRax",
+        "output": [
+          {
+            "type": "input_text",
+            "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+          },
+          {
+            "type": "input_text",
+            "text": "fatal: not a git repository (or any of the parent directories): .git\n✔ returns the first successful result without another attempt (0.7979ms)\n✔ the default permits two failures before a successful third attempt (0.1622ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 79.4697\n"
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:41:00.927Z",
+      "payload": {
+        "type": "custom_tool_call",
+        "id": "ctc_0f9a8cb7410f55ab016ab00c9bfe1887d08de10f804fd74b22",
+        "status": "completed",
+        "call_id": "call_05MnzwCJZVR1ONNOKd88rAmU",
+        "name": "exec",
+        "input": "const patch = \"*** Begin Patch\\n*** Update File: <workspace>\\\\test\\\\retry.test.mjs\\n@@\\n test('returns the first successful result without another attempt', async () => {\\n-  const seen = [];\\n+  let calls = 0;\\n   const result = await retry(async (attempt) => {\\n-    seen.push(attempt);\\n+    calls += 1;\\n+    assert.equal(attempt, 1);\\n+    assert.equal(calls, 1);\\n     return 'ready';\\n   });\\n   assert.equal(result, 'ready');\\n-  assert.deepEqual(seen, [1]);\\n+  assert.equal(calls, 1);\\n });\\n*** End Patch\";\ntext(await tools.apply_patch(patch));\n"
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:41:01.004Z",
+      "payload": {
+        "type": "custom_tool_call_output",
+        "id": "ctco_01a0bfb1-454c-7980-9358-dbd73260db29",
+        "call_id": "call_05MnzwCJZVR1ONNOKd88rAmU",
+        "output": [
+          {
+            "type": "input_text",
+            "text": "Script completed\nWall time 0.0 seconds\nOutput:\n"
+          },
+          {
+            "type": "input_text",
+            "text": "{}"
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:41:07.421Z",
+      "payload": {
+        "type": "custom_tool_call",
+        "id": "ctc_0f9a8cb7410f55ab016ab00ca2408c87d0a40ca071ecef1a3c",
+        "status": "completed",
+        "call_id": "call_gEVNERRsQFcbk54DgkruqiKb",
+        "name": "exec",
+        "input": "const results = await Promise.all([\n  tools.exec_command({cmd:\"node --test\",\"workdir\":\"<workspace>\",\"yield_time_ms\":10000,\"max_output_tokens\":8000}),\n  tools.exec_command({cmd:\"node --test\",\"workdir\":\"<workspace>\",\"yield_time_ms\":10000,\"max_output_tokens\":8000}),\n  tools.exec_command({cmd:\"Get-Content -Raw test\\\\retry.test.mjs\",\"workdir\":\"<workspace>\",\"yield_time_ms\":10000,\"max_output_tokens\":8000})\n]);\nfor (const r of results) text(r.output);\n"
+      }
+    },
+    {
+      "timestamp": "2026-09-20T16:41:07.897Z",
+      "payload": {
+        "type": "custom_tool_call_output",
+        "id": "ctco_01a0bfb1-6039-7680-b09b-2094ac0b3141",
+        "call_id": "call_gEVNERRsQFcbk54DgkruqiKb",
+        "output": [
+          {
+            "type": "input_text",
+            "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+          },
+          {
+            "type": "input_text",
+            "text": "✔ returns the first successful result without another attempt (0.4559ms)\n✔ the default permits two failures before a successful third attempt (0.5528ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 95.6867\n"
+          },
+          {
+            "type": "input_text",
+            "text": "✔ returns the first successful result without another attempt (0.4659ms)\n✔ the default permits two failures before a successful third attempt (0.5336ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 95.24\n"
+          },
+          {
+            "type": "input_text",
+            "text": "// SPDX-License-Identifier: MIT\nimport assert from 'node:assert/strict';\nimport test from 'node:test';\nimport { retry } from '../src/retry.mjs';\n\ntest('returns the first successful result without another attempt', async () => {\n  let calls = 0;\n  const result = await retry(async (attempt) => {\n    calls += 1;\n    assert.equal(attempt, 1);\n    assert.equal(calls, 1);\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.equal(calls, 1);\n});\n\ntest('the default permits two failures before a successful third attempt', async () => {\n  const seen = [];\n  const result = await retry(async (attempt) => {\n    seen.push(attempt);\n    if (attempt < 3) throw new Error('temporary failure');\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.deepEqual(seen, [1, 2, 3]);\n});\n\r\n"
+          }
+        ]
+      }
+    }
+  ],
+  "final_answer": "已完成：仅修改 `test/retry.test.mjs`，强化首次成功场景，明确断言：\n\n- 首次调用参数为 `1`\n- operation 只调用一次\n- retry 返回首次成功结果\n\n生产代码未修改。已连续运行两次 `node --test`，两次均为 2/2 通过。",
+  "initial_hashes": {
+    "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+    "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+    "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+    "TASK.md": "dc364268a24dd651b44e13e3cebc0729e3c17613551e9d81974b9d69a9cc021b",
+    "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+  },
+  "final_hashes": {
+    "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+    "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+    "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+    "TASK.md": "dc364268a24dd651b44e13e3cebc0729e3c17613551e9d81974b9d69a9cc021b",
+    "test/retry.test.mjs": "63215e8e7f3a72cce74bf7f4d9f6d48e83576dcaee07f5126eb8b36fe1c2336b"
+  },
+  "changed_files": [
+    "test/retry.test.mjs"
+  ],
+  "file_changes": {
+    "test/retry.test.mjs": "// SPDX-License-Identifier: MIT\nimport assert from 'node:assert/strict';\nimport test from 'node:test';\nimport { retry } from '../src/retry.mjs';\n\ntest('returns the first successful result without another attempt', async () => {\n  let calls = 0;\n  const result = await retry(async (attempt) => {\n    calls += 1;\n    assert.equal(attempt, 1);\n    assert.equal(calls, 1);\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.equal(calls, 1);\n});\n\ntest('the default permits two failures before a successful third attempt', async () => {\n  const seen = [];\n  const result = await retry(async (attempt) => {\n    seen.push(attempt);\n    if (attempt < 3) throw new Error('temporary failure');\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.deepEqual(seen, [1, 2, 3]);\n});\n"
+  },
+  "telemetry_scope": "Host-recorded tool calls/results; not a network packet audit. Private reasoning and system/developer messages excluded.",
+  "reviewer_replay": {
+    "command": "node --test --test-reporter=tap",
+    "exit_code": 0,
+    "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.4671\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.5212\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 80.6854\n",
+    "stderr": ""
+  }
+}

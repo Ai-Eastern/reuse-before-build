@@ -34,6 +34,8 @@ jobs:
         run: node --test
       - name: Prepare a reproducible recovery scenario
         run: node evals/prepare.mjs 04-dirty-resume "$RUNNER_TEMP/reuse-dirty-eval"
+      - name: Prepare paired search-timing inputs
+        run: python evals/prepare-search-timing.py "$RUNNER_TEMP/reuse-timing-eval"
 
 # These are format, documentation, fixture, and preparation checks.
 # They do not run an agent or establish provider compatibility.

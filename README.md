@@ -97,6 +97,8 @@ The response should cite actual files or sources and explain its choice. See [lo
 
 Search starts with local code and tests, then standard library or platform capabilities, installed dependencies, and external candidates when needed. For architecture or a new project's stack, a material gap can lead to discovery on GitHub and in official repositories before committing to components and boundaries. Inspect the strongest candidates' code and contracts; a README claim or search snippet does not establish fit.
 
+Research is event-scoped: an unresolved capability or compatibility gap can open external research, while a verified local fit closes it. Read the existing runner, actual assertions, fixtures, and exercised code before adding tests. An error, a new development phase, or a new session alone does not trigger a new survey.
+
 Stop when the evidence is sufficient. Internet research is unnecessary when existing assets meet the need, and must respect user restrictions. External discovery depends on the host's existing search tools and network access; the skill provides neither. Small edits get a brief local check.
 
 | Decision | What happens next |
@@ -115,9 +117,11 @@ On resumption, check that record against the current request and workspace. Keep
 
 ## Recorded results
 
-**Architecture discovery — 2026-09-21, current instructions.** A fresh-context agent explicitly loaded the skill to design a Node.js/PostgreSQL job service without adding Redis. It screened three candidates, inspected two in depth, and proposed component boundaries with pinned source references and planned integration checks. It installed no dependencies and ran no runtime tests. Inspect the [design](evals/results/2026-09-21/architecture-result.md), [sources](evals/results/2026-09-21/architecture-sources.json), and [review receipt](evals/results/2026-09-21/architecture-review.json). This is one source-backed proposal, not a verified deployment.
+**Search timing and test reuse — GPT-5.6 Luna / medium.** [17 recorded runs](evals/results/2026-09-21/luna-search-timing/REPORT.md) include controls and follow-ups. Stronger rules helped the model reuse sufficient tests without edits and write an assertion that caught a deliberately wrong implementation. Changed requirements prompted external research after local inspection. Candidate source/license inspection still failed in both architecture trials. The report preserves failures and revision hashes; this is a small exploratory comparison, not a success-rate claim.
 
-Two separate fresh-context runs explicitly loaded the **prior revision (2026-09-20)** on a small synthetic retry-service fixture. These two tasks have not been rerun with the current instructions:
+**Architecture discovery — 2026-09-21, architecture revision (historical).** A fresh-context agent explicitly loaded that revision to design a Node.js/PostgreSQL job service without adding Redis. It screened three candidates, inspected two in depth, and proposed component boundaries with pinned source references and planned integration checks. It installed no dependencies and ran no runtime tests. Inspect the [design](evals/results/2026-09-21/architecture-result.md), [sources](evals/results/2026-09-21/architecture-sources.json), and [review receipt](evals/results/2026-09-21/architecture-review.json). This is one source-backed proposal, not a verified deployment.
+
+Two separate fresh-context runs explicitly loaded the **prior revision (2026-09-20)** on a small synthetic retry-service fixture. These records apply to that earlier Skill hash:
 
 | Scenario | Observed result | Evidence |
 | --- | --- | --- |
