@@ -27,24 +27,24 @@
 
 ## 快速开始
 
-> **开发预览：** 此修订尚未推送至公开 `main`。试用本轮改造，请从干净的修订后工作副本或提供的源码包安装。
-
-在**另一个需要使用 Skill 的项目**中打开终端，替换来源路径后执行：
+在**需要使用 Skill 的项目**中打开终端，执行：
 
 ```bash
-npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-build --agent codex --copy -y
+npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
 
 可选安装器要求 **Node.js ≥22.20.0**，Skill 本身不需要。也可以手动将 `SKILL.md` 和 `LICENSE` 放到 Codex 项目的 `.agents/skills/reuse-before-build/`；详见[复制命令与其他工具目录](docs/compatibility.md#manual-installation)。
 
 <details>
-<summary>安装当前已公开的 GitHub 版本</summary>
+<summary>从本地工作副本安装</summary>
 
-以下命令取得的是较早的公开版本，不含本预览的改造：
+使用干净的工作副本或源码包。在另一个需要使用 Skill 的项目中，替换来源路径后执行：
 
 ```bash
-npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
+npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-build --agent codex --copy -y
 ```
+
+不要在 Skill 源仓库内执行 `add .`，详见[本地安装说明](docs/compatibility.md#optional-installer)。
 
 </details>
 

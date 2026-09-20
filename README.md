@@ -27,24 +27,24 @@ An Agent Skill that helps coding agents find existing work, check whether it fit
 
 ## Quick start
 
-> **Development preview:** this revision is not yet on public `main`. To try these changes, install from a clean revised checkout or the supplied source archive.
-
-From a **separate project** where you want to use the skill, replace the source path and run:
+From the **project where you want to use the skill**, run:
 
 ```bash
-npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-build --agent codex --copy -y
+npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
 
 The optional installer needs **Node.js ≥22.20.0**. The skill itself does not. Prefer a manual copy? Put `SKILL.md` and `LICENSE` in `.agents/skills/reuse-before-build/` for Codex; see [copy commands and other host paths](docs/compatibility.md#manual-installation).
 
 <details>
-<summary>Install the currently published GitHub version</summary>
+<summary>Install from a local checkout</summary>
 
-This retrieves the older public version, without the changes in this preview:
+Use a clean checkout or source archive. From a separate consuming project, replace the source path and run:
 
 ```bash
-npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
+npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-build --agent codex --copy -y
 ```
+
+Do not run `add .` inside the skill source repository. See [local installation details](docs/compatibility.md#optional-installer).
 
 </details>
 

@@ -1,8 +1,8 @@
 # Validation and evidence
 
-Checked on **2026-09-20**. This is an unreleased working revision based on
-`1680f06eac44efe9d80c4ce26b71ce711774fb17`. No release tag, remote CI result,
-or universal host compatibility is implied.
+Local evaluation recorded on **2026-09-20**, for the skill revision identified
+by its SHA-256 below. These observations do not imply a release tag,
+a remote CI result, or universal host compatibility.
 
 The evaluated `SKILL.md` SHA-256 is:
 
@@ -104,9 +104,10 @@ checkout or the distributed archive.
 
 The [CI workflow](../.github/workflows/validate.yml) checks skill format,
 local links, the fixture, and recovery-scenario preparation. Action revisions
-and the reference validator are pinned. The workflow has not run on GitHub
-for this unpublished change; local execution does not establish remote CI
-success.
+and the reference validator are pinned. Inspect [GitHub Actions runs](https://github.com/Ai-Eastern/reuse-before-build/actions/workflows/validate.yml)
+for the result associated with a particular commit. The local evaluation
+above predates the first remote run; local execution alone does not establish
+remote CI success.
 
 Behavior scenarios 01, 02, 05, and 06 have prepared inputs but were not run
 through fresh evaluating agents in this validation batch. The revised skill

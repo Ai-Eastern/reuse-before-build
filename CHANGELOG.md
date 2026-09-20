@@ -11,7 +11,7 @@
 - Reworked English and Chinese onboarding and documented compatibility by evidence level.
 - Replaced the failing root-layout GitHub CLI recommendation with verified installation paths.
 
-These changes are local/unreleased until published. No tag or GitHub release is implied.
+These changes are available on `main`. No tag or GitHub release is implied.
 
 ## 0.1.1 - 2026-08-17
 

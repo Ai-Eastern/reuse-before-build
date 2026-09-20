@@ -36,7 +36,13 @@ The previous README reported manual exercises in Codex, Claude Code, and GitHub 
 
 The examples pin [Vercel's skills CLI 1.7.0](https://github.com/vercel-labs/skills/tree/v1.7.0). Its [package manifest](https://github.com/vercel-labs/skills/blob/v1.7.0/package.json) requires **Node.js >=22.20.0**. That requirement belongs to the optional installer, not to `reuse-before-build`.
 
-For this unpublished revision, obtain the complete revised checkout. Run the following from a **separate consuming project**, replacing the source path with the absolute path to that checkout:
+To install from GitHub, run from your target project:
+
+```bash
+npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
+```
+
+For a local source installation, use a clean checkout or source archive. Run the following from a **separate consuming project**, replacing the source path with the absolute path to that checkout:
 
 **PowerShell**
 
@@ -53,12 +59,6 @@ npx skills@1.7.0 add "$skill_source" --skill reuse-before-build --agent codex --
 ```
 
 Do not run `add .` in the skill source checkout. In CLI 1.7.0, a destination inside the source can produce a skipped copy even when the process exits successfully. Inspect the installed files rather than relying on exit status alone. See the [installer's overlap handling](https://github.com/vercel-labs/skills/blob/v1.7.0/src/installer.ts) and the [local validation record](validation.md).
-
-For the older, currently published GitHub version, run from your target project:
-
-```bash
-npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
-```
 
 These commands use project scope and copy files. They do not request a global installation. Consult the pinned installer's documentation or `--help` for other agents; its supported-agent list does not imply this skill was behavior-tested on each agent. Package-manager caches may still be written outside the project as part of normal `npx` operation.
 
