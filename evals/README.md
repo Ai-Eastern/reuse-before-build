@@ -42,6 +42,27 @@ its vendored source is unavailable. Keep the reviewer criteria away from the
 agents. A correctly unresolved adoption decision is distinct from verified
 adoption. This case does not measure real provider compatibility.
 
+## Returned-content comparison
+
+Prepare four offline inputs (previous/current full Skills, headers-only/full
+responses) without launching models:
+
+```sh
+python evals/prepare-content-cases.py /absolute/existing-parent/content-run evals/results/2026-09-26/luna6-high/skill-v7.md
+```
+
+Only the response bodies differ between cases; both contain the same source
+and a manifest declaring MIT. Evaluate a supplied snapshot in a hypothetical
+design exercise, separately from real-world package adoption. Use the
+[reviewer criteria](evidence-gate-reviewer.md), kept outside agent contexts.
+Preparation/CI checks do not grade model answers. Preserve exact Skill/input
+hashes and raw observable results for both arms.
+
+The [2026-09-26 returned-content report](results/2026-09-26/luna6-content/REPORT.md)
+records ten fresh GPT-6 Luna / high runs, including the original scope-confounded
+positive cases and a separate clarified pair. Both Skill versions passed the
+focused content checks; no causal improvement or live-research result follows.
+
 ## Search-timing evaluation
 
 The current timing preparer requires Python 3.10+ and the standard library

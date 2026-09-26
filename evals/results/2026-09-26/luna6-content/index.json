@@ -1,0 +1,104 @@
+[
+  {
+    "agent": "luna6_content_v7_a",
+    "case": "receipt-a",
+    "arm": "control",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_content_v8_a",
+    "case": "receipt-a",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_content_v7_b",
+    "case": "receipt-b",
+    "arm": "control",
+    "changed_files": [],
+    "tool_calls": 4,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_content_v8_b",
+    "case": "receipt-b",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 3,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_snapshot_a_v8",
+    "case": "snapshot-a",
+    "arm": "skill",
+    "changed_files": [
+      "design.md"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_snapshot_b_v8",
+    "case": "snapshot-b",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 4,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_covered_v8",
+    "case": "covered-test",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "luna6_revision_v8",
+    "case": "revision-map",
+    "arm": "skill",
+    "changed_files": [
+      "DECISION.md"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_content_scoped_v7_b",
+    "case": "receipt-b",
+    "arm": "control",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "luna6_content_scoped_v8_b",
+    "case": "receipt-b",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 3,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  }
+]

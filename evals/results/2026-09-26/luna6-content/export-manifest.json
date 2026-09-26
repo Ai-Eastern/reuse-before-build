@@ -1,0 +1,98 @@
+{
+  "completed_model_runs": 10,
+  "runs_by_skill": {
+    "v7": 3,
+    "v8": 7
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "runtime_source": "Actual host turn_context events checked for every exported turn.",
+  "preparation_source_sha256_at_export": {
+    "evals/prepare-content-cases.py": "c20fe5c819e73142096eb464d7d5dfb6346d40630a47ffdf2434ce5016843291",
+    "evals/prepare-evidence-gate.py": "776b3dd286e64cea9f19c1bc95ff22aab16431fee9117bbdc679554e180480c4",
+    "evals/prepare-search-timing.py": "3bdfa507b515968f65836c1afe54aa2c8dda22be9d4c08ebc4d2b9b4d0f06fb8",
+    "evals/prepare-revision-case.py": "e41c1980ad48758356e41b98e333d89e9babc227caebab3e49fa4588942529e5"
+  },
+  "scheduled_runs": {
+    "luna6_content_v7_a": [
+      "content-v8-20260926",
+      "receipt-a",
+      "control"
+    ],
+    "luna6_content_v8_a": [
+      "content-v8-20260926",
+      "receipt-a",
+      "skill"
+    ],
+    "luna6_content_v7_b": [
+      "content-v8-20260926",
+      "receipt-b",
+      "control"
+    ],
+    "luna6_content_v8_b": [
+      "content-v8-20260926",
+      "receipt-b",
+      "skill"
+    ],
+    "luna6_snapshot_a_v8": [
+      "luna6-v8-20260926",
+      "snapshot-a",
+      "skill"
+    ],
+    "luna6_snapshot_b_v8": [
+      "luna6-v8-20260926",
+      "snapshot-b",
+      "skill"
+    ],
+    "luna6_covered_v8": [
+      "luna6-v8-20260926",
+      "covered-test",
+      "skill"
+    ],
+    "luna6_revision_v8": [
+      "luna6-revision-v8-20260926",
+      "revision-map",
+      "skill"
+    ],
+    "luna6_content_scoped_v7_b": [
+      "content-v8-scoped-20260926",
+      "receipt-b",
+      "control"
+    ],
+    "luna6_content_scoped_v8_b": [
+      "content-v8-scoped-20260926",
+      "receipt-b",
+      "skill"
+    ]
+  },
+  "coverage_note": "Only scheduled_runs were launched. Other helper-prepared inputs were not scheduled. No live architecture research was rerun on V8.",
+  "transformations": [
+    "Exports contain dispatches, observable tool calls/results, user-facing final answers and file changes only.",
+    "Private reasoning, system/developer messages, host tool descriptions and internal chat metadata are excluded.",
+    "Local workspace paths are normalized and export files use LF; runtime input hashes preserve their original bytes.",
+    "All scenarios were offline. Saved simulated responses are fixture data, not real web retrievals.",
+    "Independent review and test replays are not model trials."
+  ],
+  "files_sha256": {
+    "index.json": "81fa2a95cd7296c4e490adc35ba0fa1bf0e00f7f1210d6e8e9967f1f6059ec47",
+    "initial-prepared-inputs.json": "227919fa0785ce4362096e7af2cdb0b8d30bfc538c7b7eb8e00945cc601f7de8",
+    "initial-preparer.py.txt": "eb97134f746a1ce08f61652f429419ea1a7a698e075f1a788e7ced4a7b2e368e",
+    "luna6_content_scoped_v7_b.json": "af5525c60eecfef077d0884329a81c9325823638004c9e05bd3775b69c33531a",
+    "luna6_content_scoped_v8_b.json": "aa7693817603857bc5a6994ad15203faec6720adb98448dc08fe47dc30140716",
+    "luna6_content_v7_a.json": "ebf5541319667181da1da51a30fccaa2d67c6e97bc16e4a0c6b5ab88da825fac",
+    "luna6_content_v7_b.json": "6578fb5352bde4177fa84af0a0d323da27fd313d1ac916294fb13f82e255cac3",
+    "luna6_content_v8_a.json": "4fd75491e5a16a2ad53ce7d4de84d65ed609d7e4df3267a10b35870a55138db6",
+    "luna6_content_v8_b.json": "49ea4b32762fac2325563144e8d24743b578a5279473bb746fdf546e85950fda",
+    "luna6_covered_v8.json": "f13959e9d30ec0471a9c59dca4d2911712f2249b2575b49ca8541457f0ddb5c1",
+    "luna6_revision_v8.json": "fb29c924fdb553d180b200f8cff14d6d319c5ec3f37d39d71a04eb2c2a22c881",
+    "luna6_snapshot_a_v8.json": "a98352f8fa37e3805bbf8401112604efc490998f5765ca10f22d4c51089bcbc2",
+    "luna6_snapshot_b_v8.json": "75d72c06dd8c03c71cca3c691ae842d42498a63d4cd66412f4507e5bf51d9bb6",
+    "regression-prepared-inputs.json": "42bea9ce1930d60161d81f74687f3832359c62682974d81d39e3ac99adc6bc7d",
+    "REPORT.md": "cd312ce267ddb215126ba29645829e0e711505ec5786b5a5fd17f468d56fcb63",
+    "review-assessment.json": "970692b3c0654a871b30f964fd88764056b6f9af1bfa40ba002441feeb519c7c",
+    "review-plan.md": "a0db45577a6230529f5cee84e8dcc2237837787dcfadfa321c452a551ba41b34",
+    "revision-prepared-inputs.json": "463cbfb3d5dd28f501e985d3d8df1a2252ed50f0809746e271657112f22686ba",
+    "scoped-prepared-inputs.json": "b5599a522854b262738496774fe7f5a3ca4cca6bb67f11a083619f144ccc678b",
+    "skill-v8.md": "e53cad8cdb6843bc11802eb411a82fed2628cd553e056871229f298f99b72e15"
+  }
+}

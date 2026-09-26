@@ -6,6 +6,34 @@ GPT-5.6 Luna / medium comparison and GPT-6 Luna / high follow-up. Follow-ups did
 on the final revision. These observations imply neither a release tag nor
 universal host compatibility.
 
+## Returned content and claim accuracy — 2026-09-26, GPT-6 Luna / high
+
+The [returned-content report](../evals/results/2026-09-26/luna6-content/REPORT.md)
+records **10 additional offline runs: three V7 and seven V8**. Actual runtime
+settings and unchanged inputs were verified. V8 requires concrete returned
+content for inspection claims, distinguishes declared metadata from inspected
+terms, and audits claims about blocked/rejected candidates too.
+
+Both versions passed the header-only checks. With explicit hypothetical
+snapshot scope, both also made a bounded Borrow decision from the full bodies.
+Initial positive cases confused snapshot assessment with real upstream adoption;
+they remain recorded as scope-confounded, not clean positive reuse passes.
+V8 also completed the four regressions that were unexecuted on historical V7:
+missing-license, covered-test and revision-map checks passed their scoped
+review; complete-snapshot shared the initial scope ambiguity. The local test
+case changed no files and passed its existing two tests.
+
+The core is 148 lines, about 3,303 `o200k_base` tokens (123 more than V7), with
+no runtime dependency. Its frozen hash is:
+
+```text
+e53cad8cdb6843bc11802eb411a82fed2628cd553e056871229f298f99b72e15
+```
+
+This batch did not rerun live architecture discovery, establish a causal
+improvement over V7, or demonstrate guaranteed compliance. See the report for
+every run, the task clarification, input hashes and unmeasured boundaries.
+
 ## Revision linkage and execution paths — 2026-09-26, GPT-6 Luna / high
 
 The [new follow-up report](../evals/results/2026-09-26/luna6-high/REPORT.md)
@@ -40,7 +68,7 @@ The final complete-snapshot, missing-license, covered-test and revision-map
 probes were therefore not executed. The report preserves those gaps, the
 baseline's incorrect rejection-chain claim, and all intermediate failures.
 This batch neither passed every scenario nor establishes complete V7 coverage.
-The final standalone Skill is 146 lines and about 3,180 `o200k_base` tokens.
+That V7 Skill was 146 lines and about 3,180 `o200k_base` tokens.
 
 ## Candidate inspection — 2026-09-26, GPT-5.6 Luna / medium (historical V5)
 

@@ -1,0 +1,35 @@
+{
+  "review_scope": "Parent review of observable results plus a separate contextual reviewer; neither review is a fresh model trial.",
+  "completed_model_runs": 10,
+  "runs_by_skill": {"v7": 3, "v8": 7},
+  "skill_v8_sha256": "e53cad8cdb6843bc11802eb411a82fed2628cd553e056871229f298f99b72e15",
+  "claims": {
+    "actual_runtime_settings_verified": true,
+    "all_original_inputs_unchanged": true,
+    "offline_content_checks_passed": true,
+    "causal_improvement_established": false,
+    "all_scenarios_passed": false,
+    "live_architecture_retested_on_v8": false,
+    "runtime_integration_verified": false
+  },
+  "runs": {
+    "luna6_content_v7_a": "Pass: missing bodies distinguished from headers and declared MIT metadata.",
+    "luna6_content_v8_a": "Pass: missing bodies distinguished from headers; candidate adoption Blocked.",
+    "luna6_content_v7_b": "Content claims supported; positive adoption outcome scope-confounded.",
+    "luna6_content_v8_b": "Content claims supported; positive adoption outcome scope-confounded.",
+    "luna6_snapshot_a_v8": "Partial/scope-confounded: complete materials read, but refused real upstream adoption; not a clean reuse pass.",
+    "luna6_snapshot_b_v8": "Pass: candidate code excluded for missing rights evidence, independent design separately scoped; no invented defect.",
+    "luna6_covered_v8": "Pass: existing assertions reused, 2 tests passed, no files changed; reviewer replay passed.",
+    "luna6_revision_v8": "Pass: wrapper adoption Blocked by mismatched core revision and missing vendored source.",
+    "luna6_content_scoped_v7_b": "Pass for hypothetical snapshot scope: Borrow with actual content evidence, no real upstream or runtime claims.",
+    "luna6_content_scoped_v8_b": "Pass for hypothetical snapshot scope: Borrow with actual content evidence, no real upstream or runtime claims."
+  },
+  "reviewer_agreement": "The new returned-content rule is appropriate. No further core edit follows from these probes. Preserve three scope-confounded outcomes; do not treat their clarification as a causal improvement.",
+  "structural_checks": {
+    "skill_format_validators": ["quick_validate.py passed", "skills-ref validate passed"],
+    "fixture_tests": "node --test: 2 passed, 0 failed",
+    "preparation_guards": "Existing and relative destinations rejected without writes; all initial input hashes checked.",
+    "paired_inputs": "Only SKILL.md differs between arms; only response bodies differ between cases; only TASK.md differs in the clarified batch.",
+    "readme_views": "English/Chinese desktop/mobile/dark: 6 views, no horizontal overflow or broken anchors, images loaded, 3 badges."
+  }
+}
