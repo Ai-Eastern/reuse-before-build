@@ -56,13 +56,11 @@ Use external research when earlier paths leave a material gap, including before 
 Artifact: original repository/package + inspected release/commit
 Compatibility: manifest/metadata path + field/value + fit to the task
 Behavior: implementation path + symbol + inspected behavior/limit
-Corroboration: test or executable call-site path + behavior and execution mode it actually exercises
+Corroboration: test or executable call-site path + required behavior it actually exercises
 Rights: license/terms path + grant/obligations for this artifact
 ```
 
 Keep the artifacts on the same revision. Across releases or repositories, inspect a version pin, submodule/build record, or equivalent authoritative mapping that connects them; matching tag names alone do not establish that link. Corroboration must exercise or call the behavior being selected: feature prose, a test filename, an unrelated assertion, or an unlinked revision is not enough. A versioned executable documentation example may qualify as a call site. For a closed-source service, use its documented API version, official contract, examples and terms; explicitly mark implementation evidence unavailable rather than inventing it.
-
-Trace test setup/helpers when they choose a backend, mock, feature flag, or implementation branch. Evidence from a substituted execution path covers that path only; do not use it to certify the selected production path. Keep unsupported behavior unresolved even when other assertions pass.
 
 4. **Decide:** check the receipt for missing or conflicting facts. Use `Take` or `Borrow` only when the applicable fields have inspected evidence and constraints fit. Otherwise keep the candidate **unverified** and perform the missing inspection within the research bound. If required evidence is unavailable, mark that candidate decision `Blocked` and name the missing fact. Continue independent design or assess a verified alternative; give any separate `Build` decision its own scope and grounds. Missing candidate evidence alone does not establish `Build`.
 

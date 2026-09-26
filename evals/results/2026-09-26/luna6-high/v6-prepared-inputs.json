@@ -1,0 +1,94 @@
+{
+  "previous_skill_sha256": "62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c",
+  "current_skill_sha256": "5f1dc8921368ecc88b91d61af2ebe7612a360fccd1f7d5e66e1874ddf7a0eda6",
+  "planned_runs": [
+    {
+      "case": "changed-requirement",
+      "arm": "control",
+      "initial_hashes": {
+        "context/baseline.tap": "b65e3a3b04706ccec6b7e1731b9671ebde254522e74858b33cf54b365d8c7c0e",
+        "context/checkpoint.md": "28cd92684b7311a6e89853361312f74baf74bff115d82be53520fc5c292391e1",
+        "context/verification.json": "93d2e849b61076dace374e58cbd5c4b63d2844ee3373f74d356b0fca72a4afe8",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "SKILL.md": "62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "8ec91b581b25e8bb536a6421e79ab951a666999697f64e208a1bae5dbc645035",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      }
+    },
+    {
+      "case": "changed-requirement",
+      "arm": "skill",
+      "initial_hashes": {
+        "context/baseline.tap": "b65e3a3b04706ccec6b7e1731b9671ebde254522e74858b33cf54b365d8c7c0e",
+        "context/checkpoint.md": "28cd92684b7311a6e89853361312f74baf74bff115d82be53520fc5c292391e1",
+        "context/verification.json": "93d2e849b61076dace374e58cbd5c4b63d2844ee3373f74d356b0fca72a4afe8",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "SKILL.md": "5f1dc8921368ecc88b91d61af2ebe7612a360fccd1f7d5e66e1874ddf7a0eda6",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "8ec91b581b25e8bb536a6421e79ab951a666999697f64e208a1bae5dbc645035",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      }
+    },
+    {
+      "case": "analytics",
+      "arm": "control",
+      "initial_hashes": {
+        "SKILL.md": "62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c",
+        "TASK.md": "a6c8af833cce5b49662a55e3d5e9ab97de98ffe25d288b3ffab20c02474c740d"
+      }
+    },
+    {
+      "case": "analytics",
+      "arm": "skill",
+      "initial_hashes": {
+        "SKILL.md": "5f1dc8921368ecc88b91d61af2ebe7612a360fccd1f7d5e66e1874ddf7a0eda6",
+        "TASK.md": "a6c8af833cce5b49662a55e3d5e9ab97de98ffe25d288b3ffab20c02474c740d"
+      }
+    },
+    {
+      "case": "snapshot-a",
+      "arm": "skill",
+      "initial_hashes": {
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "454c6c4e7f79e278d675ad11b7daba4517d4635b83e35cfa5f574a253e8c41db",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "SKILL.md": "5f1dc8921368ecc88b91d61af2ebe7612a360fccd1f7d5e66e1874ddf7a0eda6",
+        "TASK.md": "1788af63058c6467ec3e290b16491b9d322a564131859a33e1aa48b19cd0de09"
+      }
+    },
+    {
+      "case": "snapshot-b",
+      "arm": "skill",
+      "initial_hashes": {
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "454c6c4e7f79e278d675ad11b7daba4517d4635b83e35cfa5f574a253e8c41db",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "SKILL.md": "5f1dc8921368ecc88b91d61af2ebe7612a360fccd1f7d5e66e1874ddf7a0eda6",
+        "TASK.md": "1788af63058c6467ec3e290b16491b9d322a564131859a33e1aa48b19cd0de09"
+      }
+    },
+    {
+      "case": "covered-test",
+      "arm": "skill",
+      "initial_hashes": {
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "SKILL.md": "5f1dc8921368ecc88b91d61af2ebe7612a360fccd1f7d5e66e1874ddf7a0eda6",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "e2941b08b5864719198a4b8087376cd724f9d945c2dffa0ed24133e6017c9005",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      }
+    }
+  ]
+}

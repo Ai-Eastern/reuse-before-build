@@ -2,6 +2,8 @@
 
 ## Unreleased — next minor release
 
+- Required inspectable cross-repository revision mappings, corroboration of the actual execution path, and final choices consistent with missing evidence. Kept independent design separate from blocked candidate adoption.
+- Recorded nine GPT-6 Luna / high observations across V5/V6/V7, including an unsupported defect claim, a substituted-test-path failure, and four final-version probes left unexecuted at the host's new-agent limit.
 - Replaced generic external-candidate checks with ordered inspection and concrete revision, metadata, implementation, corroboration, and license receipts. Design-only work still requires static evidence before selection.
 - Added eleven GPT-5.6 Luna / medium observations with previous/current comparisons and offline cases; versioned source reads improved, while incomplete corroboration remains documented.
 - Added distinguishable-input guidance for meaningful tests and an explicit provisional-candidate gate; recorded 17 GPT-5.6 Luna / medium runs, including initial failures, follow-ups, and the still-unreliable source/license inspection step.

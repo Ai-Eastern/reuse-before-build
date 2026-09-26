@@ -38,6 +38,8 @@ jobs:
         run: python evals/prepare-search-timing.py "$RUNNER_TEMP/reuse-timing-eval"
       - name: Prepare evidence-gate comparisons
         run: python evals/prepare-evidence-gate.py "$RUNNER_TEMP/reuse-gate-eval" evals/results/2026-09-21/luna-search-timing/skill-v3.md
+      - name: Prepare the offline revision comparison
+        run: python evals/prepare-revision-case.py "$RUNNER_TEMP/reuse-revision-eval" evals/results/2026-09-26/evidence-gate/skill-v5.md
 
 # These are format, documentation, fixture, and preparation checks.
 # They do not run an agent or establish provider compatibility.

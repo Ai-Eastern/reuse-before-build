@@ -1,0 +1,60 @@
+{
+  "scope": "Independent review of observable tool outputs and final artifacts, adjudicated against the same recorded contents by the parent. Not another measured model trial.",
+  "overall": "partial; final-version regression coverage incomplete",
+  "outcomes": [
+    {
+      "agent": "luna6_queue_v5",
+      "assessment": "partial",
+      "evidence": "Pinned metadata, license, source and runnable API examples were read. Examples corroborate the demonstrated interfaces, but multi-worker corroboration remained limited. Missing test files alone are not a failure when a relevant executable call site exists."
+    },
+    {
+      "agent": "luna6_analytics_v5",
+      "assessment": "selected-candidate gate not passed",
+      "evidence": "Selected the Python package and core using matching release tags without an inspected authoritative relationship; selected-version test corroboration was incomplete."
+    },
+    {
+      "agent": "luna6_snapshot_b_v5",
+      "assessment": "rights decision appropriate; behavior claim failed",
+      "evidence": "Blocked adopting/copying the unlicensed supplied artifact, but the final answer asserted an unhandled rejection risk that is not supported by the actual then(resolve, reject).finally chain.",
+      "review_correction": "An initial reviewer also accepted the risk. Tracing the rejection handler's normal return corrected that assessment; the intermediate promise fulfills before cleanup."
+    },
+    {
+      "agent": "luna6_revision_v5",
+      "assessment": "pass for supplied-snapshot decision discipline",
+      "evidence": "Identified the different core commit and unavailable vendored tree, and blocked unchanged wrapper adoption. No runtime or real-provider provenance claim. Only V5 was executed for this case."
+    },
+    {
+      "agent": "luna6_queue_v6",
+      "assessment": "corroboration transfer failed",
+      "evidence": "Read a concurrent-fetch test using PGlite/distributed mode with __test__distributed and UPDATE...RETURNING, then generalized it to the ordinary PostgreSQL claim path."
+    },
+    {
+      "agent": "luna6_analytics_v6",
+      "assessment": "revision mapping improved; corroboration claim failed",
+      "evidence": "A shell Git-tree query returned the Python v1.5.5 core gitlink d8cdaa33fda8df955cc76ef58a280f68f4cd43fa. The v1.5.5 parquet_hive.test response returned only a header/total-line count; actual numbered test contents were v1.5.1. No checked mapping established the tests were unchanged.",
+      "relevant_call_ids": ["call_tge2D017gmm0xXehxOhiuOHI", "call_QXNZV62GM8De3F0hHYhKnKgb", "call_rf9WR1A6u72XPBHPAmeOHP5a"]
+    },
+    {
+      "agent": "luna6_snapshot_b_v6",
+      "assessment": "pass for scoped candidate decision; independent design remains unimplemented",
+      "evidence": "Keeps candidate adoption Blocked for missing rights, separates the independent design, and does not repeat the baseline defect claim. No candidate code or tests were copied, executed or adopted."
+    },
+    {
+      "agent": "luna6_queue_v7",
+      "assessment": "pass for static design evidence gate",
+      "evidence": "Pins normal-path source and retry/fetch/expiry tests, no longer uses the special distributed test as ordinary PostgreSQL proof, and leaves actual multi-process/crash integration checks planned. This is not a deployed or runtime-verified design."
+    },
+    {
+      "agent": "luna6_analytics_v7",
+      "assessment": "correct Blocked outcome; partial receipt accuracy",
+      "evidence": "Keeps the candidate option-only when revision linkage and selected-version corroboration are missing. Its Python v1.5.5 LICENSE response contains no body, yet the document treats package MIT rights as inspected. Core license contents were returned; that does not prove this package-specific inspection.",
+      "relevant_call_ids": ["call_cO9FbkZmSm8qp9OoQXnxYNiu"]
+    }
+  ],
+  "not_executed_on_v7": ["snapshot-a", "snapshot-b", "covered-test", "revision-map"],
+  "non_model_checks": {
+    "baseline_limiter_reviewer_replay": {"command": "node --test candidate/index.test.mjs", "runtime": "Node.js 24.18.0", "passed": 1, "failed": 0, "scope": "Existing rejection-progress fixture only; not target Node.js 22 or exhaustive behavior."},
+    "repository_retry_fixture": {"command": "node --test evals/fixtures/retry-service/test/retry.test.mjs", "passed": 2, "failed": 0, "scope": "Fixture code only; not a model behavior evaluation."}
+  },
+  "preparer_review": "Refuses existing/relative destinations, creates deterministic paired non-Skill inputs, performs no network/model launch/global changes. Input manifests preserve file snapshots; export-manifest separately records preparation-script hashes captured at export."
+}

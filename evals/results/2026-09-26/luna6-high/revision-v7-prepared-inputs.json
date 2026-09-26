@@ -1,0 +1,46 @@
+{
+  "previous_skill_sha256": "62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c",
+  "current_skill_sha256": "8e5aef4b38de9888fe5379e49b79c07e2c55a4d1b22921e54a57eee06e6f2e95",
+  "planned_runs": [
+    {
+      "case": "revision-map",
+      "arm": "control",
+      "initial_hashes": {
+        "core/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "core/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "core/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "core/package.json": "7d357f11143787c985427bb9ef6a68d220cd2f4e63795292035c4919f4460463",
+        "core/SNAPSHOT.json": "ac2faaa0205c6baad71d865ab73cfc5542e33c91543c08bf8e2da5b56ab6b7ec",
+        "README.md": "99d3313e81afc87f2ef9e115da638ed8f06c55b3a98c0447341e3a6d22466c69",
+        "SKILL.md": "62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c",
+        "TASK.md": "b59f7c770698a4ca9b2936e0361b13b8b4321a59b2e5b9ea6d1a0e21c60ac149",
+        "wrapper/BUILD.json": "0b85c82c6c4bfe28a11b79f6f71ef142f0da4acc41841382f30e2d3453ee27e8",
+        "wrapper/index.mjs": "b60b173ca0f0ec2586c05b642a27b4c770b6b3d6ffe142a1794eb89408a87588",
+        "wrapper/index.test.mjs": "72974777f977367d035c0b7076b8c29316f32e86a9530ce8ab6572229f3dc3f3",
+        "wrapper/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "wrapper/package.json": "72e859defbe333b9d3df4bc9a5b37104564ebcb81d8c9842c8b0dfbd36cfbf09",
+        "wrapper/README.md": "c304dd1a8d62e9f24d33bcaea5e804e76290276e83922459082deb6d6cc45c5c"
+      }
+    },
+    {
+      "case": "revision-map",
+      "arm": "skill",
+      "initial_hashes": {
+        "core/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "core/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "core/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "core/package.json": "7d357f11143787c985427bb9ef6a68d220cd2f4e63795292035c4919f4460463",
+        "core/SNAPSHOT.json": "ac2faaa0205c6baad71d865ab73cfc5542e33c91543c08bf8e2da5b56ab6b7ec",
+        "README.md": "99d3313e81afc87f2ef9e115da638ed8f06c55b3a98c0447341e3a6d22466c69",
+        "SKILL.md": "8e5aef4b38de9888fe5379e49b79c07e2c55a4d1b22921e54a57eee06e6f2e95",
+        "TASK.md": "b59f7c770698a4ca9b2936e0361b13b8b4321a59b2e5b9ea6d1a0e21c60ac149",
+        "wrapper/BUILD.json": "0b85c82c6c4bfe28a11b79f6f71ef142f0da4acc41841382f30e2d3453ee27e8",
+        "wrapper/index.mjs": "b60b173ca0f0ec2586c05b642a27b4c770b6b3d6ffe142a1794eb89408a87588",
+        "wrapper/index.test.mjs": "72974777f977367d035c0b7076b8c29316f32e86a9530ce8ab6572229f3dc3f3",
+        "wrapper/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "wrapper/package.json": "72e859defbe333b9d3df4bc9a5b37104564ebcb81d8c9842c8b0dfbd36cfbf09",
+        "wrapper/README.md": "c304dd1a8d62e9f24d33bcaea5e804e76290276e83922459082deb6d6cc45c5c"
+      }
+    }
+  ]
+}

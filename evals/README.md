@@ -16,7 +16,7 @@ license; their provider metadata is fictional and does not establish real
 upstream provenance. A small helper directory from timing preparation may
 also exist; only `gate-manifest.json` lists the seven planned model runs.
 
-Give fresh GPT-5.6 Luna / medium agents only their own `TASK.md`, `SKILL.md`,
+Give fresh agents at the batch's declared model/effort only their own `TASK.md`, `SKILL.md`,
 and workspace. Both comparison arms load a full Skill; do not describe this
 as a no-Skill control. Keep the [reviewer criteria](evidence-gate-reviewer.md)
 and previous outcomes out of their contexts. Preserve actual tool results,
@@ -25,6 +25,22 @@ in a new dated location; preparation alone is not behavior validation.
 
 The [2026-09-26 report](results/2026-09-26/evidence-gate/REPORT.md) records
 eleven executed comparisons/follow-ups, including incomplete inspection.
+The separate [GPT-6 Luna / high follow-up](results/2026-09-26/luna6-high/REPORT.md)
+records nine executed runs across V5/V6/V7. Four final-version probes were
+prepared but not started at the host's new-agent limit; they are not passes.
+
+For the offline core/wrapper revision transfer case, prepare two full-Skill
+arms separately (two inputs, no model launches):
+
+```sh
+python evals/prepare-revision-case.py /absolute/existing-parent/revision-run evals/results/2026-09-26/evidence-gate/skill-v5.md
+```
+
+The vendor, commits and license-bearing snapshots are synthetic. The wrapper's
+build record refers to a different core commit than the delivered core snapshot;
+its vendored source is unavailable. Keep the reviewer criteria away from the
+agents. A correctly unresolved adoption decision is distinct from verified
+adoption. This case does not measure real provider compatibility.
 
 ## Search-timing evaluation
 

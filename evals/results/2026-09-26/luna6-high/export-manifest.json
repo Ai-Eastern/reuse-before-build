@@ -1,0 +1,55 @@
+{
+  "completed_model_runs": 9,
+  "runs_by_skill": {
+    "v5": 4,
+    "v6": 3,
+    "v7": 2
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "runtime_source": "Actual host turn_context events checked for every exported turn.",
+  "preparation_source_sha256_at_export": {
+    "evals/prepare-evidence-gate.py": "776b3dd286e64cea9f19c1bc95ff22aab16431fee9117bbdc679554e180480c4",
+    "evals/prepare-search-timing.py": "3bdfa507b515968f65836c1afe54aa2c8dda22be9d4c08ebc4d2b9b4d0f06fb8",
+    "evals/prepare-revision-case.py": "e41c1980ad48758356e41b98e333d89e9babc227caebab3e49fa4588942529e5"
+  },
+  "not_executed_on_v7": [
+    "snapshot-a",
+    "snapshot-b",
+    "covered-test",
+    "revision-map"
+  ],
+  "execution_limit": "Spawning snapshot-a returned agent thread limit reached. No model started for it; remaining fresh-context probes were not dispatched.",
+  "transformations": [
+    "Exports contain task dispatches, observable tool calls/results, user-facing final answers and changed files only.",
+    "Private reasoning, system/developer messages, host tool descriptions and internal chat metadata are excluded.",
+    "Local workspace paths are normalized; export files use LF. Recorded runtime input hashes preserve their original bytes.",
+    "Remote page bodies are omitted; URLs, output hashes, sizes and syntax-error flags remain.",
+    "Inspection receipts distinguish returned numbered contents from failed or unconfirmed reads; they do not endorse agent conclusions.",
+    "Independent review and local fixture replays are not counted as model trials."
+  ],
+  "files_sha256": {
+    "index.json": "f5f3392ba0cd8a9e47548a83b07931be1c4f4a6a780eabc5facb4c3129ca7041",
+    "inspection-receipts.json": "3144c90910c50d83a3d411e8bf62f971310316e4b4a379bd54ddb64526541daa",
+    "luna6_analytics_v5.json": "f86e65246d573e69425c12237130b032df449a10b155e038200b6dd7381e06dd",
+    "luna6_analytics_v6.json": "629431c88c5686e2ee79c8a1989ae5113f3bc8a95d478d9744d7aa6cca0c3080",
+    "luna6_analytics_v7.json": "ddf2380830732360a2c2955c80323e160fb7b563459ea785d9c90b8e0e273e02",
+    "luna6_queue_v5.json": "6d02d31a40a8295e125ca819e14e125f53058a9988307219c396465b1f6724e9",
+    "luna6_queue_v6.json": "bde3b06d112172e587c4a6517a889063e60724838bde015b1dd303c88746f7c0",
+    "luna6_queue_v7.json": "8f550c8064f7d38c3e25baa40768741e83f1e10330a21d9e2b00d6c2077e550e",
+    "luna6_revision_v5.json": "893f2937bfebc97aef7e8d54701baf22c1eb3d587af9ffaa98613eecf75f8e24",
+    "luna6_snapshot_b_v5.json": "9ea6a3648a96090950b221b61b08d336be23762450d57927fb9f706115093c86",
+    "luna6_snapshot_b_v6.json": "86c1c1bc4a3df9012851c25adca8751bdbdceb18a78f0377b3505e003bc6ad81",
+    "REPORT.md": "63ba99d93f142d9ff18edd70e259e0d21c2601ae0f885031a56001ebe642a779",
+    "review-assessment.json": "56b0317d9bbf5e91eb3e1158c2c92959f48da5ac5192de7e8e6a8710de2fd8b1",
+    "review-plan.md": "5a36bc8d497c127eca28fb283f2a0bee6606eaed43d42acff0a3ab5f7c0b4dbe",
+    "revision-v6-prepared-inputs.json": "74adfaa440cdbad8d421d44c72ccfb191ad867da9c60a6790885649c1b79666a",
+    "revision-v7-prepared-inputs.json": "f93f70c0ac67ca5d4e59a8d23faeb2fe35e43e4f0f9ba5c48157e528b46598f4",
+    "skill-v5.md": "62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c",
+    "skill-v6.md": "5f1dc8921368ecc88b91d61af2ebe7612a360fccd1f7d5e66e1874ddf7a0eda6",
+    "skill-v7.md": "8e5aef4b38de9888fe5379e49b79c07e2c55a4d1b22921e54a57eee06e6f2e95",
+    "v5-prepared-inputs.json": "a7c08891aac95cb5318b33dae75ffaca6d9585840c7b0b561831f705a5b1afb5",
+    "v6-prepared-inputs.json": "cf42e469acbf41a3a5d9276aa0a748d1f5303167f55518f4bfa4fb4d0f700f62",
+    "v7-prepared-inputs.json": "b24c441d9629db1b048138c7f050afd1b32b64fd63228dd42a73458940e29787"
+  }
+}

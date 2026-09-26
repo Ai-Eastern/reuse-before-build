@@ -56,17 +56,13 @@ Use external research when earlier paths leave a material gap, including before 
 Artifact: original repository/package + inspected release/commit
 Compatibility: manifest/metadata path + field/value + fit to the task
 Behavior: implementation path + symbol + inspected behavior/limit
-Corroboration: test or executable call-site path + behavior and execution mode it actually exercises
+Corroboration: test or call-site path + what it demonstrates
 Rights: license/terms path + grant/obligations for this artifact
 ```
 
-Keep the artifacts on the same revision. Across releases or repositories, inspect a version pin, submodule/build record, or equivalent authoritative mapping that connects them; matching tag names alone do not establish that link. Corroboration must exercise or call the behavior being selected: feature prose, a test filename, an unrelated assertion, or an unlinked revision is not enough. A versioned executable documentation example may qualify as a call site. For a closed-source service, use its documented API version, official contract, examples and terms; explicitly mark implementation evidence unavailable rather than inventing it.
-
-Trace test setup/helpers when they choose a backend, mock, feature flag, or implementation branch. Evidence from a substituted execution path covers that path only; do not use it to certify the selected production path. Keep unsupported behavior unresolved even when other assertions pass.
+Keep the artifacts on the same revision, or explain their relationship. For a closed-source service, use its documented API version, official contract, examples and terms; explicitly mark implementation evidence unavailable rather than inventing it.
 
 4. **Decide:** check the receipt for missing or conflicting facts. Use `Take` or `Borrow` only when the applicable fields have inspected evidence and constraints fit. Otherwise keep the candidate **unverified** and perform the missing inspection within the research bound. If required evidence is unavailable, mark that candidate decision `Blocked` and name the missing fact. Continue independent design or assess a verified alternative; give any separate `Build` decision its own scope and grounds. Missing candidate evidence alone does not establish `Build`.
-
-Before delivering, reconcile every selected component in the architecture and summary with its receipt, including corroboration and revision linkage. An open static check stays `Blocked`, even if installation is deferred or the recommendation says "subject to verification". Label candidate adoption separately from an independent local design; a blocked artifact must not reappear as `Borrow` under a broader pattern label.
 
 **Design-only work still completes these static checks.** Installation and runtime integration tests can remain planned; source, compatibility, and rights checks cannot be moved into a future implementation plan to justify today's selection. An unverified candidate may appear as an option, but not as an adopted component in the architecture or final summary.
 
@@ -90,7 +86,7 @@ Do not add a second runner or duplicate suite just to demonstrate activity. Pres
 
 Anchor decisive claims to inspected files, authoritative sources, observed tool results, or clearly attributed user-supplied evidence. Never invent paths, licenses, versions, test runs, or compatibility facts. Inspect the license that covers the particular artifact; hosting on GitHub or calling code internal is not license evidence.
 
-Separate facts, inferences, and planned checks. Name the specific material being borrowed and check the rights relevant to that use; an independent design using general techniques is a separate decision. Do not turn missing evidence into a claimed incompatibility or defect. Support a defect claim with the actual control/data path or a permitted check; otherwise label it a hypothesis.
+Separate facts, inferences, and planned checks. A useful pattern may be borrowed without adopting its package, but make that boundary explicit and verify the source and rights relevant to the intended use before copying or adding a dependency.
 
 **Test assets can be reused; a previous passing result is conditional historical evidence.** When relying on a stored result, read the underlying record and check:
 
@@ -135,7 +131,7 @@ For a substantial decision, use this compact shape; omit inapplicable detail rat
 ## Reuse Decision
 Scope: the behavior or artifact being decided
 Evidence: inspected paths/URLs, relevant versions/contracts, and search scope
-External candidate checks: identity/compatibility, behavior, corroboration, rights, revision linkage — inspected / missing / conflict (omit for local work)
+External candidate checks: identity/compatibility, behavior, rights — verified / missing / conflict (omit for local work)
 Decision: Take | Borrow | Build | Blocked | Needs human approval
 Tests: existing coverage, the actual gap, and checks to reuse or extend
 Verification: observed / historical (not rerun) / planned / blocked / interrupted

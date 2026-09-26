@@ -2,11 +2,47 @@
 
 Evidence is tied to the evaluated Skill hash. This page retains the earlier
 2026-09-20 test/recovery runs, an earlier 2026-09-21 architecture run, and the
-new GPT-5.6 Luna / medium comparison. Follow-ups did not rerun every scenario
+GPT-5.6 Luna / medium comparison and GPT-6 Luna / high follow-up. Follow-ups did not rerun every scenario
 on the final revision. These observations imply neither a release tag nor
 universal host compatibility.
 
-## Candidate inspection — 2026-09-26
+## Revision linkage and execution paths — 2026-09-26, GPT-6 Luna / high
+
+The [new follow-up report](../evals/results/2026-09-26/luna6-high/REPORT.md)
+records **nine completed GPT-6 Luna / high runs**: four on published V5,
+three on V6, and two on V7. Actual host runtime settings were checked for
+every exported turn. Repeated cases shared byte-identical task inputs; all
+agents explicitly received a full Skill and no reviewer conclusions.
+
+V6 required authoritative core/wrapper revision links and reconciled selected
+components with concrete receipts. A queue follow-up still transferred a
+PGlite/distributed-mode test's claim to a normal PostgreSQL design. V7 therefore
+required checking test setup, backend and implementation branch. Its hash is:
+
+```text
+8e5aef4b38de9888fe5379e49b79c07e2c55a4d1b22921e54a57eee06e6f2e95
+```
+
+In the two final live runs, analytics retained Blocked status when version
+linkage and corroboration were missing, and queue stopped citing the special
+database-mode test as production-path proof. Runtime, concurrency/crash
+integration and workload performance remain unverified. A Blocked candidate
+is a supported unresolved decision, not successful adoption.
+
+Receipt accuracy still needs work: V6 attributed an older revision's retrieved
+test contents to the selected revision, and V7 described a package license as
+inspected although its response contained no file body. The final queue design
+passes the scoped static review; final analytics remains partial despite its
+correct Blocked decision. Neither artifact was installed or runtime-tested.
+
+The host refused another fresh agent with `agent thread limit reached`.
+The final complete-snapshot, missing-license, covered-test and revision-map
+probes were therefore not executed. The report preserves those gaps, the
+baseline's incorrect rejection-chain claim, and all intermediate failures.
+This batch neither passed every scenario nor establishes complete V7 coverage.
+The final standalone Skill is 146 lines and about 3,180 `o200k_base` tokens.
+
+## Candidate inspection — 2026-09-26, GPT-5.6 Luna / medium (historical V5)
 
 The [new evidence-gate report](../evals/results/2026-09-26/evidence-gate/REPORT.md)
 records **11 additional GPT-5.6 Luna / medium runs**, verified from actual host
@@ -194,7 +230,8 @@ checkout or the distributed archive.
 ## CI and remaining coverage
 
 The [CI workflow](../.github/workflows/validate.yml) checks skill format,
-local links, the fixture, recovery-scenario preparation, and paired timing inputs. Action revisions
+local links, the fixture, recovery-scenario preparation, paired timing inputs,
+candidate evidence inputs and the offline revision comparison. Action revisions
 and the reference validator are pinned. Inspect [GitHub Actions runs](https://github.com/Ai-Eastern/reuse-before-build/actions/workflows/validate.yml)
 for the result associated with a particular commit. Local checks and model trials alone do not establish remote CI success.
 
