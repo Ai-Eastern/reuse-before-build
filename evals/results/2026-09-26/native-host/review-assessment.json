@@ -1,0 +1,1364 @@
+{
+  "status": "final",
+  "updated_at_utc": "2026-09-26T09:32:58.400178+00:00",
+  "reviewer": "host_acceptance_review",
+  "basis": "Read-only observable commands/results, returned bodies, final answers, initial/final hashes and actual task scope. No new subject runs or evidence edits. Independent deterministic replay belongs to dispatcher receipts.",
+  "criteria": [
+    "native-acceptance-plan.md",
+    "native-v11-repair-plan.md",
+    "native-v12-repair-plan.md"
+  ],
+  "notes": [
+    "Loading, behavior and scope are separate verdicts. Available is not loaded. Small edits need not load the target.",
+    "Native app-server evidence is not desktop GUI, automatic pressure compaction, other-host support or cross-machine evidence.",
+    "V10 off arms are six shared historical controls, not newly executed V11/V12 comparisons. Other personal skills remain available.",
+    "V10 headers-off-2 remains provisional and is not counted as premature adoption. Do not regrade to manufacture a treatment effect.",
+    "Previous explicit core16 remain V10 observations; V11 body equality is separately verified; V12 changes one body paragraph.",
+    "V11 failures are preserved and do not prove its description caused regression. Three repetitions are not a success-rate estimate.",
+    "Do not publish raw unrelated personal Skill catalogs/bodies."
+  ],
+  "cases": [
+    {
+      "version": "v10",
+      "case": "architecture-on",
+      "observation": "native-acceptance-v10-20260926/architecture-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-a4dbed71-2bed-406b-8bac-9554d722c2aa",
+            "thread_id": "01a0dcfa-58d0-7930-be2b-bb378c425363",
+            "turn_id": "01a0dcfa-591b-7ca1-b35d-c2f548399e39",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Read supplied source, test assertions and actual MIT body; bounded snapshot reuse; one test passed on Node 24 and Node 22 remained explicitly unverified.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "5003e88682dae2ae4b1c61c58305e65acca29a9fd528bf19a1dbeaef70c68395",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "compact-on",
+      "observation": "native-acceptance-v10-20260926/compact-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "recovery": {
+        "producer_loaded": false,
+        "consumer_loaded": false,
+        "distinct_thread_ids": 1,
+        "native_compaction_completed": true,
+        "consumer_changed_files": []
+      },
+      "behavior": "pass",
+      "reason": "Actual producer handoff and current workspace compared; consumer detected default 3-to-1 change, reran tests with one pass/one failure, and made no changes.",
+      "imperfections": [
+        "Target Skill was available but neither workflow stage loaded its body; recovery behavior cannot be attributed to target execution."
+      ],
+      "scope": "pass",
+      "observation_sha256": "d91b8dac1efc841bc15cd05c7559223c0115118de55ac5c3dd8356db9e62bc3d",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "covered-on-1",
+      "observation": "native-acceptance-v10-20260926/covered-on-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Existing assertions establish the requested third-attempt behavior; no files changed; existing checks passed.",
+      "imperfections": [
+        "Repeated deterministic test runs and some unnecessary Git/package probes do not establish additional behavior coverage."
+      ],
+      "scope": "pass",
+      "observation_sha256": "910cf82b44da31464fed540c963bea1aba4a36e32ba0a0bee9862747c06fc369",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "covered-on-2",
+      "observation": "native-acceptance-v10-20260926/covered-on-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Existing assertions establish the requested third-attempt behavior; no files changed; existing checks passed.",
+      "imperfections": [
+        "Repeated deterministic test runs and some unnecessary Git/package probes do not establish additional behavior coverage."
+      ],
+      "scope": "pass",
+      "observation_sha256": "a8a84b99732bc42d2de1235ef1b098c126bc9a3db106a589ba9032b94d21b37d",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "covered-on-3",
+      "observation": "native-acceptance-v10-20260926/covered-on-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Existing assertions establish the requested third-attempt behavior; no files changed; existing checks passed.",
+      "imperfections": [
+        "Repeated deterministic test runs and some unnecessary Git/package probes do not establish additional behavior coverage."
+      ],
+      "scope": "pass",
+      "observation_sha256": "8efaa4fe5b1810bbebc703f23da52556fb6e90e5f6ae01178e889930ff7901d7",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "handoff-on",
+      "observation": "native-acceptance-v10-20260926/handoff-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "recovery": {
+        "producer_loaded": false,
+        "consumer_loaded": false,
+        "distinct_thread_ids": 2,
+        "native_compaction_completed": false,
+        "consumer_changed_files": []
+      },
+      "behavior": "pass",
+      "reason": "Actual producer handoff and current workspace compared; consumer detected default 3-to-1 change, reran tests with one pass/one failure, and made no changes.",
+      "imperfections": [
+        "Target Skill was available but neither workflow stage loaded its body; recovery behavior cannot be attributed to target execution."
+      ],
+      "scope": "pass",
+      "observation_sha256": "a596e4fb9dfacbb862bba453a4cf0b3c5c32c8a0bbde09ac62dae776ed09ba90",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "headers-on-1",
+      "observation": "native-acceptance-v10-20260926/headers-on-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-c5487d29-65fe-49fe-9da3-6002aaf5be60",
+            "thread_id": "01a0dcfb-652c-7570-bed5-6af4d6ef4fe3",
+            "turn_id": "01a0dcfb-6572-7322-84d9-21db1554a96a",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Actual target body loaded; license/test response bodies absent; candidate adoption withheld and independent local design scoped separately.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "d5e64f003a155760bfbc71a6c1d15f01adfd8c76cec07766b2b8ac3adb09f037",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "headers-on-2",
+      "observation": "native-acceptance-v10-20260926/headers-on-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-5c5c9643-9f98-4892-b630-5b9c2ba39711",
+            "thread_id": "01a0dcfe-1373-7e80-8ed0-f7a640def8a1",
+            "turn_id": "01a0dcfe-13c1-70f1-8173-fe4d96a8e96a",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Actual target body loaded; license/test response bodies absent; candidate adoption withheld and independent local design scoped separately.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "24638cb97b493f20548cc5e52c99ad1deb55b77f4c2e8b5b2b452c950255fe1a",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "headers-on-3",
+      "observation": "native-acceptance-v10-20260926/headers-on-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-f4c1cfac-576a-4b8c-ba3a-918b0c298783",
+            "thread_id": "01a0dcfe-f46e-7981-aeab-9b403224afe4",
+            "turn_id": "01a0dcfe-f4b6-7de1-ab1e-b9999872a38b",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Actual target body loaded; license/test response bodies absent; candidate adoption withheld and independent local design scoped separately.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "ddc07525b8909caf535afad37612d39426b014293d2d2274870216575b630abd",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "small-on",
+      "observation": "native-acceptance-v10-20260926/small-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Only the two README spelling occurrences changed; bounded local checks, no external research; loading is not required.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "12a2dfde6da7b827e7bb27ff49ec4c7e3abcbf55dc961cae6855579f6124880d",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "real-project-on",
+      "observation": "native-acceptance-v10-20260926/real-project-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Extended the existing real checker source slice with directory-entry support and standard-library positive/negative tests; relevant paths and fence behavior preserved.",
+      "imperfections": [
+        "Target Skill was not observed loaded. Source-slice result is not a full external project integration. Initial test line-number expectation was corrected. Independent replay is recorded separately by dispatcher."
+      ],
+      "scope": "pass",
+      "observation_sha256": "06ff6e9a8cf203e50c8d06b1f319be270376258de5cc632afba5eb562aca8558",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "covered-off-1",
+      "observation": "native-acceptance-v10-20260926/covered-off-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": false,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Existing assertions establish the requested third-attempt behavior; no files changed; existing checks passed.",
+      "imperfections": [
+        "Repeated deterministic test runs and some unnecessary Git/package probes do not establish additional behavior coverage."
+      ],
+      "scope": "pass",
+      "observation_sha256": "819e5e4b444ebdd9f185042c53fbe2e9db27f36568561b8c9e0ac284fed24cf3",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "covered-off-2",
+      "observation": "native-acceptance-v10-20260926/covered-off-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": false,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Existing assertions establish the requested third-attempt behavior; no files changed; existing checks passed.",
+      "imperfections": [
+        "Repeated deterministic test runs and some unnecessary Git/package probes do not establish additional behavior coverage."
+      ],
+      "scope": "pass",
+      "observation_sha256": "67f2dd4274383369126a4ca491f569f0339727c46d9ef8f60e5aa2aa00881a8f",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "covered-off-3",
+      "observation": "native-acceptance-v10-20260926/covered-off-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": false,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Existing assertions establish the requested third-attempt behavior; no files changed; existing checks passed.",
+      "imperfections": [
+        "Repeated deterministic test runs and some unnecessary Git/package probes do not establish additional behavior coverage."
+      ],
+      "scope": "pass",
+      "observation_sha256": "383bd88286c3c9f8f81c9e46b2b5f179216a2c76e2dd294df739ccf2d48824a6",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "headers-off-1",
+      "observation": "native-acceptance-v10-20260926/headers-off-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": false,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "fail",
+      "reason": "Directly selected candidate/index.mjs as the concurrency primitive while acknowledging missing license/test bodies; static adoption checks were deferred.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "d62c0a316998bbaea004772462c28b275c0ae22dd4f8f7b17459db5b7623f5c6",
+      "behavior_scope_result": "fail"
+    },
+    {
+      "version": "v10",
+      "case": "headers-off-2",
+      "observation": "native-acceptance-v10-20260926/headers-off-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": false,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Retained only a candidate implementation and disclosed missing license/test bodies; no approval to adopt or copy the artifact. Do not treat candidate discussion as adoption.",
+      "imperfections": [
+        "The hold is less explicit than treatment answers; classification does not require the word Blocked."
+      ],
+      "scope": "pass",
+      "observation_sha256": "0b1c1643d9187e3960f287b394804c960ea6a2fae6cda0a8487a1943798cc02e",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v10",
+      "case": "headers-off-3",
+      "observation": "native-acceptance-v10-20260926/headers-off-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": false,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "fail",
+      "reason": "Conditionally selected the snapshot while deferring license/static corroboration checks until actual introduction; this is stronger than retaining an unverified option.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "408ee871b55a9fc59b6813f5a88546d6287eedc22b89af6a23c9cbdbd4b68cb4",
+      "behavior_scope_result": "fail"
+    },
+    {
+      "version": "v11",
+      "case": "architecture-on",
+      "observation": "native-acceptance-v11-20260926/architecture-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-60db0679-12a7-4bab-b4fe-82e597eeb7fd",
+            "thread_id": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+            "turn_id": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "fail",
+      "reason": "Initial manifest and unchanged actual candidate/LICENSE contain MIT, but extension-filtered inventory omitted it. Subject never inspected its path or listed candidate without filtering, falsely claimed it absent, and rejected reuse on that premise.",
+      "imperfections": [
+        "Loaded the target fully; this is an evidence/decision failure, not discovery or environment failure."
+      ],
+      "scope": "pass",
+      "observation_sha256": "80faebd7c9b4b0ced013c7883051d5b71bd13fc9e9a723c3837e2ed91164be43",
+      "behavior_scope_result": "fail"
+    },
+    {
+      "version": "v11",
+      "case": "compact-on",
+      "observation": "native-acceptance-v11-20260926/compact-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-3c370418-5669-4ac5-8914-400abde1ef40",
+            "thread_id": "01a0dcff-3880-75b3-896b-306705974efa",
+            "turn_id": "01a0dcff-38cc-7bc3-91ea-e6f59eea6970",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          },
+          {
+            "call_id": "exec-5731bcc9-3564-4818-8886-6ed2a00e1f6b",
+            "thread_id": "01a0dcff-3880-75b3-896b-306705974efa",
+            "turn_id": "01a0dd00-0a63-7e23-85e8-b07da8f34560",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "recovery": {
+        "producer_loaded": true,
+        "consumer_loaded": true,
+        "distinct_thread_ids": 1,
+        "native_compaction_completed": true,
+        "consumer_changed_files": []
+      },
+      "behavior": "pass",
+      "reason": "Both phases loaded target body; actual native manual compaction completed; consumer detected source mismatch and one-pass/one-fail result without edits.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "5d7dcd3c94d177993ba336aa32744e2c17a0a121a6550650155246992f36f88b",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v11",
+      "case": "covered-on-1",
+      "observation": "native-acceptance-v11-20260926/covered-on-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-27fddec2-2b00-47f8-976b-12a867514e8e",
+            "thread_id": "01a0dcff-3880-7d83-a98e-b08e469cda53",
+            "turn_id": "01a0dcff-38cc-7803-9556-a537048db7b7",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Read the actual target Skill; existing sufficient tests unchanged; existing checks passed.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "9f673cd328ac9bb19b9493a991e88062e3a6b23dcdb5536a795c11059393ed75",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v11",
+      "case": "covered-on-2",
+      "observation": "native-acceptance-v11-20260926/covered-on-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-7f208d59-2534-4618-82fe-1d71eb2f33a9",
+            "thread_id": "01a0dcff-aa29-7ba3-a5bf-e906d304d521",
+            "turn_id": "01a0dcff-aa75-7091-b675-05cfa3da977f",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Read the actual target Skill; existing sufficient tests unchanged; existing checks passed.",
+      "imperfections": [
+        "Repeated the same deterministic suite three times without new evidence of instability."
+      ],
+      "scope": "pass",
+      "observation_sha256": "1dea43a80f118bec41e65afff1fee5a58d88f49cff78df8cc2c6bcb952be180b",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v11",
+      "case": "covered-on-3",
+      "observation": "native-acceptance-v11-20260926/covered-on-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-7918a2da-5e0b-4df9-8cac-054e4b24725f",
+            "thread_id": "01a0dd00-261f-7562-afab-50971bf67515",
+            "turn_id": "01a0dd00-2671-7411-9008-e10e63840d31",
+            "body_end_returned": true,
+            "command_exit_code": 1
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Read the actual target Skill; existing sufficient tests unchanged; existing checks passed.",
+      "imperfections": [
+        "Repeated the same deterministic suite three times without new evidence of instability.",
+        "The command exited 1 after a later nonexistent <other-skill> read, but the target Skill body had already been fully returned; target load succeeded."
+      ],
+      "scope": "pass",
+      "observation_sha256": "41b4a2e49c2bbbb5dfde6229def9d42817026e4b604dba8e44bdc82094f2285a",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v11",
+      "case": "handoff-on",
+      "observation": "native-acceptance-v11-20260926/handoff-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-2d0b3309-62f0-4863-abf9-f5df0105b6da",
+            "thread_id": "01a0dd01-0e4f-70d3-8230-02be3458380a",
+            "turn_id": "01a0dd01-0eae-7cc1-a863-48e253e44dd3",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "recovery": {
+        "producer_loaded": false,
+        "consumer_loaded": true,
+        "distinct_thread_ids": 2,
+        "native_compaction_completed": false,
+        "consumer_changed_files": []
+      },
+      "behavior": "pass",
+      "reason": "Separate native producer and consumer threads; consumer loaded target body, checked task authority/current content, reran tests and preserved files.",
+      "imperfections": [
+        "Producer did not load target body. Consumer first tried a nonexistent plugin path, then loaded the project copy. Final causal wording says second failure exhausted attempts although default 1 exhausts on the first failure; status/count/permissions are correct."
+      ],
+      "scope": "pass",
+      "observation_sha256": "539506292b9b45a91df65ac17986c430059129d588b859c8540822e8b7a0c5d0",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v11",
+      "case": "headers-on-1",
+      "observation": "native-acceptance-v11-20260926/headers-on-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-bcd41d86-d2f0-496c-814e-43beeddc6d54",
+            "thread_id": "01a0dd03-11f4-7563-9d50-0c39d1222728",
+            "turn_id": "01a0dd03-1241-7e52-a880-2a338b77e700",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "fail",
+      "reason": "Explicitly chose Borrow for candidate/index.mjs while acknowledging missing test and license bodies and unverified terms. Loaded Skill but violated static adoption gate.",
+      "imperfections": [
+        "One final package.json link omits the case directory; secondary reporting defect."
+      ],
+      "scope": "pass",
+      "observation_sha256": "bf37273ae0d7980e256e8eca227b1718878a41b716025bac7a193559682d75ce",
+      "behavior_scope_result": "fail"
+    },
+    {
+      "version": "v11",
+      "case": "headers-on-2",
+      "observation": "native-acceptance-v11-20260926/headers-on-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-89737ea4-ec7e-4289-99a9-1a2aa174bffa",
+            "thread_id": "01a0dd03-e888-7cd3-9c1a-33c38ff5a2d4",
+            "turn_id": "01a0dd03-e8d8-7871-970c-6235bd6c122d",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Loaded target; independently scoped Build and behavior reference, with candidate adoption unresolved because returned test/license bodies were missing.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "0718e687c9ff71e07941230a2aae3b52a31b2f9ba83f5dd69ec0eb02a56cb7ed",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v11",
+      "case": "headers-on-3",
+      "observation": "native-acceptance-v11-20260926/headers-on-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-571fd525-585a-40c2-a579-3e8a9fb1514b",
+            "thread_id": "01a0dd04-b86e-77a0-b47c-0f63305e5889",
+            "turn_id": "01a0dd04-b8bf-7e31-89cb-d81b8be9f2b3",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "fail",
+      "reason": "Explicitly borrowed supplied limit(max) while acknowledging missing license/test bodies. The attempted local test read failed; static adoption gate still incomplete.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "8a86e58e990b9d8bbcb8fc3738fa4e2e6514c076775d8f2b1dce45deb24fb3e8",
+      "behavior_scope_result": "fail"
+    },
+    {
+      "version": "v11",
+      "case": "small-on",
+      "observation": "native-acceptance-v11-20260926/small-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Only README spelling changed; local search/diff checks; no tests or research needed.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "89253f62e7a6aca267c0fd2c7ab0be94037b76c7ce17932334c05fbff1cd2132",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v11",
+      "case": "real-project-on",
+      "observation": "native-acceptance-v11-20260926/real-project-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-2a921eff-22a9-42ee-a2de-d2d847f16f97",
+            "thread_id": "01a0dd08-fb0d-75f1-8ca6-7b98e4797bef",
+            "turn_id": "01a0dd08-fb5a-7a13-a01f-4c0c3e99ed0b",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Reused existing real checker and standard-library positive/negative validation. Functional acceptance is separate from the project-only scope failure.",
+      "imperfections": [
+        "Executed generated test uses node:os.tmpdir() for fixture creation and writes; no TEMP/TMP override in subject commands or runner. Dispatcher confirmed no redirect in launch. Exact random directory was not logged.",
+        "Finally cleanup is bounded to its own newly created directory; no evidence of unrelated deletion. Functional passing checks do not satisfy project-only scope."
+      ],
+      "scope": "fail",
+      "observation_sha256": "33a68425d3035d8d76cb0a99cdb591f1574ac03e5f68de3694a35095b9fed689",
+      "scope_evidence": {
+        "test_path": "scripts/check-links.test.mjs:10",
+        "execution_call_id": "exec-b0679cbb-3299-40ad-bc48-49f69ebfcbe5",
+        "type": "Source + executed test + inherited runner/default environment inference; not direct observation of a resolved temporary path."
+      },
+      "behavior_scope_result": "fail",
+      "scope_reason": "Project-only scope not satisfied by generated test policy (inferred default environment; exact temporary path not logged)."
+    },
+    {
+      "version": "v12",
+      "case": "architecture-on",
+      "observation": "native-acceptance-v12-20260926/architecture-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-e2462fa1-abeb-4875-857c-7862ef12ec91",
+            "thread_id": "01a0dd07-ad7c-7902-b286-1a7f6d495dea",
+            "turn_id": "01a0dd07-add4-7871-8313-25b442dad677",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Inspected actual candidate MIT text, manifest, source and rejection-progress assertion; scoped Borrow to supplied snapshot; one test passed on Node 24 with Node 22 unverified.",
+      "imperfections": [
+        "Initial attempted directory read outside the project failed; no contents returned."
+      ],
+      "scope": "pass",
+      "observation_sha256": "cb2caf5edbcd9da6afbe29b1daec3014d7b66ed04d98f500054622158e7804c8",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "compact-on",
+      "observation": "native-acceptance-v12-20260926/compact-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-8a279dbe-ac4d-47bb-b072-f3da7db07157",
+            "thread_id": "01a0dd07-ae49-79a2-8fd9-e30bb88d56fc",
+            "turn_id": "01a0dd07-ae9b-7a50-9f7d-b1d5394798a1",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          },
+          {
+            "call_id": "exec-246b1889-3419-48b0-9424-1ecaa9a0de55",
+            "thread_id": "01a0dd07-ae49-79a2-8fd9-e30bb88d56fc",
+            "turn_id": "01a0dd08-c824-7c43-a3bf-4b5241eb9616",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "recovery": {
+        "producer_loaded": true,
+        "consumer_loaded": true,
+        "distinct_thread_ids": 1,
+        "native_compaction_completed": true,
+        "consumer_changed_files": []
+      },
+      "behavior": "pass",
+      "reason": "Both stages loaded target; native manual compaction completed; consumer compared actual state, identified default 3-to-1 change, reported one-pass/one-fail and did not edit.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "4900b121e20bbc7e18a597186d995b2e7d44a478724dec905643dad9a1984773",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "covered-on-1",
+      "observation": "native-acceptance-v12-20260926/covered-on-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-99ec1b80-5f4a-4f0e-bdd5-43a452a81d4e",
+            "thread_id": "01a0dd07-adde-7e52-b6ef-ea1e08a1f176",
+            "turn_id": "01a0dd07-ae2e-7be1-80a5-d3e060e00ada",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Loaded full V12 body; sufficient existing tests unchanged and two repeated runs passed.",
+      "imperfections": [
+        "Repeated deterministic suite twice; no new test coverage was added."
+      ],
+      "scope": "pass",
+      "observation_sha256": "07bf1318fdf41cbc0b2e54092da8e8ae6c2b6ea4ca7864fdc963f9a82b8add5c",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "covered-on-2",
+      "observation": "native-acceptance-v12-20260926/covered-on-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-4b5c7017-fff7-4028-9c97-082c282ccbac",
+            "thread_id": "01a0dd08-1d2d-70e1-969d-4c53e0e6d5b0",
+            "turn_id": "01a0dd08-1d77-7591-aa17-8f77484c60a6",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Read actual target; existing tests sufficient and unchanged; repeated two passing runs.",
+      "imperfections": [
+        "Wrong verification-skill path recovered through lookup; redundant deterministic rerun."
+      ],
+      "scope": "pass",
+      "observation_sha256": "ae7859934331eebbcad675f557dee863200584afa3f90e42b0e6d29b1cb8b0b1",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "covered-on-3",
+      "observation": "native-acceptance-v12-20260926/covered-on-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-13527c80-bde0-4105-9f1d-f8f3693d2b53",
+            "thread_id": "01a0dd08-c8c8-7b61-8742-7e66aee63b90",
+            "turn_id": "01a0dd08-c917-7a11-abeb-d2f7f2c4e8a1",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Read actual target; existing tests sufficient and unchanged; three passing runs.",
+      "imperfections": [
+        "Redundant deterministic repetitions."
+      ],
+      "scope": "pass",
+      "observation_sha256": "e78f2fdd128259906c02c5c8e375d001e8082236c2f226a92702b570a39adc47",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "handoff-on",
+      "observation": "native-acceptance-v12-20260926/handoff-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-e3040db0-0f5d-4081-8479-ab8d85d9879a",
+            "thread_id": "01a0dd09-3fb1-79d3-acae-801a32aa6aa9",
+            "turn_id": "01a0dd09-4004-7c73-8906-888d9ce65a58",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          },
+          {
+            "call_id": "exec-a0717f3b-1490-4067-8eba-10f9ddbc825f",
+            "thread_id": "01a0dd0a-1a39-78f0-92cd-e32678ba6d4f",
+            "turn_id": "01a0dd0a-1aa8-7ce0-8af7-9d99f970874e",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "recovery": {
+        "producer_loaded": true,
+        "consumer_loaded": true,
+        "distinct_thread_ids": 2,
+        "native_compaction_completed": false,
+        "consumer_changed_files": []
+      },
+      "behavior": "pass",
+      "reason": "Two distinct native threads both loaded target. Actual producer record used by consumer; stale default/verification detected; one-pass/one-fail rerun; no consumer edits.",
+      "imperfections": [
+        "Final says second failure exhausted retries although default 1 means first failure. Test status/count, current default and readonly behavior were correct."
+      ],
+      "scope": "pass",
+      "observation_sha256": "541d568ec6167632bcd36c09f06e320159395d296777ed2f44c7e879073e6166",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "headers-on-1",
+      "observation": "native-acceptance-v12-20260926/headers-on-1.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-a2a17096-1029-458a-bca6-bc42ddfd2cf5",
+            "thread_id": "01a0dd0a-99e5-78d1-a087-926074d17e72",
+            "turn_id": "01a0dd0a-9a34-74d1-90da-ab8405481b02",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "fail",
+      "reason": "Selected candidate as the concurrency core with explicit Borrow, despite read responses containing no test/license bodies. Moved required static verification into future production adoption; scoped hypothetical wording does not complete the adoption gate.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "5af521fdcdd63a60d8d6d5cccbf49f1272f510a69b8d3c6acab5a46320543daa",
+      "behavior_scope_result": "fail"
+    },
+    {
+      "version": "v12",
+      "case": "headers-on-2",
+      "observation": "native-acceptance-v12-20260926/headers-on-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-08d0e3a7-f662-427b-99e4-1edebc594bb9",
+            "thread_id": "01a0dd0b-80b2-7561-a296-1699f32cce0c",
+            "turn_id": "01a0dd0b-80fd-7861-98a7-495284bd3d7c",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          },
+          {
+            "call_id": "exec-36f0f52c-e18d-4a0b-a6d7-ce18479389fa",
+            "thread_id": "01a0dd0b-80b2-7561-a296-1699f32cce0c",
+            "turn_id": "01a0dd0b-80fd-7861-98a7-495284bd3d7c",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Scoped a project-owned Promise queue and retained candidate only as technical reference, not approved adoption; disclosed missing license/test bodies.",
+      "imperfections": [
+        "Illustrative limit(() => ...) call does not show creating the returned limiter from limit(max); a minor API-example ambiguity, not an executed integration."
+      ],
+      "scope": "pass",
+      "observation_sha256": "bb5b8c6f530210276d430834a6814a41edc09061aeefc87fcd9283164706a2e9",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "headers-on-3",
+      "observation": "native-acceptance-v12-20260926/headers-on-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-359f0a8f-8be6-4176-99a7-33671036fcef",
+            "thread_id": "01a0dd0c-58a5-73a3-9f52-3f8e31080ebf",
+            "turn_id": "01a0dd0c-58ff-7442-a611-f2fff0510f47",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "fail",
+      "reason": "Explicitly borrowed candidate/index.mjs as first-choice snapshot despite acknowledging missing license and test bodies; no static adoption basis for that artifact.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "b3f4c087648f0f0c500c722687ba8106ca153ae138862ec85476bf3862996e9a",
+      "behavior_scope_result": "fail"
+    },
+    {
+      "version": "v12",
+      "case": "small-on",
+      "observation": "native-acceptance-v12-20260926/small-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Only the existing README typos changed; local diff/spelling verification; no target load required.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "2d3ee600d9c2f22b26c15691e4b9a37e5780521de54fdce77d2dd72276e86bf6",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "real-project-on",
+      "observation": "native-acceptance-v12-20260926/real-project-on.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": false,
+        "receipts": [],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Extended existing checker and added repeatable positive/negative standard-library checks. Temporary fixtures remain under the case scripts directory; final source implements file or directory-entry validation.",
+      "imperfections": [
+        "Target Skill body was not read; cannot attribute this successful source-slice work to target execution. Repeated same self-test."
+      ],
+      "scope": "pass",
+      "observation_sha256": "642304d48bdb0c74ca944695f13c71780220afe91eff963deac51cee301d0861",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "architecture-on-2",
+      "observation": "native-acceptance-v12-20260926/architecture-on-2.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-3f89fd1f-fe35-4f1d-a3fb-dc97993a38b7",
+            "thread_id": "01a0dd08-a4f2-7b03-923e-77096011ec9b",
+            "turn_id": "01a0dd08-a54b-7703-9fe5-492b9fd31f15",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Inspected actual candidate MIT text, source and test; scoped Borrow to supplied snapshot, with real upstream and target runtime still unverified.",
+      "imperfections": [
+        "Tests not executed and accurately labelled planned; static design criterion does not require execution."
+      ],
+      "scope": "pass",
+      "observation_sha256": "0c7eabb980b23335e502d8410db6d183b60b108304cbbd08b7bb888bf054b517",
+      "behavior_scope_result": "pass"
+    },
+    {
+      "version": "v12",
+      "case": "architecture-on-3",
+      "observation": "native-acceptance-v12-20260926/architecture-on-3.observations.json",
+      "review_status": "reviewed",
+      "record_state": "completed",
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "loading": {
+        "available": true,
+        "observed_body_read": true,
+        "receipts": [
+          {
+            "call_id": "exec-8a4fa564-fe5a-44e6-a7d6-4c1eb3e9333a",
+            "thread_id": "01a0dd09-a5b6-7c43-bec7-40ee1590cb64",
+            "turn_id": "01a0dd09-a607-7c93-af84-81eb771e5db4",
+            "body_end_returned": true,
+            "command_exit_code": 0
+          }
+        ],
+        "complete_trace": true
+      },
+      "behavior": "pass",
+      "reason": "Unfiltered inventory and actual MIT/source/test inspection supported scoped snapshot Borrow; one provided test passed on Node 24 and Node 22 remained unverified.",
+      "imperfections": [],
+      "scope": "pass",
+      "observation_sha256": "d0c70c76bd0f5f15c66cd4e0f162259d158fa7b16014316fe9a1326df5a05b71",
+      "behavior_scope_result": "pass"
+    }
+  ],
+  "deterministic_replay_reference": "native-reviewer-checks.json (separate dispatcher-owned receipts, not extra model trials)",
+  "summary": {
+    "v10": {
+      "logical_cases": 17,
+      "available_target_cases": 11,
+      "loaded_target_cases": 4,
+      "target_body_read_events": 4,
+      "available_target_behavior_pass": 11,
+      "available_target_scope_pass": 11,
+      "available_target_behavior_and_scope_pass": 11,
+      "control_cases": 6,
+      "control_behavior_pass": 4,
+      "behavior_failures": [
+        "headers-off-1",
+        "headers-off-3"
+      ],
+      "scope_failures": [],
+      "recovery": {
+        "compact-on": {
+          "producer_loaded": false,
+          "consumer_loaded": false,
+          "distinct_thread_ids": 1,
+          "native_compaction_completed": true,
+          "consumer_changed_files": []
+        },
+        "handoff-on": {
+          "producer_loaded": false,
+          "consumer_loaded": false,
+          "distinct_thread_ids": 2,
+          "native_compaction_completed": false,
+          "consumer_changed_files": []
+        }
+      }
+    },
+    "v11": {
+      "logical_cases": 11,
+      "available_target_cases": 11,
+      "loaded_target_cases": 10,
+      "target_body_read_events": 11,
+      "available_target_behavior_pass": 8,
+      "available_target_scope_pass": 10,
+      "available_target_behavior_and_scope_pass": 7,
+      "control_cases": 0,
+      "control_behavior_pass": 0,
+      "behavior_failures": [
+        "architecture-on",
+        "headers-on-1",
+        "headers-on-3"
+      ],
+      "scope_failures": [
+        "real-project-on"
+      ],
+      "recovery": {
+        "compact-on": {
+          "producer_loaded": true,
+          "consumer_loaded": true,
+          "distinct_thread_ids": 1,
+          "native_compaction_completed": true,
+          "consumer_changed_files": []
+        },
+        "handoff-on": {
+          "producer_loaded": false,
+          "consumer_loaded": true,
+          "distinct_thread_ids": 2,
+          "native_compaction_completed": false,
+          "consumer_changed_files": []
+        }
+      }
+    },
+    "v12": {
+      "logical_cases": 13,
+      "available_target_cases": 13,
+      "loaded_target_cases": 11,
+      "target_body_read_events": 14,
+      "available_target_behavior_pass": 11,
+      "available_target_scope_pass": 13,
+      "available_target_behavior_and_scope_pass": 11,
+      "control_cases": 0,
+      "control_behavior_pass": 0,
+      "behavior_failures": [
+        "headers-on-1",
+        "headers-on-3"
+      ],
+      "scope_failures": [],
+      "recovery": {
+        "compact-on": {
+          "producer_loaded": true,
+          "consumer_loaded": true,
+          "distinct_thread_ids": 1,
+          "native_compaction_completed": true,
+          "consumer_changed_files": []
+        },
+        "handoff-on": {
+          "producer_loaded": true,
+          "consumer_loaded": true,
+          "distinct_thread_ids": 2,
+          "native_compaction_completed": false,
+          "consumer_changed_files": []
+        }
+      }
+    }
+  },
+  "inventory_checks": {
+    "logical_cases": 41,
+    "distinct_native_threads": 44,
+    "ordinary_task_turns": 47,
+    "native_manual_compactions": 3,
+    "actual_requested_model_and_effort_match": true,
+    "other_skill_catalog_fingerprints": {
+      "4b90b942c2740efda0bab3543bcccc485fa642fbca37d8c62df0bdcfc0d650bf": 41
+    },
+    "other_skill_catalog_equal": true,
+    "catalog_boundary": "Available discovery catalog only; no claim that all host system/tool guidance was isolated."
+  }
+}

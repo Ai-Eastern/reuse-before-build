@@ -1,0 +1,484 @@
+{
+  "case": "covered-off-3",
+  "native_host": "Codex desktop-bundled app-server 0.158.0-alpha.2",
+  "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+  "skill_available": false,
+  "initial_hashes": {
+    "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+    "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+    "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+    "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+    "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+  },
+  "state": "completed",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "events": [
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1790413948639
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turn": {
+          "id": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+          "status": "inProgress",
+          "error": null
+        }
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a0dcfc-d752-7950-a089-26daf36704b0",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413952850
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a0dcfc-d752-7950-a089-26daf36704b0",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413952850
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_06040b5bd679f589016ab78c83170487d09545cfb910c4e218",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413954728
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_06040b5bd679f589016ab78c83170487d09545cfb910c4e218",
+          "text": "我会先查看当前项目内的说明和 retry 实现、现有测试，再补上针对“三次总尝试”的回归测试；按你的要求不改生产代码，并实际运行可重复的验证。此编码任务会用 `<other-skill>` 技能来保持改动精简。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413955648
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-ed786077-aba1-4b69-b252-7f22bdd74c8e",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*retry*' -g '*Retry*' -g '*test*' -g '*spec*' -g 'pyproject.toml' -g 'package.json' -g 'go.mod' -g 'Cargo.toml' -g '*.sln' -g '*.csproj'\"",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "11204",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*retry*' -g '*Retry*' -g '*test*' -g '*spec*' -g 'pyproject.toml' -g 'package.json' -g 'go.mod' -g 'Cargo.toml' -g '*.sln' -g '*.csproj'"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413958466
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-ed786077-aba1-4b69-b252-7f22bdd74c8e",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*retry*' -g '*Retry*' -g '*test*' -g '*spec*' -g 'pyproject.toml' -g 'package.json' -g 'go.mod' -g 'Cargo.toml' -g '*.sln' -g '*.csproj'\"",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "11204",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*retry*' -g '*Retry*' -g '*test*' -g '*spec*' -g 'pyproject.toml' -g 'package.json' -g 'go.mod' -g 'Cargo.toml' -g '*.sln' -g '*.csproj'"
+            }
+          ],
+          "aggregatedOutput": {
+            "omitted": "Mixed or unrelated personal instruction output; original reviewed locally, not redistributed.",
+            "sha256": "17cf98b5a89ccc36eb46e3a3cb6d7a95a2abd5ab0ba22267f3077c33ddd9cce3",
+            "characters": 6652,
+            "complete_target_skill_also_returned": false
+          },
+          "exitCode": 0,
+          "durationMs": 178
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413958645
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-27327036-e08d-44d8-9317-d332bf303a87",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'Get-Content -Raw src/retry.mjs; Get-Content -Raw test/retry.test.mjs; Get-Content -Raw package.json; git status --short'",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "29521",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw src/retry.mjs; Get-Content -Raw test/retry.test.mjs; Get-Content -Raw package.json; git status --short"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413962368
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-27327036-e08d-44d8-9317-d332bf303a87",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'Get-Content -Raw src/retry.mjs; Get-Content -Raw test/retry.test.mjs; Get-Content -Raw package.json; git status --short'",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "29521",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw src/retry.mjs; Get-Content -Raw test/retry.test.mjs; Get-Content -Raw package.json; git status --short"
+            }
+          ],
+          "aggregatedOutput": "// SPDX-License-Identifier: MIT\nexport async function retry(operation, { attempts = 3 } = {}) {\n  if (!Number.isInteger(attempts) || attempts < 1) {\n    throw new RangeError('attempts must be a positive integer');\n  }\n\n  for (let attempt = 1; attempt <= attempts; attempt += 1) {\n    try {\n      return await operation(attempt);\n    } catch (error) {\n      if (attempt === attempts) throw error;\n    }\n  }\n}\n\r\n// SPDX-License-Identifier: MIT\nimport assert from 'node:assert/strict';\nimport test from 'node:test';\nimport { retry } from '../src/retry.mjs';\n\ntest('returns the first successful result without another attempt', async () => {\n  const seen = [];\n  const result = await retry(async (attempt) => {\n    seen.push(attempt);\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.deepEqual(seen, [1]);\n});\n\ntest('the default permits two failures before a successful third attempt', async () => {\n  const seen = [];\n  const result = await retry(async (attempt) => {\n    seen.push(attempt);\n    if (attempt < 3) throw new Error('temporary failure');\n    return 'ready';\n  });\n  assert.equal(result, 'ready');\n  assert.deepEqual(seen, [1, 2, 3]);\n});\n\r\nGet-Content: \r\nLine |\r\n   2 |  … ntent -Raw test/retry.test.mjs; Get-Content -Raw package.json; git st …\r\n     |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n     | Cannot find path '<v10-batch>\\covered-off-3\\package.json' because it does not exist.\r\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\n",
+          "exitCode": 0,
+          "durationMs": 265
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413962633
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_06040b5bd679f589016ab78c948bfc87d0acdaa6911f2bf602",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413972179
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_06040b5bd679f589016ab78c948bfc87d0acdaa6911f2bf602",
+          "text": "现有 `test/retry.test.mjs` 已经包含这条场景：使用默认参数，记录调用序号，前两次抛出暂时错误，第三次返回 `ready`，并断言结果及调用序列恰为 `[1, 2, 3]`。这同时锁定了默认总尝试次数和成功后不再调用；我会重复运行该测试确认可复现。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413973451
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-89f191c6-bbc6-4293-88c1-e8fd42e10c3f",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git -c core.excludesFile=NUL status --short; git -c core.excludesFile=NUL diff -- test/retry.test.mjs src/retry.mjs'",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "47474",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git -c core.excludesFile=NUL status --short; git -c core.excludesFile=NUL diff -- test/retry.test.mjs src/retry.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413976135
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-89f191c6-bbc6-4293-88c1-e8fd42e10c3f",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git -c core.excludesFile=NUL status --short; git -c core.excludesFile=NUL diff -- test/retry.test.mjs src/retry.mjs'",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "47474",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; node --test test/retry.test.mjs; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; git -c core.excludesFile=NUL status --short; git -c core.excludesFile=NUL diff -- test/retry.test.mjs src/retry.mjs"
+            }
+          ],
+          "aggregatedOutput": "✔ returns the first successful result without another attempt (0.8156ms)\n✔ the default permits two failures before a successful third attempt (0.1562ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 80.1533\n✔ returns the first successful result without another attempt (0.8264ms)\n✔ the default permits two failures before a successful third attempt (0.1547ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 79.4978\nfatal: cannot use NUL as an exclude file\n",
+          "exitCode": 0,
+          "durationMs": 559
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413976695
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-3f8d4bb7-a664-4747-9d83-37a9bf8b312c",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git status --short --untracked-files=no; git diff -- src/retry.mjs test/retry.test.mjs'",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "97097",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git status --short --untracked-files=no; git diff -- src/retry.mjs test/retry.test.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413982922
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-3f8d4bb7-a664-4747-9d83-37a9bf8b312c",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git status --short --untracked-files=no; git diff -- src/retry.mjs test/retry.test.mjs'",
+          "cwd": "<v10-batch>\\covered-off-3",
+          "processId": "97097",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git status --short --untracked-files=no; git diff -- src/retry.mjs test/retry.test.mjs"
+            }
+          ],
+          "aggregatedOutput": "warning: unable to access '<user-profile>/.config/git/ignore': Permission denied\n",
+          "exitCode": 0,
+          "durationMs": 437
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413983360
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_06040b5bd679f589016ab78ca29b0087d0991a54618b065fbe",
+          "text": "",
+          "phase": "final_answer",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "startedAtMs": 1790413986250
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_06040b5bd679f589016ab78ca29b0087d0991a54618b065fbe",
+          "text": "已确认，[retry.test.mjs](/<v10-batch>/covered-off-3/test/retry.test.mjs:17) 已覆盖该场景：前两次抛出暂时错误，第三次返回 `ready`，并断言调用序列恰为 `[1, 2, 3]`。这也验证了成功后没有额外调用。\n\n验证命令 `node --test test/retry.test.mjs` 连续运行两次，每次均为 2 项通过、0 项失败。测试保障已存在，因此未改文件；生产代码保持不变。",
+          "phase": "final_answer",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turnId": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+        "completedAtMs": 1790413988143
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1790413988186
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+        "turn": {
+          "id": "01a0dcfc-c6d4-7dc3-a630-77d676d1f68f",
+          "status": "completed",
+          "error": null
+        }
+      }
+    }
+  ],
+  "stderr_line_count": 13,
+  "last_updated_utc": "2026-09-26T09:13:08Z",
+  "discovery": {
+    "target_entries": [
+      {
+        "name": "reuse-before-build",
+        "path": "<personal-skills>\\reuse-before-build\\SKILL.md",
+        "enabled": false,
+        "scope": "user"
+      }
+    ],
+    "other_catalog_entry_count": 31,
+    "other_catalog_entries_sha256": "2c2096edca3aff52f9f2b4561598901d51943fdf378978973693c906e42d3aef",
+    "note": "Unrelated names, paths and metadata omitted. Fingerprint covers catalog entries, not their contents."
+  },
+  "threads": [
+    {
+      "id": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "modelProvider": "openai",
+      "ephemeral": true,
+      "instruction_source_summary": {
+        "entry_count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  ],
+  "turn_requests": [
+    {
+      "threadId": "01a0dcfc-c686-7f62-8738-b6c293631d3b",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "input": [
+        {
+          "type": "text",
+          "text": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。"
+        }
+      ]
+    }
+  ],
+  "final_hashes": {
+    "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+    "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+    "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+    "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+    "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+  },
+  "changed_files": [],
+  "target_skill_body_read_item_ids": [],
+  "target_skill_body_read_evidence": [],
+  "personal_instruction_output_omissions": [
+    "exec-ed786077-aba1-4b69-b252-7f22bdd74c8e"
+  ],
+  "final_git_head": "f75a42dfdfbcf0a7620ead8d696511239e8f95af",
+  "final_git_status": "",
+  "file_changes": {},
+  "export_note": "Sanitized native JSON-RPC observable items. Raw observations, reasoning, compacted/encrypted content and unrelated personal instructions are not published. Private names/paths are anonymized; mixed instruction outputs retain a fingerprint and exact target-body-match receipt. UI interaction was not tested."
+}

@@ -1,0 +1,947 @@
+{
+  "note": "Complete preparation manifests include unrun controls. Preparation-time flags describe preparation, not current execution. Only execution_summary and index.json establish executed cases. Source slices and directories listed as prepared are not thereby tested.",
+  "manifests": {
+    "v10": {
+      "skill_sha256": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+      "cases": {
+        "covered-on-1": {
+          "path": "<v10-batch>\\covered-on-1",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "9e5af12268ace71e6791d3b5764e8ce0b3782371"
+        },
+        "covered-off-1": {
+          "path": "<v10-batch>\\covered-off-1",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "0b649ccbc8fab68a1741f99cbbff1994ff9da9e6"
+        },
+        "covered-on-2": {
+          "path": "<v10-batch>\\covered-on-2",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "b3a3d5446795e4b0fbe5a5ee559185026bba2919"
+        },
+        "covered-off-2": {
+          "path": "<v10-batch>\\covered-off-2",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "0b649ccbc8fab68a1741f99cbbff1994ff9da9e6"
+        },
+        "covered-on-3": {
+          "path": "<v10-batch>\\covered-on-3",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "5ace051f69fff22032877047db1802870557b7d3"
+        },
+        "covered-off-3": {
+          "path": "<v10-batch>\\covered-off-3",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "f75a42dfdfbcf0a7620ead8d696511239e8f95af"
+        },
+        "headers-on-1": {
+          "path": "<v10-batch>\\headers-on-1",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "4d36f049eb11b725d3428bb4a5da533d84e179d5"
+        },
+        "headers-off-1": {
+          "path": "<v10-batch>\\headers-off-1",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "74d985f0cae275370f3ae9dc68386d3781234f5b"
+        },
+        "headers-on-2": {
+          "path": "<v10-batch>\\headers-on-2",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "4a14e6b1a7a816283eafb45bd87cd3fe069fdcc1"
+        },
+        "headers-off-2": {
+          "path": "<v10-batch>\\headers-off-2",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "74d985f0cae275370f3ae9dc68386d3781234f5b"
+        },
+        "headers-on-3": {
+          "path": "<v10-batch>\\headers-on-3",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "cfd094020ac4e686e59cda7992f202e4ea28ba21"
+        },
+        "headers-off-3": {
+          "path": "<v10-batch>\\headers-off-3",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "0ca037e0974d3d77fd2d4cb7d3009f2d194adb44"
+        },
+        "architecture-on": {
+          "path": "<v10-batch>\\architecture-on",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+            "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+            "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "8fbb75c0698544fca9acf39793180cfeb0c4f7e8"
+        },
+        "small-on": {
+          "path": "<v10-batch>\\small-on",
+          "skill_available": true,
+          "prompt": "修正 README 中 staus 的拼写问题，仅处理这个文档问题。完成后说明改动和验证。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "44f59fdf9661da4fc50411cb4c7be6d40c62f4c96bac1d3bc78e6aa9d02bfc19",
+            "TASK.md": "4c29ab95026f498ef95efb5e08fc6b88f19e729cdd716cdf17658e2b3c661d7f",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "1c253797717231181e332d8a07d05f6f25e8dc67"
+        },
+        "compact-on": {
+          "path": "<v10-batch>\\compact-on",
+          "skill_available": true,
+          "prompt": "检查当前 fetchStatus 是否能在 readStatus 前两次失败、第三次成功时返回结果；readStatus 必须以零参数调用。本轮只读，可运行现有本地测试。将决定、约束、验证依据和待办保存为 HANDOFF.md，供下一会话继续检查。除 HANDOFF.md 外不改文件，不实施修复。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "0be05a546df59e59e5d853ce37db5cfd2f5e2e1d339dd0d3ddee084c05bded49",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "8edfbc26be1c3df9158ace674ac444d1a75f834c"
+        },
+        "handoff-on": {
+          "path": "<v10-batch>\\handoff-on",
+          "skill_available": true,
+          "prompt": "检查当前 fetchStatus 是否能在 readStatus 前两次失败、第三次成功时返回结果；readStatus 必须以零参数调用。本轮只读，可运行现有本地测试。将决定、约束、验证依据和待办保存为 HANDOFF.md，供下一会话继续检查。除 HANDOFF.md 外不改文件，不实施修复。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "0be05a546df59e59e5d853ce37db5cfd2f5e2e1d339dd0d3ddee084c05bded49",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "8edfbc26be1c3df9158ace674ac444d1a75f834c"
+        },
+        "real-project-on": {
+          "path": "<v10-batch>\\real-project-on",
+          "skill_available": true,
+          "prompt": "为现有文档链接检查脚本补充目录链接支持：本地链接指向一个真实目录，且目录包含 README.md 或 index.md 时视为有效；没有入口文档的目录仍报错。保留已有文件链接和代码围栏行为，给出可重复的正反验证。只在这份源码副本中实现。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "18bf8ee505bbc23728bde4941402f87fd1943ed77edadf8f6a4755e9ad85b771",
+            "TASK.md": "4b510617bc5bce449597e5af9a96f1eb96f27a1a6cbca6a82deba9019e4cfd84",
+            "scripts/check-links.mjs": "3d37f55a55bd91373882ecde6da76d444bb56189dfab76ed537fd3d4cf5faafc",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf"
+          },
+          "initial_head": "080979adb513651c9be55b67c509f2a5f51a038f"
+        }
+      },
+      "prepared_not_started": true
+    },
+    "v11": {
+      "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+      "cases": {
+        "covered-on-1": {
+          "path": "<v11-batch>\\covered-on-1",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "192e5f6e68ffc2a0634aba4496a02dcd8b1681b1"
+        },
+        "covered-off-1": {
+          "path": "<v11-batch>\\covered-off-1",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "3184b577b67fffd3af5b5bd346da9365c4871787"
+        },
+        "covered-on-2": {
+          "path": "<v11-batch>\\covered-on-2",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "192e5f6e68ffc2a0634aba4496a02dcd8b1681b1"
+        },
+        "covered-off-2": {
+          "path": "<v11-batch>\\covered-off-2",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "3184b577b67fffd3af5b5bd346da9365c4871787"
+        },
+        "covered-on-3": {
+          "path": "<v11-batch>\\covered-on-3",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "3c240359b92e8312899e97cd257b8125e6bed200"
+        },
+        "covered-off-3": {
+          "path": "<v11-batch>\\covered-off-3",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "306acf6489d8b929e3bba5fa83da44fb05d7977e"
+        },
+        "headers-on-1": {
+          "path": "<v11-batch>\\headers-on-1",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "c64df8fc0d6e5bc042b284be4a7a98cb9730de3c"
+        },
+        "headers-off-1": {
+          "path": "<v11-batch>\\headers-off-1",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "ea964d4a22c8eaaf115669cbc2b6c4f7b87235d1"
+        },
+        "headers-on-2": {
+          "path": "<v11-batch>\\headers-on-2",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "4138746cc4a1734fad28e96a790e6c853e5f0390"
+        },
+        "headers-off-2": {
+          "path": "<v11-batch>\\headers-off-2",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "674ee4121717d44ab210d3fb08f7321f389e60a9"
+        },
+        "headers-on-3": {
+          "path": "<v11-batch>\\headers-on-3",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "4138746cc4a1734fad28e96a790e6c853e5f0390"
+        },
+        "headers-off-3": {
+          "path": "<v11-batch>\\headers-off-3",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "674ee4121717d44ab210d3fb08f7321f389e60a9"
+        },
+        "architecture-on": {
+          "path": "<v11-batch>\\architecture-on",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+            "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+            "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "ea18d8839e6db724abdb32c54cab60bf54488925"
+        },
+        "small-on": {
+          "path": "<v11-batch>\\small-on",
+          "skill_available": true,
+          "prompt": "修正 README 中 staus 的拼写问题，仅处理这个文档问题。完成后说明改动和验证。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "44f59fdf9661da4fc50411cb4c7be6d40c62f4c96bac1d3bc78e6aa9d02bfc19",
+            "TASK.md": "4c29ab95026f498ef95efb5e08fc6b88f19e729cdd716cdf17658e2b3c661d7f",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "536eb3427ee4ef985d8a9b68de13959812f7c98e"
+        },
+        "compact-on": {
+          "path": "<v11-batch>\\compact-on",
+          "skill_available": true,
+          "prompt": "检查当前 fetchStatus 是否能在 readStatus 前两次失败、第三次成功时返回结果；readStatus 必须以零参数调用。本轮只读，可运行现有本地测试。将决定、约束、验证依据和待办保存为 HANDOFF.md，供下一会话继续检查。除 HANDOFF.md 外不改文件，不实施修复。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "0be05a546df59e59e5d853ce37db5cfd2f5e2e1d339dd0d3ddee084c05bded49",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "804bb4491e90ac47f39d9b5bcac2ea89177d7bdb"
+        },
+        "handoff-on": {
+          "path": "<v11-batch>\\handoff-on",
+          "skill_available": true,
+          "prompt": "检查当前 fetchStatus 是否能在 readStatus 前两次失败、第三次成功时返回结果；readStatus 必须以零参数调用。本轮只读，可运行现有本地测试。将决定、约束、验证依据和待办保存为 HANDOFF.md，供下一会话继续检查。除 HANDOFF.md 外不改文件，不实施修复。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "0be05a546df59e59e5d853ce37db5cfd2f5e2e1d339dd0d3ddee084c05bded49",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "804bb4491e90ac47f39d9b5bcac2ea89177d7bdb"
+        },
+        "real-project-on": {
+          "path": "<v11-batch>\\real-project-on",
+          "skill_available": true,
+          "prompt": "为现有文档链接检查脚本补充目录链接支持：本地链接指向一个真实目录，且目录包含 README.md 或 index.md 时视为有效；没有入口文档的目录仍报错。保留已有文件链接和代码围栏行为，给出可重复的正反验证。只在这份源码副本中实现。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "18bf8ee505bbc23728bde4941402f87fd1943ed77edadf8f6a4755e9ad85b771",
+            "TASK.md": "4b510617bc5bce449597e5af9a96f1eb96f27a1a6cbca6a82deba9019e4cfd84",
+            "scripts/check-links.mjs": "3d37f55a55bd91373882ecde6da76d444bb56189dfab76ed537fd3d4cf5faafc",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+          },
+          "initial_head": "9bfa75c504cb9c11f0b3c8916db10702f4e05239"
+        }
+      },
+      "model_launches_during_preparation": 0
+    },
+    "v12": {
+      "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+      "cases": {
+        "covered-on-1": {
+          "path": "<v12-batch>\\covered-on-1",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "cb1cc114e21ae867fc62a75c945f94e60e11b73b"
+        },
+        "covered-off-1": {
+          "path": "<v12-batch>\\covered-off-1",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "468912ac77f345402d2602ab24aa780c87c39fd4"
+        },
+        "covered-on-2": {
+          "path": "<v12-batch>\\covered-on-2",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "cb1cc114e21ae867fc62a75c945f94e60e11b73b"
+        },
+        "covered-off-2": {
+          "path": "<v12-batch>\\covered-off-2",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "331d16b8c90ca02df93ab115cb3589cda8a19163"
+        },
+        "covered-on-3": {
+          "path": "<v12-batch>\\covered-on-3",
+          "skill_available": true,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "f81d5efb9a429e504be0132e5f524ea25aa46f83"
+        },
+        "covered-off-3": {
+          "path": "<v12-batch>\\covered-off-3",
+          "skill_available": false,
+          "prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "e0988c1f64eefc75cea6067b5e83f0c4d00b6ebd5868e847208101c627f88d0d",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+          },
+          "initial_head": "836091521f8cf6db7728512512720d1f965b605f"
+        },
+        "headers-on-1": {
+          "path": "<v12-batch>\\headers-on-1",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "6b60cf65b1872720392258961cf2669080c4c1ba"
+        },
+        "headers-off-1": {
+          "path": "<v12-batch>\\headers-off-1",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "22e5a4e4b9bbc1b30ac51c3437d8ce709b0f2a48"
+        },
+        "headers-on-2": {
+          "path": "<v12-batch>\\headers-on-2",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "5694d922a0007eb1de95953597b2bf39a76431c6"
+        },
+        "headers-off-2": {
+          "path": "<v12-batch>\\headers-off-2",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "5a455b5f4be38b161025a1775276095871515da6"
+        },
+        "headers-on-3": {
+          "path": "<v12-batch>\\headers-on-3",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "8c71547c70b62966f1b686d7d57744ebeb6a6b7e"
+        },
+        "headers-off-3": {
+          "path": "<v12-batch>\\headers-off-3",
+          "skill_available": false,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "21e78386bca512335544047b753e5c96b8dcdbd68276493288db02af6fd2d838",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/package.json": "1c59323318d8a764375d1612effd5d3955b021eca9e4181d3fdca535245cdcff",
+            "retrieved/index.test.mjs.response.txt": "c8186af39338bc7d363488c5806b7d3a9477e90698fb7b0bb91e2e8f7c12d7c5",
+            "retrieved/LICENSE.response.txt": "7f83148783f445fb072e9479119819fa52d6afe3020b5508a1cfea2c1e20f7b4"
+          },
+          "initial_head": "723c9eeaac7209852865ee86bc4183862dcb29a9"
+        },
+        "architecture-on": {
+          "path": "<v12-batch>\\architecture-on",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+            "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+            "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "a4c27a346c7c3a9214c8a3002095c9e1b3314427"
+        },
+        "small-on": {
+          "path": "<v12-batch>\\small-on",
+          "skill_available": true,
+          "prompt": "修正 README 中 staus 的拼写问题，仅处理这个文档问题。完成后说明改动和验证。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "44f59fdf9661da4fc50411cb4c7be6d40c62f4c96bac1d3bc78e6aa9d02bfc19",
+            "TASK.md": "4c29ab95026f498ef95efb5e08fc6b88f19e729cdd716cdf17658e2b3c661d7f",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "a8afb9794c78d84513bc22534608b072c261458c"
+        },
+        "compact-on": {
+          "path": "<v12-batch>\\compact-on",
+          "skill_available": true,
+          "prompt": "检查当前 fetchStatus 是否能在 readStatus 前两次失败、第三次成功时返回结果；readStatus 必须以零参数调用。本轮只读，可运行现有本地测试。将决定、约束、验证依据和待办保存为 HANDOFF.md，供下一会话继续检查。除 HANDOFF.md 外不改文件，不实施修复。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "0be05a546df59e59e5d853ce37db5cfd2f5e2e1d339dd0d3ddee084c05bded49",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "36a27275f1699af55c2d8b6ed1ad99f950cf3d25"
+        },
+        "handoff-on": {
+          "path": "<v12-batch>\\handoff-on",
+          "skill_available": true,
+          "prompt": "检查当前 fetchStatus 是否能在 readStatus 前两次失败、第三次成功时返回结果；readStatus 必须以零参数调用。本轮只读，可运行现有本地测试。将决定、约束、验证依据和待办保存为 HANDOFF.md，供下一会话继续检查。除 HANDOFF.md 外不改文件，不实施修复。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+            "TASK.md": "0be05a546df59e59e5d853ce37db5cfd2f5e2e1d339dd0d3ddee084c05bded49",
+            "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+            "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+            "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "4fdea83c8039f631c500d4e0cee1892543fa7894"
+        },
+        "real-project-on": {
+          "path": "<v12-batch>\\real-project-on",
+          "skill_available": true,
+          "prompt": "为现有文档链接检查脚本补充目录链接支持：本地链接指向一个真实目录，且目录包含 README.md 或 index.md 时视为有效；没有入口文档的目录仍报错。保留已有文件链接和代码围栏行为，给出可重复的正反验证。只在这份源码副本中实现。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "README.md": "18bf8ee505bbc23728bde4941402f87fd1943ed77edadf8f6a4755e9ad85b771",
+            "TASK.md": "4b510617bc5bce449597e5af9a96f1eb96f27a1a6cbca6a82deba9019e4cfd84",
+            "scripts/check-links.mjs": "3d37f55a55bd91373882ecde6da76d444bb56189dfab76ed537fd3d4cf5faafc",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "803a1e2f02ec4128ca6e6568d861f6e762a074f9"
+        },
+        "architecture-on-2": {
+          "path": "<v12-batch>\\architecture-on-2",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+            "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+            "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "a4c27a346c7c3a9214c8a3002095c9e1b3314427"
+        },
+        "architecture-on-3": {
+          "path": "<v12-batch>\\architecture-on-3",
+          "skill_available": true,
+          "prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+          "initial_hashes": {
+            "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+            "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+            "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+            "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+            "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+            "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+            ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+            ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+          },
+          "initial_head": "a4c27a346c7c3a9214c8a3002095c9e1b3314427"
+        }
+      },
+      "model_launches_during_preparation": 0,
+      "preexecution_plan_revision": "Final receipt-state clarification; no model had run before revision."
+    }
+  },
+  "execution_summary": {
+    "v10": {
+      "prepared_cases": 17,
+      "planned_cases": [
+        "architecture-on",
+        "compact-on",
+        "covered-off-1",
+        "covered-off-2",
+        "covered-off-3",
+        "covered-on-1",
+        "covered-on-2",
+        "covered-on-3",
+        "handoff-on",
+        "headers-off-1",
+        "headers-off-2",
+        "headers-off-3",
+        "headers-on-1",
+        "headers-on-2",
+        "headers-on-3",
+        "real-project-on",
+        "small-on"
+      ],
+      "completed_cases": [
+        "architecture-on",
+        "compact-on",
+        "covered-off-1",
+        "covered-off-2",
+        "covered-off-3",
+        "covered-on-1",
+        "covered-on-2",
+        "covered-on-3",
+        "handoff-on",
+        "headers-off-1",
+        "headers-off-2",
+        "headers-off-3",
+        "headers-on-1",
+        "headers-on-2",
+        "headers-on-3",
+        "real-project-on",
+        "small-on"
+      ],
+      "prepared_not_run_cases": [],
+      "unrun_off_controls": []
+    },
+    "v11": {
+      "prepared_cases": 17,
+      "planned_cases": [
+        "architecture-on",
+        "compact-on",
+        "covered-on-1",
+        "covered-on-2",
+        "covered-on-3",
+        "handoff-on",
+        "headers-on-1",
+        "headers-on-2",
+        "headers-on-3",
+        "real-project-on",
+        "small-on"
+      ],
+      "completed_cases": [
+        "architecture-on",
+        "compact-on",
+        "covered-on-1",
+        "covered-on-2",
+        "covered-on-3",
+        "handoff-on",
+        "headers-on-1",
+        "headers-on-2",
+        "headers-on-3",
+        "real-project-on",
+        "small-on"
+      ],
+      "prepared_not_run_cases": [
+        "covered-off-1",
+        "covered-off-2",
+        "covered-off-3",
+        "headers-off-1",
+        "headers-off-2",
+        "headers-off-3"
+      ],
+      "unrun_off_controls": [
+        "covered-off-1",
+        "covered-off-2",
+        "covered-off-3",
+        "headers-off-1",
+        "headers-off-2",
+        "headers-off-3"
+      ]
+    },
+    "v12": {
+      "prepared_cases": 19,
+      "planned_cases": [
+        "architecture-on",
+        "architecture-on-2",
+        "architecture-on-3",
+        "compact-on",
+        "covered-on-1",
+        "covered-on-2",
+        "covered-on-3",
+        "handoff-on",
+        "headers-on-1",
+        "headers-on-2",
+        "headers-on-3",
+        "real-project-on",
+        "small-on"
+      ],
+      "completed_cases": [
+        "architecture-on",
+        "architecture-on-2",
+        "architecture-on-3",
+        "compact-on",
+        "covered-on-1",
+        "covered-on-2",
+        "covered-on-3",
+        "handoff-on",
+        "headers-on-1",
+        "headers-on-2",
+        "headers-on-3",
+        "real-project-on",
+        "small-on"
+      ],
+      "prepared_not_run_cases": [
+        "covered-off-1",
+        "covered-off-2",
+        "covered-off-3",
+        "headers-off-1",
+        "headers-off-2",
+        "headers-off-3"
+      ],
+      "unrun_off_controls": [
+        "covered-off-1",
+        "covered-off-2",
+        "covered-off-3",
+        "headers-off-1",
+        "headers-off-2",
+        "headers-off-3"
+      ]
+    }
+  }
+}

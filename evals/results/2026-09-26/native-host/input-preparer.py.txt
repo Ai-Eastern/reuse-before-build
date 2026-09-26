@@ -1,0 +1,53 @@
+"""Fresh native inputs from unchanged fixtures; no models launched."""
+from pathlib import Path
+import hashlib,json,shutil,subprocess,sys
+
+work=Path(__file__).resolve().parent
+repo=work/'reuse-before-build'
+batch=work/(sys.argv[1] if len(sys.argv)>1 else 'native-acceptance-v10-20260926')
+skill=Path(sys.argv[2]) if len(sys.argv)>2 else repo/'SKILL.md'
+batch.mkdir(exist_ok=False)
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+inventory={}
+scope='\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。'
+
+def add(name,source,prompt,enabled=True):
+    root=batch/name
+    shutil.copytree(source,root,ignore=shutil.ignore_patterns('.git','SKILL.md','TASK.md','DESIGN.md'))
+    if enabled:
+        target=root/'.agents/skills/reuse-before-build';target.mkdir(parents=True)
+        shutil.copy2(skill,target/'SKILL.md');shutil.copy2(repo/'LICENSE',target/'LICENSE')
+    (root/'TASK.md').write_text(prompt+scope+'\n',encoding='utf-8',newline='\n')
+    # A repository boundary prevents parent project discovery; local-only baseline.
+    subprocess.run(['git','init','-q',str(root)],check=True)
+    subprocess.run(['git','-c','core.hooksPath=NUL','add','.'],cwd=root,check=True,capture_output=True)
+    subprocess.run(['git','-c','core.hooksPath=NUL','-c','user.name=Acceptance Fixture','-c','user.email=fixture@example.invalid','commit','-qm','Prepared native fixture'],cwd=root,check=True,capture_output=True)
+    inventory[name]={'path':str(root),'skill_available':enabled,'prompt':prompt+scope,
+                     'initial_hashes':{p.relative_to(root).as_posix():sha(p) for p in root.rglob('*') if p.is_file() and '.git' not in p.relative_to(root).parts},
+                     'initial_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()}
+    return root
+
+gate=work/'independent-gate-v10-20260926'
+core=repo/'evals/fixtures/retry-service'
+covered=(work/'independent-regression-v10-20260926/covered-test/skill/TASK.md').read_text(encoding='utf-8').strip()
+headers=work/'independent-content-v10-20260926/receipt-a/skill'
+for case,src,prompt in [('covered',core,covered),('headers',headers,(headers/'TASK.md').read_text(encoding='utf-8').strip())]:
+    for repeat in range(1,4):
+        for arm in ['on','off']:add(f'{case}-{arm}-{repeat}',src,prompt,arm=='on')
+add('architecture-on',gate/'snapshot-a/skill',(gate/'snapshot-a/skill/TASK.md').read_text(encoding='utf-8').strip())
+root=add('small-on',core,'修正 README 中 staus 的拼写问题，仅处理这个文档问题。完成后说明改动和验证。')
+with (root/'README.md').open('a',encoding='utf-8',newline='\n') as f:f.write('\nThe service returns a staus value from its reader.\n')
+inventory['small-on']['initial_hashes']['README.md']=sha(root/'README.md')
+
+recovery='检查当前 fetchStatus 是否能在 readStatus 前两次失败、第三次成功时返回结果；readStatus 必须以零参数调用。本轮只读，可运行现有本地测试。将决定、约束、验证依据和待办保存为 HANDOFF.md，供下一会话继续检查。除 HANDOFF.md 外不改文件，不实施修复。'
+add('compact-on',core,recovery)
+add('handoff-on',core,recovery)
+
+slice_dir=batch/'real-source-input';slice_dir.mkdir()
+(slice_dir/'scripts').mkdir()
+shutil.copy2(repo/'scripts/check-links.mjs',slice_dir/'scripts/check-links.mjs')
+shutil.copy2(repo/'LICENSE',slice_dir/'LICENSE')
+(slice_dir/'README.md').write_text('# Local documentation link checker\n\nSource: Ai-Eastern/reuse-before-build, commit 11d246336ef70826ef286613e154ec5deb308807.\n\nRun `node scripts/check-links.mjs [directory]`. This source slice excludes evaluation artifacts. The checker currently checks local inline Markdown file links.\n',encoding='utf-8')
+add('real-project-on',slice_dir,'为现有文档链接检查脚本补充目录链接支持：本地链接指向一个真实目录，且目录包含 README.md 或 index.md 时视为有效；没有入口文档的目录仍报错。保留已有文件链接和代码围栏行为，给出可重复的正反验证。只在这份源码副本中实现。')
+(batch/'manifest.json').write_text(json.dumps({'skill_sha256':sha(skill),'cases':inventory,'model_launches_during_preparation':0},ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+print(json.dumps({'cases':len(inventory),'skill_sha256':sha(skill),'root':str(batch)}))

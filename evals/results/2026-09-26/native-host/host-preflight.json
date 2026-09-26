@@ -1,0 +1,51 @@
+{
+  "native-preflight.json": {
+    "version": "codex-cli 0.153.4",
+    "target_model_entries": [],
+    "target_present": false,
+    "source": "Native model/list preflight; unrelated catalog and account data omitted."
+  },
+  "native-preflight-desktop.json": {
+    "version": "codex-cli 0.158.0-alpha.2",
+    "target_model_entries": [
+      {
+        "id": "gpt-6-luna",
+        "model": "gpt-6-luna",
+        "supportedReasoningEfforts": [
+          {
+            "reasoningEffort": "low",
+            "description": "Fast responses with lighter reasoning"
+          },
+          {
+            "reasoningEffort": "medium",
+            "description": "Balances speed and reasoning depth for everyday tasks"
+          },
+          {
+            "reasoningEffort": "high",
+            "description": "Greater reasoning depth for complex problems"
+          },
+          {
+            "reasoningEffort": "xhigh",
+            "description": "Extra high reasoning depth for complex problems"
+          },
+          {
+            "reasoningEffort": "max",
+            "description": "Maximum reasoning depth for the hardest problems"
+          }
+        ]
+      }
+    ],
+    "target_present": true,
+    "source": "Native model/list preflight; unrelated catalog and account data omitted."
+  },
+  "evaluation": {
+    "chosen_host": "Codex desktop-bundled app-server 0.158.0-alpha.2",
+    "transport": "native JSON-RPC over stdio",
+    "requested_model": "gpt-6-luna",
+    "requested_effort": "high",
+    "provider_fallback": false,
+    "ephemeral_threads": true,
+    "gui_tested": false,
+    "other_hosts": "User stated Claude Code and Copilot models unavailable; no other-host model run or substitution."
+  }
+}

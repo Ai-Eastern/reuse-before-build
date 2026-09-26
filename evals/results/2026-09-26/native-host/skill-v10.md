@@ -1,6 +1,6 @@
 ---
 name: reuse-before-build
-description: Discover reusable implementations and tests before architecture design, substantial changes, or test work. Use when asked to check or extend test coverage, choose components, or resume from a handoff or context compaction. Inspect local code, assertions, and verified records first; search GitHub and official sources only for unresolved implementation or compatibility gaps. Reuse sufficient tests instead of adding equivalent ones. Small edits stay local.
+description: Discover and evaluate reusable implementations before architecture design, technology selection, or substantial engineering changes. Search local assets and, when needed, GitHub and official sources; decide what to adopt, adapt, or build. Reuse tests and verified records when extending or resuming work. Small edits stay local.
 license: MIT
 ---
 
@@ -70,7 +70,7 @@ For each decisive capability, record a compact mapping: **required behavior and 
 
 4. **Decide:** check the receipt for missing or conflicting facts. Use `Take` or `Borrow` only when the applicable fields have inspected evidence and constraints fit. Otherwise keep the candidate **unverified** and perform the missing inspection within the research bound. If required evidence is unavailable, mark that candidate decision `Blocked` and name the missing fact. Continue independent design or assess a verified alternative; give any separate `Build` decision its own scope and grounds. Missing candidate evidence alone does not establish `Build`.
 
-Before delivering, classify decisive evidence as **inspected**, **not yet inspected**, or **unavailable after checking**. Unread is not absent: before declaring a local artifact absent, check its expected path or list its containing directory without file-type filters, accounting for hidden or ignored entries when relevant. Complete available targeted inspections before deciding. Check every material claim against returned content, including rejections, and reconcile proposed components in the architecture and summary with their receipts. Required evidence still unread or unavailable keeps that candidate adoption `Blocked`, even if installation is deferred or selection says "subject to verification". An independent `Build` needs its own scope and grounds; an unchecked artifact cannot reappear as `Take` or `Borrow`, including under a broader pattern label.
+Before delivering, check every material evidence claim against returned content, including claims about blocked or rejected candidates. Then reconcile selected components in the architecture and summary with their receipts, including corroboration and revision linkage. An open static check stays `Blocked`, even if installation is deferred or the recommendation says "subject to verification". Label candidate adoption separately from an independent local design; a blocked artifact must not reappear as `Borrow` under a broader pattern label.
 
 **Design-only work still completes these static checks.** Installation and runtime integration tests can remain planned; source, compatibility, and rights checks cannot be moved into a future implementation plan to justify today's selection. An unverified candidate may appear as an option, but not as an adopted component in the architecture or final summary.
 

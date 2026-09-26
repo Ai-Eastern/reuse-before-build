@@ -1,0 +1,412 @@
+[
+  {
+    "version": "v10",
+    "case": "architecture-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-architecture-on.json"
+  },
+  {
+    "version": "v10",
+    "case": "compact-on",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 2,
+    "threads": 1,
+    "manual_compaction": true,
+    "export": "v10-compact-on.json"
+  },
+  {
+    "version": "v10",
+    "case": "covered-off-1",
+    "target_available": false,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-covered-off-1.json"
+  },
+  {
+    "version": "v10",
+    "case": "covered-off-2",
+    "target_available": false,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-covered-off-2.json"
+  },
+  {
+    "version": "v10",
+    "case": "covered-off-3",
+    "target_available": false,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-covered-off-3.json"
+  },
+  {
+    "version": "v10",
+    "case": "covered-on-1",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-covered-on-1.json"
+  },
+  {
+    "version": "v10",
+    "case": "covered-on-2",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-covered-on-2.json"
+  },
+  {
+    "version": "v10",
+    "case": "covered-on-3",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-covered-on-3.json"
+  },
+  {
+    "version": "v10",
+    "case": "handoff-on",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 2,
+    "threads": 2,
+    "manual_compaction": false,
+    "export": "v10-handoff-on.json"
+  },
+  {
+    "version": "v10",
+    "case": "headers-off-1",
+    "target_available": false,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-headers-off-1.json"
+  },
+  {
+    "version": "v10",
+    "case": "headers-off-2",
+    "target_available": false,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-headers-off-2.json"
+  },
+  {
+    "version": "v10",
+    "case": "headers-off-3",
+    "target_available": false,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-headers-off-3.json"
+  },
+  {
+    "version": "v10",
+    "case": "headers-on-1",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-headers-on-1.json"
+  },
+  {
+    "version": "v10",
+    "case": "headers-on-2",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-headers-on-2.json"
+  },
+  {
+    "version": "v10",
+    "case": "headers-on-3",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-headers-on-3.json"
+  },
+  {
+    "version": "v10",
+    "case": "real-project-on",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-real-project-on.json"
+  },
+  {
+    "version": "v10",
+    "case": "small-on",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v10-small-on.json"
+  },
+  {
+    "version": "v11",
+    "case": "architecture-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-architecture-on.json"
+  },
+  {
+    "version": "v11",
+    "case": "compact-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 2,
+    "threads": 1,
+    "manual_compaction": true,
+    "export": "v11-compact-on.json"
+  },
+  {
+    "version": "v11",
+    "case": "covered-on-1",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-covered-on-1.json"
+  },
+  {
+    "version": "v11",
+    "case": "covered-on-2",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-covered-on-2.json"
+  },
+  {
+    "version": "v11",
+    "case": "covered-on-3",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-covered-on-3.json"
+  },
+  {
+    "version": "v11",
+    "case": "handoff-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 2,
+    "threads": 2,
+    "manual_compaction": false,
+    "export": "v11-handoff-on.json"
+  },
+  {
+    "version": "v11",
+    "case": "headers-on-1",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-headers-on-1.json"
+  },
+  {
+    "version": "v11",
+    "case": "headers-on-2",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-headers-on-2.json"
+  },
+  {
+    "version": "v11",
+    "case": "headers-on-3",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-headers-on-3.json"
+  },
+  {
+    "version": "v11",
+    "case": "real-project-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-real-project-on.json"
+  },
+  {
+    "version": "v11",
+    "case": "small-on",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v11-small-on.json"
+  },
+  {
+    "version": "v12",
+    "case": "architecture-on-2",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-architecture-on-2.json"
+  },
+  {
+    "version": "v12",
+    "case": "architecture-on-3",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-architecture-on-3.json"
+  },
+  {
+    "version": "v12",
+    "case": "architecture-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-architecture-on.json"
+  },
+  {
+    "version": "v12",
+    "case": "compact-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 2,
+    "threads": 1,
+    "manual_compaction": true,
+    "export": "v12-compact-on.json"
+  },
+  {
+    "version": "v12",
+    "case": "covered-on-1",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-covered-on-1.json"
+  },
+  {
+    "version": "v12",
+    "case": "covered-on-2",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-covered-on-2.json"
+  },
+  {
+    "version": "v12",
+    "case": "covered-on-3",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-covered-on-3.json"
+  },
+  {
+    "version": "v12",
+    "case": "handoff-on",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 2,
+    "threads": 2,
+    "manual_compaction": false,
+    "export": "v12-handoff-on.json"
+  },
+  {
+    "version": "v12",
+    "case": "headers-on-1",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-headers-on-1.json"
+  },
+  {
+    "version": "v12",
+    "case": "headers-on-2",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-headers-on-2.json"
+  },
+  {
+    "version": "v12",
+    "case": "headers-on-3",
+    "target_available": true,
+    "target_body_read": true,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-headers-on-3.json"
+  },
+  {
+    "version": "v12",
+    "case": "real-project-on",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-real-project-on.json"
+  },
+  {
+    "version": "v12",
+    "case": "small-on",
+    "target_available": true,
+    "target_body_read": false,
+    "model_turns": 1,
+    "threads": 1,
+    "manual_compaction": false,
+    "export": "v12-small-on.json"
+  }
+]

@@ -2,7 +2,7 @@
 
 [English README](../README.md) · [中文说明](../README.zh-CN.md) · [Validation](validation.md)
 
-Checked against the linked documentation on **2026-09-20**. Host support changes over time; this page separates documented support from observed results.
+The installation matrix was checked against the linked documentation on **2026-09-20**; Codex native discovery was additionally exercised on **2026-09-26**. Host support changes over time; this page separates documented support from observed results.
 
 ## What a support claim means
 
@@ -18,7 +18,7 @@ Paths below are relative to the project root and end with `reuse-before-build/SK
 
 | Host / surface | Documented project directory | Revision-scoped evidence | Official reference |
 | --- | --- | --- | --- |
-| Codex local app / CLI / IDE | `.agents/skills/` | Prior revision: `skills@1.7.0` project installation checked on Windows with Node.js 24.18.0; see [validation](validation.md) for dated behavior evidence | [Codex skills](https://developers.openai.com/codex/skills/) |
+| Codex local app / CLI / IDE | `.agents/skills/` | Native Windows app-server **0.158.0-alpha.2**, **GPT-6 Luna / high**: project discovery, natural loading and scoped behavior observations; [report](../evals/results/2026-09-26/native-host/REPORT.md). This does not cover every CLI/IDE/UI. Prior `skills@1.7.0` installation check is separate | [Codex skills](https://developers.openai.com/codex/skills/) |
 | Claude Code local CLI | `.claude/skills/` | Format documented; current revision not runtime-tested in Claude Code | [Claude Code skills](https://code.claude.com/docs/en/skills) |
 | GitHub Copilot CLI | `.github/skills/` or `.agents/skills/` | Format documented; current revision not runtime-tested in Copilot CLI | [Copilot skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [CLI installation](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills) |
 | Cursor local agent | `.cursor/skills/` or `.agents/skills/` | Format documented; not runtime-tested | [Cursor skills](https://cursor.com/docs/skills) |
@@ -27,6 +27,22 @@ Paths below are relative to the project root and end with `reuse-before-build/SK
 | Windsurf / Cascade | `.windsurf/skills/` | Format documented; not runtime-tested | [Cascade skills](https://docs.devin.ai/desktop/cascade/skills) |
 
 Cloud agents and remote sessions need the skill available in their own environment. A local personal installation does not establish availability in a cloud task. Copilot CLI validation would not by itself establish behavior in VS Code or the Copilot coding agent.
+
+### Native host check — 2026-09-26
+
+The desktop-bundled Codex runtime listed `gpt-6-luna` with `high` effort; the
+installed standalone CLI **0.153.4** did not. Trials used the bundled runtime,
+verified actual model/effort and disabled provider fallback. Project Skill
+discovery was checked through `skills/list`; actual file reads established
+loading. Prompts did not name the Skill. Other installed skills remained
+available, so unavailable-target controls are not guidance-free agents.
+
+The [report](../evals/results/2026-09-26/native-host/REPORT.md) distinguishes
+native manual compaction from automatic context-window exhaustion and a
+separate ephemeral session from cross-machine recovery. No desktop GUI path
+was exercised. Claude Code **2.1.220** and Copilot CLI **1.0.80** were present,
+but no models were available for this evaluation; neither host received a
+behavior trial or substitute model. Their support remains documentation-only.
 
 ### Historical author observations
 

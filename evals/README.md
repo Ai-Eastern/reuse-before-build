@@ -92,6 +92,21 @@ Correct Blocked decisions count as evidence-gate behavior, not successful
 component adoption. The report makes no automatic-activation or success-rate
 claim; previous failed observations remain unchanged.
 
+## Native host acceptance
+
+The [native-host report](results/2026-09-26/native-host/REPORT.md) records
+natural task prompts on the desktop-bundled Codex app-server with **GPT-6 Luna /
+high**, verified discovery, observable body reads, actual manual compaction,
+a separate-session handoff and an isolated real-repository source slice.
+Loading and behavior are distinct outcomes. Historical failed trials remain
+visible; small repeats are exploratory and do not estimate a success rate.
+
+Its archived client/preparation text is an audit record of this Windows setup,
+not a portable model runner or a required Skill dependency. The report states
+which personal instructions were withheld, which controls were shared across
+revisions, and which prepared cases were never executed. CI does not run
+these model trials. No Claude Code or Copilot model was used.
+
 ## Search-timing evaluation
 
 The current timing preparer requires Python 3.10+ and the standard library

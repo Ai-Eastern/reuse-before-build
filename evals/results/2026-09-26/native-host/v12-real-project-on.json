@@ -1,0 +1,1117 @@
+{
+  "case": "real-project-on",
+  "native_host": "Codex desktop-bundled app-server 0.158.0-alpha.2",
+  "skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+  "skill_available": true,
+  "initial_hashes": {
+    "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    "README.md": "18bf8ee505bbc23728bde4941402f87fd1943ed77edadf8f6a4755e9ad85b771",
+    "TASK.md": "4b510617bc5bce449597e5af9a96f1eb96f27a1a6cbca6a82deba9019e4cfd84",
+    "scripts/check-links.mjs": "3d37f55a55bd91373882ecde6da76d444bb56189dfab76ed537fd3d4cf5faafc",
+    ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+  },
+  "state": "completed",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "events": [
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1790414798273
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turn": {
+          "id": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+          "status": "inProgress",
+          "error": null
+        }
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a0dd09-e4d5-74c0-b85f-40da9eb63bc2",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "为现有文档链接检查脚本补充目录链接支持：本地链接指向一个真实目录，且目录包含 README.md 或 index.md 时视为有效；没有入口文档的目录仍报错。保留已有文件链接和代码围栏行为，给出可重复的正反验证。只在这份源码副本中实现。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414808277
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a0dd09-e4d5-74c0-b85f-40da9eb63bc2",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "为现有文档链接检查脚本补充目录链接支持：本地链接指向一个真实目录，且目录包含 README.md 或 index.md 时视为有效；没有入口文档的目录仍报错。保留已有文件链接和代码围栏行为，给出可重复的正反验证。只在这份源码副本中实现。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414808277
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab78fdb26bc87d0877903e3cf3438e3",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414810797
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab78fdb26bc87d0877903e3cf3438e3",
+          "text": "我会先检查当前副本中的检查脚本及其现有验证方式，再做最小修改并运行可重复的正反验证。只操作当前项目目录，不访问相邻项目或历史材料。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414811510
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-27a5adbc-662b-43ac-9fc5-c46d3ad4eb75",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*link*' -g '*doc*' -g '*test*' -g 'package.json' -g 'pyproject.toml' -g '*.ps1' -g '*.py' -g '*.js' -g '*.ts'\"",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "68179",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*link*' -g '*doc*' -g '*test*' -g 'package.json' -g 'pyproject.toml' -g '*.ps1' -g '*.py' -g '*.js' -g '*.ts'"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414814246
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-27a5adbc-662b-43ac-9fc5-c46d3ad4eb75",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*link*' -g '*doc*' -g '*test*' -g 'package.json' -g 'pyproject.toml' -g '*.ps1' -g '*.py' -g '*.js' -g '*.ts'\"",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "68179",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw '<other-skill-path>'; rg --files -g 'AGENTS.md' -g '*link*' -g '*doc*' -g '*test*' -g 'package.json' -g 'pyproject.toml' -g '*.ps1' -g '*.py' -g '*.js' -g '*.ts'"
+            }
+          ],
+          "aggregatedOutput": {
+            "omitted": "Mixed or unrelated personal instruction output; original reviewed locally, not redistributed.",
+            "sha256": "5bcf5bcfb6008f8fea2d08634b553f6a087dbed7bba07f34d7c3aeb82e71d622",
+            "characters": 6642,
+            "complete_target_skill_also_returned": false
+          },
+          "exitCode": 0,
+          "durationMs": 151
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414814398
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-a6cd9000-54f7-4c4e-b5ab-c09162430266",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw scripts/check-links.mjs; rg --files -g 'package.json' -g 'README*' -g '*check*' -g '*.test.*' -g '*.spec.*' -g 'AGENTS.md'; git status --short\"",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "93471",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw scripts/check-links.mjs; rg --files -g 'package.json' -g 'README*' -g '*check*' -g '*.test.*' -g '*.spec.*' -g 'AGENTS.md'; git status --short"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414819302
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-a6cd9000-54f7-4c4e-b5ab-c09162430266",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw scripts/check-links.mjs; rg --files -g 'package.json' -g 'README*' -g '*check*' -g '*.test.*' -g '*.spec.*' -g 'AGENTS.md'; git status --short\"",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "93471",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content -Raw scripts/check-links.mjs; rg --files -g 'package.json' -g 'README*' -g '*check*' -g '*.test.*' -g '*.spec.*' -g 'AGENTS.md'; git status --short"
+            }
+          ],
+          "aggregatedOutput": "// SPDX-License-Identifier: MIT\n// Checks local inline Markdown file links; does not validate URL or heading anchors.\nimport { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';\nimport { dirname, join, relative, resolve } from 'node:path';\nimport { fileURLToPath } from 'node:url';\n\nconst root = resolve(process.argv[2] || join(dirname(fileURLToPath(import.meta.url)), '..'));\nlet checked = 0;\nconst missing = [];\n\nfunction walk(directory) {\n  for (const item of readdirSync(directory, { withFileTypes: true })) {\n    if (['.git', 'node_modules', '.agents'].includes(item.name) || item.name.startsWith('.asset-validation-')) continue;\n    const file = join(directory, item.name);\n    if (item.isDirectory()) walk(file);\n    else if (item.isFile() && item.name.endsWith('.md')) check(file);\n  }\n}\n\nfunction check(file) {\n  let fence;\n  for (const [index, line] of readFileSync(file, 'utf8').split(/\\r?\\n/).entries()) {\n    const marker = line.match(/^\\s*(`{3,}|~{3,})(.*)$/);\n    if (marker) {\n      if (!fence) fence = marker[1];\n      else if (marker[1][0] === fence[0] && marker[1].length >= fence.length && !marker[2].trim()) fence = undefined;\n      continue;\n    }\n    if (fence) continue;\n    for (const match of line.matchAll(/\\[[^\\]\\n]*\\]\\((?:<([^>\\n]+)>|([^\\s)]+))(?:\\s+\"[^\"]*\")?\\)/g)) {\n      const href = match[1] || match[2];\n      if (/^(?:[a-z][a-z\\d+.-]*:|#|\\/)/i.test(href)) continue;\n      const path = decodeURIComponent(href.split(/[?#]/, 1)[0]);\n      if (!path) continue;\n      checked += 1;\n      const target = resolve(dirname(file), path);\n      if (!existsSync(target) || !statSync(target).isFile()) {\n        missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n      }\n    }\n  }\n}\n\nwalk(root);\nif (missing.length) {\n  console.error(`Missing local Markdown targets:\\n${missing.join('\\n')}`);\n  process.exitCode = 1;\n} else {\n  console.log(`Checked ${checked} local Markdown file links.`);\n}\n\r\nscripts\\check-links.mjs\nREADME.md\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\n",
+          "exitCode": 0,
+          "durationMs": 212
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414819515
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab78ff12f0487d0b571712c17131b96",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414832834
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab78ff12f0487d0b571712c17131b96",
+          "text": "脚本目前只接受本地文件目标；代码围栏和文件判断都集中在同一个链接解析循环里。我会在这里加目录入口判断，并补一个无需依赖的 Node 自测，覆盖 README.md、index.md、无入口目录、普通文件和代码围栏。自测临时内容只写入当前项目目录并在结束时清理。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414833866
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab78ff28fc487d09b8b7a4cb37026c8",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414834215
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab78ff28fc487d09b8b7a4cb37026c8",
+          "text": "我会按验证前核对要求，在修改后实际运行新增自测并检查工作区差异，报告命令和结果。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414834707
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-58c7900e-5cdc-4bad-9b8a-c4b1b1542876",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw '<other-skill-path>'\"",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "90378",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "read",
+              "command": "Get-Content -Raw '<other-skill-path>'",
+              "name": "SKILL.md",
+              "path": "<other-skill-path>"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414836743
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-58c7900e-5cdc-4bad-9b8a-c4b1b1542876",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content -Raw '<other-skill-path>'\"",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "90378",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "read",
+              "command": "Get-Content -Raw '<other-skill-path>'",
+              "name": "SKILL.md",
+              "path": "<other-skill-path>"
+            }
+          ],
+          "aggregatedOutput": {
+            "omitted": "Mixed or unrelated personal instruction output; original reviewed locally, not redistributed.",
+            "sha256": "8b69fd864c421fe54789c6c5cdbaeb91c670bf8438f369b345f449cb688a8032",
+            "characters": 3600,
+            "complete_target_skill_also_returned": false
+          },
+          "exitCode": 0,
+          "durationMs": 107
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414836851
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "fileChange",
+          "id": "exec-9aa3da0c-5a65-42d9-aebb-81718a5ff91e",
+          "changes": [
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.mjs",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": "@@ -36,3 +36,8 @@\n       const target = resolve(dirname(file), path);\n-      if (!existsSync(target) || !statSync(target).isFile()) {\n+      const validDirectory = existsSync(target) && statSync(target).isDirectory() &&\n+        ['README.md', 'index.md'].some(entry => {\n+          const index = join(target, entry);\n+          return existsSync(index) && statSync(index).isFile();\n+        });\n+      if (!validDirectory && (!existsSync(target) || !statSync(target).isFile())) {\n         missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n"
+            },
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.test.mjs",
+              "kind": {
+                "type": "add"
+              },
+              "diff": "// SPDX-License-Identifier: MIT\nimport assert from 'node:assert/strict';\nimport { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';\nimport { tmpdir } from 'node:os';\nimport { dirname, join } from 'node:path';\nimport { fileURLToPath } from 'node:url';\nimport { spawnSync } from 'node:child_process';\n\nconst script = join(dirname(fileURLToPath(import.meta.url)), 'check-links.mjs');\nconst fixture = mkdtempSync(join(dirname(script), '.asset-validation-link-check-'));\nconst write = (path, contents = '') => writeFileSync(join(fixture, path), contents);\nconst run = () => spawnSync(process.execPath, [script, fixture], { encoding: 'utf8' });\n\ntry {\n  for (const directory of ['readme-dir', 'index-dir', 'empty-dir']) mkdirSync(join(fixture, directory));\n  write('readme-dir/README.md');\n  write('index-dir/index.md');\n  write('file.md');\n  write('links.md', [\n    '[README](readme-dir/) [index](index-dir/) [file](file.md)',\n    '```md',\n    '[fenced missing](missing.md)',\n    '```',\n  ].join('\\n'));\n\n  const valid = run();\n  assert.equal(valid.status, 0, valid.stderr);\n  assert.match(valid.stdout, /Checked 3 local Markdown file links\\./);\n\n  write('links.md', '[README](readme-dir/) [empty](empty-dir/)');\n  const invalid = run();\n  assert.equal(invalid.status, 1, invalid.stdout);\n  assert.match(invalid.stderr, /links\\.md:1: empty-dir\\//);\n  console.log('Directory link checks passed (README.md, index.md, empty directory, file, and fence).');\n} finally {\n  rmSync(fixture, { recursive: true, force: true });\n}\n"
+            }
+          ],
+          "status": "inProgress"
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414847577
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "fileChange",
+          "id": "exec-9aa3da0c-5a65-42d9-aebb-81718a5ff91e",
+          "changes": [
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.mjs",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": "@@ -36,3 +36,8 @@\n       const target = resolve(dirname(file), path);\n-      if (!existsSync(target) || !statSync(target).isFile()) {\n+      const validDirectory = existsSync(target) && statSync(target).isDirectory() &&\n+        ['README.md', 'index.md'].some(entry => {\n+          const index = join(target, entry);\n+          return existsSync(index) && statSync(index).isFile();\n+        });\n+      if (!validDirectory && (!existsSync(target) || !statSync(target).isFile())) {\n         missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n"
+            },
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.test.mjs",
+              "kind": {
+                "type": "add"
+              },
+              "diff": "// SPDX-License-Identifier: MIT\nimport assert from 'node:assert/strict';\nimport { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';\nimport { tmpdir } from 'node:os';\nimport { dirname, join } from 'node:path';\nimport { fileURLToPath } from 'node:url';\nimport { spawnSync } from 'node:child_process';\n\nconst script = join(dirname(fileURLToPath(import.meta.url)), 'check-links.mjs');\nconst fixture = mkdtempSync(join(dirname(script), '.asset-validation-link-check-'));\nconst write = (path, contents = '') => writeFileSync(join(fixture, path), contents);\nconst run = () => spawnSync(process.execPath, [script, fixture], { encoding: 'utf8' });\n\ntry {\n  for (const directory of ['readme-dir', 'index-dir', 'empty-dir']) mkdirSync(join(fixture, directory));\n  write('readme-dir/README.md');\n  write('index-dir/index.md');\n  write('file.md');\n  write('links.md', [\n    '[README](readme-dir/) [index](index-dir/) [file](file.md)',\n    '```md',\n    '[fenced missing](missing.md)',\n    '```',\n  ].join('\\n'));\n\n  const valid = run();\n  assert.equal(valid.status, 0, valid.stderr);\n  assert.match(valid.stdout, /Checked 3 local Markdown file links\\./);\n\n  write('links.md', '[README](readme-dir/) [empty](empty-dir/)');\n  const invalid = run();\n  assert.equal(invalid.status, 1, invalid.stdout);\n  assert.match(invalid.stderr, /links\\.md:1: empty-dir\\//);\n  console.log('Directory link checks passed (README.md, index.md, empty directory, file, and fence).');\n} finally {\n  rmSync(fixture, { recursive: true, force: true });\n}\n"
+            }
+          ],
+          "status": "completed"
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414848893
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "fileChange",
+          "id": "exec-19744573-6233-4f6b-889e-7cd47d5e4d0c",
+          "changes": [
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.test.mjs",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": "@@ -3,3 +3,2 @@\n import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';\n-import { tmpdir } from 'node:os';\n import { dirname, join } from 'node:path';\n"
+            }
+          ],
+          "status": "inProgress"
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414852964
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "fileChange",
+          "id": "exec-19744573-6233-4f6b-889e-7cd47d5e4d0c",
+          "changes": [
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.test.mjs",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": "@@ -3,3 +3,2 @@\n import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';\n-import { tmpdir } from 'node:os';\n import { dirname, join } from 'node:path';\n"
+            }
+          ],
+          "status": "completed"
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414853673
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-a98ebced-4467-4f80-85eb-e49ad356fa64",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "71681",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414858979
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-b72892ef-6873-41b4-b7d9-32468355c973",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git diff --check; git diff -- scripts/check-links.mjs scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "7885",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git diff --check; git diff -- scripts/check-links.mjs scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414859004
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-b72892ef-6873-41b4-b7d9-32468355c973",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git diff --check; git diff -- scripts/check-links.mjs scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "7885",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git diff --check; git diff -- scripts/check-links.mjs scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": "warning: in the working copy of 'scripts/check-links.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'scripts/check-links.mjs', LF will be replaced by CRLF the next time Git touches it\ndiff --git a/scripts/check-links.mjs b/scripts/check-links.mjs\nindex 70966a3..0e01551 100644\n--- a/scripts/check-links.mjs\n+++ b/scripts/check-links.mjs\n@@ -34,7 +34,12 @@ function check(file) {\n       if (!path) continue;\n       checked += 1;\n       const target = resolve(dirname(file), path);\n-      if (!existsSync(target) || !statSync(target).isFile()) {\n+      const validDirectory = existsSync(target) && statSync(target).isDirectory() &&\n+        ['README.md', 'index.md'].some(entry => {\n+          const index = join(target, entry);\n+          return existsSync(index) && statSync(index).isFile();\n+        });\n+      if (!validDirectory && (!existsSync(target) || !statSync(target).isFile())) {\n         missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n       }\n     }\n",
+          "exitCode": 0,
+          "durationMs": 263
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414859267
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-a98ebced-4467-4f80-85eb-e49ad356fa64",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "71681",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": "Directory link checks passed (README.md, index.md, empty directory, file, and fence).\n",
+          "exitCode": 0,
+          "durationMs": 381
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414859361
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "fileChange",
+          "id": "exec-1dbbd626-2cb6-4c2e-a7b1-643b79c04bdd",
+          "changes": [
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.mjs",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": "@@ -36,8 +36,9 @@\n       const target = resolve(dirname(file), path);\n-      const validDirectory = existsSync(target) && statSync(target).isDirectory() &&\n+      const targetStat = existsSync(target) ? statSync(target) : undefined;\n+      const validTarget = targetStat?.isFile() || (targetStat?.isDirectory() &&\n         ['README.md', 'index.md'].some(entry => {\n-          const index = join(target, entry);\n-          return existsSync(index) && statSync(index).isFile();\n-        });\n-      if (!validDirectory && (!existsSync(target) || !statSync(target).isFile())) {\n+          const indexPath = join(target, entry);\n+          return existsSync(indexPath) && statSync(indexPath).isFile();\n+        }));\n+      if (!validTarget) {\n         missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n"
+            }
+          ],
+          "status": "inProgress"
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414870026
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "fileChange",
+          "id": "exec-1dbbd626-2cb6-4c2e-a7b1-643b79c04bdd",
+          "changes": [
+            {
+              "path": "<v12-batch>\\real-project-on\\scripts\\check-links.mjs",
+              "kind": {
+                "type": "update",
+                "move_path": null
+              },
+              "diff": "@@ -36,8 +36,9 @@\n       const target = resolve(dirname(file), path);\n-      const validDirectory = existsSync(target) && statSync(target).isDirectory() &&\n+      const targetStat = existsSync(target) ? statSync(target) : undefined;\n+      const validTarget = targetStat?.isFile() || (targetStat?.isDirectory() &&\n         ['README.md', 'index.md'].some(entry => {\n-          const index = join(target, entry);\n-          return existsSync(index) && statSync(index).isFile();\n-        });\n-      if (!validDirectory && (!existsSync(target) || !statSync(target).isFile())) {\n+          const indexPath = join(target, entry);\n+          return existsSync(indexPath) && statSync(indexPath).isFile();\n+        }));\n+      if (!validTarget) {\n         missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n"
+            }
+          ],
+          "status": "completed"
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414870946
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab79018b80087d09a57b3b19d254f03",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414872365
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab79018b80087d09a57b3b19d254f03",
+          "text": "目录分支和自测已经加好。现在我会重新运行隔离的正反用例，再对当前项目执行原检查脚本，并核对改动清单；这些结果会区分新行为验证与项目现有链接状态。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414873157
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-e7f9b0c1-258a-4433-b925-31b1d9a52613",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git diff --check; git status --short; git diff -- scripts/check-links.mjs; git diff --no-index -- NUL scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "99722",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git diff --check; git status --short; git diff -- scripts/check-links.mjs; git diff --no-index -- NUL scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414876323
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-6648a8c9-2d25-45fa-8aa3-4d7ffbfdd41c",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "18041",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414876346
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-2c7694d9-f416-4573-8e88-3930393a225e",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "51553",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414876372
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-2c7694d9-f416-4573-8e88-3930393a225e",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "51553",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.mjs"
+            }
+          ],
+          "aggregatedOutput": "Checked 0 local Markdown file links.\n",
+          "exitCode": 0,
+          "durationMs": 285
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414876658
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-e7f9b0c1-258a-4433-b925-31b1d9a52613",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git diff --check; git status --short; git diff -- scripts/check-links.mjs; git diff --no-index -- NUL scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "99722",
+          "source": "unifiedExecStartup",
+          "status": "failed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git diff --check; git status --short; git diff -- scripts/check-links.mjs; git diff --no-index -- NUL scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": "warning: in the working copy of 'scripts/check-links.mjs', LF will be replaced by CRLF the next time Git touches it\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\n M scripts/check-links.mjs\n?? scripts/.asset-validation-link-check-xQf6hs/\n?? scripts/check-links.test.mjs\nwarning: in the working copy of 'scripts/check-links.mjs', LF will be replaced by CRLF the next time Git touches it\ndiff --git a/scripts/check-links.mjs b/scripts/check-links.mjs\nindex 70966a3..fd08d69 100644\n--- a/scripts/check-links.mjs\n+++ b/scripts/check-links.mjs\n@@ -34,7 +34,13 @@ function check(file) {\n       if (!path) continue;\n       checked += 1;\n       const target = resolve(dirname(file), path);\n-      if (!existsSync(target) || !statSync(target).isFile()) {\n+      const targetStat = existsSync(target) ? statSync(target) : undefined;\n+      const validTarget = targetStat?.isFile() || (targetStat?.isDirectory() &&\n+        ['README.md', 'index.md'].some(entry => {\n+          const indexPath = join(target, entry);\n+          return existsSync(indexPath) && statSync(indexPath).isFile();\n+        }));\n+      if (!validTarget) {\n         missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n       }\n     }\nwarning: in the working copy of 'scripts/check-links.test.mjs', LF will be replaced by CRLF the next time Git touches it\ndiff --git a/scripts/check-links.test.mjs b/scripts/check-links.test.mjs\nnew file mode 100644\nindex 0000000..0a4c489\n--- /dev/null\n+++ b/scripts/check-links.test.mjs\n@@ -0,0 +1,36 @@\n+// SPDX-License-Identifier: MIT\n+import assert from 'node:assert/strict';\n+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';\n+import { dirname, join } from 'node:path';\n+import { fileURLToPath } from 'node:url';\n+import { spawnSync } from 'node:child_process';\n+\n+const script = join(dirname(fileURLToPath(import.meta.url)), 'check-links.mjs');\n+const fixture = mkdtempSync(join(dirname(script), '.asset-validation-link-check-'));\n+const write = (path, contents = '') => writeFileSync(join(fixture, path), contents);\n+const run = () => spawnSync(process.execPath, [script, fixture], { encoding: 'utf8' });\n+\n+try {\n+  for (const directory of ['readme-dir', 'index-dir', 'empty-dir']) mkdirSync(join(fixture, directory));\n+  write('readme-dir/README.md');\n+  write('index-dir/index.md');\n+  write('file.md');\n+  write('links.md', [\n+    '[README](readme-dir/) [index](index-dir/) [file](file.md)',\n+    '```md',\n+    '[fenced missing](missing.md)',\n+    '```',\n+  ].join('\\n'));\n+\n+  const valid = run();\n+  assert.equal(valid.status, 0, valid.stderr);\n+  assert.match(valid.stdout, /Checked 3 local Markdown file links\\./);\n+\n+  write('links.md', '[README](readme-dir/) [empty](empty-dir/)');\n+  const invalid = run();\n+  assert.equal(invalid.status, 1, invalid.stdout);\n+  assert.match(invalid.stderr, /links\\.md:1: empty-dir\\//);\n+  console.log('Directory link checks passed (README.md, index.md, empty directory, file, and fence).');\n+} finally {\n+  rmSync(fixture, { recursive: true, force: true });\n+}\n",
+          "exitCode": 1,
+          "durationMs": 393
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414876716
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-6648a8c9-2d25-45fa-8aa3-4d7ffbfdd41c",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "18041",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": "Directory link checks passed (README.md, index.md, empty directory, file, and fence).\n",
+          "exitCode": 0,
+          "durationMs": 395
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414876742
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-3e17f1cb-4ef6-4143-8362-d76ab2987a77",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "91459",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414887472
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-3e17f1cb-4ef6-4143-8362-d76ab2987a77",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node scripts/check-links.test.mjs'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "91459",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node scripts/check-links.test.mjs"
+            }
+          ],
+          "aggregatedOutput": "Directory link checks passed (README.md, index.md, empty directory, file, and fence).\n",
+          "exitCode": 0,
+          "durationMs": 498
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414887970
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-a91c7a94-ece7-4524-a17d-370a4e98a9cf",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git diff --check'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "58040",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git diff --check"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414888782
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-a91c7a94-ece7-4524-a17d-370a4e98a9cf",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git diff --check'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "58040",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git diff --check"
+            }
+          ],
+          "aggregatedOutput": "warning: in the working copy of 'scripts/check-links.mjs', LF will be replaced by CRLF the next time Git touches it\n",
+          "exitCode": 0,
+          "durationMs": 232
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414889014
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-e0c9f5f4-9444-488e-a6a5-80cc31e3ceb4",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git status --short'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "73185",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git status --short"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414889884
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-e0c9f5f4-9444-488e-a6a5-80cc31e3ceb4",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git status --short'",
+          "cwd": "<v12-batch>\\real-project-on",
+          "processId": "73185",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "git status --short"
+            }
+          ],
+          "aggregatedOutput": "warning: unable to access '<user-profile>/.config/git/ignore': Permission denied\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\n M scripts/check-links.mjs\n?? scripts/check-links.test.mjs\n",
+          "exitCode": 0,
+          "durationMs": 316
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414890201
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab7902db2a487d09590408eca8b1fbb",
+          "text": "",
+          "phase": "final_answer",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "startedAtMs": 1790414893350
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_09f568fc3c6e4d6b016ab7902db2a487d09590408eca8b1fbb",
+          "text": "已在当前源码副本中为目录链接增加入口检查：目录含 `README.md` 或 `index.md` 时有效，否则报错。普通文件链接和代码围栏行为由自测覆盖。\n\n可重复验证：`node scripts/check-links.test.mjs`，输出通过；它分别验证有效目录、空目录报错、文件链接和围栏中的链接。当前项目扫描 `node scripts/check-links.mjs` 输出 `Checked 0 local Markdown file links.`；`git diff --check` 退出码为 0。\n\n改动位于 [check-links.mjs](/<v12-batch>/real-project-on/scripts/check-links.mjs) 和 [check-links.test.mjs](/<v12-batch>/real-project-on/scripts/check-links.test.mjs)。",
+          "phase": "final_answer",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turnId": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+        "completedAtMs": 1790414896140
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1790414896187
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+        "turn": {
+          "id": "01a0dd09-bdb1-7a02-91dd-96d48d3f60c3",
+          "status": "completed",
+          "error": null
+        }
+      }
+    }
+  ],
+  "stderr_line_count": 19,
+  "last_updated_utc": "2026-09-26T09:28:16Z",
+  "discovery": {
+    "target_entries": [
+      {
+        "name": "reuse-before-build",
+        "path": "<v12-batch>\\real-project-on\\.agents\\skills\\reuse-before-build\\SKILL.md",
+        "enabled": true,
+        "scope": "repo"
+      },
+      {
+        "name": "reuse-before-build",
+        "path": "<personal-skills>\\reuse-before-build\\SKILL.md",
+        "enabled": false,
+        "scope": "user"
+      }
+    ],
+    "other_catalog_entry_count": 31,
+    "other_catalog_entries_sha256": "2c2096edca3aff52f9f2b4561598901d51943fdf378978973693c906e42d3aef",
+    "note": "Unrelated names, paths and metadata omitted. Fingerprint covers catalog entries, not their contents."
+  },
+  "threads": [
+    {
+      "id": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "modelProvider": "openai",
+      "ephemeral": true,
+      "instruction_source_summary": {
+        "entry_count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  ],
+  "turn_requests": [
+    {
+      "threadId": "01a0dd09-bd5b-7e72-8e6f-471ffe09cd49",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "input": [
+        {
+          "type": "text",
+          "text": "为现有文档链接检查脚本补充目录链接支持：本地链接指向一个真实目录，且目录包含 README.md 或 index.md 时视为有效；没有入口文档的目录仍报错。保留已有文件链接和代码围栏行为，给出可重复的正反验证。只在这份源码副本中实现。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。"
+        }
+      ]
+    }
+  ],
+  "final_hashes": {
+    "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    "README.md": "18bf8ee505bbc23728bde4941402f87fd1943ed77edadf8f6a4755e9ad85b771",
+    "TASK.md": "4b510617bc5bce449597e5af9a96f1eb96f27a1a6cbca6a82deba9019e4cfd84",
+    "scripts/check-links.mjs": "34faadd8e8a2d7b296c6f26123ba8ea3a53c110b762c6efb1aed99b9d57f6e13",
+    "scripts/check-links.test.mjs": "b65d4f663ddeeebc8c5187b54b3c3445d8ac55422aa3e114582d1ebecac3799b",
+    ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+  },
+  "changed_files": [
+    "scripts/check-links.mjs",
+    "scripts/check-links.test.mjs"
+  ],
+  "target_skill_body_read_item_ids": [],
+  "target_skill_body_read_evidence": [],
+  "personal_instruction_output_omissions": [
+    "exec-27a5adbc-662b-43ac-9fc5-c46d3ad4eb75",
+    "exec-58c7900e-5cdc-4bad-9b8a-c4b1b1542876"
+  ],
+  "final_git_head": "803a1e2f02ec4128ca6e6568d861f6e762a074f9",
+  "final_git_status": "M scripts/check-links.mjs\n?? scripts/check-links.test.mjs",
+  "file_changes": {
+    "scripts/check-links.mjs": "// SPDX-License-Identifier: MIT\n// Checks local inline Markdown file links; does not validate URL or heading anchors.\nimport { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';\nimport { dirname, join, relative, resolve } from 'node:path';\nimport { fileURLToPath } from 'node:url';\n\nconst root = resolve(process.argv[2] || join(dirname(fileURLToPath(import.meta.url)), '..'));\nlet checked = 0;\nconst missing = [];\n\nfunction walk(directory) {\n  for (const item of readdirSync(directory, { withFileTypes: true })) {\n    if (['.git', 'node_modules', '.agents'].includes(item.name) || item.name.startsWith('.asset-validation-')) continue;\n    const file = join(directory, item.name);\n    if (item.isDirectory()) walk(file);\n    else if (item.isFile() && item.name.endsWith('.md')) check(file);\n  }\n}\n\nfunction check(file) {\n  let fence;\n  for (const [index, line] of readFileSync(file, 'utf8').split(/\\r?\\n/).entries()) {\n    const marker = line.match(/^\\s*(`{3,}|~{3,})(.*)$/);\n    if (marker) {\n      if (!fence) fence = marker[1];\n      else if (marker[1][0] === fence[0] && marker[1].length >= fence.length && !marker[2].trim()) fence = undefined;\n      continue;\n    }\n    if (fence) continue;\n    for (const match of line.matchAll(/\\[[^\\]\\n]*\\]\\((?:<([^>\\n]+)>|([^\\s)]+))(?:\\s+\"[^\"]*\")?\\)/g)) {\n      const href = match[1] || match[2];\n      if (/^(?:[a-z][a-z\\d+.-]*:|#|\\/)/i.test(href)) continue;\n      const path = decodeURIComponent(href.split(/[?#]/, 1)[0]);\n      if (!path) continue;\n      checked += 1;\n      const target = resolve(dirname(file), path);\n      const targetStat = existsSync(target) ? statSync(target) : undefined;\n      const validTarget = targetStat?.isFile() || (targetStat?.isDirectory() &&\n        ['README.md', 'index.md'].some(entry => {\n          const indexPath = join(target, entry);\n          return existsSync(indexPath) && statSync(indexPath).isFile();\n        }));\n      if (!validTarget) {\n        missing.push(`${relative(root, file)}:${index + 1}: ${href}`);\n      }\n    }\n  }\n}\n\nwalk(root);\nif (missing.length) {\n  console.error(`Missing local Markdown targets:\\n${missing.join('\\n')}`);\n  process.exitCode = 1;\n} else {\n  console.log(`Checked ${checked} local Markdown file links.`);\n}\n",
+    "scripts/check-links.test.mjs": "// SPDX-License-Identifier: MIT\nimport assert from 'node:assert/strict';\nimport { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';\nimport { dirname, join } from 'node:path';\nimport { fileURLToPath } from 'node:url';\nimport { spawnSync } from 'node:child_process';\n\nconst script = join(dirname(fileURLToPath(import.meta.url)), 'check-links.mjs');\nconst fixture = mkdtempSync(join(dirname(script), '.asset-validation-link-check-'));\nconst write = (path, contents = '') => writeFileSync(join(fixture, path), contents);\nconst run = () => spawnSync(process.execPath, [script, fixture], { encoding: 'utf8' });\n\ntry {\n  for (const directory of ['readme-dir', 'index-dir', 'empty-dir']) mkdirSync(join(fixture, directory));\n  write('readme-dir/README.md');\n  write('index-dir/index.md');\n  write('file.md');\n  write('links.md', [\n    '[README](readme-dir/) [index](index-dir/) [file](file.md)',\n    '```md',\n    '[fenced missing](missing.md)',\n    '```',\n  ].join('\\n'));\n\n  const valid = run();\n  assert.equal(valid.status, 0, valid.stderr);\n  assert.match(valid.stdout, /Checked 3 local Markdown file links\\./);\n\n  write('links.md', '[README](readme-dir/) [empty](empty-dir/)');\n  const invalid = run();\n  assert.equal(invalid.status, 1, invalid.stdout);\n  assert.match(invalid.stderr, /links\\.md:1: empty-dir\\//);\n  console.log('Directory link checks passed (README.md, index.md, empty directory, file, and fence).');\n} finally {\n  rmSync(fixture, { recursive: true, force: true });\n}\n"
+  },
+  "export_note": "Sanitized native JSON-RPC observable items. Raw observations, reasoning, compacted/encrypted content and unrelated personal instructions are not published. Private names/paths are anonymized; mixed instruction outputs retain a fingerprint and exact target-body-match receipt. UI interaction was not tested."
+}

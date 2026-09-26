@@ -1,0 +1,541 @@
+{
+  "case": "architecture-on",
+  "native_host": "Codex desktop-bundled app-server 0.158.0-alpha.2",
+  "skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d",
+  "skill_available": true,
+  "initial_hashes": {
+    "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+    "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+    "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+    "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+    "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+    "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+    ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+  },
+  "state": "completed",
+  "model": "gpt-6-luna",
+  "effort": "high",
+  "events": [
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "status": {
+          "type": "active",
+          "activeFlags": []
+        }
+      },
+      "emittedAtMs": 1790414295490
+    },
+    {
+      "method": "turn/started",
+      "params": {
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turn": {
+          "id": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+          "status": "inProgress",
+          "error": null
+        }
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a0dd02-37a0-7cb0-99c8-027a40565383",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414305184
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "userMessage",
+          "id": "01a0dd02-37a0-7cb0-99c8-027a40565383",
+          "clientId": null,
+          "content": [
+            {
+              "type": "text",
+              "text": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。",
+              "text_elements": []
+            }
+          ]
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414305184
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78de5f47887d092255a76b9e6238e",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414309588
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78de5f47887d092255a76b9e6238e",
+          "text": "我会只读取当前目录里的项目约定和你提供的候选材料，按最小依赖原则比较方案，并给出适配边界与离线可执行的验证计划。不会联网、安装依赖或改动项目文件。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414310396
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-60db0679-12a7-4bab-b4fe-82e597eeb7fd",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content '<other-skill-path>'; Get-Content '<v11-batch>/architecture-on/.agents/skills/reuse-before-build/SKILL.md'\"",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "65674",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content '<other-skill-path>'; Get-Content '<v11-batch>/architecture-on/.agents/skills/reuse-before-build/SKILL.md'"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414312946
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-60db0679-12a7-4bab-b4fe-82e597eeb7fd",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-Content '<other-skill-path>'; Get-Content '<v11-batch>/architecture-on/.agents/skills/reuse-before-build/SKILL.md'\"",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "65674",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content '<other-skill-path>'; Get-Content '<v11-batch>/architecture-on/.agents/skills/reuse-before-build/SKILL.md'"
+            }
+          ],
+          "aggregatedOutput": {
+            "omitted": "Mixed or unrelated personal instruction output; original reviewed locally, not redistributed.",
+            "sha256": "756964a68c7a8be47f9550ff776aa7dce1346f9389a8b5d24f4002569f2fa814",
+            "characters": 25731,
+            "complete_target_skill_also_returned": true
+          },
+          "exitCode": 0,
+          "durationMs": 170
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414313117
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-f767710a-2de0-4540-99d0-b94e597c4ae3",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-ChildItem -Force | Select-Object Mode,Name; rg --files -g 'AGENTS.md' -g 'package.json' -g 'package-lock.json' -g 'pnpm-lock.yaml' -g 'yarn.lock' -g '*.md' -g '*.json' -g '*.js' -g '*.mjs' -g '*.ts' -g '*.txt'\"",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "12877",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-ChildItem -Force | Select-Object Mode,Name; rg --files -g 'AGENTS.md' -g 'package.json' -g 'package-lock.json' -g 'pnpm-lock.yaml' -g 'yarn.lock' -g '*.md' -g '*.json' -g '*.js' -g '*.mjs' -g '*.ts' -g '*.txt'"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414317117
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-f767710a-2de0-4540-99d0-b94e597c4ae3",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"Get-ChildItem -Force | Select-Object Mode,Name; rg --files -g 'AGENTS.md' -g 'package.json' -g 'package-lock.json' -g 'pnpm-lock.yaml' -g 'yarn.lock' -g '*.md' -g '*.json' -g '*.js' -g '*.mjs' -g '*.ts' -g '*.txt'\"",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "12877",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-ChildItem -Force | Select-Object Mode,Name; rg --files -g 'AGENTS.md' -g 'package.json' -g 'package-lock.json' -g 'pnpm-lock.yaml' -g 'yarn.lock' -g '*.md' -g '*.json' -g '*.js' -g '*.mjs' -g '*.ts' -g '*.txt'"
+            }
+          ],
+          "aggregatedOutput": "\r\nTASK.md\nREADME.md\ncandidate\\README.md\ncandidate\\package.json\ncandidate\\index.test.mjs\ncandidate\\index.mjs\nMode  Name\r\n----  ----\r\nd---- .agents\r\nd--h- .git\r\nd---- candidate\r\n-a--- README.md\r\n-a--- TASK.md\r\n\r\n",
+          "exitCode": 0,
+          "durationMs": 244
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414317362
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-ced0d76c-379f-47ab-8e37-05a88fc46721",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'Get-Content TASK.md; Get-Content README.md; Get-Content candidate/README.md; Get-Content candidate/package.json; Get-Content candidate/index.mjs; Get-Content candidate/index.test.mjs'",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "41253",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content TASK.md; Get-Content README.md; Get-Content candidate/README.md; Get-Content candidate/package.json; Get-Content candidate/index.mjs; Get-Content candidate/index.test.mjs"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414320824
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-ced0d76c-379f-47ab-8e37-05a88fc46721",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'Get-Content TASK.md; Get-Content README.md; Get-Content candidate/README.md; Get-Content candidate/package.json; Get-Content candidate/index.mjs; Get-Content candidate/index.test.mjs'",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "41253",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "Get-Content TASK.md; Get-Content README.md; Get-Content candidate/README.md; Get-Content candidate/package.json; Get-Content candidate/index.mjs; Get-Content candidate/index.test.mjs"
+            }
+          ],
+          "aggregatedOutput": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\r\n\r\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\r\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。\r\nSynthetic evaluation workspace; no production implementation exists.\r\ncandidate/ contains a supplied external-project snapshot for offline assessment.\r\nThe provider is fictional and its provenance fields are simulated fixture facts.\r\nThe parent evaluation repository license is not evidence of rights to that simulated third-party artifact.\r\n# Async limiter fixture\r\n\r\nProvider: Fictional Fixture Authors; snapshot version: 1.0.0.\r\nThe provider field is a simulated distribution label, not a statement identifying the copyright holder.\r\nAny accompanying LICENSE retains its named copyright notice; neither field establishes a real upstream release.\r\nAPI: limit(max) returns run(fn), accepting an asynchronous task function.\r\nThis snapshot claims bounded concurrency and progress after rejection.\r\nDelivery contains no network fetch or upstream verification record.\r\n{\r\n  \"name\": \"@fixture/async-limit\",\r\n  \"version\": \"1.0.0\",\r\n  \"type\": \"module\",\r\n  \"engines\": {\r\n    \"node\": \">=22\"\r\n  },\r\n  \"exports\": \"./index.mjs\"\r\n}\r\nexport function limit(max) {\r\n  if (!Number.isInteger(max) || max < 1) throw new RangeError('positive max required');\r\n  let active = 0;\r\n  const queue = [];\r\n  const start = () => {\r\n    while (active < max && queue.length) {\r\n      const {fn, resolve, reject} = queue.shift();\r\n      active++;\r\n      Promise.resolve().then(fn).then(resolve, reject).finally(() => { active--; start(); });\r\n    }\r\n  };\r\n  return fn => new Promise((resolve, reject) => { queue.push({fn, resolve, reject}); start(); });\r\n}\r\nimport assert from 'node:assert/strict';\r\nimport test from 'node:test';\r\nimport { limit } from './index.mjs';\r\ntest('a failed task releases the slot', async () => {\r\n  const run = limit(1);\r\n  let release;\r\n  const barrier = new Promise(resolve => { release = resolve; });\r\n  let secondStarted = false;\r\n  const error = new Error('first');\r\n  const first = run(async () => { await barrier; throw error; });\r\n  const second = run(() => { secondStarted = true; return 'next'; });\r\n  await Promise.resolve();\r\n  assert.equal(secondStarted, false);\r\n  release();\r\n  await assert.rejects(first, e => e === error);\r\n  assert.equal(await second, 'next');\r\n});\r\n",
+          "exitCode": 0,
+          "durationMs": 141
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414320966
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78dfc7a3087d0a2cfba83ab5d5176",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414332112
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78dfc7a3087d0a2cfba83ab5d5176",
+          "text": "候选快照只提供一个实现和一个测试；测试覆盖“并发上限为 1 时，首任务拒绝后释放槽位并启动后续任务”。我会在不安装依赖的前提下运行这个现成测试，并确认本地 Node 版本与项目改动状态，作为设计结论的验证证据。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414333172
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-7dcb84f0-6d18-46fa-a2bf-b31e7af1d2bf",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --version; node --test candidate/index.test.mjs; git status --short'",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "52787",
+          "source": "unifiedExecStartup",
+          "status": "inProgress",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node --version; node --test candidate/index.test.mjs; git status --short"
+            }
+          ],
+          "aggregatedOutput": null,
+          "exitCode": null,
+          "durationMs": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414335160
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "commandExecution",
+          "id": "exec-7dcb84f0-6d18-46fa-a2bf-b31e7af1d2bf",
+          "pluginId": null,
+          "scriptPath": null,
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --version; node --test candidate/index.test.mjs; git status --short'",
+          "cwd": "<v11-batch>\\architecture-on",
+          "processId": "52787",
+          "source": "unifiedExecStartup",
+          "status": "completed",
+          "commandActions": [
+            {
+              "type": "unknown",
+              "command": "node --version; node --test candidate/index.test.mjs; git status --short"
+            }
+          ],
+          "aggregatedOutput": "v24.18.0\r\n✔ a failed task releases the slot (0.6462ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 75.4613\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\nwarning: unable to access '<user-profile>/.config/git/ignore': Permission denied\n",
+          "exitCode": 0,
+          "durationMs": 348
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414335509
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78e0bea7487d091818d67113c36e0",
+          "text": "",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414347550
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78e0bea7487d091818d67113c36e0",
+          "text": "我按 `reuse-before-build` 的本地证据规则和 `<other-skill>` 的最小方案原则处理：离线约束排除了外部上游核查；候选快照可评估其行为，但快照的许可文件未提供，不能据此推荐直接复用其代码。",
+          "phase": "commentary",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414348425
+      }
+    },
+    {
+      "method": "item/started",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78e11263087d0b7d75e6ced94b1db",
+          "text": "",
+          "phase": "final_answer",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "startedAtMs": 1790414352791
+      }
+    },
+    {
+      "method": "item/completed",
+      "params": {
+        "item": {
+          "type": "agentMessage",
+          "id": "msg_08e5939ef281434e016ab78e11263087d0b7d75e6ced94b1db",
+          "text": "## 选型结论\n\n建议本项目用 **Node.js 标准 Promise 实现项目内的有界并发调度器**，暂不把候选包作为依赖，也不直接复用其源码。接口可以沿用快照展示的简洁形式：`limit(max)` 返回 `run(task)`；每个任务独立返回 Promise，失败只拒绝自己的 Promise，并释放槽位以便队列继续运行。\n\n候选快照在功能上符合需求：[实现](<v11-batch>/architecture-on/candidate/index.mjs)以 FIFO 队列限制并发，任务拒绝后通过 `finally` 释放槽位；[测试](<v11-batch>/architecture-on/candidate/index.test.mjs)覆盖了并发数为 1 时失败后继续启动下一个任务。但候选材料标明来源是虚构的模拟快照，且目录中没有提供其源码许可文件，因此不足以支持将它作为实际依赖或直接复用代码。这里不对真实包或上游发布是否存在作判断。\n\n## 适配边界\n\n- 接收异步任务函数；同步抛错也应转换为该任务的拒绝结果，且不能阻塞队列。\n- 失败按任务隔离：调用方需处理每个返回 Promise 的拒绝；调度器继续处理后续任务。\n- 本轮只要求并发上限和失败后续跑。重试、超时、取消、优先级、速率限制和队列容量上限不纳入首版；若任务量可能持续积压，再单独确定背压策略。\n- `max` 应为正整数。队列与并发上限是两回事：限制执行中的任务数不限制排队数量。\n\n## 验证计划与实际结果\n\n本次只做设计，未修改文件、安装依赖或访问网络。现有测试只覆盖 `max = 1` 的失败恢复；实现阶段应补充确定性测试，覆盖 `max > 1` 的并发峰值、多个任务在失败后继续执行、同步抛错、任务结果隔离、FIFO 顺序及非法 `max`。\n\n实际运行了 `node --version` 和 `node --test candidate/index.test.mjs`：环境版本是 **Node v24.18.0**，快照测试 **1 项通过**。这验证了该单一拒绝恢复场景在当前环境中的表现，**不等于已在 Node.js 22 上验证**；实现后应在 Node.js 22 环境运行项目测试。`git status --short` 没有列出项目改动；Git 同时报告无法读取用户级 ignore 配置，但命令退出码为 0。",
+          "phase": "final_answer",
+          "delivery": null,
+          "questions": null
+        },
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turnId": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+        "completedAtMs": 1790414360758
+      }
+    },
+    {
+      "method": "thread/status/changed",
+      "params": {
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "status": {
+          "type": "idle"
+        }
+      },
+      "emittedAtMs": 1790414360814
+    },
+    {
+      "method": "turn/completed",
+      "params": {
+        "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+        "turn": {
+          "id": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+          "status": "completed",
+          "error": null
+        }
+      }
+    }
+  ],
+  "stderr_line_count": 15,
+  "last_updated_utc": "2026-09-26T09:19:20Z",
+  "discovery": {
+    "target_entries": [
+      {
+        "name": "reuse-before-build",
+        "path": "<v11-batch>\\architecture-on\\.agents\\skills\\reuse-before-build\\SKILL.md",
+        "enabled": true,
+        "scope": "repo"
+      },
+      {
+        "name": "reuse-before-build",
+        "path": "<personal-skills>\\reuse-before-build\\SKILL.md",
+        "enabled": false,
+        "scope": "user"
+      }
+    ],
+    "other_catalog_entry_count": 31,
+    "other_catalog_entries_sha256": "2c2096edca3aff52f9f2b4561598901d51943fdf378978973693c906e42d3aef",
+    "note": "Unrelated names, paths and metadata omitted. Fingerprint covers catalog entries, not their contents."
+  },
+  "threads": [
+    {
+      "id": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "modelProvider": "openai",
+      "ephemeral": true,
+      "instruction_source_summary": {
+        "entry_count": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  ],
+  "turn_requests": [
+    {
+      "threadId": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+      "model": "gpt-6-luna",
+      "effort": "high",
+      "input": [
+        {
+          "type": "text",
+          "text": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n仅操作当前项目目录；不要读取相邻项目、评估报告或历史会话，不要创建其他代理、安装依赖、联网、启动服务、提交或发布。报告实际执行的验证。"
+        }
+      ]
+    }
+  ],
+  "final_hashes": {
+    "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+    "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+    "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+    "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+    "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+    "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+    ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+    ".agents/skills/reuse-before-build/SKILL.md": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+  },
+  "changed_files": [],
+  "target_skill_body_read_item_ids": [
+    "exec-60db0679-12a7-4bab-b4fe-82e597eeb7fd"
+  ],
+  "target_skill_body_read_evidence": [
+    {
+      "item_id": "exec-60db0679-12a7-4bab-b4fe-82e597eeb7fd",
+      "thread_id": "01a0dd02-1169-76d1-993f-2a24011c7c14",
+      "turn_id": "01a0dd02-11b5-7330-987f-b7000eff9f57",
+      "match": "complete frozen Skill text; line endings normalized",
+      "frozen_skill": "skill-v11.md",
+      "frozen_skill_sha256": "e270b9869812653a3b66787151200460df895ee0ada8a8e96db1e4e88239706d"
+    }
+  ],
+  "personal_instruction_output_omissions": [
+    "exec-60db0679-12a7-4bab-b4fe-82e597eeb7fd"
+  ],
+  "final_git_head": "ea18d8839e6db724abdb32c54cab60bf54488925",
+  "final_git_status": "",
+  "file_changes": {},
+  "export_note": "Sanitized native JSON-RPC observable items. Raw observations, reasoning, compacted/encrypted content and unrelated personal instructions are not published. Private names/paths are anonymized; mixed instruction outputs retain a fingerprint and exact target-body-match receipt. UI interaction was not tested."
+}

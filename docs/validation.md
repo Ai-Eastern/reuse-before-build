@@ -3,9 +3,46 @@
 Evidence is tied to the evaluated Skill hash. This page retains the earlier
 2026-09-20 test/recovery runs, an earlier 2026-09-21 architecture run, and the
 GPT-5.6 Luna / medium comparison and GPT-6 Luna / high follow-ups. The latest
-batch reruns its defined sixteen-case core set on one final revision; earlier
-partial coverage stays tied to its original hashes. These observations imply
-neither a release tag nor universal host compatibility.
+native-host batch adds natural loading, manual compaction, session handoff and
+real-source-slice observations. The sixteen-case explicit core pass belongs
+to V10; it was not fully rerun on V12. Earlier results retain their original
+hashes. These observations imply neither a release tag nor universal host compatibility.
+
+## Native host acceptance — 2026-09-26, GPT-6 Luna / high
+
+The [native-host report](../evals/results/2026-09-26/native-host/REPORT.md)
+records **41 logical cases** across V10/V11/V12, with discovery and actual
+Skill-body reads scored separately from behavior. The desktop-bundled Codex
+app-server **0.158.0-alpha.2** verified the model and effort with fallback
+disabled. These are native runtime observations, not a desktop GUI test.
+
+V11 adds test coverage and recovery to the discovery description. V12 clarifies
+inspected, unread and unavailable evidence at the final decision. The current
+standalone core is **150 lines / 3,497 `o200k_base` tokens**, 83 more than V10.
+No service, hook or executable is required. Repeated complete snapshots now
+read the existing license rather than mistaking a filtered search for absence.
+
+**The current revision is not an all-pass result.** In the three V12
+headers-only repetitions, two selected Borrow despite unread required bodies;
+one retained an independent design without approving the candidate. Natural
+loading succeeded in the repeated coverage tasks and both recovery phases,
+but the successful real-source task did not load the target Skill. Loading is
+not compliance, and correct behavior without loading is not Skill attribution.
+
+Three actual manual-compaction workflows and three separate-session handoffs
+rechecked intentionally changed uncommitted content. They do not prove automatic
+compaction, automatic checkpoint creation or lossless recovery. Each distinct
+checker implementation passed independent positive/negative probes. V11's
+system-temporary-directory policy and recovery wording errors remain visible.
+
+Unavailable-target controls are six shared V10 observations with other skills
+still present, not a pure no-guidance or randomized comparison. Networking was
+prohibited by the task and web search disabled, so these trials do not newly
+validate live search timing. Claude Code and Copilot had no available models
+and were not run. Automatic
+context-pressure recovery, cross-machine behavior and production integration
+remain untested. V10's historical sixteen explicit core cases below were not
+fully rerun on V12.
 
 ## Independent core evaluation — 2026-09-26, GPT-6 Luna / high
 
@@ -18,7 +55,7 @@ loaded the Skill; this is not automatic-activation evidence.
 
 V10 requires a decisive capability's behavior and limiting condition to match
 the inspected symbol/assertion, rather than accepting a related variant.
-The core remains 150 lines, **3,414 `o200k_base` tokens**, 42 more than V9,
+That V10 core was 150 lines, **3,414 `o200k_base` tokens**, 42 more than V9,
 with no runtime dependency. Analytics now distinguishes high-cardinality
 DISTINCT state from the requested aggregation workload and keeps the 2 GB
 process-RSS gate unresolved. Queue design remains conditional on deployment
@@ -36,7 +73,8 @@ shows about interpreter availability; the report retains that wording issue
 alongside non-Git command failures and one redundant test rerun. No substantive
 behavior criterion failed. This is not a zero-error transcript, a causal
 comparison or a reliability estimate. Production integration, performance,
-real compaction, automatic activation and other hosts remain untested.
+real compaction, automatic activation and other hosts were outside that batch.
+The later native-host observations above do not change its original scope.
 All earlier reports and unsuccessful outcomes below remain unchanged.
 
 ## Live research and core regression — 2026-09-26, GPT-6 Luna / high
@@ -330,7 +368,7 @@ In the original six-scenario harness, scenarios 01, 02, 05, and 06 were not
 run through agents in the 2026-09-20 batch. The newer paired timing experiment
 uses separate scenario IDs and records its own executed set. The revised skill
 has not been behavior-tested in Claude Code, Copilot CLI, Cursor, Gemini
-CLI, OpenCode, or Windsurf. Automatic activation, real host compaction,
-cross-machine handoffs, and dynamic external-service checks remain outside
-these observations. See [compatibility](compatibility.md) for documented
-installation routes and evidence levels.
+CLI, OpenCode, or Windsurf. Native Codex natural-loading and manual-compaction
+observations are recorded separately above. Automatic context-pressure compaction,
+cross-machine handoffs and dynamic external-service checks remain untested.
+See [compatibility](compatibility.md) for documented installation routes and evidence levels.

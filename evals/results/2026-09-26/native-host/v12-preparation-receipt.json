@@ -1,0 +1,60 @@
+{
+  "record_type": "Preparation supplement reconstructed from executed shell steps, not a model trial",
+  "model_launches_during_preparation": 0,
+  "steps": [
+    "Ran unchanged prepare-native-acceptance.py native-acceptance-v12-20260926 native-skill-v12.md, creating 17 cases.",
+    "Before any V12 model ran, revised the candidate and repair plan to address both observed V11 evidence-state failures; replaced Skill in all target-on fixtures, git-added only that Skill and amended the local fixture baseline using command-scoped fixture identity. Small-on preexisting dirty README remained unchanged.",
+    "Copied the complete prepared architecture-on fixture, including its identical Git baseline, into architecture-on-2 and architecture-on-3. Added two manifest entries with only root paths changed.",
+    "Refreshed target Skill hashes and initial HEADs in the manifest; then started thirteen target-on logical cases. Six off arms were prepared but never scheduled."
+  ],
+  "final_skill_sha256": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35",
+  "plan_sha256": "283c7267f427ea508e16a90c4c4a60ea30ea7a1dfba3e9a545ecb33ae4607f32",
+  "architecture_repetitions": {
+    "architecture-on": {
+      "initial_head": "a4c27a346c7c3a9214c8a3002095c9e1b3314427",
+      "initial_hashes": {
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+      },
+      "same_prompt_as_first": true
+    },
+    "architecture-on-2": {
+      "initial_head": "a4c27a346c7c3a9214c8a3002095c9e1b3314427",
+      "initial_hashes": {
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+      },
+      "same_prompt_as_first": true
+    },
+    "architecture-on-3": {
+      "initial_head": "a4c27a346c7c3a9214c8a3002095c9e1b3314427",
+      "initial_hashes": {
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "0131574203f0db2de58457790b60231c4376cfe283ad3b5e33d6890596a0ff58",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "f433ce850f4049a0c1fc49a21cffd3e539566777b084d9ac538dcab9e9a3ec35"
+      },
+      "same_prompt_as_first": true
+    }
+  },
+  "assertion": "Repeated fixtures have identical business inputs, prompt, Skill and initial HEAD; distinct case directories and subsequent native thread IDs."
+}
