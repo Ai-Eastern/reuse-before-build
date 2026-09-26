@@ -1,0 +1,875 @@
+{
+  "review_status": "complete",
+  "reviewer": "host_acceptance_review",
+  "updated_utc": "2026-09-26T10:03:15.496096+00:00",
+  "plan": "combination-plan.md",
+  "skill_sha256": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+  "companion_sha256": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+  "method": "Read-only manual review of completed native command returns, edits, final response and task scope. Entire skill bodies matched after CRLF normalization, not self-report. No evaluator model trials or tests were run. Only this review artifact was written.",
+  "limitations": [
+    "Explicit dual loading only; no natural activation claim.",
+    "No isolated before/after or four-arm causal comparison; no reliability-rate claim.",
+    "Only bundled Codex host and Node built-in runner are observed; no other host/framework compatibility inference.",
+    "V12 candidate-evidence gate failures remain unchanged and were not retested here.",
+    "Scope means observed task actions and file state; it is not a claim that all network I/O was physically blocked."
+  ],
+  "cases": [
+    {
+      "case": "covered-rp",
+      "task": "covered",
+      "requested_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "7d51e850a37b1f10c60ebf48f33559c3269218802ba51f0238a4ef1233b7d75c",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd23-74cd-7952-9034-ffba1440c021",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\covered-rp\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\covered-rp\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-2c0f9749-8004-48b3-acb4-f665f4c7a3ed",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "ponytail",
+          "command_id": "exec-f9e793c9-5fd6-4f71-b200-4a9a39cbf005",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "changed_files": [],
+      "final_file_hashes_verified": true,
+      "finding": "Existing exact third-success/value/call-sequence assertions reused; no files changed. Targeted and documented full command each passed the same two tests.",
+      "notes": [
+        "The second run repeats the same deterministic cases; bounded targeted-to-documented-command verification, not a second skill workflow."
+      ],
+      "test_executions": [
+        {
+          "command_id": "exec-3d464598-128b-4616-af98-3243c7b668dd",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'git status --short; node --version; node --test test/retry.test.mjs'",
+          "exit_code": 0,
+          "passes": [
+            "2"
+          ],
+          "failures": [
+            "0"
+          ]
+        },
+        {
+          "command_id": "exec-efe8915f-902b-4cfd-9792-71ce8091274f",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test; git diff --exit-code -- src/retry.mjs; git status --short'",
+          "exit_code": 0,
+          "passes": [
+            "2"
+          ],
+          "failures": [
+            "0"
+          ]
+        }
+      ],
+      "independent_replay": {
+        "record": "combination-replays.json",
+        "verdict": "pass",
+        "review_basis": "Inspected reviewer script and recorded TAP output, source fingerprints and original-subject integrity; review agent did not execute tests.",
+        "source_group": "covered:27e026c7d9cee01101fc432de92d991cb54bcc716c793eb44eec96e282b706fb",
+        "suite_tap": {
+          "pass": 2,
+          "fail": 0,
+          "tests": 2,
+          "failing_names": [],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt"
+          ]
+        }
+      }
+    },
+    {
+      "case": "covered-pr",
+      "task": "covered",
+      "requested_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "83f18c0b07b7c0b8089713c37d10c628ce1fc9c66f809703f0a046867eb86b5d",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd24-0ea7-7552-84e5-4d3557d42bad",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\covered-pr\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\covered-pr\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "ponytail",
+          "command_id": "exec-d6eafad4-7450-46ef-907b-17bcd12f38a5",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-d9d4b91c-81fa-4686-ab0d-fff7191ed8b7",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "changed_files": [],
+      "final_file_hashes_verified": true,
+      "finding": "Existing exact third-success/value/call-sequence assertions reused; no files changed. Two declared repeatability runs each passed the existing two tests.",
+      "notes": [
+        "The same deterministic suite was rerun without changed inputs; explicit bounded repeatability check, not duplicate tests or a new runner."
+      ],
+      "test_executions": [
+        {
+          "command_id": "exec-2bc5a9ef-06bb-433e-b4c9-9ea90e9e4af0",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command \"rg --files -g '\"'! .git'\"'; node --version; node --test; node --test; git diff --check; git status --short; git diff -- src/retry.mjs test/retry.test.mjs\"",
+          "exit_code": 0,
+          "passes": [
+            "2",
+            "2"
+          ],
+          "failures": [
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "independent_replay": {
+        "record": "combination-replays.json",
+        "verdict": "pass",
+        "review_basis": "Inspected reviewer script and recorded TAP output, source fingerprints and original-subject integrity; review agent did not execute tests.",
+        "source_group": "covered:27e026c7d9cee01101fc432de92d991cb54bcc716c793eb44eec96e282b706fb",
+        "suite_tap": {
+          "pass": 2,
+          "fail": 0,
+          "tests": 2,
+          "failing_names": [],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt"
+          ]
+        }
+      }
+    },
+    {
+      "case": "adapt-rp",
+      "task": "adapt",
+      "requested_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "83c83b64630228f1bd1d5d34d268a8a20239c0358d95a0cd6929d4af5dc083bf",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd24-a0bd-75d2-8d6e-bf672167cad6",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\adapt-rp\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\adapt-rp\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-cb7f5c77-276e-4388-904e-3d4a670a91f3",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "ponytail",
+          "command_id": "exec-00359fac-bdda-4bb5-9f79-ad1c2d0a3bbb",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "changed_files": [
+        "README.md",
+        "src/status-service.mjs",
+        "test/retry.test.mjs"
+      ],
+      "final_file_hashes_verified": true,
+      "finding": "Existing retry helper is imported and invoked through a zero-argument reader closure. Original runner/tests extended with early success, zero arguments and final distinct error identity; four tests passed. README updated for resulting behavior.",
+      "notes": [
+        "A second diff check followed a README-only correction; no unnecessary test rerun."
+      ],
+      "test_executions": [
+        {
+          "command_id": "exec-037e215a-7395-4a51-a278-c430323f712a",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test'",
+          "exit_code": 0,
+          "passes": [
+            "4"
+          ],
+          "failures": [
+            "0"
+          ]
+        }
+      ],
+      "independent_replay": {
+        "record": "combination-replays.json",
+        "verdict": "pass",
+        "review_basis": "Inspected reviewer script and recorded TAP output, source fingerprints and original-subject integrity; review agent did not execute tests.",
+        "source_group": "adapt:b0ae43a78ad955885cb16a4d202a2d9c3383a90149a044c4ff6a60abb25c64f3",
+        "suite_tap": {
+          "pass": 4,
+          "fail": 0,
+          "tests": 4,
+          "failing_names": [],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "fetchStatus calls its reader without arguments and stops at first success",
+            "fetchStatus preserves the last error after three failed reads"
+          ]
+        },
+        "adapter_probe_group": "75c4233b6cca04a005cc030241569825974703022fa3e7d94a335088474fadf8",
+        "adapter_probe_tap": {
+          "pass": 3,
+          "fail": 0,
+          "tests": 3,
+          "failing_names": [],
+          "passing_names": [
+            "reviewer: zero arguments and stop at first success with identical return object",
+            "reviewer: two failures then third success with zero arguments and no fourth call",
+            "reviewer: at most three failures and final error identity preserved"
+          ]
+        },
+        "reuse_note": "Same production hashes in both orders; one independent three-probe run is attributed to both, not counted as two runs."
+      }
+    },
+    {
+      "case": "adapt-pr",
+      "task": "adapt",
+      "requested_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "4b4c64dfdc2255656fdf4a46b408bc2a9374510c0d1bea21598237b47dd5521e",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd25-8829-7dc0-a430-06c83fd3e6ea",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\adapt-pr\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\adapt-pr\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "ponytail",
+          "command_id": "exec-db100229-cb26-4c8a-b706-cea369fde7e8",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-bed302cb-7ec1-4259-b42c-c763a9b5705c",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "changed_files": [
+        "README.md",
+        "src/status-service.mjs",
+        "test/retry.test.mjs"
+      ],
+      "final_file_hashes_verified": true,
+      "finding": "Existing retry helper is imported and invoked through a zero-argument reader closure. Existing test file gains meaningful service integration checks with distinct errors and original successful value identity; four tests pass, production helper is unchanged, and README reflects behavior.",
+      "notes": [
+        "The same four tests were rerun after a README-only correction. This is a non-blocking redundant verification, with no second runner or duplicate implementation."
+      ],
+      "test_executions": [
+        {
+          "command_id": "exec-beec496d-c547-4350-a410-e29738f19af2",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test'",
+          "exit_code": 0,
+          "passes": [
+            "4"
+          ],
+          "failures": [
+            "0"
+          ]
+        },
+        {
+          "command_id": "exec-4ef6eef4-1167-48ed-a094-e1f1879f0e6c",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test; git diff --check'",
+          "exit_code": 0,
+          "passes": [
+            "4"
+          ],
+          "failures": [
+            "0"
+          ]
+        }
+      ],
+      "independent_replay": {
+        "record": "combination-replays.json",
+        "verdict": "pass",
+        "review_basis": "Inspected reviewer script and recorded TAP output, source fingerprints and original-subject integrity; review agent did not execute tests.",
+        "source_group": "adapt:00484900b6c5076d61229dc768dc8d971d6e6f6e0de94e6cadc593c39cbe2478",
+        "suite_tap": {
+          "pass": 4,
+          "fail": 0,
+          "tests": 4,
+          "failing_names": [],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "fetchStatus retries with no arguments and stops at the first success",
+            "fetchStatus throws the last error after three zero-argument calls"
+          ]
+        },
+        "adapter_probe_group": "75c4233b6cca04a005cc030241569825974703022fa3e7d94a335088474fadf8",
+        "adapter_probe_tap": {
+          "pass": 3,
+          "fail": 0,
+          "tests": 3,
+          "failing_names": [],
+          "passing_names": [
+            "reviewer: zero arguments and stop at first success with identical return object",
+            "reviewer: two failures then third success with zero arguments and no fourth call",
+            "reviewer: at most three failures and final error identity preserved"
+          ]
+        },
+        "reuse_note": "Same production hashes in both orders; one independent three-probe run is attributed to both, not counted as two runs."
+      }
+    },
+    {
+      "case": "gap-rp",
+      "task": "gap",
+      "requested_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "3bcdf539ed8baeeb80db2c0307efe82912b3826667cec3658b5a124cda669d65",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd23-caae-7813-ad83-61699a367666",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\gap-rp\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\gap-rp\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-994ce30e-e29f-421b-b28b-6231639f8b1c",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "ponytail",
+          "command_id": "exec-e869029b-8550-4229-8413-5ac4550b140d",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "changed_files": [
+        "test/retry.test.mjs"
+      ],
+      "final_file_hashes_verified": true,
+      "finding": "Only existing test file extended: attempts=2, distinct first/second errors, strict identity of final error, exact calls [1,2], and attempts=0 rejects without invoking operation. Four tests passed.",
+      "notes": [
+        "Independent first-error mutation replay was reviewed separately; only the new final-error test failed."
+      ],
+      "test_executions": [
+        {
+          "command_id": "exec-dd215ba5-6792-44d2-9f13-b6edf8a2be7b",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test'",
+          "exit_code": 0,
+          "passes": [
+            "4"
+          ],
+          "failures": [
+            "0"
+          ]
+        }
+      ],
+      "independent_replay": {
+        "record": "combination-replays.json",
+        "verdict": "pass",
+        "review_basis": "Inspected reviewer script and recorded TAP output, source fingerprints and original-subject integrity; review agent did not execute tests.",
+        "source_group": "gap:fa907df135fa29be1da1849a5290d7ced35f89242b08baaa91b9e5bb5f9df1d2",
+        "suite_tap": {
+          "pass": 4,
+          "fail": 0,
+          "tests": 4,
+          "failing_names": [],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "throws the final error object after exactly the configured attempts",
+            "rejects zero attempts without calling the operation"
+          ]
+        },
+        "mutation_tap": {
+          "pass": 3,
+          "fail": 1,
+          "tests": 4,
+          "failing_names": [
+            "throws the final error object after exactly the configured attempts"
+          ],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "rejects zero attempts without calling the operation"
+          ]
+        },
+        "only_expected_final_error_test_failed": true
+      }
+    },
+    {
+      "case": "gap-pr",
+      "task": "gap",
+      "requested_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "c7fd82016a1778cd97d8be753ef246624cb9bc1dac715a66b0e2ff47a8dcc0b1",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd24-8cf3-7b61-a9cf-ea4897706046",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\gap-pr\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\gap-pr\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "ponytail",
+          "command_id": "exec-70b2b66a-7171-4946-bf86-8fb7cee52e17",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-ace911f1-9299-4ada-924a-1b957f804501",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "changed_files": [
+        "test/retry.test.mjs"
+      ],
+      "final_file_hashes_verified": true,
+      "finding": "Only existing test file extended: three distinct errors, strict identity of final error, exact calls [1,2,3], and attempts=0 rejects without invoking operation. Four tests passed.",
+      "notes": [
+        "Positive configured attempt count equals default 3, so this assertion alone does not discriminate an implementation that ignores other positive attempt values. Frozen required first-error mutation was detected in the separate reviewer replay."
+      ],
+      "test_executions": [
+        {
+          "command_id": "exec-3eea8bfd-9c40-42db-b0d8-e8cb6620ebf0",
+          "command": "\"<powershell-runtime>\\\\pwsh.exe\" -Command 'node --test'",
+          "exit_code": 0,
+          "passes": [
+            "4"
+          ],
+          "failures": [
+            "0"
+          ]
+        }
+      ],
+      "independent_replay": {
+        "record": "combination-replays.json",
+        "verdict": "pass",
+        "review_basis": "Inspected reviewer script and recorded TAP output, source fingerprints and original-subject integrity; review agent did not execute tests.",
+        "source_group": "gap:d02ac94bb9b8efcd095143b933f2dd2554517a18cf558437ac2dae5f4f97a279",
+        "suite_tap": {
+          "pass": 4,
+          "fail": 0,
+          "tests": 4,
+          "failing_names": [],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "throws the last error object after exactly the configured attempts",
+            "rejects zero attempts without calling the operation"
+          ]
+        },
+        "mutation_tap": {
+          "pass": 3,
+          "fail": 1,
+          "tests": 4,
+          "failing_names": [
+            "throws the last error object after exactly the configured attempts"
+          ],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "rejects zero attempts without calling the operation"
+          ]
+        },
+        "only_expected_final_error_test_failed": true
+      }
+    },
+    {
+      "case": "design-rp",
+      "task": "design",
+      "requested_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "aae4a125def987f997fdea01ab3995fa6b626673575b0afa3e65d0f9cb6c7f1b",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd25-5088-7872-a942-a7d32f4c3d54",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\design-rp\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\design-rp\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-9e4eea24-8f43-4a16-805e-3d52a0a40849",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "ponytail",
+          "command_id": "exec-84b2ce54-02a8-410b-be18-43298ff00cbf",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "changed_files": [
+        "DECISIONS.md"
+      ],
+      "final_file_hashes_verified": true,
+      "finding": "All five supplied candidate files were actually inspected, including the full artifact license, implementation and behavior test. Borrow is limited to the hypothetical snapshot. Existing DECISIONS.md preserves constraints, evidence, adaptation limits, static/executed versus planned checks and next actions. Only the existing decision record changed; no runtime test is falsely claimed.",
+      "notes": [
+        "One PowerShell here-string write failed with syntax error; the subject read the unchanged record, corrected the command and verified the completed record. This was bounded recovery rather than a new workflow.",
+        "Static source supports concurrency limiting; the existing test specifically corroborates limit=1 failure recovery. Greater-than-one concurrency runtime testing remains explicitly planned."
+      ],
+      "test_executions": [],
+      "candidate_full_content_returns": {
+        "candidate/index.mjs": [
+          "exec-aed66257-f36d-4acd-905c-46f3215b111e"
+        ],
+        "candidate/index.test.mjs": [
+          "exec-f84faa76-2a07-43c6-b034-7053c89d0a72"
+        ],
+        "candidate/LICENSE": [
+          "exec-c4dc0870-a6d0-474c-8353-b0240a0042b6"
+        ],
+        "candidate/package.json": [
+          "exec-e850843a-3791-4ae9-935d-5941af6c10a2"
+        ],
+        "candidate/README.md": [
+          "exec-b31c5aef-eece-43e7-94f0-29702ca7a99c"
+        ]
+      },
+      "independent_replay": {
+        "verdict": "not_applicable_runtime",
+        "artifact_integrity": "Final inventory independently matched raw final_hashes; only DECISIONS.md changed. Semantic record reviewed manually."
+      }
+    },
+    {
+      "case": "design-pr",
+      "task": "design",
+      "requested_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "record_state": "completed",
+      "review_state": "reviewed",
+      "load_verdict": "pass",
+      "behavior_verdict": "pass",
+      "scope_verdict": "pass",
+      "workflow_verdict": "pass",
+      "raw_record_sha256": "d382f9b401162ab4851ebc420f516dce32f9197214064d22042ca1945db47dcb",
+      "actual_model_threads": [
+        {
+          "id": "01a0dd27-4dfb-7572-85d6-c676282d06f4",
+          "model": "gpt-6-luna",
+          "effort": "high",
+          "modelProvider": "openai",
+          "ephemeral": true,
+          "instructionSources": []
+        }
+      ],
+      "enabled_skills": [
+        {
+          "name": "ponytail",
+          "scope": "repo",
+          "path": "<combination-batch>\\design-pr\\.agents\\skills\\ponytail\\SKILL.md"
+        },
+        {
+          "name": "reuse-before-build",
+          "scope": "repo",
+          "path": "<combination-batch>\\design-pr\\.agents\\skills\\reuse-before-build\\SKILL.md"
+        }
+      ],
+      "full_body_reads": [
+        {
+          "skill": "ponytail",
+          "command_id": "exec-89f8c465-0b74-470a-b154-4d5192146314",
+          "full_body_returned": true,
+          "exit_code": 0
+        },
+        {
+          "skill": "reuse-before-build",
+          "command_id": "exec-38eb314c-3f01-4602-a71a-70c9da06a77b",
+          "full_body_returned": true,
+          "exit_code": 0
+        }
+      ],
+      "actual_read_order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "changed_files": [
+        "DECISIONS.md"
+      ],
+      "final_file_hashes_verified": true,
+      "finding": "All five supplied candidate files were actually inspected, including license, implementation and behavior test. Snapshot-only design selection remains distinct from real package adoption. The existing DECISIONS.md retains evidence, scope, adaptation boundaries and a verification handoff. Only that record changed; no implementation, install or runtime validation was performed or claimed.",
+      "notes": [
+        "The added real-world identity/rights caveat is conservative and somewhat broader than needed for this supplied hypothetical snapshot; it does not omit the requested snapshot decision.",
+        "The existing decision record was deleted and re-added at the same path; final state and scope are an update to the sole requested record, not competing reports."
+      ],
+      "test_executions": [],
+      "candidate_full_content_returns": {
+        "candidate/index.mjs": [
+          "exec-42c6a62c-6a3f-4fcd-af2e-2edc6fae04fa"
+        ],
+        "candidate/index.test.mjs": [
+          "exec-42c6a62c-6a3f-4fcd-af2e-2edc6fae04fa"
+        ],
+        "candidate/LICENSE": [
+          "exec-42c6a62c-6a3f-4fcd-af2e-2edc6fae04fa"
+        ],
+        "candidate/package.json": [
+          "exec-ce5d55cf-d91b-47ba-87c4-3b534f1de286",
+          "exec-42c6a62c-6a3f-4fcd-af2e-2edc6fae04fa"
+        ],
+        "candidate/README.md": [
+          "exec-42c6a62c-6a3f-4fcd-af2e-2edc6fae04fa"
+        ]
+      },
+      "independent_replay": {
+        "verdict": "not_applicable_runtime",
+        "artifact_integrity": "Final inventory independently matched raw final_hashes; only DECISIONS.md changed. Semantic record reviewed manually."
+      }
+    }
+  ],
+  "summary": {
+    "planned_cases": 8,
+    "completed_cases": 8,
+    "reviewed_cases": 8,
+    "full_body_loaded_cases": 8,
+    "full_body_read_events": 16,
+    "correct_order_cases": 8,
+    "only_two_enabled_skill_cases": 8,
+    "behavior_pass_cases": 8,
+    "scope_pass_cases": 8,
+    "workflow_pass_cases": 8,
+    "pending_cases": [],
+    "observed_failures": [],
+    "runtime_model_errors": [],
+    "non_blocking_notes_retained": true
+  },
+  "conclusion": "All eight fixed explicit-combination cases pass loading/order, observed task behavior, scope and bounded workflow criteria. This does not establish causal improvement, natural dual activation or full-core reliability. Non-blocking repetition and coverage limits are retained per case.",
+  "independent_replay_evidence": {
+    "path": "combination-replays.json",
+    "reviewed_summary": {
+      "completed_subjects_checked": 8,
+      "suite_groups_replayed": 5,
+      "adapter_probe_groups_replayed": 1,
+      "mutation_groups_replayed": 2,
+      "design_artifacts_checked": 2,
+      "all_original_suites_passed": true,
+      "all_adapter_probes_passed": true,
+      "all_mutations_only_intended_failure": true,
+      "covered_cases_have_zero_file_changes": true,
+      "adapter_cases_reuse_unchanged_retry_helper": true,
+      "gap_cases_preserve_production_code": true,
+      "design_cases_only_update_existing_record": true,
+      "all_reviewed_subjects_unchanged": true,
+      "all_business_inputs_equal_between_orders": true
+    },
+    "source_hash_grouping": "Five unique suite groups for six coding subjects; identical covered outputs share a replay; identical adapter production outputs share one three-probe replay. Two gap variants each have their own first-error mutation replay."
+  },
+  "harness_validity": {
+    "all_business_files_equal_between_orders": true,
+    "all_business_prompts_equal_between_orders": true,
+    "explicit_invocation_and_scope_in_prompts": true,
+    "reviewer_expected_outcomes_not_embedded_in_business_prompts": true,
+    "only_project_local_two_skills_enabled": true,
+    "full_body_match_definition": "The entire frozen local file content occurs in actual completed command output after carriage-return normalization and outer-whitespace trim. This proves returned content, not internal cognition.",
+    "limits": "Two fixed invocation orders, one model/effort and small synthetic workspaces. No unskilled, single-skill, pre-V13 or natural-trigger arms."
+  }
+}

@@ -1,0 +1,177 @@
+"""Bounded native JSON-RPC runner; exports observable items only, never reasoning."""
+from pathlib import Path
+import hashlib,json,queue,subprocess,sys,threading,time,os
+
+WORK=Path(__file__).resolve().parent
+BATCH=WORK/os.environ.get('RBB_NATIVE_BATCH','native-acceptance-v10-20260926')
+EXE=Path('<bundled-runtime>/codex.exe')
+PERSONAL=Path('<personal-skills>/reuse-before-build/SKILL.md')
+ALLOWED_ITEMS={'agentMessage','commandExecution','fileChange','webSearch','mcpToolCall','contextCompaction','userMessage','imageView'}
+
+def snapshot(root):
+    return {p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in root.rglob('*') if p.is_file() and '.git' not in p.relative_to(root).parts}
+
+class Native:
+    def __init__(self,root,receipt):
+        self.root=root;self.receipt=receipt;self.counter=0;self.q=queue.Queue();self.err=[];self.events=[]
+        # Process-scoped override, never config/write: the project copy is the only target Skill.
+        config='skills.config=[{path='+json.dumps(PERSONAL.as_posix())+',enabled=false}]'
+        self.proc=subprocess.Popen([str(EXE),'-c',config,'-c','web_search="disabled"','app-server','--stdio'],cwd=root,
+            stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',creationflags=subprocess.CREATE_NO_WINDOW)
+        threading.Thread(target=self._stdout,daemon=True).start();threading.Thread(target=self._stderr,daemon=True).start()
+        self.request('initialize',{'clientInfo':{'name':'reuse_skill_acceptance','version':'0.1'},'capabilities':{'experimentalApi':True}})
+        self.send({'method':'initialized','params':{}})
+    def _stdout(self):
+        for line in self.proc.stdout:
+            try:self.q.put(json.loads(line))
+            except json.JSONDecodeError:pass
+    def _stderr(self):
+        for line in self.proc.stderr:self.err.append(line)
+    def send(self,v):
+        self.proc.stdin.write(json.dumps(v,ensure_ascii=False)+'\n');self.proc.stdin.flush()
+    def observe(self,event):
+        method=event.get('method','');params=event.get('params',{})
+        if method in ['item/started','item/completed']:
+            item=params.get('item',{})
+            if item.get('type') in ALLOWED_ITEMS:
+                if item.get('type')=='contextCompaction':
+                    params={**params,'item':{k:item.get(k) for k in ['id','type']}}
+                self.events.append({'method':method,'params':params})
+        elif method in ['turn/started','turn/completed']:
+            t=params.get('turn',{})
+            self.events.append({'method':method,'params':{'threadId':params.get('threadId'),'turn':{k:t.get(k) for k in ['id','status','error']}}})
+        elif method in ['error','thread/compacted','thread/status/changed']:
+            self.events.append(event)
+        if method and 'id' in event:
+            # Subject turns cannot approve broader actions or contact the user.
+            self.events.append({'method':'unexpected_server_request','request_method':method})
+            self.send({'id':event['id'],'error':{'code':-32601,'message':'No interactive approval in this bounded evaluation'}})
+        self.save()
+    def save(self):
+        self.receipt['events']=self.events;self.receipt['stderr_line_count']=len(self.err)
+        self.receipt['last_updated_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
+        path=BATCH/(self.root.name+'.observations.json')
+        path.write_text(json.dumps(self.receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+    def request(self,method,params,timeout=60):
+        self.counter+=1;request_id=self.counter
+        self.send({'id':request_id,'method':method,'params':params})
+        end=time.monotonic()+timeout
+        while time.monotonic()<end:
+            event=self.q.get(timeout=max(.1,end-time.monotonic()))
+            if event.get('id')==request_id:
+                if 'error' in event:raise RuntimeError(json.dumps(event['error']))
+                return event['result']
+            self.observe(event)
+        raise TimeoutError(method)
+    def discover(self):
+        result=self.request('skills/list',{'cwds':[str(self.root)],'forceReload':True})
+        data=[{'cwd':d.get('cwd'),'skills':[{k:s.get(k) for k in ['name','path','enabled','scope']} for s in d.get('skills',[])],'errors':d.get('errors')} for d in result.get('data',[])]
+        self.receipt['discovery']=data
+        selected=[s for d in data for s in d['skills'] if s['name']=='reuse-before-build' and s['enabled']]
+        assert len(selected)==int(self.receipt['skill_available']),selected
+        if selected:assert Path(selected[0]['path']).resolve()==(self.root/'.agents/skills/reuse-before-build/SKILL.md').resolve()
+        self.save();return data
+    def start(self):
+        args={'model':'gpt-6-luna','cwd':str(self.root),'approvalPolicy':'never','sandbox':'workspace-write','ephemeral':True,'allowProviderModelFallback':False,
+              'config':{'model_reasoning_effort':'high','features.memories':False,'features.multi_agent':False},'serviceName':'reuse-skill-acceptance'}
+        result=self.request('thread/start',args)
+        tid=result['thread']['id']
+        self.receipt.setdefault('threads',[]).append({'id':tid,'model':result.get('model'),'effort':result.get('reasoningEffort'),'modelProvider':result.get('modelProvider'),'ephemeral':result['thread'].get('ephemeral'),'instructionSources':result.get('instructionSources')})
+        assert result.get('model')=='gpt-6-luna',result.get('model')
+        self.save();return tid
+    def turn(self,tid,prompt,timeout=600):
+        args={'threadId':tid,'model':'gpt-6-luna','effort':'high','input':[{'type':'text','text':prompt}]}
+        self.receipt.setdefault('turn_requests',[]).append(args);self.save()
+        result=self.request('turn/start',args)
+        turn_id=result['turn']['id'];end=time.monotonic()+timeout
+        while time.monotonic()<end:
+            try:event=self.q.get(timeout=max(.1,min(60,end-time.monotonic())))
+            except queue.Empty:continue
+            self.observe(event)
+            if event.get('method')=='turn/completed' and event.get('params',{}).get('turn',{}).get('id')==turn_id:
+                status=event['params']['turn']['status']
+                if status!='completed':raise RuntimeError('turn '+status+': '+json.dumps(event['params']['turn'].get('error')))
+                return turn_id
+        raise TimeoutError('turn completion')
+    def close(self):
+        self.proc.terminate()
+        try:self.proc.wait(timeout=5)
+        except subprocess.TimeoutExpired:self.proc.kill();self.proc.wait()
+
+    def compact(self,tid,timeout=360):
+        self.receipt['compaction_request']={'method':'thread/compact/start','threadId':tid}
+        self.request('thread/compact/start',{'threadId':tid})
+        end=time.monotonic()+timeout;completed_item=False
+        while time.monotonic()<end:
+            try:event=self.q.get(timeout=max(.1,min(60,end-time.monotonic())))
+            except queue.Empty:continue
+            self.observe(event)
+            if event.get('method')=='item/completed' and event.get('params',{}).get('item',{}).get('type')=='contextCompaction':
+                completed_item=True;self.receipt['native_compaction_completed']=True;self.save()
+            if event.get('method')=='turn/completed':
+                status=event['params']['turn']['status']
+                if status!='completed':raise RuntimeError('compaction turn '+status)
+                if completed_item:return
+        raise TimeoutError('native contextCompaction completion')
+
+def run_recovery(name):
+    m=json.loads((BATCH/'manifest.json').read_text(encoding='utf-8'))
+    case=m['cases'][name];root=Path(case['path']);output=BATCH/(name+'.observations.json')
+    if output.exists():raise ValueError('Preserve existing subject record: '+name)
+    receipt={'case':name,'native_host':'Codex desktop-bundled app-server 0.158.0-alpha.2','skill_sha256':m['skill_sha256'],'skill_available':True,'initial_hashes':snapshot(root),'state':'starting','model':'gpt-6-luna','effort':'high'}
+    client=None
+    try:
+        client=Native(root,receipt);client.discover();tid=client.start();receipt['state']='producer-running';client.save()
+        client.turn(tid,case['prompt'])
+        assert (root/'HANDOFF.md').is_file(),'No actual agent-produced handoff'
+        receipt['producer_hashes']=snapshot(root)
+        receipt['producer_handoff']=(root/'HANDOFF.md').read_text(encoding='utf-8')
+        if name=='compact-on':
+            receipt['state']='compacting';client.save();client.compact(tid)
+        else:
+            previous_id=tid;tid=client.start()
+            assert tid!=previous_id
+            receipt['fresh_handoff_thread']=True
+        # Deliberate evaluator edit between turns, uncommitted; not a subject edit.
+        source=root/'src/retry.mjs';original=source.read_text(encoding='utf-8')
+        assert original.count('attempts = 3')==1
+        source.write_text(original.replace('attempts = 3','attempts = 1'),encoding='utf-8',newline='\n')
+        receipt['evaluator_change']={'path':'src/retry.mjs','from':'attempts = 3','to':'attempts = 1','purpose':'Changed current content after genuine producer verification; HEAD unchanged.'}
+        receipt['consumer_initial_hashes']=snapshot(root);receipt['state']='consumer-running';client.save()
+        prompt='请根据 HANDOFF.md 接续之前的检查，核对当前工作区并报告结论及尚未解决的问题。仅操作这个项目，不读取相邻项目或其他会话，不联网、安装、启动服务、提交或发布。'
+        client.turn(tid,prompt);receipt['state']='completed'
+    except Exception as e:
+        receipt['state']='interrupted';receipt['harness_or_runtime_error']=type(e).__name__+': '+str(e)
+        print(json.dumps({'case':name,'error':receipt['harness_or_runtime_error']},ensure_ascii=False),flush=True)
+    finally:
+        receipt['final_hashes']=snapshot(root)
+        baseline=receipt.get('consumer_initial_hashes',receipt['initial_hashes'])
+        receipt['consumer_changed_files']=[p for p in sorted(set(baseline)|set(receipt['final_hashes'])) if baseline.get(p)!=receipt['final_hashes'].get(p)]
+        if client:client.save();client.close()
+        else:output.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps({'case':name,'state':receipt['state'],'native_compaction_completed':receipt.get('native_compaction_completed'),'consumer_changed_files':receipt['consumer_changed_files']},ensure_ascii=False),flush=True)
+
+def run_case(name):
+    m=json.loads((BATCH/'manifest.json').read_text(encoding='utf-8'))
+    case=m['cases'][name];root=Path(case['path'])
+    output=BATCH/(name+'.observations.json')
+    if output.exists():raise ValueError('Preserve existing subject record: '+name)
+    receipt={'case':name,'native_host':'Codex desktop-bundled app-server 0.158.0-alpha.2','skill_sha256':m['skill_sha256'],'skill_available':case['skill_available'],'initial_hashes':snapshot(root),'state':'starting','model':'gpt-6-luna','effort':'high'}
+    client=None
+    try:
+        client=Native(root,receipt);client.discover();tid=client.start();receipt['state']='running';client.save()
+        client.turn(tid,case['prompt']);receipt['state']='completed'
+    except Exception as e:
+        receipt['state']='interrupted';receipt['harness_or_runtime_error']=type(e).__name__+': '+str(e)
+        print(json.dumps({'case':name,'error':receipt['harness_or_runtime_error']},ensure_ascii=False),flush=True)
+    finally:
+        receipt['final_hashes']=snapshot(root)
+        receipt['changed_files']=[p for p in sorted(set(receipt['initial_hashes'])|set(receipt['final_hashes'])) if receipt['initial_hashes'].get(p)!=receipt['final_hashes'].get(p)]
+        if client:client.save();client.close()
+        else:output.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps({'case':name,'state':receipt['state'],'changed_files':receipt['changed_files']},ensure_ascii=False),flush=True)
+
+if __name__=='__main__':
+    for name in sys.argv[1:]:
+        if name in ['compact-on','handoff-on']:run_recovery(name)
+        else:run_case(name)

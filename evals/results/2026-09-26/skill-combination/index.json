@@ -1,0 +1,138 @@
+[
+  {
+    "case": "adapt-pr",
+    "task": "adapt",
+    "requested_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "first_full_body_return_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "adapt-pr.json"
+  },
+  {
+    "case": "adapt-rp",
+    "task": "adapt",
+    "requested_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "first_full_body_return_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "adapt-rp.json"
+  },
+  {
+    "case": "covered-pr",
+    "task": "covered",
+    "requested_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "first_full_body_return_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "covered-pr.json"
+  },
+  {
+    "case": "covered-rp",
+    "task": "covered",
+    "requested_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "first_full_body_return_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "covered-rp.json"
+  },
+  {
+    "case": "design-pr",
+    "task": "design",
+    "requested_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "first_full_body_return_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "design-pr.json"
+  },
+  {
+    "case": "design-rp",
+    "task": "design",
+    "requested_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "first_full_body_return_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "design-rp.json"
+  },
+  {
+    "case": "gap-pr",
+    "task": "gap",
+    "requested_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "first_full_body_return_order": [
+      "ponytail",
+      "reuse-before-build"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "gap-pr.json"
+  },
+  {
+    "case": "gap-rp",
+    "task": "gap",
+    "requested_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "first_full_body_return_order": [
+      "reuse-before-build",
+      "ponytail"
+    ],
+    "both_complete_bodies_returned": true,
+    "requested_order_matched": true,
+    "threads": 1,
+    "ordinary_task_turns": 1,
+    "export": "gap-rp.json"
+  }
+]

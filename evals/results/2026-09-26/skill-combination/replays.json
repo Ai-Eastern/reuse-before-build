@@ -1,0 +1,986 @@
+{
+  "scope": "Independent deterministic replays, not model trials. Only code manually read for safety is executed, in reviewer-owned work copies.",
+  "node_version": {
+    "argv": [
+      "<node-runtime>\\node.exe",
+      "--version"
+    ],
+    "cwd": "<task-workspace>\\work",
+    "started_utc": "2026-09-26T09:58:03.415007+00:00",
+    "exit_code": 0,
+    "stdout": "v24.18.0\n",
+    "stderr": "",
+    "environment_overrides": {
+      "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+      "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+    }
+  },
+  "source_groups": {
+    "covered:27e026c7d9cee01101fc432de92d991cb54bcc716c793eb44eec96e282b706fb": {
+      "members": [
+        "covered-rp",
+        "covered-pr"
+      ],
+      "representative": "covered-rp",
+      "source_hashes": {
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      },
+      "execution_copy": "<task-workspace>\\work\\combination-review-probes\\covered-rp-27e026c7d9",
+      "suite_replay": {
+        "argv": [
+          "<node-runtime>\\node.exe",
+          "--test",
+          "--test-reporter=tap"
+        ],
+        "cwd": "<task-workspace>\\work\\combination-review-probes\\covered-rp-27e026c7d9",
+        "started_utc": "2026-09-26T09:58:03.465578+00:00",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8088\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1383\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 81.3895\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "suite_tap": {
+        "pass": 2,
+        "fail": 0,
+        "tests": 2,
+        "failing_names": [],
+        "passing_names": [
+          "returns the first successful result without another attempt",
+          "the default permits two failures before a successful third attempt"
+        ]
+      },
+      "suite_passed": true
+    },
+    "gap:fa907df135fa29be1da1849a5290d7ced35f89242b08baaa91b9e5bb5f9df1d2": {
+      "members": [
+        "gap-rp"
+      ],
+      "representative": "gap-rp",
+      "source_hashes": {
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "3b09362c9ea90705cec5d3728a930c77d0d68b4c2f8dae53227b183314bda875"
+      },
+      "execution_copy": "<task-workspace>\\work\\combination-review-probes\\gap-rp-fa907df135",
+      "suite_replay": {
+        "argv": [
+          "<node-runtime>\\node.exe",
+          "--test",
+          "--test-reporter=tap"
+        ],
+        "cwd": "<task-workspace>\\work\\combination-review-probes\\gap-rp-fa907df135",
+        "started_utc": "2026-09-26T09:58:03.821121+00:00",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8487\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.165\n  type: 'test'\n  ...\n# Subtest: throws the final error object after exactly the configured attempts\nok 3 - throws the final error object after exactly the configured attempts\n  ---\n  duration_ms: 0.2769\n  type: 'test'\n  ...\n# Subtest: rejects zero attempts without calling the operation\nok 4 - rejects zero attempts without calling the operation\n  ---\n  duration_ms: 0.8607\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 85.4495\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "suite_tap": {
+        "pass": 4,
+        "fail": 0,
+        "tests": 4,
+        "failing_names": [],
+        "passing_names": [
+          "returns the first successful result without another attempt",
+          "the default permits two failures before a successful third attempt",
+          "throws the final error object after exactly the configured attempts",
+          "rejects zero attempts without calling the operation"
+        ]
+      },
+      "suite_passed": true,
+      "first_error_mutation": {
+        "source": "<task-workspace>\\work\\independent-gap-mutation-v10-20260926\\src\\retry.mjs",
+        "mutant_sha256": "21a153c9131e713404112e6ccc5054b6d8f9fa18b91c0129b3c60d216c3cfd12",
+        "expected_failing_test_names": [
+          "throws the final error object after exactly the configured attempts"
+        ],
+        "replay": {
+          "argv": [
+            "<node-runtime>\\node.exe",
+            "--test",
+            "--test-reporter=tap"
+          ],
+          "cwd": "<task-workspace>\\work\\combination-review-probes\\gap-rp-fa907df135-first-error",
+          "started_utc": "2026-09-26T09:58:03.972831+00:00",
+          "exit_code": 1,
+          "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8109\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1319\n  type: 'test'\n  ...\n# Subtest: throws the final error object after exactly the configured attempts\nnot ok 3 - throws the final error object after exactly the configured attempts\n  ---\n  duration_ms: 0.9037\n  type: 'test'\n  location: '<task-workspace>\\\\work\\\\combination-review-probes\\\\gap-rp-fa907df135-first-error\\\\test\\\\retry.test.mjs:27:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    The validation function is expected to return \"true\". Received false\n    \n    Caught error:\n    \n    Error: first\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  stack: |-\n    async TestContext.<anonymous> (file:///<task-workspace>/work/combination-review-probes/gap-rp-fa907df135-first-error/test/retry.test.mjs:30:3)\n    async Test.run (node:internal/test_runner/test:1332:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:911:7)\n  ...\n# Subtest: rejects zero attempts without calling the operation\nok 4 - rejects zero attempts without calling the operation\n  ---\n  duration_ms: 0.1115\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 3\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 82.4445\n",
+          "stderr": "",
+          "environment_overrides": {
+            "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+            "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+          }
+        },
+        "tap": {
+          "pass": 3,
+          "fail": 1,
+          "tests": 4,
+          "failing_names": [
+            "throws the final error object after exactly the configured attempts"
+          ],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "rejects zero attempts without calling the operation"
+          ]
+        },
+        "only_intended_failure": true,
+        "interpretation": "A nonzero exit alone is insufficient; only the new final-error test may fail."
+      }
+    },
+    "adapt:b0ae43a78ad955885cb16a4d202a2d9c3383a90149a044c4ff6a60abb25c64f3": {
+      "members": [
+        "adapt-rp"
+      ],
+      "representative": "adapt-rp",
+      "source_hashes": {
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "db38ac8481cac414ebf855718dc0df72bde77ff9faf44ba558bc5b6a35369f48",
+        "test/retry.test.mjs": "35a4e45bac023cbd02eee1d38304faf3702b88f2ba0b87148777e52a53b80066"
+      },
+      "execution_copy": "<task-workspace>\\work\\combination-review-probes\\adapt-rp-b0ae43a78a",
+      "suite_replay": {
+        "argv": [
+          "<node-runtime>\\node.exe",
+          "--test",
+          "--test-reporter=tap"
+        ],
+        "cwd": "<task-workspace>\\work\\combination-review-probes\\adapt-rp-b0ae43a78a",
+        "started_utc": "2026-09-26T09:59:02.175057+00:00",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.7984\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1371\n  type: 'test'\n  ...\n# Subtest: fetchStatus calls its reader without arguments and stops at first success\nok 3 - fetchStatus calls its reader without arguments and stops at first success\n  ---\n  duration_ms: 0.5849\n  type: 'test'\n  ...\n# Subtest: fetchStatus preserves the last error after three failed reads\nok 4 - fetchStatus preserves the last error after three failed reads\n  ---\n  duration_ms: 0.2881\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 82.7045\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "suite_tap": {
+        "pass": 4,
+        "fail": 0,
+        "tests": 4,
+        "failing_names": [],
+        "passing_names": [
+          "returns the first successful result without another attempt",
+          "the default permits two failures before a successful third attempt",
+          "fetchStatus calls its reader without arguments and stops at first success",
+          "fetchStatus preserves the last error after three failed reads"
+        ]
+      },
+      "suite_passed": true,
+      "independent_adapter_probe_group": "75c4233b6cca04a005cc030241569825974703022fa3e7d94a335088474fadf8"
+    },
+    "adapt:00484900b6c5076d61229dc768dc8d971d6e6f6e0de94e6cadc593c39cbe2478": {
+      "members": [
+        "adapt-pr"
+      ],
+      "representative": "adapt-pr",
+      "source_hashes": {
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "db38ac8481cac414ebf855718dc0df72bde77ff9faf44ba558bc5b6a35369f48",
+        "test/retry.test.mjs": "00f0aae1cf2cb253d68b79819d7cf9fc593930420aeb7d2d8f96d61f44460e2e"
+      },
+      "execution_copy": "<task-workspace>\\work\\combination-review-probes\\adapt-pr-00484900b6",
+      "suite_replay": {
+        "argv": [
+          "<node-runtime>\\node.exe",
+          "--test",
+          "--test-reporter=tap"
+        ],
+        "cwd": "<task-workspace>\\work\\combination-review-probes\\adapt-pr-00484900b6",
+        "started_utc": "2026-09-26T09:59:02.572610+00:00",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.824\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1324\n  type: 'test'\n  ...\n# Subtest: fetchStatus retries with no arguments and stops at the first success\nok 3 - fetchStatus retries with no arguments and stops at the first success\n  ---\n  duration_ms: 0.5625\n  type: 'test'\n  ...\n# Subtest: fetchStatus throws the last error after three zero-argument calls\nok 4 - fetchStatus throws the last error after three zero-argument calls\n  ---\n  duration_ms: 0.2824\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 81.6863\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "suite_tap": {
+        "pass": 4,
+        "fail": 0,
+        "tests": 4,
+        "failing_names": [],
+        "passing_names": [
+          "returns the first successful result without another attempt",
+          "the default permits two failures before a successful third attempt",
+          "fetchStatus retries with no arguments and stops at the first success",
+          "fetchStatus throws the last error after three zero-argument calls"
+        ]
+      },
+      "suite_passed": true,
+      "independent_adapter_probe_group": "75c4233b6cca04a005cc030241569825974703022fa3e7d94a335088474fadf8"
+    },
+    "gap:d02ac94bb9b8efcd095143b933f2dd2554517a18cf558437ac2dae5f4f97a279": {
+      "members": [
+        "gap-pr"
+      ],
+      "representative": "gap-pr",
+      "source_hashes": {
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "bdd7e3259821cd2fc04912ef9c72ede72a9c69ed1dd9dc6e014cdb1a985fbf34"
+      },
+      "execution_copy": "<task-workspace>\\work\\combination-review-probes\\gap-pr-d02ac94bb9",
+      "suite_replay": {
+        "argv": [
+          "<node-runtime>\\node.exe",
+          "--test",
+          "--test-reporter=tap"
+        ],
+        "cwd": "<task-workspace>\\work\\combination-review-probes\\gap-pr-d02ac94bb9",
+        "started_utc": "2026-09-26T09:59:02.923977+00:00",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.802\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1407\n  type: 'test'\n  ...\n# Subtest: throws the last error object after exactly the configured attempts\nok 3 - throws the last error object after exactly the configured attempts\n  ---\n  duration_ms: 0.2811\n  type: 'test'\n  ...\n# Subtest: rejects zero attempts without calling the operation\nok 4 - rejects zero attempts without calling the operation\n  ---\n  duration_ms: 0.6322\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 82.3368\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "suite_tap": {
+        "pass": 4,
+        "fail": 0,
+        "tests": 4,
+        "failing_names": [],
+        "passing_names": [
+          "returns the first successful result without another attempt",
+          "the default permits two failures before a successful third attempt",
+          "throws the last error object after exactly the configured attempts",
+          "rejects zero attempts without calling the operation"
+        ]
+      },
+      "suite_passed": true,
+      "first_error_mutation": {
+        "source": "<task-workspace>\\work\\independent-gap-mutation-v10-20260926\\src\\retry.mjs",
+        "mutant_sha256": "21a153c9131e713404112e6ccc5054b6d8f9fa18b91c0129b3c60d216c3cfd12",
+        "expected_failing_test_names": [
+          "throws the last error object after exactly the configured attempts"
+        ],
+        "replay": {
+          "argv": [
+            "<node-runtime>\\node.exe",
+            "--test",
+            "--test-reporter=tap"
+          ],
+          "cwd": "<task-workspace>\\work\\combination-review-probes\\gap-pr-d02ac94bb9-first-error",
+          "started_utc": "2026-09-26T09:59:03.073607+00:00",
+          "exit_code": 1,
+          "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.9005\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1456\n  type: 'test'\n  ...\n# Subtest: throws the last error object after exactly the configured attempts\nnot ok 3 - throws the last error object after exactly the configured attempts\n  ---\n  duration_ms: 1.0182\n  type: 'test'\n  location: '<task-workspace>\\\\work\\\\combination-review-probes\\\\gap-pr-d02ac94bb9-first-error\\\\test\\\\retry.test.mjs:27:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    The validation function is expected to return \"true\". Received false\n    \n    Caught error:\n    \n    Error: failure 1\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  stack: |-\n    async TestContext.<anonymous> (file:///<task-workspace>/work/combination-review-probes/gap-pr-d02ac94bb9-first-error/test/retry.test.mjs:30:3)\n    async Test.run (node:internal/test_runner/test:1332:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:911:7)\n  ...\n# Subtest: rejects zero attempts without calling the operation\nok 4 - rejects zero attempts without calling the operation\n  ---\n  duration_ms: 0.1065\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 3\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 84.6968\n",
+          "stderr": "",
+          "environment_overrides": {
+            "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+            "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+          }
+        },
+        "tap": {
+          "pass": 3,
+          "fail": 1,
+          "tests": 4,
+          "failing_names": [
+            "throws the last error object after exactly the configured attempts"
+          ],
+          "passing_names": [
+            "returns the first successful result without another attempt",
+            "the default permits two failures before a successful third attempt",
+            "rejects zero attempts without calling the operation"
+          ]
+        },
+        "only_intended_failure": true,
+        "interpretation": "A nonzero exit alone is insufficient; only the new final-error test may fail."
+      }
+    }
+  },
+  "cases": {
+    "covered-rp": {
+      "task": "covered",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "fa8d306068e98b6b858536d142b78297365414f29bd6a5ba0eafa15460dc6067",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      },
+      "changed_from_subject_input": [],
+      "source_group": "covered:27e026c7d9cee01101fc432de92d991cb54bcc716c793eb44eec96e282b706fb",
+      "retry_helper_unchanged": true,
+      "matches_subject_final_observation": true,
+      "zero_subject_file_changes": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "fa8d306068e98b6b858536d142b78297365414f29bd6a5ba0eafa15460dc6067",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\covered-rp",
+        "started_utc": "2026-09-26T10:01:15.025619+00:00",
+        "exit_code": 0,
+        "stdout": "a2964679e8f5453bd5c74c1b930365803eea9166\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\covered-rp",
+        "started_utc": "2026-09-26T10:01:15.069851+00:00",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    },
+    "covered-pr": {
+      "task": "covered",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "1eb87e438750e410ad935108c2b0178d22d09806cf2ac97355a80c3a8752f429",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      },
+      "changed_from_subject_input": [],
+      "source_group": "covered:27e026c7d9cee01101fc432de92d991cb54bcc716c793eb44eec96e282b706fb",
+      "retry_helper_unchanged": true,
+      "matches_subject_final_observation": true,
+      "zero_subject_file_changes": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "1eb87e438750e410ad935108c2b0178d22d09806cf2ac97355a80c3a8752f429",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\covered-pr",
+        "started_utc": "2026-09-26T10:01:15.135799+00:00",
+        "exit_code": 0,
+        "stdout": "12b9e413e9418a568daf6876b2c2f861a5314cf1\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\covered-pr",
+        "started_utc": "2026-09-26T10:01:15.181034+00:00",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    },
+    "gap-rp": {
+      "task": "gap",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "e7a585a8fcab9c698ae49001067612c994771b6d44bdbb85ef607d85a23183c2",
+        "test/retry.test.mjs": "3b09362c9ea90705cec5d3728a930c77d0d68b4c2f8dae53227b183314bda875"
+      },
+      "changed_from_subject_input": [
+        "test/retry.test.mjs"
+      ],
+      "source_group": "gap:fa907df135fa29be1da1849a5290d7ced35f89242b08baaa91b9e5bb5f9df1d2",
+      "retry_helper_unchanged": true,
+      "matches_subject_final_observation": true,
+      "production_code_unchanged": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "e7a585a8fcab9c698ae49001067612c994771b6d44bdbb85ef607d85a23183c2",
+        "test/retry.test.mjs": "3b09362c9ea90705cec5d3728a930c77d0d68b4c2f8dae53227b183314bda875"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\gap-rp",
+        "started_utc": "2026-09-26T10:01:15.466791+00:00",
+        "exit_code": 0,
+        "stdout": "4244957794fda28ec11ef63491e7100421f69ae2\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\gap-rp",
+        "started_utc": "2026-09-26T10:01:15.509483+00:00",
+        "exit_code": 0,
+        "stdout": " M test/retry.test.mjs\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    },
+    "adapt-rp": {
+      "task": "adapt",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "6b50b20fd19e04bb4878eb999252e048440f81b4dadc957ea4802b8a30d27746",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "db38ac8481cac414ebf855718dc0df72bde77ff9faf44ba558bc5b6a35369f48",
+        "TASK.md": "8a00c9fd4be454887fc498483fbdfdc419697d8fefaa9e8f5fb11a1acb4b3ce8",
+        "test/retry.test.mjs": "35a4e45bac023cbd02eee1d38304faf3702b88f2ba0b87148777e52a53b80066"
+      },
+      "changed_from_subject_input": [
+        "README.md",
+        "src/status-service.mjs",
+        "test/retry.test.mjs"
+      ],
+      "source_group": "adapt:b0ae43a78ad955885cb16a4d202a2d9c3383a90149a044c4ff6a60abb25c64f3",
+      "retry_helper_unchanged": true,
+      "matches_subject_final_observation": true,
+      "adapter_source": "// SPDX-License-Identifier: MIT\nimport { retry } from './retry.mjs';\n\nexport async function fetchStatus(readStatus) {\n  return retry(() => readStatus());\n}\n",
+      "adapter_imports_and_calls_existing_retry": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "6b50b20fd19e04bb4878eb999252e048440f81b4dadc957ea4802b8a30d27746",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "db38ac8481cac414ebf855718dc0df72bde77ff9faf44ba558bc5b6a35369f48",
+        "TASK.md": "8a00c9fd4be454887fc498483fbdfdc419697d8fefaa9e8f5fb11a1acb4b3ce8",
+        "test/retry.test.mjs": "35a4e45bac023cbd02eee1d38304faf3702b88f2ba0b87148777e52a53b80066"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\adapt-rp",
+        "started_utc": "2026-09-26T10:01:15.247565+00:00",
+        "exit_code": 0,
+        "stdout": "b6e0aa2be69902469269d8a053a7aea3e7a478a3\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\adapt-rp",
+        "started_utc": "2026-09-26T10:01:15.292231+00:00",
+        "exit_code": 0,
+        "stdout": " M README.md\n M src/status-service.mjs\n M test/retry.test.mjs\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    },
+    "adapt-pr": {
+      "task": "adapt",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "03e00062857757ba61cbb11b6c032f0ca07edde0fab3c952920b06232a17d15a",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "db38ac8481cac414ebf855718dc0df72bde77ff9faf44ba558bc5b6a35369f48",
+        "TASK.md": "3a68739dcac2ac197d45ddbbfc00bb4945fdb8177384e0c49facf149e79ddf65",
+        "test/retry.test.mjs": "00f0aae1cf2cb253d68b79819d7cf9fc593930420aeb7d2d8f96d61f44460e2e"
+      },
+      "changed_from_subject_input": [
+        "README.md",
+        "src/status-service.mjs",
+        "test/retry.test.mjs"
+      ],
+      "source_group": "adapt:00484900b6c5076d61229dc768dc8d971d6e6f6e0de94e6cadc593c39cbe2478",
+      "retry_helper_unchanged": true,
+      "matches_subject_final_observation": true,
+      "adapter_source": "// SPDX-License-Identifier: MIT\nimport { retry } from './retry.mjs';\n\nexport async function fetchStatus(readStatus) {\n  return retry(() => readStatus());\n}\n",
+      "adapter_imports_and_calls_existing_retry": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "03e00062857757ba61cbb11b6c032f0ca07edde0fab3c952920b06232a17d15a",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "db38ac8481cac414ebf855718dc0df72bde77ff9faf44ba558bc5b6a35369f48",
+        "TASK.md": "3a68739dcac2ac197d45ddbbfc00bb4945fdb8177384e0c49facf149e79ddf65",
+        "test/retry.test.mjs": "00f0aae1cf2cb253d68b79819d7cf9fc593930420aeb7d2d8f96d61f44460e2e"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\adapt-pr",
+        "started_utc": "2026-09-26T10:01:15.358675+00:00",
+        "exit_code": 0,
+        "stdout": "91ce0b374636ccbf799fa54bd672ec05d592a91f\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\adapt-pr",
+        "started_utc": "2026-09-26T10:01:15.401313+00:00",
+        "exit_code": 0,
+        "stdout": " M README.md\n M src/status-service.mjs\n M test/retry.test.mjs\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    },
+    "gap-pr": {
+      "task": "gap",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "dce7c8bfddfdf8d7babff80c296e7a72985d2e8f9caf9ca0b9aafad1a92cb719",
+        "test/retry.test.mjs": "bdd7e3259821cd2fc04912ef9c72ede72a9c69ed1dd9dc6e014cdb1a985fbf34"
+      },
+      "changed_from_subject_input": [
+        "test/retry.test.mjs"
+      ],
+      "source_group": "gap:d02ac94bb9b8efcd095143b933f2dd2554517a18cf558437ac2dae5f4f97a279",
+      "retry_helper_unchanged": true,
+      "matches_subject_final_observation": true,
+      "production_code_unchanged": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "TASK.md": "dce7c8bfddfdf8d7babff80c296e7a72985d2e8f9caf9ca0b9aafad1a92cb719",
+        "test/retry.test.mjs": "bdd7e3259821cd2fc04912ef9c72ede72a9c69ed1dd9dc6e014cdb1a985fbf34"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\gap-pr",
+        "started_utc": "2026-09-26T10:01:15.574646+00:00",
+        "exit_code": 0,
+        "stdout": "50f42d1cbed7ce9e76043579f7ef89e2f86429eb\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\gap-pr",
+        "started_utc": "2026-09-26T10:01:15.617372+00:00",
+        "exit_code": 0,
+        "stdout": " M test/retry.test.mjs\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    },
+    "design-rp": {
+      "task": "design",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        "DECISIONS.md": "bd0ecd8515b9a45270198f0742dc7a9822dcff0a4f30cb76a7e309ea73e94e5d",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "8894bf46be19407bd4e8f94b71bafeeb156dc94214360b882cbaf5e8cd4315ea"
+      },
+      "changed_from_subject_input": [
+        "DECISIONS.md"
+      ],
+      "source_group": null,
+      "retry_helper_unchanged": null,
+      "matches_subject_final_observation": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        "DECISIONS.md": "bd0ecd8515b9a45270198f0742dc7a9822dcff0a4f30cb76a7e309ea73e94e5d",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "8894bf46be19407bd4e8f94b71bafeeb156dc94214360b882cbaf5e8cd4315ea"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\design-rp",
+        "started_utc": "2026-09-26T10:01:15.678531+00:00",
+        "exit_code": 0,
+        "stdout": "7fa55d97a102d01f5d86046c7977115efa09b22b\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\design-rp",
+        "started_utc": "2026-09-26T10:01:15.718100+00:00",
+        "exit_code": 0,
+        "stdout": " M DECISIONS.md\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    },
+    "design-pr": {
+      "task": "design",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "before_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        "DECISIONS.md": "1303fc151c51472f79898ff7d2c6df058180c107ee00909257ea29056b5dad25",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "782c82d13a5c379898864641d79440fbffd998c2b26f6b17f49bc6bf099c8dec"
+      },
+      "changed_from_subject_input": [
+        "DECISIONS.md"
+      ],
+      "source_group": null,
+      "retry_helper_unchanged": null,
+      "matches_subject_final_observation": true,
+      "after_reviewer_hashes": {
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        "DECISIONS.md": "1303fc151c51472f79898ff7d2c6df058180c107ee00909257ea29056b5dad25",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "782c82d13a5c379898864641d79440fbffd998c2b26f6b17f49bc6bf099c8dec"
+      },
+      "unchanged_by_reviewer": true,
+      "git_head": {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "cwd": "<combination-batch>\\design-pr",
+        "started_utc": "2026-09-26T10:01:15.775369+00:00",
+        "exit_code": 0,
+        "stdout": "80e63912c767c3af0e08c37863a1a15be81bc9ee\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "git_status": {
+        "argv": [
+          "git",
+          "--no-optional-locks",
+          "status",
+          "--porcelain=v1"
+        ],
+        "cwd": "<combination-batch>\\design-pr",
+        "started_utc": "2026-09-26T10:01:15.815600+00:00",
+        "exit_code": 0,
+        "stdout": " M DECISIONS.md\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "head_unchanged_from_input": true
+    }
+  },
+  "input_equivalence": {
+    "covered": {
+      "same_business_files_between_orders": true,
+      "same_business_prompt_between_orders": true,
+      "note": "TASK.md carries the intentionally different invocation order and is excluded from business-file equality."
+    },
+    "adapt": {
+      "same_business_files_between_orders": true,
+      "same_business_prompt_between_orders": true,
+      "note": "TASK.md carries the intentionally different invocation order and is excluded from business-file equality."
+    },
+    "gap": {
+      "same_business_files_between_orders": true,
+      "same_business_prompt_between_orders": true,
+      "note": "TASK.md carries the intentionally different invocation order and is excluded from business-file equality."
+    },
+    "design": {
+      "same_business_files_between_orders": true,
+      "same_business_prompt_between_orders": true,
+      "note": "TASK.md carries the intentionally different invocation order and is excluded from business-file equality."
+    }
+  },
+  "design_cases": {
+    "design-rp": {
+      "changed_files": [
+        "DECISIONS.md"
+      ],
+      "only_existing_decision_record_changed": true,
+      "candidate_assets_unchanged": true,
+      "decision_file_nonempty": true,
+      "interpretation": "Artifact integrity only; semantic design grading belongs to the review assessment. No new tests run."
+    },
+    "design-pr": {
+      "changed_files": [
+        "DECISIONS.md"
+      ],
+      "only_existing_decision_record_changed": true,
+      "candidate_assets_unchanged": true,
+      "decision_file_nonempty": true,
+      "interpretation": "Artifact integrity only; semantic design grading belongs to the review assessment. No new tests run."
+    }
+  },
+  "summary": {
+    "completed_subjects_checked": 8,
+    "suite_groups_replayed": 5,
+    "adapter_probe_groups_replayed": 1,
+    "mutation_groups_replayed": 2,
+    "design_artifacts_checked": 2,
+    "all_original_suites_passed": true,
+    "all_adapter_probes_passed": true,
+    "all_mutations_only_intended_failure": true,
+    "covered_cases_have_zero_file_changes": true,
+    "adapter_cases_reuse_unchanged_retry_helper": true,
+    "gap_cases_preserve_production_code": true,
+    "design_cases_only_update_existing_record": true,
+    "all_reviewed_subjects_unchanged": true,
+    "all_business_inputs_equal_between_orders": true
+  },
+  "updated_utc": "2026-09-26T10:01:15.860321+00:00",
+  "adapter_probe_groups": {
+    "75c4233b6cca04a005cc030241569825974703022fa3e7d94a335088474fadf8": {
+      "production_hashes": {
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "db38ac8481cac414ebf855718dc0df72bde77ff9faf44ba558bc5b6a35369f48"
+      },
+      "members": [
+        "adapt-rp",
+        "adapt-pr"
+      ],
+      "source": "import assert from 'node:assert/strict';\nimport test from 'node:test';\nimport { fetchStatus } from '../src/status-service.mjs';\ntest('reviewer: zero arguments and stop at first success with identical return object', async () => {\n  const seen = []; const value = { ready: true };\n  const actual = await fetchStatus((...args) => { seen.push(args); return value; });\n  assert.strictEqual(actual, value); assert.deepEqual(seen, [[]]);\n});\ntest('reviewer: two failures then third success with zero arguments and no fourth call', async () => {\n  const seen = []; const value = { ready: true };\n  const actual = await fetchStatus((...args) => {\n    seen.push(args); if (seen.length < 3) return Promise.reject(new Error('temporary ' + seen.length));\n    return Promise.resolve(value);\n  });\n  assert.strictEqual(actual, value); assert.deepEqual(seen, [[], [], []]);\n});\ntest('reviewer: at most three failures and final error identity preserved', async () => {\n  const seen = []; const errors = [new Error('first'), new Error('second'), new Error('third')];\n  await assert.rejects(fetchStatus((...args) => { seen.push(args); throw errors[seen.length - 1]; }), error => error === errors[2]);\n  assert.deepEqual(seen, [[], [], []]);\n});\n",
+      "sha256": "b10ae2e1b731a15b87176662b7d9e03079742cb6b79e199734a8c39faab1dc76",
+      "replay": {
+        "argv": [
+          "<node-runtime>\\node.exe",
+          "--test",
+          "--test-reporter=tap",
+          "reviewer/adapt.test.mjs"
+        ],
+        "cwd": "<task-workspace>\\work\\combination-review-probes\\adapt-rp-b0ae43a78a",
+        "started_utc": "2026-09-26T09:59:02.325732+00:00",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: reviewer: zero arguments and stop at first success with identical return object\nok 1 - reviewer: zero arguments and stop at first success with identical return object\n  ---\n  duration_ms: 0.8229\n  type: 'test'\n  ...\n# Subtest: reviewer: two failures then third success with zero arguments and no fourth call\nok 2 - reviewer: two failures then third success with zero arguments and no fourth call\n  ---\n  duration_ms: 0.1438\n  type: 'test'\n  ...\n# Subtest: reviewer: at most three failures and final error identity preserved\nok 3 - reviewer: at most three failures and final error identity preserved\n  ---\n  duration_ms: 0.7505\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 77.7597\n",
+        "stderr": "",
+        "environment_overrides": {
+          "TEMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp",
+          "TMP": "<task-workspace>\\work\\combination-review-probes\\runtime-temp"
+        }
+      },
+      "tap": {
+        "pass": 3,
+        "fail": 0,
+        "tests": 3,
+        "failing_names": [],
+        "passing_names": [
+          "reviewer: zero arguments and stop at first success with identical return object",
+          "reviewer: two failures then third success with zero arguments and no fourth call",
+          "reviewer: at most three failures and final error identity preserved"
+        ]
+      },
+      "passed": true
+    }
+  }
+}

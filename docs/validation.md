@@ -3,10 +3,36 @@
 Evidence is tied to the evaluated Skill hash. This page retains the earlier
 2026-09-20 test/recovery runs, an earlier 2026-09-21 architecture run, and the
 GPT-5.6 Luna / medium comparison and GPT-6 Luna / high follow-ups. The latest
-native-host batch adds natural loading, manual compaction, session handoff and
-real-source-slice observations. The sixteen-case explicit core pass belongs
-to V10; it was not fully rerun on V12. Earlier results retain their original
-hashes. These observations imply neither a release tag nor universal host compatibility.
+V13 batch checks explicit combination with ponytail in both read orders. The
+earlier native-host batch adds natural loading, manual compaction, handoff
+and real-source-slice observations. The sixteen-case explicit core pass
+belongs to V10; it was not fully rerun on V12 or V13. Earlier results retain
+their original hashes. These observations imply neither a release tag nor
+universal host compatibility.
+
+## Explicit Skill combination — 2026-09-26, GPT-6 Luna / high
+
+The [V13 combination report](../evals/results/2026-09-26/skill-combination/REPORT.md)
+records **eight fresh subjects, all passing scoped criteria**, on the native
+Codex app-server with exactly two project Skills enabled. Each explicitly read
+the full target and unchanged local ponytail body, in the requested order.
+Four tasks in both orders checked adequate tests, local implementation reuse,
+missing coverage and design records. No duplicate implementation, demo,
+runner or competing decision record was introduced.
+
+The current standalone core is **158 lines / 3,664 `o200k_base` tokens**,
+167 more than V12. Its shared-workflow section adds no companion dependency
+or host-enforced precedence. Five distinct source/test groups passed 18 tests;
+three independent adapter probes passed; both gap variants caught the
+existing first-error mutant in exactly the intended test. Reviewer replays
+are separate from model trials. Some repeated verification commands and a
+recovered write-command failure remain recorded.
+
+This batch validates explicit combination only, not natural dual activation,
+isolated causal improvement, other ponytail intensities or other frameworks.
+The earlier V12 headers-only failures below were not repaired or rerun, and
+the historical V10 full core set was not rerun. These eight passes must not
+be presented as all outstanding issues resolved.
 
 ## Native host acceptance — 2026-09-26, GPT-6 Luna / high
 
@@ -17,12 +43,12 @@ app-server **0.158.0-alpha.2** verified the model and effort with fallback
 disabled. These are native runtime observations, not a desktop GUI test.
 
 V11 adds test coverage and recovery to the discovery description. V12 clarifies
-inspected, unread and unavailable evidence at the final decision. The current
-standalone core is **150 lines / 3,497 `o200k_base` tokens**, 83 more than V10.
+inspected, unread and unavailable evidence at the final decision. That V12
+standalone core was **150 lines / 3,497 `o200k_base` tokens**, 83 more than V10.
 No service, hook or executable is required. Repeated complete snapshots now
 read the existing license rather than mistaking a filtered search for absence.
 
-**The current revision is not an all-pass result.** In the three V12
+**That V12 batch was not an all-pass result.** In the three V12
 headers-only repetitions, two selected Borrow despite unread required bodies;
 one retained an independent design without approving the candidate. Natural
 loading succeeded in the repeated coverage tasks and both recovery phases,

@@ -1,0 +1,42 @@
+{
+  "native_logical_cases": 8,
+  "unique_threads": 8,
+  "ordinary_task_turns": 8,
+  "cases_by_task": {
+    "covered": 2,
+    "adapt": 2,
+    "gap": 2,
+    "design": 2
+  },
+  "both_complete_bodies_returned_cases": 8,
+  "requested_order_matched_cases": 8,
+  "distinct_disabled_catalog_fingerprints": 1,
+  "target_sha256": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+  "companion_name": "ponytail",
+  "companion_sha256": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+  "companion_intensity": "full (unchanged default)",
+  "business_input_equivalence_verified": true,
+  "interpretation": "Eight explicitly invoked native combination trials. No natural dual activation, isolated causal effect, other-host compatibility, production integration or new full-core claim. Behavior grades and reviewer replays remain separate from loading receipts.",
+  "files_sha256": {
+    "adapt-pr.json": "86f32b5fd6a3ebbb0d65aa9aeed7ed27310e7c1cb1b8ec357b54e312ee4b9287",
+    "adapt-rp.json": "8afc12f1bb324cc25e23efc53d51b0980984ced5378b4bcba5b3227a777188e3",
+    "business-equivalence.json": "487a097e76d60f490e67f9c847839d53781f4d26cb8fa3c4624d289a87e4cd25",
+    "combination-client.py.txt": "37dc667643c0fa6878d0fdf429e735a02ff87cf5c5a129b35ff423fd0525189b",
+    "companion.json": "29176fed80fb9b51e38879c4912d0048743200cd918f63c9b3e8f163b3184db8",
+    "covered-pr.json": "b290701897e5a5bbdf4cf52728dc6be89411a6beda8f8174113691ba3fc1369d",
+    "covered-rp.json": "2f0cc0a4d2b017b043a27ec712481e266d2ba5ac20d8b60890009ae9637153f8",
+    "design-pr.json": "727992f7ebf4fd20bc658fa544b63a187e35595e8b7cfccecda7a7713f14ab01",
+    "design-rp.json": "ba0b857a2ad18fe34f482bee517f51e251c7faba5d2a4ee2bd7b8ff7614cf0af",
+    "gap-pr.json": "160560390594494a46e6b130bffb921dc8b5ccebd25d8bcb23f5ad39312100bf",
+    "gap-rp.json": "afb1d6e4806025b33b708fef8c0ca83bb9258083e603ecef227dbb2a8e2a6e1d",
+    "index.json": "59eff1807a0c2199fccb0014722ecb2e78aabc3a5e990504519d8efda86bced0",
+    "input-manifest.json": "e6b6fba406f200a04d548c9b91bd748e93d5208e3cd46790e900333f8fe2daf1",
+    "input-preparer.py.txt": "8e86463d5989b048f2631c3a98b6c56eb852f9b667acc22bcf1e029b59e8a41b",
+    "native-client.py.txt": "c9fbb247966c002a308c48422fe327967bd6b9aeb74ad110a733c4f83c8a5473",
+    "replays.json": "2804c0c574cfea67eb817bc507ed631bccf5f44a1efadb98babb1e3d750765a1",
+    "REPORT.md": "90df306d50d027fd532bcc5b3bf8b18ebd11e4c900329443e3b835fb263c808d",
+    "review-plan.md": "2568636f15be5e714f6232a0a39b9e1280192cdab1192229dc9f219e0c65b4b9",
+    "review.json": "3b4e7f70f4cd7cd604a464bfc73a5c5de230e24517f0217dd2c428e1c239ae6f",
+    "skill-v13.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+  }
+}

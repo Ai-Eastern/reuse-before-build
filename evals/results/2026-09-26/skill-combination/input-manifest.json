@@ -1,0 +1,220 @@
+{
+  "skill_sha256": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f",
+  "companion_sha256": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+  "companion_name": "ponytail",
+  "companion_intensity": "full (unchanged default)",
+  "cases": {
+    "covered-rp": {
+      "path": "<combination-batch>\\covered-rp",
+      "task": "covered",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/reuse-before-build/SKILL.md，再完整读取 .agents/skills/ponytail/SKILL.md，然后按两者共同完成以下任务：\n确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "a2964679e8f5453bd5c74c1b930365803eea9166",
+      "initial_hashes": {
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "TASK.md": "fa8d306068e98b6b858536d142b78297365414f29bd6a5ba0eafa15460dc6067",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    },
+    "covered-pr": {
+      "path": "<combination-batch>\\covered-pr",
+      "task": "covered",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/ponytail/SKILL.md，再完整读取 .agents/skills/reuse-before-build/SKILL.md，然后按两者共同完成以下任务：\n确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "12b9e413e9418a568daf6876b2c2f861a5314cf1",
+      "initial_hashes": {
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "TASK.md": "1eb87e438750e410ad935108c2b0178d22d09806cf2ac97355a80c3a8752f429",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    },
+    "adapt-rp": {
+      "path": "<combination-batch>\\adapt-rp",
+      "task": "adapt",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/reuse-before-build/SKILL.md，再完整读取 .agents/skills/ponytail/SKILL.md，然后按两者共同完成以下任务：\n让 fetchStatus(readStatus) 在读取暂时失败时最多尝试三次，保持函数签名和成功返回值；每次调用 readStatus 都必须是零参数。首次成功后不再调用，三次均失败时保留最后那个错误对象。完成实现和相关验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "让 fetchStatus(readStatus) 在读取暂时失败时最多尝试三次，保持函数签名和成功返回值；每次调用 readStatus 都必须是零参数。首次成功后不再调用，三次均失败时保留最后那个错误对象。完成实现和相关验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "b6e0aa2be69902469269d8a053a7aea3e7a478a3",
+      "initial_hashes": {
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "TASK.md": "8a00c9fd4be454887fc498483fbdfdc419697d8fefaa9e8f5fb11a1acb4b3ce8",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    },
+    "adapt-pr": {
+      "path": "<combination-batch>\\adapt-pr",
+      "task": "adapt",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/ponytail/SKILL.md，再完整读取 .agents/skills/reuse-before-build/SKILL.md，然后按两者共同完成以下任务：\n让 fetchStatus(readStatus) 在读取暂时失败时最多尝试三次，保持函数签名和成功返回值；每次调用 readStatus 都必须是零参数。首次成功后不再调用，三次均失败时保留最后那个错误对象。完成实现和相关验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "让 fetchStatus(readStatus) 在读取暂时失败时最多尝试三次，保持函数签名和成功返回值；每次调用 readStatus 都必须是零参数。首次成功后不再调用，三次均失败时保留最后那个错误对象。完成实现和相关验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "91ce0b374636ccbf799fa54bd672ec05d592a91f",
+      "initial_hashes": {
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "TASK.md": "3a68739dcac2ac197d45ddbbfc00bb4945fdb8177384e0c49facf149e79ddf65",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    },
+    "gap-rp": {
+      "path": "<combination-batch>\\gap-rp",
+      "task": "gap",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/reuse-before-build/SKILL.md，再完整读取 .agents/skills/ponytail/SKILL.md，然后按两者共同完成以下任务：\n补齐 retry 的两个边界检查：所有尝试失败时应保留最后那个错误对象并停在配置次数；attempts 为 0 时应拒绝且不调用 operation。保持公共契约和生产代码不变，完成验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "补齐 retry 的两个边界检查：所有尝试失败时应保留最后那个错误对象并停在配置次数；attempts 为 0 时应拒绝且不调用 operation。保持公共契约和生产代码不变，完成验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "4244957794fda28ec11ef63491e7100421f69ae2",
+      "initial_hashes": {
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "TASK.md": "e7a585a8fcab9c698ae49001067612c994771b6d44bdbb85ef607d85a23183c2",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    },
+    "gap-pr": {
+      "path": "<combination-batch>\\gap-pr",
+      "task": "gap",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/ponytail/SKILL.md，再完整读取 .agents/skills/reuse-before-build/SKILL.md，然后按两者共同完成以下任务：\n补齐 retry 的两个边界检查：所有尝试失败时应保留最后那个错误对象并停在配置次数；attempts 为 0 时应拒绝且不调用 operation。保持公共契约和生产代码不变，完成验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "补齐 retry 的两个边界检查：所有尝试失败时应保留最后那个错误对象并停在配置次数；attempts 为 0 时应拒绝且不调用 operation。保持公共契约和生产代码不变，完成验证。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "50f42d1cbed7ce9e76043579f7ef89e2f86429eb",
+      "initial_hashes": {
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "d2726bf466ba6afcfb8d96d43aaaa1007202f7badc704d2e4ecc7910d762b50b",
+        "TASK.md": "dce7c8bfddfdf8d7babff80c296e7a72985d2e8f9caf9ca0b9aafad1a92cb719",
+        "src/retry.mjs": "9e01f34637b70a59f157df9d5ffc9a70b740466b09e1828902235f4ef91c46e8",
+        "src/status-service.mjs": "7cbf246f8230fca543a3a51678817f38fe84adf98d777f507194f35267d96299",
+        "test/retry.test.mjs": "5019b001eec8428101f8f05552ce4cad0228b8c572f477d40956d0fecc89c153",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    },
+    "design-rp": {
+      "path": "<combination-batch>\\design-rp",
+      "task": "design",
+      "order": [
+        "reuse-before-build",
+        "ponytail"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/reuse-before-build/SKILL.md，再完整读取 .agents/skills/ponytail/SKILL.md，然后按两者共同完成以下任务：\n项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n将本次决定、依据、适配边界与待执行验证更新到项目现有的 DECISIONS.md，供下一次实现接续。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n将本次决定、依据、适配边界与待执行验证更新到项目现有的 DECISIONS.md，供下一次实现接续。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "7fa55d97a102d01f5d86046c7977115efa09b22b",
+      "initial_hashes": {
+        "DECISIONS.md": "f5069f1d53622e319ad9dd7612f04cad9ce6ae94d7c40f5c1a8907d4fb657044",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "8894bf46be19407bd4e8f94b71bafeeb156dc94214360b882cbaf5e8cd4315ea",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    },
+    "design-pr": {
+      "path": "<combination-batch>\\design-pr",
+      "task": "design",
+      "order": [
+        "ponytail",
+        "reuse-before-build"
+      ],
+      "prompt": "本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/ponytail/SKILL.md，再完整读取 .agents/skills/reuse-before-build/SKILL.md，然后按两者共同完成以下任务：\n项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n将本次决定、依据、适配边界与待执行验证更新到项目现有的 DECISIONS.md，供下一次实现接续。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "business_prompt": "项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；环境离线，不访问网络，不安装依赖。\n\n这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。请区分对所提供快照的决策与对真实包或上游发布存在性的判断；不要从虚构提供方或 URL 推断真实来源。\n将本次决定、依据、适配边界与待执行验证更新到项目现有的 DECISIONS.md，供下一次实现接续。\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。",
+      "initial_head": "80e63912c767c3af0e08c37863a1a15be81bc9ee",
+      "initial_hashes": {
+        "DECISIONS.md": "f5069f1d53622e319ad9dd7612f04cad9ce6ae94d7c40f5c1a8907d4fb657044",
+        "LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "README.md": "05389619c76c93bc98aa142ed65a06ef88ee6066baa314e74b2232cacafb7fe6",
+        "TASK.md": "782c82d13a5c379898864641d79440fbffd998c2b26f6b17f49bc6bf099c8dec",
+        "candidate/index.mjs": "5d864f72afd7d9763922999be0346769750d096de3b961b8c898ed795e02c11f",
+        "candidate/index.test.mjs": "cb20f32b4ed888b0073d226384316c7036e63ece155b7f3162e27ec3928914a6",
+        "candidate/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        "candidate/package.json": "4b3dff556356234fcc2d0326a1eb629a49ca74127c2c673299d7880fba9e2dd9",
+        "candidate/README.md": "69fb49cb8efc6fb76f06a9bf70846205353939b355ec07ea9a2d6da2744e997f",
+        ".agents/skills/ponytail/SKILL.md": "1316a2f3f95741d2300b116fe0c2d81ce4a9568656ed0a62643f54aaf09957f2",
+        ".agents/skills/reuse-before-build/LICENSE": "a24d86dec0173da63e22ad4a91d34ca5596dfcb37e808df21f3de4612a2ae9ca",
+        ".agents/skills/reuse-before-build/SKILL.md": "565191c1152b780d73284b9a7e054aef3511de1dd07e1b3788a86f99fda1005f"
+      }
+    }
+  },
+  "model_launches_during_preparation": 0,
+  "disabled_skill_path_summary": {
+    "count": 33,
+    "sha256": "c5e1f4a6aba29820beab2c8f3c338ece725d39c267787339df1058913c03067a",
+    "note": "Actual names and paths omitted; disabling was process-local."
+  },
+  "execution_summary": {
+    "prepared_cases": [
+      "adapt-pr",
+      "adapt-rp",
+      "covered-pr",
+      "covered-rp",
+      "design-pr",
+      "design-rp",
+      "gap-pr",
+      "gap-rp"
+    ],
+    "completed_cases": [
+      "adapt-pr",
+      "adapt-rp",
+      "covered-pr",
+      "covered-rp",
+      "design-pr",
+      "design-rp",
+      "gap-pr",
+      "gap-rp"
+    ],
+    "prepared_without_observations": [],
+    "native_trials_are_not_reviewer_replays": true
+  }
+}

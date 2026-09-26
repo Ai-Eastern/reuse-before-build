@@ -1,0 +1,30 @@
+{
+  "covered": {
+    "business_prompt_equal": true,
+    "initial_files_except_task_prompt_equal": true,
+    "business_prompt_sha256": "be8dcad30e3cc6b6e1d418f172cd2cb2df89f9c95f6498d0bbc6f7f2a53a2c40",
+    "initial_file_map_except_task_prompt_sha256": "767daeca10dc86ba0cb8e5b2d50f4713a0dc6c1cdfdff5c19bfc4b93390dbc4b",
+    "note": "TASK.md intentionally differs only by the explicit invocation order; native behavior is not assumed equivalent."
+  },
+  "adapt": {
+    "business_prompt_equal": true,
+    "initial_files_except_task_prompt_equal": true,
+    "business_prompt_sha256": "6580596da45c32e954ba8541c675dec0a1cfe633a62904160c722982fc941127",
+    "initial_file_map_except_task_prompt_sha256": "767daeca10dc86ba0cb8e5b2d50f4713a0dc6c1cdfdff5c19bfc4b93390dbc4b",
+    "note": "TASK.md intentionally differs only by the explicit invocation order; native behavior is not assumed equivalent."
+  },
+  "gap": {
+    "business_prompt_equal": true,
+    "initial_files_except_task_prompt_equal": true,
+    "business_prompt_sha256": "954deaeb1608683fce1639366dbabbfa80ce3041fca30bce0ee146f45d43d026",
+    "initial_file_map_except_task_prompt_sha256": "767daeca10dc86ba0cb8e5b2d50f4713a0dc6c1cdfdff5c19bfc4b93390dbc4b",
+    "note": "TASK.md intentionally differs only by the explicit invocation order; native behavior is not assumed equivalent."
+  },
+  "design": {
+    "business_prompt_equal": true,
+    "initial_files_except_task_prompt_equal": true,
+    "business_prompt_sha256": "0b3550c5b1d7eb0be9d1f7713e33a3e7114f0855a62e89a387ab8c65d3f97a9c",
+    "initial_file_map_except_task_prompt_sha256": "080a2479005373e3b0e554cf5a19be9c27980910dde77e00a7e4f83856ff07cb",
+    "note": "TASK.md intentionally differs only by the explicit invocation order; native behavior is not assumed equivalent."
+  }
+}

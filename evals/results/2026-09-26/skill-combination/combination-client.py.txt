@@ -1,0 +1,38 @@
+"""Explicit combination trials; reuse the already-verified native transport."""
+from pathlib import Path
+import importlib.util,json,queue,subprocess,sys,threading,hashlib
+W=Path(__file__).resolve().parent;B=W/'combination-v13-20260926'
+spec=importlib.util.spec_from_file_location('native_transport',W/'native-host-client.py');base=importlib.util.module_from_spec(spec);spec.loader.exec_module(base);base.BATCH=B
+M=json.loads((B/'manifest.json').read_text(encoding='utf-8'))
+class Combined(base.Native):
+ def __init__(self,root,receipt):
+  self.root=root;self.receipt=receipt;self.counter=0;self.q=queue.Queue();self.err=[];self.events=[]
+  config='skills.config=['+','.join('{path='+json.dumps(Path(p).as_posix())+',enabled=false}' for p in M['disabled_skill_paths'])+']'
+  self.proc=subprocess.Popen([str(base.EXE),'-c',config,'-c','web_search="disabled"','app-server','--stdio'],cwd=root,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',creationflags=subprocess.CREATE_NO_WINDOW)
+  threading.Thread(target=self._stdout,daemon=True).start();threading.Thread(target=self._stderr,daemon=True).start()
+  self.request('initialize',{'clientInfo':{'name':'reuse_skill_combination','version':'0.1'},'capabilities':{'experimentalApi':True}});self.send({'method':'initialized','params':{}})
+ def discover(self):
+  data=super().discover();enabled=[s for g in data for s in g['skills'] if s['enabled']]
+  assert sorted(s['name'] for s in enabled)==['ponytail','reuse-before-build'],enabled
+  for s in enabled:assert Path(s['path']).resolve()==(self.root/'.agents/skills'/s['name']/'SKILL.md').resolve()
+  self.receipt['enabled_skill_names_verified']=sorted(s['name'] for s in enabled);self.save()
+  return data
+ def start(self):
+  tid=super().start();t=self.receipt['threads'][-1];assert t['effort']=='high' and t['ephemeral'];return tid
+
+def run(name):
+ c=M['cases'][name];root=Path(c['path']);dest=B/(name+'.observations.json');assert not dest.exists(),name
+ d={'case':name,'task':c['task'],'requested_order':c['order'],'native_host':'Codex desktop-bundled app-server 0.158.0-alpha.2','skill_sha256':M['skill_sha256'],'companion_sha256':M['companion_sha256'],'skill_available':True,'initial_hashes':base.snapshot(root),'state':'starting','model':'gpt-6-luna','effort':'high'}
+ client=None
+ try:
+  client=Combined(root,d);client.discover();tid=client.start();d['state']='running';client.save();client.turn(tid,c['prompt']);d['state']='completed'
+ except Exception as e:
+  d['state']='interrupted';d['harness_or_runtime_error']=type(e).__name__+': '+str(e)
+ finally:
+  d['final_hashes']=base.snapshot(root);d['changed_files']=[p for p in sorted(set(d['initial_hashes'])|set(d['final_hashes'])) if d['initial_hashes'].get(p)!=d['final_hashes'].get(p)]
+  if client:client.save();client.close()
+  else:dest.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ print(json.dumps({'case':name,'state':d['state'],'changed_files':d['changed_files'],'error':d.get('harness_or_runtime_error')},ensure_ascii=False),flush=True)
+ if d['state']!='completed':raise RuntimeError('Preserved failed native case; inspect before continuing')
+if __name__=='__main__':
+ for name in sys.argv[1:]:run(name)

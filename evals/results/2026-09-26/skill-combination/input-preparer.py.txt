@@ -1,0 +1,39 @@
+"""Prepare explicit two-Skill combination fixtures; no model execution."""
+from pathlib import Path
+import hashlib,json,shutil,subprocess
+W=Path(__file__).resolve().parent;R=W/'reuse-before-build';B=W/'combination-v13-20260926'
+assert not B.exists();B.mkdir()
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+source_skill=W/'combination-skill-v13.md';pony=Path('<personal-skills>/ponytail/SKILL.md')
+old=json.loads((W/'native-acceptance-v12-20260926/covered-on-1.observations.json').read_text(encoding='utf-8'))
+disabled=sorted({s['path'] for g in old['discovery'] for s in g['skills']})
+tasks={
+ 'covered':'确认并补足 retry 默认允许三次总尝试的测试保障：前两次暂时失败、第三次成功时，应返回成功值并停止调用。给出可重复的验证结果，保持生产代码不变。',
+ 'adapt':'让 fetchStatus(readStatus) 在读取暂时失败时最多尝试三次，保持函数签名和成功返回值；每次调用 readStatus 都必须是零参数。首次成功后不再调用，三次均失败时保留最后那个错误对象。完成实现和相关验证。',
+ 'gap':'补齐 retry 的两个边界检查：所有尝试失败时应保留最后那个错误对象并停在配置次数；attempts 为 0 时应拒绝且不调用 operation。保持公共契约和生产代码不变，完成验证。',
+ 'design':(W/'independent-gate-v10-20260926/snapshot-a/skill/TASK.md').read_text(encoding='utf-8').strip()+'\n将本次决定、依据、适配边界与待执行验证更新到项目现有的 DECISIONS.md，供下一次实现接续。'
+}
+scope='\n只操作本项目；不读取相邻项目、历史会话或评估记录，不创建其他代理、不联网、不安装依赖、不启动服务、不提交或发布。报告实际执行的验证。'
+m={'skill_sha256':sha(source_skill),'companion_sha256':sha(pony),'companion_name':'ponytail','companion_intensity':'full (unchanged default)','disabled_skill_paths':disabled,'cases':{},'model_launches_during_preparation':0}
+for name,task in tasks.items():
+ for order in ['rp','pr']:
+  case=f'{name}-{order}';root=B/case
+  src=(W/'independent-gate-v10-20260926/snapshot-a/skill') if name=='design' else R/'evals/fixtures/retry-service'
+  shutil.copytree(src,root,ignore=shutil.ignore_patterns('.git','SKILL.md','TASK.md','DESIGN.md'))
+  if not (root/'LICENSE').exists():shutil.copy2(R/'LICENSE',root/'LICENSE')
+  if name=='design':(root/'DECISIONS.md').write_text('# Component decision\n\nCurrent status: decision pending.\n',encoding='utf-8',newline='\n')
+  for label,source in [('reuse-before-build',source_skill),('ponytail',pony)]:
+   d=root/'.agents/skills'/label;d.mkdir(parents=True);shutil.copy2(source,d/'SKILL.md')
+   if label=='reuse-before-build':shutil.copy2(R/'LICENSE',d/'LICENSE')
+  names=['reuse-before-build','ponytail'] if order=='rp' else ['ponytail','reuse-before-build']
+  invocation='本次同时使用项目内的 reuse-before-build 与 ponytail（保持默认 full）。先完整读取 .agents/skills/'+names[0]+'/SKILL.md，再完整读取 .agents/skills/'+names[1]+'/SKILL.md，然后按两者共同完成以下任务：\n'
+  prompt=invocation+task+scope
+  (root/'TASK.md').write_text(prompt+'\n',encoding='utf-8',newline='\n')
+  subprocess.run(['git','init','-q',str(root)],check=True)
+  subprocess.run(['git','-c','core.hooksPath=NUL','add','.'],cwd=root,check=True,capture_output=True)
+  subprocess.run(['git','-c','core.hooksPath=NUL','-c','user.name=Combination Fixture','-c','user.email=fixture@example.invalid','commit','-qm','Prepared combination fixture'],cwd=root,check=True,capture_output=True)
+  m['cases'][case]={'path':str(root),'task':name,'order':names,'prompt':prompt,'business_prompt':task+scope,'initial_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'initial_hashes':{p.relative_to(root).as_posix():sha(p) for p in root.rglob('*') if p.is_file() and '.git' not in p.relative_to(root).parts}}
+for name in tasks:
+ a=m['cases'][name+'-rp'];b=m['cases'][name+'-pr'];assert a['business_prompt']==b['business_prompt'];assert {k:v for k,v in a['initial_hashes'].items() if k!='TASK.md'}=={k:v for k,v in b['initial_hashes'].items() if k!='TASK.md'}
+(B/'manifest.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+print(json.dumps({'cases':len(m['cases']),'target_sha256':m['skill_sha256'],'companion_sha256':m['companion_sha256'],'disabled_paths':len(disabled)}))

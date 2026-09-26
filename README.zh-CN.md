@@ -118,7 +118,9 @@ npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-bu
 
 ## 实际结果
 
-**Codex 原生补测——2026-09-26，GPT-6 Luna / high。** [原生宿主报告](evals/results/2026-09-26/native-host/REPORT.md)区分“自动选中 Skill”和“行为正确”，实际执行手动上下文压缩与新会话交接，并验证真实仓库的隔离源码片段。**当前修订尚未全项通过：** 仍有必要证据未读就采用候选的情况，真实源码任务也没有自动加载本 Skill。失败及各版改动均保留。这是原生 app-server 证据；其他宿主、上下文满载后的自动压缩和生产集成仍未验证。
+**Skill 组合实测——2026-09-26，GPT-6 Luna / high。** V13 与 ponytail 按两种顺序读取，[8 个显式组合案例](evals/results/2026-09-26/skill-combination/REPORT.md)均通过限定标准：复用充分的测试与现有代码，补充真实缺口，保留设计记录，没有新增重复实现或第二套执行器。仍有少量重复验证命令；双方自然触发和其他宿主未测。
+
+**已知限制仍保留。** [此前原生宿主测试](evals/results/2026-09-26/native-host/REPORT.md)中，V12 有两例在必要证据未读完时就采用候选；一例真实源码任务行为正确，但未加载本 Skill。V13 的组合测试没有解决这些问题。手动上下文压缩与新会话交接已观察到；上下文满载后的自动压缩和生产集成仍未验证。
 
 **历史 V10 核心实测——2026-09-26，GPT-6 Luna / high。** [V10 评估](evals/results/2026-09-26/luna6-independent/REPORT.md)在同一版 Skill 上完成 **16 个独立新上下文场景，均通过限定范围内的行为标准**：两个联网设计、十二个本地场景和两个证据边界检查。已有测试得到复用，缺口补测能抓住故意引入的缺陷，历史结果和交接权限得到核对。数据分析在资源限制未验证时保留阻止采用状态，队列设计保留部署条件。报告同时记录了一处措辞问题和多余命令；这 16 项属于 V10，不是当前修订的核心全量重跑，也不代表自动触发或稳定成功率。[此前失败及接续式回归记录](evals/results/2026-09-26/luna6-closure/REPORT.md)均保留。
 
@@ -138,6 +140,8 @@ npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-bu
 第二个场景刻意引入了回归，识别失败就是预期行为。这是两次有界观察，没有对照实验，不代表普遍成功率或 token 节省比例。详见[评估方法、证据与覆盖边界](docs/validation.md)。
 
 ## 与你的 Agent 配合使用
+
+与 `ponytail` 等精简类 Skill 同用时，共享一次复用决策，已有测试足够就直接使用；在证据充分的方案中精简实现。详见[协作规则](docs/compatibility.md#combining-workflow-skills)。
 
 已整理 **Codex、Claude Code、GitHub Copilot CLI、Cursor、Gemini CLI、OpenCode 和 Windsurf** 的安装路径。各工具的证据程度不同：文档支持格式、安装检查通过和实际行为验证，是不同的结论。
 

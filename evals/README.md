@@ -1,5 +1,21 @@
 # Small behavior evaluations
 
+## Explicit Skill combination
+
+The [V13 combination report](results/2026-09-26/skill-combination/REPORT.md)
+records eight fresh GPT-6 Luna / high subjects: four tasks, each with both
+read orders for reuse-before-build and an unchanged local ponytail snapshot.
+Both full bodies and order were verified; all scoped criteria passed. Existing
+tests, implementation and decision records were reused without duplicate
+assets or a second runner. Some verification commands repeated.
+
+The fixed plan, sanitized traces and separate reviewer replays retain the
+limits. Only Node's built-in runner was used; explicit loading is not natural
+dual activation. The private companion body is identified by hash and not
+redistributed. This batch neither reruns the historical full core set nor
+resolves the previous V12 evidence-gate failures. Its client text is a local
+audit record, not a required dependency or a CI model runner.
+
 ## External-candidate evidence gate
 
 To compare two full Skill versions, use Python 3.10+ and Node.js 22+:

@@ -120,6 +120,28 @@ Downloading a raw `main/SKILL.md` URL obtains the currently published file. It c
 
 Some hosts select skills automatically; an explicit first invocation makes troubleshooting easier. A successful file copy or an expected heading in the response is insufficient to demonstrate useful behavior. See the [validation guide](validation.md) for reproducible checks and result boundaries.
 
+## Combining workflow skills
+
+When pairing this Skill with a simplification workflow such as `ponytail`, use
+one scoped inventory, reuse decision and verification plan. This Skill checks
+whether reuse is supported; simplification chooses the smallest acceptable
+implementation within the user's requirements and evidence boundaries.
+
+- Reuse an existing implementation instead of writing another equivalent helper.
+- Adequate existing project tests satisfy a runnable-check requirement. Use the
+  project's runner, framework and fixtures; extend them for a demonstrated gap.
+  Do not create a parallel demo, self-check or test runner merely for another Skill.
+- A newly activated Skill alone does not restart searches or verification.
+  Changed inputs, invalidated evidence and required fresh checks still justify work.
+- Keep necessary decision evidence and handoff state under terse-output rules.
+  A design-only request remains design-only; small edits do not need extra reports.
+
+These are explicit cooperation instructions, not host-enforced precedence.
+`ponytail` is optional and is not a dependency. The
+[combination report](../evals/results/2026-09-26/skill-combination/REPORT.md)
+records the exact companion hash and tested scope. It does not establish
+natural dual activation, universal compatibility or a causal improvement.
+
 ## Updating and removing
 
 For a manual copy, compare your installed files with the intended source revision before updating. Preserve local edits, replace this skill's `SKILL.md` and `LICENSE`, and repeat the discovery check. Optional documentation and evaluation assets can stay in the source checkout.
