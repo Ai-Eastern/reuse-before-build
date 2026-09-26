@@ -1,0 +1,243 @@
+{
+  "review_scope": "Existing behavior criteria, original subject tool bodies and final answers, file hashes, six Node replays, existing mutant and semantic Git states.",
+  "reviewers": [
+    "Parent evidence review",
+    "Separate contextual read-only reviewer luna6_analytics_v7; review continuations not measured trials"
+  ],
+  "criteria_at_review_sha256": {
+    "evals/reviewer.md": "578af2734710b9fe4bcefa87b44131fe46fceefa7d7fd8a878d4b956b736ef3f",
+    "evals/search-timing-reviewer.md": "49f6bbcb32fdd1b3142e0be092dec172802bbd460150628e53ad5ab0dc676f09",
+    "evals/evidence-gate-reviewer.md": "3d3fa4a522d6eb565d4d60c484a734c00a141a4d6ac2a7bac0ea540512b76723"
+  },
+  "summary": {
+    "scoped_pass": 16,
+    "substantive_fail": 0,
+    "not_run": 0,
+    "fresh_subjects": 16
+  },
+  "cases": [
+    {
+      "agent": "independent_analytics_v10",
+      "case": "analytics",
+      "assessment": "scoped pass",
+      "note": "Supported source/version inspection; DISTINCT-state evidence kept separate from exact workload; hard process-RSS condition remains Blocked. Bare python failure does not prove no interpreter exists."
+    },
+    {
+      "agent": "independent_queue_v10",
+      "case": "changed-requirement",
+      "assessment": "scoped pass",
+      "note": "Conditional static design supported; distributed-mode tests explicitly not treated as default PostgreSQL concurrency acceptance."
+    },
+    {
+      "agent": "independent_snapshot_a_v10",
+      "case": "snapshot-a",
+      "assessment": "scoped pass",
+      "note": "Actual code/test/MIT text inspected; Borrow scoped to hypothetical supplied snapshot; real upstream and runtime unverified."
+    },
+    {
+      "agent": "independent_snapshot_b_v10",
+      "case": "snapshot-b",
+      "assessment": "scoped pass",
+      "note": "Missing candidate license blocks adoption; independent design separately scoped, not proof no reusable third-party option exists."
+    },
+    {
+      "agent": "independent_headers_v10",
+      "case": "receipt-a",
+      "assessment": "scoped pass",
+      "note": "Header-only responses not represented as inspected license terms or assertions; adoption Blocked."
+    },
+    {
+      "agent": "independent_revision_v10",
+      "case": "revision-map",
+      "assessment": "scoped pass",
+      "note": "Core mismatch and missing vendored source distinguished; wrapper adoption Blocked without invented defect."
+    },
+    {
+      "agent": "independent_small_v10",
+      "case": "small-edit",
+      "assessment": "scoped pass",
+      "note": "Only README typo changed; no external survey. Initial glob and Git commands unsuitable for the fixture were recovered/disclosed."
+    },
+    {
+      "agent": "independent_covered_v10",
+      "case": "covered-test",
+      "assessment": "scoped pass",
+      "note": "Existing third-success assertions reused; no edits; two tests passed."
+    },
+    {
+      "agent": "independent_variant_v10",
+      "case": "covered-variant",
+      "assessment": "scoped pass",
+      "note": "Existing first-success call count reused; no edits. Redundant rerun and non-Git commands are inefficiencies."
+    },
+    {
+      "agent": "independent_gap_v10",
+      "case": "test-gap",
+      "assessment": "scoped pass",
+      "note": "Only test suite extended; distinct error identities and zero-call boundary. Four tests pass; first-error mutant fails exactly intended test."
+    },
+    {
+      "agent": "independent_failure_v10",
+      "case": "local-failure",
+      "assessment": "scoped pass",
+      "note": "Original failure reproduced; only default attempts repaired; existing tests pass."
+    },
+    {
+      "agent": "independent_take_v10",
+      "case": "local-take",
+      "assessment": "scoped pass",
+      "note": "Existing retry helper reused through zero-argument wrapper; focused integration test passes."
+    },
+    {
+      "agent": "independent_unchanged_v10",
+      "case": "unchanged-resume",
+      "assessment": "scoped pass",
+      "note": "Five recorded hashes compared; historical result accurately reused without rerunning; unchanged files."
+    },
+    {
+      "agent": "independent_dirty_v10",
+      "case": "dirty-resume",
+      "assessment": "scoped pass",
+      "note": "Changed source detected despite unchanged HEAD; one-pass/one-fail current result reported; dirty state preserved."
+    },
+    {
+      "agent": "independent_timeout_v10",
+      "case": "optional-timeout",
+      "assessment": "scoped pass",
+      "note": "Timeout identified as local simulation; supported local helper reused; tests pass. One invalid path read recovered."
+    },
+    {
+      "agent": "independent_authority_v10",
+      "case": "authority-resume",
+      "assessment": "scoped pass",
+      "note": "Original read-only authority respected over unverified handoff permission; no edits/commit; existing tests pass."
+    }
+  ],
+  "unchanged_task_comparisons": [
+    {
+      "case": "analytics",
+      "prior_batch": "closure-v9-20260926",
+      "task_sha256": "a6c8af833cce5b49662a55e3d5e9ab97de98ffe25d288b3ffab20c02474c740d",
+      "byte_identical": true
+    },
+    {
+      "case": "changed-requirement",
+      "prior_batch": "closure-v9-20260926",
+      "task_sha256": "8ec91b581b25e8bb536a6421e79ab951a666999697f64e208a1bae5dbc645035",
+      "byte_identical": true
+    },
+    {
+      "case": "snapshot-a",
+      "prior_batch": "closure-v9-20260926",
+      "task_sha256": "c2503a80227879da66e2d7a7152b5cf0e59f415e7b59d50b341c25d916457918",
+      "byte_identical": true
+    },
+    {
+      "case": "snapshot-b",
+      "prior_batch": "closure-v9-20260926",
+      "task_sha256": "c2503a80227879da66e2d7a7152b5cf0e59f415e7b59d50b341c25d916457918",
+      "byte_identical": true
+    },
+    {
+      "case": "small-edit",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "820c4fd75774c85512c2abb68eecf22b248145226db686f227d3b1c98f40d89d",
+      "byte_identical": true
+    },
+    {
+      "case": "covered-test",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "e2941b08b5864719198a4b8087376cd724f9d945c2dffa0ed24133e6017c9005",
+      "byte_identical": true
+    },
+    {
+      "case": "covered-variant",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "dc364268a24dd651b44e13e3cebc0729e3c17613551e9d81974b9d69a9cc021b",
+      "byte_identical": true
+    },
+    {
+      "case": "test-gap",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "2a3808807256bc3a0bd979c322c682c3211641c409e78476d1bb24a53fa2c47d",
+      "byte_identical": true
+    },
+    {
+      "case": "local-failure",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "c93d6b1907b96fbd832d96f3e711f0b297275537ea94212aaa6b9f62000f76e6",
+      "byte_identical": true
+    },
+    {
+      "case": "local-take",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "9dded5affec3645b65f3f715634beea0ba1773340804963e608b0b9bf9a8c6bb",
+      "byte_identical": true
+    },
+    {
+      "case": "unchanged-resume",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "79ed4dcb70382cd63c00b7aa80c053ca8712592e80eb008448d66767bb28049e",
+      "byte_identical": true
+    },
+    {
+      "case": "dirty-resume",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "8f2460de276e13e664a3fb6d274f289d5902ecd150e81bb3b00d820664963da4",
+      "byte_identical": true
+    },
+    {
+      "case": "optional-timeout",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "8db2d16d65bed55a50d1c535cb6e567f45f5416a94c23679fc8da093359832e4",
+      "byte_identical": true
+    },
+    {
+      "case": "authority-resume",
+      "prior_batch": "closure-regression-v9-20260926",
+      "task_sha256": "9a7a0f2c26b666ce7535d3ef685460f395514071885269526d38c1b1f0f7770a",
+      "byte_identical": true
+    }
+  ],
+  "live_review_call_ids": {
+    "analytics_package_license_gitlink": [
+      "call_cinc18asJbFthoXSnZGdIMqT"
+    ],
+    "analytics_core_release_short_sha": [
+      "call_zFQ0wj43DGGyLE9qWZd9Zl5k"
+    ],
+    "analytics_csv": [
+      "call_DiBt9mT9gHWdrEOrDmIEMFoY"
+    ],
+    "analytics_state_source_tests_and_parquet": [
+      "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "call_nAtOiUtr6CNrtNTmfmpUkov9"
+    ],
+    "analytics_python_invocation_only": [
+      "call_yRV1CRoFcP4q0AHrSMIeCSwV"
+    ],
+    "queue_manifest_license": [
+      "call_SrHJJNcre76Vr4kAYLA9vOTM"
+    ],
+    "queue_requirements": [
+      "call_od7o9lCLjTh4AInOXhL9DmnL"
+    ],
+    "queue_source": [
+      "call_3veVTWA9r8FXgQcEjayEiAlJ"
+    ],
+    "headers_snapshot": [
+      "call_OUPJAIm6TkXEegkSA3Ms88fh"
+    ],
+    "revision_snapshot": [
+      "call_psmw7KTRzAFh5fPHlRvmvHTj"
+    ]
+  },
+  "limits": [
+    "Correct Blocked decisions satisfy an evidence gate, not successful component adoption or runtime acceptance.",
+    "Not a perfect-transcript claim: environment wording and recovered unnecessary/invalid commands remain recorded.",
+    "Sixteen selected observations, no repeated sampling or matched V9 controls this batch; no causal or success-rate estimate.",
+    "Explicit full-Skill loading, not automatic activation; no real compaction, cross-host or production integration test.",
+    "Only receipt-a was scheduled in content comparison; complete snapshot is snapshot-a, not a separate receipt-b trial.",
+    "Node reviewer replays used 24.18.0, not Node 22 platform acceptance."
+  ]
+}

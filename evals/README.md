@@ -74,6 +74,24 @@ selection remains partial. Do not count a continuation case as a fresh subject
 or infer a success rate. The report records the host limit, fixture changes,
 review corrections and full execution inventory; older outcomes are unchanged.
 
+## Independent final core set
+
+The [V10 independent report](results/2026-09-26/luna6-independent/REPORT.md)
+records sixteen separate GPT-6 Luna / high subjects on one unchanged Skill:
+two live designs, twelve local scenarios and the headers-only/revision-mismatch
+boundaries. All passed their scoped behavior criteria, with minor reporting
+and command notes retained. Six reviewer replays and a targeted mutation check
+support the test-reuse results. They are not extra subject trials.
+
+The batch reuses the existing preparers and reviewer criteria. Its report
+archives the exact composition, inputs, dispatches, runtime settings and
+observable results. Keep each task in a fresh context and workspace, and keep
+the reviewer plan away from subjects. Do not substitute continuations for
+fresh contexts or count helper-prepared controls that were never scheduled.
+Correct Blocked decisions count as evidence-gate behavior, not successful
+component adoption. The report makes no automatic-activation or success-rate
+claim; previous failed observations remain unchanged.
+
 ## Search-timing evaluation
 
 The current timing preparer requires Python 3.10+ and the standard library

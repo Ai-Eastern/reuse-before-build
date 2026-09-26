@@ -1,0 +1,54 @@
+{
+  "completed_model_runs": 16,
+  "fresh_subject_rollouts": 16,
+  "runs_by_skill": {
+    "v10": 16
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "high",
+  "runtime_source": "Actual host turn_context events; one task_started event per subject asserted during collection.",
+  "preparation_source_sha256_at_export": {
+    "evals/prepare-evidence-gate.py": "864d080115f4332c71cf1f1dfc73d68b0a4489181ab7bfc508134306b65d6f47",
+    "evals/prepare-search-timing.py": "3bdfa507b515968f65836c1afe54aa2c8dda22be9d4c08ebc4d2b9b4d0f06fb8",
+    "evals/prepare.mjs": "9d07caf17324935c511b6d93111eaa324ce85b53309dfdfc9fa6431428c03c77",
+    "evals/prepare-revision-case.py": "e41c1980ad48758356e41b98e333d89e9babc227caebab3e49fa4588942529e5",
+    "evals/prepare-content-cases.py": "fa0a24b43b3bc2abbca00ce711453137a649faac05676dd37a27825f473ac957"
+  },
+  "coverage_note": "Two live designs, twelve local cases, two evidence boundaries. Only dispatch-inventory entries were started; helper-prepared controls were unscheduled.",
+  "transformations": [
+    "Observable tool calls/results, finals and project hashes only; no private reasoning, encrypted messages, system/developer messages or tool catalog bodies.",
+    "Dispatch texts are labeled dispatcher copies of visible spawn calls; actual runtime settings are independently host-recorded.",
+    "Local paths normalized and exports use LF; initial/final input hashes preserve runtime bytes.",
+    "Remote page bodies omitted; retrieval metadata, paired requests and output hashes retained. Bodies reviewed locally.",
+    "Reviewer replays, mutation checks and review continuations are not counted as subject trials."
+  ],
+  "files_sha256": {
+    "dispatch-inventory.json": "201e2da563a602500e8116dd8940d9fd39b1b7098c92a743e0db719f7447e599",
+    "independent_analytics_v10.json": "ac578351dc0078bbbe947e6c5cb5b5ab2f8106b50d2eca61fb52c43df0252d80",
+    "independent_authority_v10.json": "b9116b8effb70b3e202db96ed2c3946a0775268b851d86f623132d4aa846fc82",
+    "independent_covered_v10.json": "d2e64805438b97c4f77b82f83df1b6d677c96699abde9de8755cfcaaf9af9cc5",
+    "independent_dirty_v10.json": "622b6bdf2a99cc822e2170e40d109b84a5864301e228a6d4a22610a5dabc66be",
+    "independent_failure_v10.json": "cab416d8e253769f964d5c4c5ede736c3d46cc48bc38a12899446daeb00aee9c",
+    "independent_gap_v10.json": "7f1e149953e37e2661a2130cf987d01af531ad14ba4aabc08eb0ea3d26fb07f1",
+    "independent_headers_v10.json": "5aee8329285b6bd3825ee6b2f1211709ce849d04527a619acba21e42aff744e3",
+    "independent_queue_v10.json": "b8825e34104f04aef422c07d81f9e7858d7ad9df7e063535223b5684b4900b72",
+    "independent_revision_v10.json": "fcd7ce9e72adbdf17f02be5dc0ed289163ff1c620ef09ceacebeb8a648d1c03e",
+    "independent_small_v10.json": "a3029f6c6e9d1335598550d7f5d59d8d5a3d24290d562d07edaf290b663df2c5",
+    "independent_snapshot_a_v10.json": "fcd30195667015cda1930f7e5bc045646a76913a473d26fcae28da4069d0e37a",
+    "independent_snapshot_b_v10.json": "0e41a87370e217a54b643cc89477f6b6041e4ca66d354f457b533351d9e2a761",
+    "independent_take_v10.json": "e8f38215a8e0e9aee2f2f0b1ff33546e3c190b52780de63ca6cad68253225367",
+    "independent_timeout_v10.json": "f6ccea8f141ecbe23da67cfb6568ebd2b371ecc8ea6443174a36f42e583e6230",
+    "independent_unchanged_v10.json": "f15f5ba655768b25746a26c70652aca6c194eceb360da41bc2d57f57036c53f5",
+    "independent_variant_v10.json": "ca70be037b366387165be726cba0f2983304af6e4d0a1d2788cf1265b033de85",
+    "index.json": "46bb9711683d42db80b585e723f89d500aa84d0ffebf39f38e8f063ad058c1f6",
+    "input-manifests.json": "9a5694e6866bb2d9427a96aedab6b4b9201bf5b88b6ed77af68d355b4317d982",
+    "inspection-receipts.json": "b9fb9c56396f50db49af307269a1844718a80a3d4256e3f597c1c3c3c8483cf6",
+    "regression-preparer.py.txt": "6d3ee1b3f3fac53df81800d14532690fa653372e4cc3125f506cf35fb04fd647",
+    "REPORT.md": "b3c17ff4799275cd469528578142739f780012b70f9206e236cc74b05380d59d",
+    "review-assessment.json": "f1196c0ef80f2bbeae89d4b54f5f69ed676704dd579ec0ac2bfedccdd6869c73",
+    "review-plan.md": "77288b4af24004eebb30614cc70e359034b62bc1ded7b81dec4aadbf0995c02a",
+    "reviewer-checks.json": "a3e3052028aaf2d10e4258e0d46eff7cc6f115f23e7eb215e3b2faf6f59671ae",
+    "skill-v10.md": "67a298af37fbb76cf59763eda9ce05c1d97554a0b3b0c55cb86c2f3f2f2a92cf",
+    "skill-v9.md": "f52a422ad7f78425410d3824ecc4a1d6f7c7c5c9540533b8f22eabe230b83c31"
+  }
+}

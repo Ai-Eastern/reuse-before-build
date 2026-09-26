@@ -1,0 +1,37 @@
+"""Task-local composition of existing fixtures; no model launch."""
+from pathlib import Path
+import contextlib
+import io
+import json
+import runpy
+import subprocess
+import sys
+
+work = Path(__file__).resolve().parent
+repo = work / 'reuse-before-build'
+destination = work / (sys.argv[1] if len(sys.argv) > 1 else 'closure-regression-v8-20260926')
+timing = runpy.run_path(str(repo / 'evals/prepare-search-timing.py'))
+timing['TASKS'].pop('changed-requirement')
+with contextlib.redirect_stdout(io.StringIO()):
+    timing['prepare'](destination)
+timing_manifest = json.loads((destination / 'manifest.json').read_text(encoding='utf-8'))
+runs = [{'case': c['id'], 'arm': 'skill', 'initial_hashes': c['arms']['skill']['initial_hashes']}
+        for c in timing_manifest['cases']]
+for case, scenario in [('local-take', '01-local-take'), ('dirty-resume', '04-dirty-resume'),
+                       ('optional-timeout', '05-optional-timeout'), ('authority-resume', '06-authority-resume')]:
+    (destination / case).mkdir()
+    root = destination / case / 'skill'
+    subprocess.run(['node', str(repo / 'evals/prepare.mjs'), scenario, str(root)],
+                   check=True, capture_output=True, text=True)
+    # Keep baseline records but omit mutable/binary Git internals from project diffs.
+    inputs = {p: sha for p, sha in timing['snapshot'](root).items()
+              if not p.startswith('.git/') or p.startswith('.git/reuse-eval-baseline/')}
+    runs.append({'case': case, 'arm': 'skill', 'initial_hashes': inputs,
+                 'initial_git_head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip(),
+                 'initial_git_status': subprocess.check_output(['git', 'status', '--porcelain=v1', '--untracked-files=all'], cwd=root, text=True)})
+manifest = {'current_skill_sha256': timing['digest'](repo / 'SKILL.md'), 'planned_runs': runs,
+            'input_scope': 'Project files and baseline records; mutable/binary .git internals excluded; semantic Git state recorded separately.',
+            'preparation_source_sha256': {p: timing['digest'](repo / p) for p in [
+                'evals/prepare-search-timing.py', 'evals/prepare.mjs']}}
+(destination / 'gate-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
+print(json.dumps({'destination': str(destination), 'current_skill_cases': len(runs), 'model_launches': 0}))

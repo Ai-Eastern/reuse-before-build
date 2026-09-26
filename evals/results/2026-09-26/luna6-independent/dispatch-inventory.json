@@ -1,0 +1,210 @@
+{
+  "independent_analytics_v10": {
+    "batch": "independent-gate-v10-20260926",
+    "case": "analytics",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_analytics_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_queue_v10": {
+    "batch": "independent-gate-v10-20260926",
+    "case": "changed-requirement",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_queue_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_snapshot_a_v10": {
+    "batch": "independent-gate-v10-20260926",
+    "case": "snapshot-a",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_snapshot_a_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_snapshot_b_v10": {
+    "batch": "independent-gate-v10-20260926",
+    "case": "snapshot-b",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_snapshot_b_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_headers_v10": {
+    "batch": "independent-content-v10-20260926",
+    "case": "receipt-a",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_headers_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_revision_v10": {
+    "batch": "independent-revision-v10-20260926",
+    "case": "revision-map",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_revision_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_small_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "small-edit",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_small_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_covered_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "covered-test",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_covered_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_variant_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "covered-variant",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_variant_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_gap_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "test-gap",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_gap_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_failure_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "local-failure",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_failure_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_take_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "local-take",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_take_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_unchanged_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "unchanged-resume",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_unchanged_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; public read-only research is available if needed. Do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_dirty_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "dirty-resume",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_dirty_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_timeout_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "optional-timeout",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_timeout_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  },
+  "independent_authority_v10": {
+    "batch": "independent-regression-v10-20260926",
+    "case": "authority-resume",
+    "state": "started",
+    "dispatch": {
+      "task_name": "independent_authority_v10",
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "message": "Complete the task in TASK.md using the supplied SKILL.md. Workspace: <workspace>. Read both files and follow the task's permitted scope. Work only in this workspace; do not inspect sibling workspaces, evaluation scripts, reports, or parent history. Do not contact other agents. Do not use the network, install packages, start services, commit, or push. Report the actual evidence and verification performed.",
+      "record_source": "Dispatcher record of visible spawn request; stored host agent_message payload may be encrypted; runtime settings independently checked."
+    }
+  }
+}

@@ -2,9 +2,42 @@
 
 Evidence is tied to the evaluated Skill hash. This page retains the earlier
 2026-09-20 test/recovery runs, an earlier 2026-09-21 architecture run, and the
-GPT-5.6 Luna / medium comparison and GPT-6 Luna / high follow-up. Follow-ups did not rerun every scenario
-on the final revision. These observations imply neither a release tag nor
-universal host compatibility.
+GPT-5.6 Luna / medium comparison and GPT-6 Luna / high follow-ups. The latest
+batch reruns its defined sixteen-case core set on one final revision; earlier
+partial coverage stays tied to its original hashes. These observations imply
+neither a release tag nor universal host compatibility.
+
+## Independent core evaluation — 2026-09-26, GPT-6 Luna / high
+
+The [V10 report](../evals/results/2026-09-26/luna6-independent/REPORT.md) records
+**16 separate fresh-context cases, all passing their scoped behavior criteria**:
+two live designs, twelve local scenarios and two evidence-boundary probes.
+Actual host runtime settings, sixteen distinct rollout IDs, one started turn
+per subject and a shared unchanged Skill hash were checked. Subjects explicitly
+loaded the Skill; this is not automatic-activation evidence.
+
+V10 requires a decisive capability's behavior and limiting condition to match
+the inspected symbol/assertion, rather than accepting a related variant.
+The core remains 150 lines, **3,414 `o200k_base` tokens**, 42 more than V9,
+with no runtime dependency. Analytics now distinguishes high-cardinality
+DISTINCT state from the requested aggregation workload and keeps the 2 GB
+process-RSS gate unresolved. Queue design remains conditional on deployment
+and runtime integration checks. Correctly blocking adoption is a behavior
+pass, not proof that a candidate meets the application's requirements.
+
+Six reviewer replays passed; the existing first-error mutant failed exactly
+the intended added test. Sufficient tests stayed unchanged, new tests covered
+real gaps, and recovery respected file content and original permissions.
+Headers-only responses and mismatched wrapper/core revisions were rerun on
+the same final Skill. The snapshot pair still differs only by its license.
+
+The original analytics answer overstates what a failed bare `python` command
+shows about interpreter availability; the report retains that wording issue
+alongside non-Git command failures and one redundant test rerun. No substantive
+behavior criterion failed. This is not a zero-error transcript, a causal
+comparison or a reliability estimate. Production integration, performance,
+real compaction, automatic activation and other hosts remain untested.
+All earlier reports and unsuccessful outcomes below remain unchanged.
 
 ## Live research and core regression — 2026-09-26, GPT-6 Luna / high
 

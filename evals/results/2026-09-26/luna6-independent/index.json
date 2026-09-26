@@ -1,0 +1,195 @@
+[
+  {
+    "agent": "independent_analytics_v10",
+    "case": "analytics",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 18,
+    "network_call_candidates": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_queue_v10",
+    "case": "changed-requirement",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 21,
+    "network_call_candidates": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_snapshot_a_v10",
+    "case": "snapshot-a",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 3,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_snapshot_b_v10",
+    "case": "snapshot-b",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_headers_v10",
+    "case": "receipt-a",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 8,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_revision_v10",
+    "case": "revision-map",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 4,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_small_v10",
+    "case": "small-edit",
+    "arm": "skill",
+    "changed_files": [
+      "README.md"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_covered_v10",
+    "case": "covered-test",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 4,
+    "network_call_candidates": [],
+    "reviewer_exit": 0
+  },
+  {
+    "agent": "independent_variant_v10",
+    "case": "covered-variant",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_gap_v10",
+    "case": "test-gap",
+    "arm": "skill",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_failure_v10",
+    "case": "local-failure",
+    "arm": "skill",
+    "changed_files": [
+      "src/retry.mjs"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_take_v10",
+    "case": "local-take",
+    "arm": "skill",
+    "changed_files": [
+      "src/status-service.mjs",
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 8,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_unchanged_v10",
+    "case": "unchanged-resume",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 9,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_dirty_v10",
+    "case": "dirty-resume",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 7,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_timeout_v10",
+    "case": "optional-timeout",
+    "arm": "skill",
+    "changed_files": [
+      "src/status-service.mjs",
+      "test/retry.test.mjs"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "independent_authority_v10",
+    "case": "authority-resume",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  }
+]

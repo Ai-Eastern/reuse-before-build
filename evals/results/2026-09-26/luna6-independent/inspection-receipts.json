@@ -1,0 +1,1141 @@
+{
+  "scope": "Observed retrievals, not endorsement of final claims. Shell-network results remain in paired call/hash records.",
+  "receipts": [
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:38.363Z",
+      "call_id": "call_QjdIJP1rEgtdHSEyspciV8ZZ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/CMakeLists.txt",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/CMakeLists.txt",
+      "status": "numbered content returned",
+      "visible_line_count": 518,
+      "first_visible_line": 0,
+      "last_visible_line": 517,
+      "output_section_sha256": "f69e54bf3b6ecb92f22c7a53d14c10603933799d0df85add83f6ccdec93c5579"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:38.363Z",
+      "call_id": "call_QjdIJP1rEgtdHSEyspciV8ZZ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/LICENSE",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "c21f74fda412a1ab2351fba31db007cfe2fb2a35ec561993eff378ff8f6a2184"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:38.363Z",
+      "call_id": "call_QjdIJP1rEgtdHSEyspciV8ZZ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/src/execution/radix_partitioned_hashtable.cpp",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/src/execution/radix_partitioned_hashtable.cpp",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "4533c5a326855239fadf0d606444b4fb9f8006c2d48ad4dc63fa9932d982434e"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:38.363Z",
+      "call_id": "call_QjdIJP1rEgtdHSEyspciV8ZZ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/test/sql/aggregate/external/aggregate_external.test",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/test/sql/aggregate/external/aggregate_external.test\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "eaf211270ec37035b464fcc2a36a01558289d3d8fcb7e51c9d58810ad95f6a5d"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:38.363Z",
+      "call_id": "call_QjdIJP1rEgtdHSEyspciV8ZZ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/test/sql/copy/parquet/copy_parquet.test",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/test/sql/copy/parquet/copy_parquet.test\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "51d4ab5c1f69265aed100093c0d4dfd3ed47e8b6965508be4d66dffb9006f6b2"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:38.363Z",
+      "call_id": "call_QjdIJP1rEgtdHSEyspciV8ZZ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.3/pyproject.toml",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.3/pyproject.toml",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "cb51a92c9447b9c6ce17e94f9ef1fe9bd4bad59540abf23a2b0e832409232001"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:44.860Z",
+      "call_id": "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn215view2",
+        "pattern": "Repartition"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/src/execution/radix_partitioned_hashtable.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 36,
+      "first_visible_line": 446,
+      "last_visible_line": 481,
+      "output_section_sha256": "41c6d550e6e1259440feae61f85e3c61d8635a1255f3a9f8aadc53939e7872f5"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:44.860Z",
+      "call_id": "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn215view2",
+        "pattern": "Flush"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/src/execution/radix_partitioned_hashtable.cpp",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "68cd349d609c5bc855bc6b5ecb7133d52462d8f9e1157790e40a748cd10be889"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:44.860Z",
+      "call_id": "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn215view2",
+        "pattern": "Sink("
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.3/src/execution/radix_partitioned_hashtable.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 226,
+      "first_visible_line": 260,
+      "last_visible_line": 880,
+      "output_section_sha256": "29bbc26405e0e7831267aa01e99b7e37606ab4488b29ef9d9587e2b374919be6"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:44.860Z",
+      "call_id": "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn215view5",
+        "pattern": "requires-python"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.3/pyproject.toml",
+      "status": "numbered content returned",
+      "visible_line_count": 15,
+      "first_visible_line": 4,
+      "last_visible_line": 18,
+      "output_section_sha256": "dafe104d038ae4fd26dd6cb8375584666385dc4844c1b3d5578c8b94a270a70e"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:44.860Z",
+      "call_id": "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn215view5",
+        "pattern": "python_requires"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.3/pyproject.toml",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "c4aebe3adb73f923a05a7435dc8a0e9a713cb86f2697c6a4e56643b42b837d02"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:44.860Z",
+      "call_id": "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn215view5",
+        "pattern": "Python"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.3/pyproject.toml",
+      "status": "numbered content returned",
+      "visible_line_count": 29,
+      "first_visible_line": 19,
+      "last_visible_line": 47,
+      "output_section_sha256": "047f7fadfa366df4af9943cd1af05d60c8f810d268018518decf130f1a6870a3"
+    },
+    {
+      "agent": "independent_analytics_v10",
+      "timestamp": "2026-09-26T08:21:44.860Z",
+      "call_id": "call_s6VhVMxyMSfuNZxMZ240dKox",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn215view5",
+        "pattern": "scikit"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.3/pyproject.toml",
+      "status": "numbered content returned",
+      "visible_line_count": 87,
+      "first_visible_line": 48,
+      "last_visible_line": 134,
+      "output_section_sha256": "2e90fe67cb8c296a05d403bee8173d79462e6cad4de8d5a1265357b3fa0bdb86"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:31.564Z",
+      "call_id": "call_SrHJJNcre76Vr4kAYLA9vOTM",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/tree/12.34.0",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/tree/12.34.0\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "e0c6c50d1313acedd2a1a50c4846eb8f0e244daca45c21d06b5b044d4180e320"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:31.564Z",
+      "call_id": "call_SrHJJNcre76Vr4kAYLA9vOTM",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/package.json",
+      "status": "numbered content returned",
+      "visible_line_count": 103,
+      "first_visible_line": 0,
+      "last_visible_line": 102,
+      "output_section_sha256": "ae56f5e8cbc57e20676e5d70998ff183f28360f5576afdbd0f4da88069416a27"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:31.564Z",
+      "call_id": "call_SrHJJNcre76Vr4kAYLA9vOTM",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 19,
+      "first_visible_line": 0,
+      "last_visible_line": 18,
+      "output_section_sha256": "463a162cd18fe7b089a8868c6e2d5a94e5f085128cff51994d512082fcc3cb1f"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:31.564Z",
+      "call_id": "call_SrHJJNcre76Vr4kAYLA9vOTM",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 401,
+      "first_visible_line": 0,
+      "last_visible_line": 400,
+      "output_section_sha256": "8a8810c72be10796fe01e29f731802c67ee0f478c6714729d3ffd7a732594bdc"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:31.564Z",
+      "call_id": "call_SrHJJNcre76Vr4kAYLA9vOTM",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/boss.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/boss.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "f6d1bb273b6568c84a9277b20950361ad5422d0c47dd029e5e6400c51c2a02fd"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:31.564Z",
+      "call_id": "call_SrHJJNcre76Vr4kAYLA9vOTM",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/timekeeper.test.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/timekeeper.test.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "d330b7795526578ab3ed411609b5033c92d8b56e0f1af824b594959add85005b"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:38.226Z",
+      "call_id": "call_Fpp3Z3yugRqVEiJPWWRNVUHe",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://api.github.com/repos/timgit/pg-boss/git/ref/tags/12.34.0",
+        "lineno": null
+      },
+      "resolved_url": "https://api.github.com/repos/timgit/pg-boss/git/ref/tags/12.34.0\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "e151063c6980ccd9fc63056150d3506ac4141ffea23e2228fdf4016c4e777889"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:38.226Z",
+      "call_id": "call_Fpp3Z3yugRqVEiJPWWRNVUHe",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://api.github.com/repos/timgit/pg-boss/git/trees/12.34.0?recursive=1",
+        "lineno": null
+      },
+      "resolved_url": "https://api.github.com/repos/timgit/pg-boss/git/trees/12.34.0?recursive=1\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "07b02fbebb85930535f6261bf50590c2594151bb2717862bb26c8baa0a3f7fbb"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:38.226Z",
+      "call_id": "call_Fpp3Z3yugRqVEiJPWWRNVUHe",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 474,
+      "first_visible_line": 0,
+      "last_visible_line": 473,
+      "output_section_sha256": "bf746b80300f0cba1dd6becfb248ae1451536e5ee18fa88f82db2703e9134680"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:38.226Z",
+      "call_id": "call_Fpp3Z3yugRqVEiJPWWRNVUHe",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/worker.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/worker.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "4c660ce44cfd607ea3ad4558ff302b12e8b5443661dfa4430d7c929bfe4d5940"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:38.226Z",
+      "call_id": "call_Fpp3Z3yugRqVEiJPWWRNVUHe",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "7e7d5966c7e014e07b0b7d245c48fca2ebc8a36208d670f585e4564e41a67996"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:45.904Z",
+      "call_id": "call_mNXn0pgAxnrpNqmUEUe4n4sC",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "FOR UPDATE SKIP LOCKED"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 186,
+      "first_visible_line": 1741,
+      "last_visible_line": 3447,
+      "output_section_sha256": "7debb9d387062eb6c33ec40aea0f7d1266b1ac234e4ac2d5cb045d5243f58b9c"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:45.904Z",
+      "call_id": "call_mNXn0pgAxnrpNqmUEUe4n4sC",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "function fetch"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "cf20c191e4cdcb5d3fd134f8f9c1815463557df69578712d85f39037d5cdd241"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:45.904Z",
+      "call_id": "call_mNXn0pgAxnrpNqmUEUe4n4sC",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "start_after"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 54,
+      "first_visible_line": 2902,
+      "last_visible_line": 2955,
+      "output_section_sha256": "bc93ef50cd58d1788decfb47f5aad54fff6594b3833a9845dc572b974091eada"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:45.904Z",
+      "call_id": "call_mNXn0pgAxnrpNqmUEUe4n4sC",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn222view2",
+        "pattern": "sendAfter"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 18,
+      "first_visible_line": 1173,
+      "last_visible_line": 1190,
+      "output_section_sha256": "f72a754806f39a422cea77cf9279bdd575e4e9052f09927fe342d92ea186ade9"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:45.904Z",
+      "call_id": "call_mNXn0pgAxnrpNqmUEUe4n4sC",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn222view2",
+        "pattern": "async fetch"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 24,
+      "first_visible_line": 1631,
+      "last_visible_line": 1654,
+      "output_section_sha256": "379bf80db5b4965f7bc8694b4dec581d119c3f9720ac1db9747a0c03d0d3e122"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:45.904Z",
+      "call_id": "call_mNXn0pgAxnrpNqmUEUe4n4sC",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn222view2",
+        "pattern": "async work"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 11,
+      "first_visible_line": 860,
+      "last_visible_line": 870,
+      "output_section_sha256": "6699380e8d9a989bf2bb4396c6afdb6286e1eec32a1e15bb878b2166fab05f59"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:26:45.904Z",
+      "call_id": "call_mNXn0pgAxnrpNqmUEUe4n4sC",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn222view4",
+        "pattern": "batchSize"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+      "status": "numbered content returned",
+      "visible_line_count": 55,
+      "first_visible_line": 9,
+      "last_visible_line": 241,
+      "output_section_sha256": "4ac07f17f864d055a9611a859b9448f20d7de0aaadda07687c8992ebd0ef4754"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn221view3",
+        "lineno": 1738
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 82,
+      "first_visible_line": 1700,
+      "last_visible_line": 1781,
+      "output_section_sha256": "8c5bb7cf1a8ebb9a04c10fbbfa43be61bfc88f2840bc7ac4bb111b4418f5aa68"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/distributedDatabaseTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/distributedDatabaseTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "6c8d440bc129fa08ac112bb9780b076ad7484d9c4c7fdd180b12ec84a08ce6da"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/examples/readme.js",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/examples/readme.js\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "e19c16e9be6f16b4e43555f15717ef41ec31d6b5d33d74324483c06693ff64a9"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn222view2",
+        "lineno": 1640
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 101,
+      "first_visible_line": 1617,
+      "last_visible_line": 1717,
+      "output_section_sha256": "917356bba02b40e17f4110be317cb4f4d4dd83200188446f6ac91afae414c3cd"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn222view4",
+        "lineno": 109
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+      "status": "numbered content returned",
+      "visible_line_count": 47,
+      "first_visible_line": 102,
+      "last_visible_line": 148,
+      "output_section_sha256": "f56ff895a367f096cccf2cd2a477e4eecea0ad728cca4d87984c12636d0036fd"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "expire"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "d23a5fc390adbf42e963dcb00bbc666fa5ce6dfc85fc401f558554de561792e0"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn222view2",
+        "pattern": "expire"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "6ddc2ae9920301c8408be648bfa4bf6e25d5d5ee31e16420e460006a3a781626"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:05.314Z",
+      "call_id": "call_QG1l2SKKXySWsHGUG9PUbYqW",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn222view2",
+        "pattern": "monitor"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 246,
+      "first_visible_line": 70,
+      "last_visible_line": 2328,
+      "output_section_sha256": "c0e96ed1bf052ffd76a090c846d8c001937577947f9a4ccb6ff871664f9101c4"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:09.945Z",
+      "call_id": "call_S68sNPkAtN1g677VB9Frcge4",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn226view1",
+        "pattern": "concurrent fetch"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/distributedDatabaseTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 12,
+      "first_visible_line": 12,
+      "last_visible_line": 23,
+      "output_section_sha256": "a22386bab19f52b8546b17128836d199e9e2266fe0e6e2fec47ffaec13762bea"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:09.945Z",
+      "call_id": "call_S68sNPkAtN1g677VB9Frcge4",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn226view1",
+        "pattern": "duplicate"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/distributedDatabaseTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 16,
+      "first_visible_line": 36,
+      "last_visible_line": 51,
+      "output_section_sha256": "94ef8cc4c801a7420cb8603a849aa0a6f6875694edec0c217c04175e98af12b4"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:09.945Z",
+      "call_id": "call_S68sNPkAtN1g677VB9Frcge4",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn226view1",
+        "pattern": "test("
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/distributedDatabaseTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 127,
+      "first_visible_line": 7,
+      "last_visible_line": 369,
+      "output_section_sha256": "f635ad73c3b762fa2196ae64864bbd76123e186333158cea0aa3a644910ecc41"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:09.945Z",
+      "call_id": "call_S68sNPkAtN1g677VB9Frcge4",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "start_after <="
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 57,
+      "first_visible_line": 2899,
+      "last_visible_line": 2955,
+      "output_section_sha256": "b3d05c72980287d40741b705626e9541441210d2bd5ae00c2a6339df92512ceb"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:09.945Z",
+      "call_id": "call_S68sNPkAtN1g677VB9Frcge4",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "FETCH"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 104,
+      "first_visible_line": 903,
+      "last_visible_line": 3542,
+      "output_section_sha256": "97bc2a03804844496475c818233546e07bb6d01696b788514ed8b37964ed9c20"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:09.945Z",
+      "call_id": "call_S68sNPkAtN1g677VB9Frcge4",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "claim"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 108,
+      "first_visible_line": 984,
+      "last_visible_line": 3466,
+      "output_section_sha256": "ea14573fbe9c514c69d724807ffd5a9d721a17fe4b820011ea596bce8022e33e"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:16.262Z",
+      "call_id": "call_R0D1BVjGhCbVhqdehEVPTpxh",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "failJobsByTimeout"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 76,
+      "first_visible_line": 984,
+      "last_visible_line": 2577,
+      "output_section_sha256": "f70ad83479e3a5f34a10485213c3687e7acbc65c2852c74773bb786b64cb3ca3"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:16.262Z",
+      "call_id": "call_R0D1BVjGhCbVhqdehEVPTpxh",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "started_on <"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 206,
+      "first_visible_line": 2383,
+      "last_visible_line": 3490,
+      "output_section_sha256": "8a409ac5c58b4ff5b2291d350e2920d3024ebe10c23135ef83ac7570a95c09c4"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:16.262Z",
+      "call_id": "call_R0D1BVjGhCbVhqdehEVPTpxh",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn226view1",
+        "pattern": "not duplicate jobs when fetching concurrently"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/distributedDatabaseTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 41,
+      "first_visible_line": 31,
+      "last_visible_line": 71,
+      "output_section_sha256": "3eb54bb6a911d8ed287552bc1044aaeee56f17f0ceceb9413e536815194f838f"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:16.262Z",
+      "call_id": "call_R0D1BVjGhCbVhqdehEVPTpxh",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn222view2",
+        "pattern": "failJobsByTimeout"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 30,
+      "first_visible_line": 1770,
+      "last_visible_line": 1799,
+      "output_section_sha256": "259c9f6e74c32bb8aeefdab25b58afeebd0876aea45ff11d1642d9fe21b39230"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:28.621Z",
+      "call_id": "call_od7o9lCLjTh4AInOXhL9DmnL",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/README.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/README.md",
+      "status": "numbered content returned",
+      "visible_line_count": 103,
+      "first_visible_line": 0,
+      "last_visible_line": 102,
+      "output_section_sha256": "70f43f371540f6362e9372b9854c0a02af0a41c1c6cff870e551434ee0f7ecc2"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:28.621Z",
+      "call_id": "call_od7o9lCLjTh4AInOXhL9DmnL",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/workerTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/workerTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 146,
+      "first_visible_line": 0,
+      "last_visible_line": 145,
+      "output_section_sha256": "2db6c7f6dfdfed9557e1550ad14070073af6a1f3d10a95595039cb0b34b7ef4a"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:28.621Z",
+      "call_id": "call_od7o9lCLjTh4AInOXhL9DmnL",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/queueTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/queueTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 328,
+      "first_visible_line": 0,
+      "last_visible_line": 327,
+      "output_section_sha256": "002a2c1d20779f4c0964cfba1c745340bfb4041e0982ee598a75bfd0466c77c5"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:28.621Z",
+      "call_id": "call_od7o9lCLjTh4AInOXhL9DmnL",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/jobsTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/jobsTest.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "a355013087def6cad7a5c7028792ef6099ffc308ccbc0f14a7eeae80a8617730"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:28.621Z",
+      "call_id": "call_od7o9lCLjTh4AInOXhL9DmnL",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "d1db074709d14112e8051e26714007287440f2d0fc5d7c6864b045e34b7836ec"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:33.121Z",
+      "call_id": "call_rag5IDHWfdcMYEHRObX8nWcx",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn229view4",
+        "pattern": "concurrently"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "0de0d3865a7c5a4a3b3796bfd353ed3223b1b9fdc0a4b694ead8412dfc7e4970"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:33.121Z",
+      "call_id": "call_rag5IDHWfdcMYEHRObX8nWcx",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn229view4",
+        "pattern": "should only fetch"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "aa7dcaec6014597b1c2ca2748d65d32cc062bb65a6173eea4b48c7c1c83267d7"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:33.121Z",
+      "call_id": "call_rag5IDHWfdcMYEHRObX8nWcx",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn229view4",
+        "pattern": "SKIP"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "3dc2a722ad49409332e9a9ed22e3d40b956cc16d5a56e76f700f38f39409f910"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:33.121Z",
+      "call_id": "call_rag5IDHWfdcMYEHRObX8nWcx",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn229view4",
+        "pattern": "deferred"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "c96877e17b2acae432f34f3da7c8f938afef07fb853ba21432c3434ee42519ad"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:33.121Z",
+      "call_id": "call_rag5IDHWfdcMYEHRObX8nWcx",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn229view4",
+        "pattern": "startAfter"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 148,
+      "first_visible_line": 93,
+      "last_visible_line": 264,
+      "output_section_sha256": "a704273b68efd088523f309362f68b291cbaeaa8c476ac6adabef6c80761ba7f"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:33.121Z",
+      "call_id": "call_rag5IDHWfdcMYEHRObX8nWcx",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn221view3",
+        "pattern": "state = '${JOB_STATES.created}'"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 234,
+      "first_visible_line": 889,
+      "last_visible_line": 2984,
+      "output_section_sha256": "87832f52c49e8e656c4bf9fc20a9368bd4596ba25315e5c1f6bc70c219aeb4fb"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:45.878Z",
+      "call_id": "call_3veVTWA9r8FXgQcEjayEiAlJ",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn221view3",
+        "lineno": 1819
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 85,
+      "first_visible_line": 1787,
+      "last_visible_line": 1871,
+      "output_section_sha256": "6c399af21d6cb6f89ea51515f358e2d3602befb83066f164add5c8f5ccd63fbe"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:45.878Z",
+      "call_id": "call_3veVTWA9r8FXgQcEjayEiAlJ",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn221view3",
+        "lineno": 1916
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 120,
+      "first_visible_line": 1872,
+      "last_visible_line": 1991,
+      "output_section_sha256": "1a72aa4afa36250d3746d83d16358f61e0c9996076341f7fd448839315551665"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:45.878Z",
+      "call_id": "call_3veVTWA9r8FXgQcEjayEiAlJ",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn221view3",
+        "lineno": 2254
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 91,
+      "first_visible_line": 2221,
+      "last_visible_line": 2311,
+      "output_section_sha256": "d0fb9f2210c8dd8c6f62f36b48e3d840f1546ea6a6a263067c86593db0c7ee63"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:45.878Z",
+      "call_id": "call_3veVTWA9r8FXgQcEjayEiAlJ",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn222view2",
+        "lineno": 1168
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 119,
+      "first_visible_line": 1141,
+      "last_visible_line": 1259,
+      "output_section_sha256": "47d6d9b010ff0042b6f2e99abb6d9e002b3c015b82d263a9c3eb51b079996c18"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:45.878Z",
+      "call_id": "call_3veVTWA9r8FXgQcEjayEiAlJ",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn222view2",
+        "lineno": 858
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 95,
+      "first_visible_line": 829,
+      "last_visible_line": 923,
+      "output_section_sha256": "aae46f6397afc9999511ab41a5343532caadc7d670d7cea30c5a9f4346c44c8b"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:57.332Z",
+      "call_id": "call_g8vK9AAIPtjmEQrS6LUH9mJT",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/jobs.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/jobs.md",
+      "status": "numbered content returned",
+      "visible_line_count": 528,
+      "first_visible_line": 0,
+      "last_visible_line": 527,
+      "output_section_sha256": "811e474880b46fec168411f47027faab923fdb60f1cc47ce3ab369ec982b9ac1"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:57.332Z",
+      "call_id": "call_g8vK9AAIPtjmEQrS6LUH9mJT",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "e5304afc9d49819bcebabc52647fb1f2887c231f7addef2400f1a91b70b0c1d2"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:27:57.332Z",
+      "call_id": "call_g8vK9AAIPtjmEQrS6LUH9mJT",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/maintenance.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/maintenance.md\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "d4a8b108907de2ca4f0c5e88fa3a9d0c42e5578b5aac170644b4db952d78343a"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:28:42.903Z",
+      "call_id": "call_eZUsVKlfrU2PNIjijSCfRe7W",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/workTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/workTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 374,
+      "first_visible_line": 0,
+      "last_visible_line": 373,
+      "output_section_sha256": "b1f06919c687c0894d595f2e2d6bac27a484224f71fa5088452c9bb5d15c50d6"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:29:01.229Z",
+      "call_id": "call_2AcqIhwFI3a9vDgocfkL68Qp",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/testHelper.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/testHelper.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 145,
+      "first_visible_line": 0,
+      "last_visible_line": 144,
+      "output_section_sha256": "7b6c116e7287cabbbb280491b9169e9730ae45ff561f9116defb1cd06b6ce713"
+    },
+    {
+      "agent": "independent_queue_v10",
+      "timestamp": "2026-09-26T08:29:01.229Z",
+      "call_id": "call_2AcqIhwFI3a9vDgocfkL68Qp",
+      "operation": "find",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/testHelper.ts",
+        "pattern": "export async function start"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/testHelper.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 341,
+      "first_visible_line": 0,
+      "last_visible_line": 340,
+      "output_section_sha256": "59c0ec07d364a8b6c3aaae4d28bae58738d58bb367aaa2f675f2d24116666b28"
+    }
+  ]
+}
