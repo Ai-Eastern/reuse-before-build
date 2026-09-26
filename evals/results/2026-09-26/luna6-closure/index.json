@@ -1,0 +1,161 @@
+[
+  {
+    "agent": "closure_queue_v8",
+    "case": "changed-requirement",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 24,
+    "network_call_candidates": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "closure_analytics_v8",
+    "case": "analytics",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 23,
+    "network_call_candidates": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "closure_snapshot_a_v8",
+    "case": "snapshot-a",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 6,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "closure_snapshot_b_v8",
+    "case": "snapshot-b",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "closure_snapshot_a_clarified_v8",
+    "case": "snapshot-a",
+    "arm": "skill",
+    "changed_files": [
+      "DESIGN.md"
+    ],
+    "tool_calls": 5,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "closure_small_v8",
+    "case": "small-edit",
+    "arm": "skill",
+    "changed_files": [
+      "README.md"
+    ],
+    "tool_calls": 7,
+    "network_call_candidates": [],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "closure_queue_v9",
+    "case": "changed-requirement",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 24,
+    "network_call_candidates": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "reviewer_exit": null
+  },
+  {
+    "agent": "closure_analytics_v9",
+    "case": "analytics",
+    "arm": "skill",
+    "changed_files": [],
+    "tool_calls": 16,
+    "network_call_candidates": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "reviewer_exit": null
+  }
+]

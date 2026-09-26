@@ -18,10 +18,6 @@ ANALYTICS = ('为一个 Python 3.12 项目设计本地日志分析方案：每�
 LIMITER = ('项目使用 Node.js 22，需要限制异步任务同时执行的数量，并在任务失败后继续处理后续任务。'
            '请根据这里提供的候选材料提出组件选型、适配边界与验证计划。本次只做设计；'
            '环境离线，不访问网络，不安装依赖。')
-SNAPSHOT_TASK = (LIMITER + '\n\n'
-                 '这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。'
-                 '请区分对所提供快照的决策与对真实包或上游发布存在性的判断；'
-                 '不要从虚构提供方或 URL 推断真实来源。')
 SOURCE = '''export function limit(max) {
   if (!Number.isInteger(max) || max < 1) throw new RangeError('positive max required');
   let active = 0;
@@ -78,7 +74,7 @@ def prepare(destination, previous_skill):
         candidate = root / 'candidate'
         candidate.mkdir(parents=True)
         shutil.copy2(repo / 'SKILL.md', root / 'SKILL.md')
-        (root / 'TASK.md').write_text(SNAPSHOT_TASK + '\n', encoding='utf-8', newline='\n')
+        (root / 'TASK.md').write_text(LIMITER + '\n', encoding='utf-8', newline='\n')
         (root / 'README.md').write_text('Synthetic evaluation workspace; no production implementation exists.\n'
             'candidate/ contains a supplied external-project snapshot for offline assessment.\n'
             'The provider is fictional and its provenance fields are simulated fixture facts.\n'
@@ -89,8 +85,6 @@ def prepare(destination, previous_skill):
         (candidate / 'index.test.mjs').write_text(TEST, encoding='utf-8', newline='\n')
         (candidate / 'README.md').write_text('# Async limiter fixture\n\n'
             'Provider: Fictional Fixture Authors; snapshot version: 1.0.0.\n'
-            'The provider field is a simulated distribution label, not a statement identifying the copyright holder.\n'
-            'Any accompanying LICENSE retains its named copyright notice; neither field establishes a real upstream release.\n'
             'API: limit(max) returns run(fn), accepting an asynchronous task function.\n'
             'This snapshot claims bounded concurrency and progress after rejection.\n'
             'Delivery contains no network fetch or upstream verification record.\n', encoding='utf-8', newline='\n')

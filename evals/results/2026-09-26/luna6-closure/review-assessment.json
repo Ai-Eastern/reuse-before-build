@@ -1,0 +1,215 @@
+{
+  "review_scope": "Observable outputs, actual returned source contents, file states and independent replays. Separate read-only reviewer; not extra subject trials.",
+  "fresh_subjects": 8,
+  "v8_subjects": 6,
+  "v9_subjects": 2,
+  "continuation_turns": 2,
+  "continuation_cases": 12,
+  "cases": [
+    {
+      "agent": "closure_queue_v8",
+      "outcome": "scoped static pass; adoption unresolved",
+      "evidence": [
+        "call_0t3aKuEUoAQADIHYa600ii95"
+      ],
+      "note": "Selected-version source/license and restart/refetch assertion returned; unknown deployment compatibility kept Blocked."
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "outcome": "partial",
+      "evidence": [
+        "call_HGMi1qysazi4u5SELP6tCei1",
+        "call_85i9nUgqhhzVzqc2m29moRQT",
+        "call_dByzo422IpJZSP1mE3eQtscx"
+      ],
+      "note": "Actual license/core gitlink and versioned Parquet/aggregate tests; CSV examples only linked to rolling docs."
+    },
+    {
+      "agent": "closure_snapshot_a_v8",
+      "outcome": "partial",
+      "note": "Task scope clarified but answer inferred provider/copyright conflict from different role names."
+    },
+    {
+      "agent": "closure_snapshot_a_clarified_v8",
+      "outcome": "scoped pass",
+      "note": "Neutral role definitions supplied; bounded snapshot Borrow. Fixture change, not causal Skill improvement."
+    },
+    {
+      "agent": "closure_snapshot_b_v8",
+      "outcome": "scoped pass",
+      "note": "Missing rights block candidate; independent local design separately scoped."
+    },
+    {
+      "agent": "closure_small_v8",
+      "outcome": "scoped pass",
+      "note": "README typo only."
+    },
+    {
+      "agent": "closure_queue_v9",
+      "outcome": "supported conditional design",
+      "evidence": [
+        "call_2aZBUJOMMGeI8Yz8XNQL0C6g",
+        "call_Po1tzSE1YhJQ4lgcPZ4eqnVb",
+        "call_guae0yJAR664xUmzopfCdHvy"
+      ],
+      "note": "Source/license/selected-version tests support design; runtime and deployment compatibility not verified. Reviewer resolved initial parent concern: task supplies Node major only, so selecting a compatible minor is defensible, not proven contract failure."
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "outcome": "partial",
+      "evidence": [
+        "call_16QY2LjDlSupppVVKYk76BKQ",
+        "call_qlMh1gO3hxtXntDrccKyHqZY",
+        "call_vyI43dnVkdJ0qBcEfsXNy161",
+        "call_dcrgD0qjNURKuMIKbQMVy68u"
+      ],
+      "note": "Actual license bodies, binding/core gitlink and same-SHA CSV/Parquet tests. Ungrouped COUNT/SUM over oversized table does not evidence grouped aggregation state spilling. Exact claim that gitlink equals core release commit lacks returned tag-ref equality evidence; gitlink itself is valid."
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "small-edit",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "README.md"
+      ],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "covered-test",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "covered-variant",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "test-gap",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "test/retry.test.mjs"
+      ],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "local-failure",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "src/retry.mjs"
+      ],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "local-take",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "src/status-service.mjs",
+        "test/status-service.test.mjs"
+      ],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "unchanged-resume",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": [],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "dirty-resume",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": [],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "optional-timeout",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": [
+        "src/status-service.mjs",
+        "test/retry.test.mjs"
+      ],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "authority-resume",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": [],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "snapshot-a",
+      "batch": "closure-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": [],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "snapshot-b",
+      "batch": "closure-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": [],
+      "outcome": "scoped pass",
+      "evidence_scope": "Continuation; same session context and ordered tasks, not independent fresh start."
+    }
+  ],
+  "review_corrections": [
+    "V8 queue shutdown/restart assertion was present in a later response; earlier reviewer absence claim corrected.",
+    "V8 analytics CSV executable example existed in rolling documentation; missing version linkage, not wholly absent.",
+    "V8 aggregation implementation excerpt was v1.5.3; separately returned relevant tests/Parquet source were v1.5.5.",
+    "V9 queue conditional design under major-version-only task accepted after independent review; deployment fit remains unverified."
+  ],
+  "limits": [
+    "No causal improvement or reliability estimate",
+    "No fresh independence for 12 continuation cases",
+    "Historical header-only/revision-map tests not rerun on V9",
+    "No automatic trigger, actual compaction, other-host, package integration or workload validation"
+  ],
+  "independent_reviewer": "/root/luna6_analytics_v7, read-only review continuation; not a measured subject in this batch",
+  "reviewed_replay_runtime": "Node.js v24.18.0"
+}

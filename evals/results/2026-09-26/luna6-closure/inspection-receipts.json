@@ -1,0 +1,2549 @@
+{
+  "scope": "Observed retrievals, not endorsement of final claims. Shell-network results remain in paired call/hash records.",
+  "receipts": [
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:26.905Z",
+      "call_id": "call_EcwlV70VHFu3JlFSJrYOXC9P",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/package.json",
+      "status": "numbered content returned",
+      "visible_line_count": 103,
+      "first_visible_line": 0,
+      "last_visible_line": 102,
+      "output_section_sha256": "03651a0fd6060eb2f6ef37ef204bd9c8809b57ab0915d4d01dd571d1bdba7b99"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:26.905Z",
+      "call_id": "call_EcwlV70VHFu3JlFSJrYOXC9P",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 19,
+      "first_visible_line": 0,
+      "last_visible_line": 18,
+      "output_section_sha256": "92e650aea79949f38c6f54b048af7324920ed621ea4f64026cee33c931c4449d"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:26.905Z",
+      "call_id": "call_EcwlV70VHFu3JlFSJrYOXC9P",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 408,
+      "first_visible_line": 0,
+      "last_visible_line": 407,
+      "output_section_sha256": "0b3c4af37e7ccce7274f305626818d6055384bd61e021a6f783c573c07d05037"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:26.905Z",
+      "call_id": "call_EcwlV70VHFu3JlFSJrYOXC9P",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "501fdb1de830a6b8a15d7723a102fa99e9133af1cc70cb9ea34878c34655fd3d"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:26.905Z",
+      "call_id": "call_EcwlV70VHFu3JlFSJrYOXC9P",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/plans.test.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/plans.test.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "a87e47d529df75c48f4207041da4700b6c54a2b060559a9adcfb54b7abb89627"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:33.368Z",
+      "call_id": "call_mUL7pop4mccyp3GmcTyVBZ3d",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "SKIP LOCKED"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 152,
+      "first_visible_line": 1741,
+      "last_visible_line": 3447,
+      "output_section_sha256": "9dc46259035710d6378c3fa81814ce49d0ead8e02fef3cfe37e2ee2c9c59b83a"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:33.368Z",
+      "call_id": "call_mUL7pop4mccyp3GmcTyVBZ3d",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "run_at"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "5fba4c6d85400aaa8b04f08690f605c7940a4fd29cf400ccf4ecdd261fa9bd8d"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:33.368Z",
+      "call_id": "call_mUL7pop4mccyp3GmcTyVBZ3d",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "retry"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 31,
+      "first_visible_line": 44,
+      "last_visible_line": 1861,
+      "output_section_sha256": "f7e542775996696006245983f2b919cba7427e75d63f23c5b2b9b3e91ffb50bf"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:33.368Z",
+      "call_id": "call_mUL7pop4mccyp3GmcTyVBZ3d",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view3",
+        "pattern": "FOR UPDATE SKIP LOCKED"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 7,
+      "first_visible_line": 1291,
+      "last_visible_line": 1297,
+      "output_section_sha256": "2d2203865a02b801f3d1e078b6d9bfbafc7e341656e5ba6113f81831764a8825"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:33.368Z",
+      "call_id": "call_mUL7pop4mccyp3GmcTyVBZ3d",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view3",
+        "pattern": "async function fetch"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "d2cb7eb80943edaabbaac84e8c74da559e2b4a1d05c5638c95fde31c9785bddf"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:39.564Z",
+      "call_id": "call_RuTHjmrzbsMpozLMogndePfj",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://api.github.com/repos/timgit/pg-boss/git/trees/12.34.0?recursive=1",
+        "lineno": null
+      },
+      "resolved_url": "https://api.github.com/repos/timgit/pg-boss/git/trees/12.34.0?recursive=1\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "f751da91b016f8cb7295a69290f89bb014de9fe652d9a5afce718e54d89194d2"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:39.564Z",
+      "call_id": "call_RuTHjmrzbsMpozLMogndePfj",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn159view2",
+        "lineno": 1737
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 165,
+      "first_visible_line": 1672,
+      "last_visible_line": 1836,
+      "output_section_sha256": "33a866d38235320469b4b14c62d8065da897a08c621c5e8b8eee049b52d4e3df"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:39.564Z",
+      "call_id": "call_RuTHjmrzbsMpozLMogndePfj",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn159view2",
+        "lineno": 1800
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 154,
+      "first_visible_line": 1750,
+      "last_visible_line": 1903,
+      "output_section_sha256": "865491c28d71883bef9ef23282a3d6599c984272a26f3544101ca973b59f4dac"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:39.564Z",
+      "call_id": "call_RuTHjmrzbsMpozLMogndePfj",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn159view2",
+        "lineno": 1900
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 179,
+      "first_visible_line": 1854,
+      "last_visible_line": 2032,
+      "output_section_sha256": "5d3d9e67790bdc4e254ff90c30dcfa14feacf170feb4a1a099eaf34862114618"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:51.387Z",
+      "call_id": "call_ReU3okKBof3d8VEw22VezGO9",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/fetchTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 265,
+      "first_visible_line": 0,
+      "last_visible_line": 264,
+      "output_section_sha256": "6c96729c7d41ee79b357c4e1e339c07de08c619de9bde35ad8bc0751dfd29bfa"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:51.387Z",
+      "call_id": "call_ReU3okKBof3d8VEw22VezGO9",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/failureTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/failureTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 324,
+      "first_visible_line": 0,
+      "last_visible_line": 323,
+      "output_section_sha256": "d77fa986f5bf0ef5d5be3ba2c96306284841707c02fa3e72750d61ccab19598e"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:51.387Z",
+      "call_id": "call_ReU3okKBof3d8VEw22VezGO9",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "a83f216c683e77491be055a484516fce50eb1c42efed3e63e59d55c20cff2431"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:51.387Z",
+      "call_id": "call_ReU3okKBof3d8VEw22VezGO9",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/README.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/README.md",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "fb7fc45fce3ca6de6af954c7ff57fbc731d1c0578a4a7e4fb31fc93be52164e4"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:58.015Z",
+      "call_id": "call_DjlasUsn2SYSrUKizSGx9joX",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "expired"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 11,
+      "first_visible_line": 984,
+      "last_visible_line": 2892,
+      "output_section_sha256": "593180f5a0f4e2a6a58fd3cdcbd65ec551af8b8dc46975c8403f7820405e8594"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:58.015Z",
+      "call_id": "call_DjlasUsn2SYSrUKizSGx9joX",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "started_on <"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 28,
+      "first_visible_line": 3378,
+      "last_visible_line": 3405,
+      "output_section_sha256": "07f96326cbbbf9976343bb2afbe0fafd1d9777bc44206ba6cd73c8699f8279b5"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:58.015Z",
+      "call_id": "call_DjlasUsn2SYSrUKizSGx9joX",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view3",
+        "pattern": "expireInSeconds"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/manager.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 85,
+      "first_visible_line": 70,
+      "last_visible_line": 1562,
+      "output_section_sha256": "47c71af107ea51866fe728e6b76c3e5bca94461432acc62f8dd84800cd083e71"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:55:58.015Z",
+      "call_id": "call_DjlasUsn2SYSrUKizSGx9joX",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn166view1",
+        "pattern": "resume"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/failureTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "55daeae09130714f318e583366df9147e025d566ca0bed79c57962cfa65595eb"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:03.581Z",
+      "call_id": "call_0t3aKuEUoAQADIHYa600ii95",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "failJobsByTimeout"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 99,
+      "first_visible_line": 984,
+      "last_visible_line": 2577,
+      "output_section_sha256": "24e53a22434e7c1fc1b25c9c9cbca5322e7b866d95b4780094485ddf67b92a4f"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:03.581Z",
+      "call_id": "call_0t3aKuEUoAQADIHYa600ii95",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "failJobsByHeartbeat"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 144,
+      "first_visible_line": 984,
+      "last_visible_line": 2577,
+      "output_section_sha256": "92cad82edd444ace0bf56c7c72cf4609b1260027f5735bdc9346502edf46ce1b"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:03.581Z",
+      "call_id": "call_0t3aKuEUoAQADIHYa600ii95",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn166view1",
+        "pattern": "timeout"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/failureTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 33,
+      "first_visible_line": 695,
+      "last_visible_line": 727,
+      "output_section_sha256": "5d08eb39844dccda80b7222b963c497be6a0293fda4bc2b925786e11459bfefc"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:16.130Z",
+      "call_id": "call_CqJsdqTKrf32r2fHMlQeWgO7",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/package.json\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "61f62e6e543ced75ae1c34f2f40657b4de8d93959a6d0e8d273deb9c85aafa91"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:16.130Z",
+      "call_id": "call_CqJsdqTKrf32r2fHMlQeWgO7",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/LICENSE\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "12ee3d8864442d126260c9872619a1b097390a0d48f30ca0b86fa760320750ab"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:16.130Z",
+      "call_id": "call_CqJsdqTKrf32r2fHMlQeWgO7",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/src/WorkerPool.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/src/WorkerPool.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "bab2b1c65e33249f85e81f3a29ce64d0c2d99a1fe4a546c3727dbdf0854dc291"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:16.130Z",
+      "call_id": "call_CqJsdqTKrf32r2fHMlQeWgO7",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/src/workerUtils.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/src/workerUtils.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "a152671e65439079ec9e53edc3b967305c8d21ed0ee15ec752b6a9b96cf4cd25"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:16.130Z",
+      "call_id": "call_CqJsdqTKrf32r2fHMlQeWgO7",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/test/worker.test.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/packages/worker/test/worker.test.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "703c2e92b32a9aa9412ca406fdcff6fd31d0b55bf11472fad4acdff097678bc5"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:35.705Z",
+      "call_id": "call_4HrMsfM0AISoxYgn9ejzFLsr",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/package.json\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "ab3e9503303948c91ffb2d0e163bc63367c1f67b702efbd680a054de281b2c04"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:35.705Z",
+      "call_id": "call_4HrMsfM0AISoxYgn9ejzFLsr",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/LICENSE\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "1b61529a61c98e6c94b0257c5dd12d3bb526dd0f6cd1a2bbc7623cf84261426b"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:35.705Z",
+      "call_id": "call_4HrMsfM0AISoxYgn9ejzFLsr",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/src/WorkerPool.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/src/WorkerPool.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "60ade0b67e0b0b12612034d73e9defa80d5d537c31ec9e05b653f824f8c5c1d3"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:35.705Z",
+      "call_id": "call_4HrMsfM0AISoxYgn9ejzFLsr",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/src/workerUtils.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/src/workerUtils.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "6a21f784ef52311979908d3b40b2f5d1b53a4113aa17fdb56294de50f1915e95"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:35.705Z",
+      "call_id": "call_4HrMsfM0AISoxYgn9ejzFLsr",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/test/worker.test.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.17.3/worker/test/worker.test.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "38bc00e237f6e995834c1f2ea0716540a04bab0164abc2d648f7865711f02224"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:51.050Z",
+      "call_id": "call_BMjiUAzNJf6zCUd0JG9drwkQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/main/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/main/package.json",
+      "status": "numbered content returned",
+      "visible_line_count": 137,
+      "first_visible_line": 0,
+      "last_visible_line": 136,
+      "output_section_sha256": "4bd9b4875b9db6fc4fdae3391a9c6464860015a6d541b490b4d8da2197a0ed3e"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:51.050Z",
+      "call_id": "call_BMjiUAzNJf6zCUd0JG9drwkQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/main/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/main/LICENSE\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "cbd4862dc3f69268f1cf0af1fb1ec7aaa0155a4b0692e3343110c96389cc8406"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:51.050Z",
+      "call_id": "call_BMjiUAzNJf6zCUd0JG9drwkQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/main/src/main.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/main/src/main.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 537,
+      "first_visible_line": 0,
+      "last_visible_line": 536,
+      "output_section_sha256": "a58646d21a2bc4c32936fb1b965d4bf7ceb0e4e3b17a03e8fdf4028edc967546"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:51.050Z",
+      "call_id": "call_BMjiUAzNJf6zCUd0JG9drwkQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/main/src/sql/getJobs.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/main/src/sql/getJobs.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "3a180e41ee31e7e71368f1952ed1a38002a46b9d08f665e69ef4daf74b4a71be"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:51.050Z",
+      "call_id": "call_BMjiUAzNJf6zCUd0JG9drwkQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/main/__tests__/worker.test.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/main/__tests__/worker.test.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "3fc6ba6e9b123f6e004d2bffb268ccc73b005b50986797e5a89805c2241cfdbd"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:57.282Z",
+      "call_id": "call_zQ1mLCaDpAhIA1Llh6AgbVeE",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "start_after"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 309,
+      "first_visible_line": 928,
+      "last_visible_line": 2989,
+      "output_section_sha256": "3635238ba5039bd4be3ccd4f220b426c3d7ab7410968c7df4070c6d85a7df8f6"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:57.282Z",
+      "call_id": "call_zQ1mLCaDpAhIA1Llh6AgbVeE",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "createTableJob"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 110,
+      "first_visible_line": 158,
+      "last_visible_line": 567,
+      "output_section_sha256": "dc87242865d9acd70b09cd328dfd484cbdf673ceab246e7f015ee979bc234473"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:56:57.282Z",
+      "call_id": "call_zQ1mLCaDpAhIA1Llh6AgbVeE",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn159view2",
+        "pattern": "cronMonitor"
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/plans.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "46263e086eb05a31c20aa588f3ce1494ef9b435963258ba9b1641801e3287613"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:07.091Z",
+      "call_id": "call_zcns4gF9YijettH8qvtZKuNK",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/hooks.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/hooks.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 71,
+      "first_visible_line": 0,
+      "last_visible_line": 70,
+      "output_section_sha256": "b8d19c6e651087c5db83bb9ecd25d7f790b41ada463d251d510f70379c709c5b"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:07.091Z",
+      "call_id": "call_zcns4gF9YijettH8qvtZKuNK",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/testHelper.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/testHelper.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 341,
+      "first_visible_line": 0,
+      "last_visible_line": 340,
+      "output_section_sha256": "b4db29897c0c42b2392f588052263b1c8fbe72a34c53b8f9413989b15a6219bb"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:07.091Z",
+      "call_id": "call_zcns4gF9YijettH8qvtZKuNK",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/vitest.config.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/vitest.config.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 27,
+      "first_visible_line": 0,
+      "last_visible_line": 26,
+      "output_section_sha256": "2bb42693526dc4f8e46fa6452823a63b1ad9b5c2c1cd29f885f493cfbc0754c6"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:07.091Z",
+      "call_id": "call_zcns4gF9YijettH8qvtZKuNK",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/worker.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/src/worker.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 133,
+      "first_visible_line": 0,
+      "last_visible_line": 132,
+      "output_section_sha256": "81745889c3c7971000d5b55dfb9f3aeb2dff4e69de22eb9434d5a07cbbcf7aee"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:30.002Z",
+      "call_id": "call_XY19XlCaqT85XEWNm34JTXLm",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/README.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/README.md",
+      "status": "numbered content returned",
+      "visible_line_count": 103,
+      "first_visible_line": 0,
+      "last_visible_line": 102,
+      "output_section_sha256": "861140fdabe09b622a57671ac2b4bafc1da72dc8297758ad1e6831685132d0d6"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:30.002Z",
+      "call_id": "call_XY19XlCaqT85XEWNm34JTXLm",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/jobs.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/jobs.md",
+      "status": "numbered content returned",
+      "visible_line_count": 392,
+      "first_visible_line": 0,
+      "last_visible_line": 391,
+      "output_section_sha256": "10a34d230b62c21361c9549383a1e875521b9f8ca42f08dad7534662873c1024"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:30.002Z",
+      "call_id": "call_XY19XlCaqT85XEWNm34JTXLm",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/workers.md",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "3fca33141bb3785b6efec4bc0386b96aab09b4f08ea292ec5edbb6ade1c87660"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:30.002Z",
+      "call_id": "call_XY19XlCaqT85XEWNm34JTXLm",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/adapters.md",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/docs/api/adapters.md",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "c89803f32efcc40369ec99ada6641c681d3111868ac4e1ee6a0a2815854740f0"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:39.662Z",
+      "call_id": "call_UzDu2wOsx9gRK1aDxxldnjhx",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/workerTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/workerTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 146,
+      "first_visible_line": 0,
+      "last_visible_line": 145,
+      "output_section_sha256": "489ee539d6e5e9429cdb11b48334e416c8fdf118b295f49bf107b2578f961979"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:39.662Z",
+      "call_id": "call_UzDu2wOsx9gRK1aDxxldnjhx",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/superviseTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/superviseTest.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "98036042673b76b52f5d5a1ce0fcc5b024dfce1c001f072e08db6c8e6c63df11"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:39.662Z",
+      "call_id": "call_UzDu2wOsx9gRK1aDxxldnjhx",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/expiryTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/12.34.0/test/expiryTest.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "8b9c146a67ba9b89e904661698e27b3da5b036db45918c07ae3e1ee7f045cdc4"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:56.817Z",
+      "call_id": "call_a4mjZzVoPwI2Y9ZUHBsPquwG",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/tree/12.34.0/test",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/tree/12.34.0/test\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "fce1f26452a8636de520a2bdaf68e817ca864cf05928034ff7ef59ae558b7ff5"
+    },
+    {
+      "agent": "closure_queue_v8",
+      "timestamp": "2026-09-26T07:57:56.817Z",
+      "call_id": "call_a4mjZzVoPwI2Y9ZUHBsPquwG",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/tree/12.34.0/test",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/tree/12.34.0/test\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "95b47da1a72dc63654a30e61f99c4db372060420b6043fdfdc2180403f55400c"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:36.698Z",
+      "call_id": "call_i5ZRIDNY4LcoLQKsO4SVSyUD",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/tools/pythonpkg/setup.py",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/tools/pythonpkg/setup.py\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "8367cf2a43281c9cc232494b2126882b705adfc3c7143924a2c5e747c8edc3d0"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:36.698Z",
+      "call_id": "call_i5ZRIDNY4LcoLQKsO4SVSyUD",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 171,
+      "first_visible_line": 0,
+      "last_visible_line": 249,
+      "output_section_sha256": "29f46f2c6b46e1157dcbf705ba30b4654ed5d08a44dec430f9517e8473c0e2ff"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:36.698Z",
+      "call_id": "call_i5ZRIDNY4LcoLQKsO4SVSyUD",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 796,
+      "first_visible_line": 0,
+      "last_visible_line": 881,
+      "output_section_sha256": "5bc95bbda5eeb8add534cb4bd835d65fc99cf866cd8dc6308d61a725c69f4923"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:36.698Z",
+      "call_id": "call_i5ZRIDNY4LcoLQKsO4SVSyUD",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/aggregates/test_aggregate.test",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/aggregates/test_aggregate.test\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "8f551433fdb809ab40c881997bb32058abfdf9f6489ca55bb5e317c53e0154f2"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:36.698Z",
+      "call_id": "call_i5ZRIDNY4LcoLQKsO4SVSyUD",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/releases/tag/v1.5.3",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/releases/tag/v1.5.3",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "b7201af041235294b1aaac14d67536e1210e310eda60d11f8c9474f33ca8a02c"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:53.245Z",
+      "call_id": "call_OvidhMTMGGVnvEqJGLuTLQg3",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/pyproject.toml",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/pyproject.toml",
+      "status": "numbered content returned",
+      "visible_line_count": 1150,
+      "first_visible_line": 0,
+      "last_visible_line": 1227,
+      "output_section_sha256": "f7b8287b250491dc5ff093e61f1103ce22d2c33025a1e2f53255855c0ddd98f6"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:53.245Z",
+      "call_id": "call_OvidhMTMGGVnvEqJGLuTLQg3",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/LICENSE",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "475dc38d224780a03f6c934194ecabc1f78f4c6069b6031cc9f6dae73546063d"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:53.245Z",
+      "call_id": "call_OvidhMTMGGVnvEqJGLuTLQg3",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/duckdb/__init__.py",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/duckdb/__init__.py",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "9cd6e0372273ff675219c3baece7ed0ed925f900bfaf8c71ddeeb8155a91d4e0"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:53.245Z",
+      "call_id": "call_OvidhMTMGGVnvEqJGLuTLQg3",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/tests/test_aggregation.py",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/tests/test_aggregation.py\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "ab6bafbeba66e3f579c3ae810b8adc1e3a20c7c0e20a4dbe9252a6e775f6f1da"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:53.245Z",
+      "call_id": "call_OvidhMTMGGVnvEqJGLuTLQg3",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/copy/parquet/parquet_hive.test",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/copy/parquet/parquet_hive.test",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "2c705331712e258b88dbb81c072035069821d72879080c3f67ff650424402e71"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:55:53.245Z",
+      "call_id": "call_OvidhMTMGGVnvEqJGLuTLQg3",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "e47ffd2db27699470d845ad83ac9cec9d8a775bd65b8cbd6ccef1790db90f3bd"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:05.323Z",
+      "call_id": "call_Uy6vCsu7xQWFNt6w0ocOkpTM",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn162view2",
+        "pattern": "Sink"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 337,
+      "first_visible_line": 2374,
+      "last_visible_line": 3285,
+      "output_section_sha256": "e0c8275c7d7904017b2034df98e5d1a214a08640b1400e09c06c4d498b736c29"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:05.323Z",
+      "call_id": "call_Uy6vCsu7xQWFNt6w0ocOkpTM",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn162view2",
+        "pattern": "Finalize"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 78,
+      "first_visible_line": 2833,
+      "last_visible_line": 3363,
+      "output_section_sha256": "2932258e61317291d83e99e9b2deaaaa154069452bb1038c1de4fa2603284cfd"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:05.323Z",
+      "call_id": "call_Uy6vCsu7xQWFNt6w0ocOkpTM",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn162view2",
+        "pattern": "External"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 11,
+      "first_visible_line": 1,
+      "last_visible_line": 15,
+      "output_section_sha256": "27759dfedd80a9511ab90a1e16b904bcdc4c055bbd2f7e4932255a56e66f02bc"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:05.323Z",
+      "call_id": "call_Uy6vCsu7xQWFNt6w0ocOkpTM",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn167view4",
+        "pattern": "COPY"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/copy/parquet/parquet_hive.test",
+      "status": "numbered content returned",
+      "visible_line_count": 108,
+      "first_visible_line": 130,
+      "last_visible_line": 248,
+      "output_section_sha256": "f0bd5da5f25a9526700702aa880ce2fb126ad07ae36d76915eb5f969c781e8b0"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:05.323Z",
+      "call_id": "call_Uy6vCsu7xQWFNt6w0ocOkpTM",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn167view1",
+        "pattern": "Permission is hereby"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 1,
+      "first_visible_line": 204,
+      "last_visible_line": 204,
+      "output_section_sha256": "9ed2e9f08c97f3411fc5c4d19d601378fdd9ee31da03f146d04f85cf4d9d226f"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:05.323Z",
+      "call_id": "call_Uy6vCsu7xQWFNt6w0ocOkpTM",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn167view2",
+        "pattern": "def connect"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/duckdb/__init__.py",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "0c99d76d25d380cbe19de7f307a921fd04d83b80aed7e682c1eb5cc94ddf5948"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:05.323Z",
+      "call_id": "call_Uy6vCsu7xQWFNt6w0ocOkpTM",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn167view0",
+        "pattern": "requires-python"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/pyproject.toml",
+      "status": "numbered content returned",
+      "visible_line_count": 25,
+      "first_visible_line": 1133,
+      "last_visible_line": 1157,
+      "output_section_sha256": "834058d6eff2a428246a471a1fbf85290980c6de18356f554ca2f1165521d5eb"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:21.020Z",
+      "call_id": "call_XC4PlblAsWhs9IXLo3HAqe96",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn167view4",
+        "pattern": "PARTITION_BY"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/copy/parquet/parquet_hive.test",
+      "status": "numbered content returned",
+      "visible_line_count": 56,
+      "first_visible_line": 820,
+      "last_visible_line": 875,
+      "output_section_sha256": "5048790df4e2c94b958e123416bdc2e4667313039cfa132f9ed186322a45f293"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:21.020Z",
+      "call_id": "call_XC4PlblAsWhs9IXLo3HAqe96",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn167view4",
+        "pattern": "hive_partitioning"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/copy/parquet/parquet_hive.test",
+      "status": "numbered content returned",
+      "visible_line_count": 290,
+      "first_visible_line": 586,
+      "last_visible_line": 875,
+      "output_section_sha256": "c7a090c34afdb76c7d5be8c771c7c75f487126698bc27859227077f5f54ceb13"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:21.020Z",
+      "call_id": "call_XC4PlblAsWhs9IXLo3HAqe96",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn162view2",
+        "pattern": "radix"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 112,
+      "first_visible_line": 2183,
+      "last_visible_line": 3011,
+      "output_section_sha256": "b84c2a3c7577a1fc14d6e95b0adc4896032b17e6df7a56b7e5bc92a167a60440"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:21.020Z",
+      "call_id": "call_XC4PlblAsWhs9IXLo3HAqe96",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn162view2",
+        "pattern": "Repartition"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "a172d863570f7ca3982657a1833226fe3216ff792680c5035f654cc4b945c982"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:31.304Z",
+      "call_id": "call_GEZIxpq0emM1aS8Hf01Uda86",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn158search0",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/docs/current/guides/performance/how_to_tune_workloads",
+      "status": "numbered content returned",
+      "visible_line_count": 111,
+      "first_visible_line": 398,
+      "last_visible_line": 630,
+      "output_section_sha256": "71830ac9f094253d37cabdf994c64f337be3c5a2d5415998f188de0898ea8947"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:31.304Z",
+      "call_id": "call_GEZIxpq0emM1aS8Hf01Uda86",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://duckdb.org/docs/current/configuration/overview",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/docs/current/configuration/overview",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "354a473a7a8e4f4126de7ed3b45538f055f80d1887882fcfcdeb488678656d14"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:31.304Z",
+      "call_id": "call_GEZIxpq0emM1aS8Hf01Uda86",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://duckdb.org/docs/current/data/csv/overview",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/docs/current/data/csv/overview",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "1224f78791cf99d56816ce8bfc6f7b171d5189da07d2d41bb298f7bd7c44fe1a"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:31.304Z",
+      "call_id": "call_GEZIxpq0emM1aS8Hf01Uda86",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn158search3",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/docs/lts/sql/statements/copy",
+      "status": "numbered content returned",
+      "visible_line_count": 227,
+      "first_visible_line": 462,
+      "last_visible_line": 696,
+      "output_section_sha256": "1aa0193e9189cd3b811c33dffd2cbcb6f17212bf3823cde8ccd8d62fd8794f18"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:55.369Z",
+      "call_id": "call_EOoRkQxocL9ntexqYDqHO91t",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external/simple_external_aggregate.test_slow",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external/simple_external_aggregate.test_slow",
+      "status": "numbered content returned",
+      "visible_line_count": 281,
+      "first_visible_line": 0,
+      "last_visible_line": 366,
+      "output_section_sha256": "e146bf5a26400265d03843890337388d5191b53dbd0c7e33b3e21b57039d56ca"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:55.369Z",
+      "call_id": "call_EOoRkQxocL9ntexqYDqHO91t",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/copy/parquet/hive_partitioning_struct.test",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/copy/parquet/hive_partitioning_struct.test",
+      "status": "numbered content returned",
+      "visible_line_count": 239,
+      "first_visible_line": 0,
+      "last_visible_line": 324,
+      "output_section_sha256": "77cd716c39a61dd468abd63afde498cb8f1e59453495f6a53fb053b2c24d9300"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:56:55.369Z",
+      "call_id": "call_EOoRkQxocL9ntexqYDqHO91t",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/tests/test_connect.py",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/tests/test_connect.py\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "3cddca7dd248685a2f5cc5d19cca8899df0f62727bcf610378bbe6b1bcd65e47"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:57:00.314Z",
+      "call_id": "call_OKlSCfBusM6H91jxYGpU4eVU",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external/large_external_aggregate.test_slow",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external/large_external_aggregate.test_slow",
+      "status": "numbered content returned",
+      "visible_line_count": 217,
+      "first_visible_line": 0,
+      "last_visible_line": 302,
+      "output_section_sha256": "3d3bb07b4bb8b2527f3ec3ca7ec88f3b7cd306044be578ad0d07e4d90d6c5224"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:57:00.314Z",
+      "call_id": "call_OKlSCfBusM6H91jxYGpU4eVU",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external/small_external_aggregate.test_slow",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.3/test/sql/aggregate/external/small_external_aggregate.test_slow",
+      "status": "numbered content returned",
+      "visible_line_count": 280,
+      "first_visible_line": 0,
+      "last_visible_line": 365,
+      "output_section_sha256": "eec7f4994d713d2dc38322772643913079bf1c983da16811b1efa24c0b03b275"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:57:15.568Z",
+      "call_id": "call_uRGuiaRCgVj6KbSPZiEib0lk",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/.gitmodules",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/.gitmodules",
+      "status": "numbered content returned",
+      "visible_line_count": 136,
+      "first_visible_line": 0,
+      "last_visible_line": 213,
+      "output_section_sha256": "a19ebdc92dda13520cd3c03a1a7721a9351793315c6795681a237ec00dacb0a4"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:57:15.568Z",
+      "call_id": "call_uRGuiaRCgVj6KbSPZiEib0lk",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/CMakeLists.txt",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/CMakeLists.txt",
+      "status": "numbered content returned",
+      "visible_line_count": 462,
+      "first_visible_line": 0,
+      "last_visible_line": 539,
+      "output_section_sha256": "8f6061a460bfe31c3b23545e95375e215c1ed84c0f2a19b748fab394b77959db"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:57:15.568Z",
+      "call_id": "call_uRGuiaRCgVj6KbSPZiEib0lk",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/duckdb_packaging/duckdb_version.txt",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.3/duckdb_packaging/duckdb_version.txt\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "6ef4d74714315a9028efc080c25214492424f90447c43b45f32df94453359376"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:37.403Z",
+      "call_id": "call_6rXUNHcyc9BZoXsvCiNq62WY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.5/pyproject.toml",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.5/pyproject.toml",
+      "status": "numbered content returned",
+      "visible_line_count": 1123,
+      "first_visible_line": 0,
+      "last_visible_line": 1200,
+      "output_section_sha256": "82a73f2e68690dd4d159fb57fc38ed08c03515f9910da8503e4a853dfc471f3a"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:37.403Z",
+      "call_id": "call_6rXUNHcyc9BZoXsvCiNq62WY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb-python/blob/v1.5.5/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.5/LICENSE",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "1f4ebedc6661cbf38f131c016e329a9b3ee1ccfce21d7ac5cb2825fb2be9ce0a"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:37.403Z",
+      "call_id": "call_6rXUNHcyc9BZoXsvCiNq62WY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.5/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.5/src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "c1be295a50f0f7dea0ae8ed1ca8998345b6f4ce8ab709ad05ffe3d9329aeb1df"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:37.403Z",
+      "call_id": "call_6rXUNHcyc9BZoXsvCiNq62WY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.5/test/sql/aggregate/external/small_external_aggregate.test_slow",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.5/test/sql/aggregate/external/small_external_aggregate.test_slow",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "70bf7847f8977492ef31456a85cb0c4c2ddf9f444965f8dd0decda3a3cbf42e5"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:37.403Z",
+      "call_id": "call_6rXUNHcyc9BZoXsvCiNq62WY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.5/test/sql/copy/parquet/hive_partitioning_struct.test",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.5/test/sql/copy/parquet/hive_partitioning_struct.test",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "1534b153116747b64eb0838f544d01a5cc2c318e07b1e278fcbf8665ab222230"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:37.403Z",
+      "call_id": "call_6rXUNHcyc9BZoXsvCiNq62WY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/blob/v1.5.5/extension/parquet/parquet_writer.cpp",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.5/extension/parquet/parquet_writer.cpp",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "eea76136dc34cc4ffe0fa9a9380187138a6d3f628f81708828c321fbd753f1a3"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:37.403Z",
+      "call_id": "call_6rXUNHcyc9BZoXsvCiNq62WY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/releases/tag/v1.5.5",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/releases/tag/v1.5.5",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "6eca913ed760e2bb75928ee5f269d7f457b4ad2f7494e3df7e6a2f4d59fb7263"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:49.012Z",
+      "call_id": "call_85i9nUgqhhzVzqc2m29moRQT",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn190view1",
+        "pattern": "Permission is hereby"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb-python/blob/v1.5.5/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 56,
+      "first_visible_line": 130,
+      "last_visible_line": 208,
+      "output_section_sha256": "44cdc56692cb74fb0fe82a7b07327f6726ee78f5291089e634b8ad5b8348e9ce"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:49.012Z",
+      "call_id": "call_85i9nUgqhhzVzqc2m29moRQT",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn190view3",
+        "pattern": "memory_limit"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.5/test/sql/aggregate/external/small_external_aggregate.test_slow",
+      "status": "numbered content returned",
+      "visible_line_count": 74,
+      "first_visible_line": 292,
+      "last_visible_line": 365,
+      "output_section_sha256": "757f0c65cb8d299ca7399a2ec9a0df2d24a81e93257b29ec59853cf4de04ea69"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:49.012Z",
+      "call_id": "call_85i9nUgqhhzVzqc2m29moRQT",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn190view4",
+        "pattern": "COPY"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.5/test/sql/copy/parquet/hive_partitioning_struct.test",
+      "status": "numbered content returned",
+      "visible_line_count": 191,
+      "first_visible_line": 113,
+      "last_visible_line": 324,
+      "output_section_sha256": "46dc08fdccf9552e9a68feb6221fe8451441538d3a4b07f30f62d5a595f196c4"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:49.012Z",
+      "call_id": "call_85i9nUgqhhzVzqc2m29moRQT",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn190view5",
+        "pattern": "FlushRowGroup"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/blob/v1.5.5/extension/parquet/parquet_writer.cpp",
+      "status": "numbered content returned",
+      "visible_line_count": 218,
+      "first_visible_line": 3289,
+      "last_visible_line": 3506,
+      "output_section_sha256": "a8aedc05d446ad875790dc84b6ae0cf7e5d805fe44e96a9ce9fdca25ee82e5d3"
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "timestamp": "2026-09-26T07:58:49.012Z",
+      "call_id": "call_85i9nUgqhhzVzqc2m29moRQT",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn190view6",
+        "pattern": "Released"
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/releases/tag/v1.5.5",
+      "status": "numbered content returned",
+      "visible_line_count": 38,
+      "first_visible_line": 120,
+      "last_visible_line": 169,
+      "output_section_sha256": "6027185b68b3e7ba548335b88111e7850a2c0e14d0d3d2e0aec8ac603d34f3f0"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:35.067Z",
+      "call_id": "call_dAGiJNM76xGBoNkgHR5KeF5y",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/tools/pythonpkg/pyproject.toml",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/tools/pythonpkg/pyproject.toml\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "1e6c49ed23077fc784f2af53a64defe84139a1cd9048a02efd8b599d37969661"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:35.067Z",
+      "call_id": "call_dAGiJNM76xGBoNkgHR5KeF5y",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 5,
+      "first_visible_line": 0,
+      "last_visible_line": 4,
+      "output_section_sha256": "e3daa211a19fa0619aa13bad0366d63eeb69d21702185ef775dfc493250eeb1a"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:35.067Z",
+      "call_id": "call_dAGiJNM76xGBoNkgHR5KeF5y",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/tools/pythonpkg/duckdb/__init__.py",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/tools/pythonpkg/duckdb/__init__.py\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "4fa96c4a0510589bdeb1a0af52d83623af0169450aa726d8c400e38ac9d596a3"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:35.067Z",
+      "call_id": "call_dAGiJNM76xGBoNkgHR5KeF5y",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/test/sql/copy/parquet/test_copy_parquet.py",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/test/sql/copy/parquet/test_copy_parquet.py\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "0b3012e47943e28fdbd2f62eaa2a94b4b33759b9dd68ac0f4246639ad631a169"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:35.067Z",
+      "call_id": "call_dAGiJNM76xGBoNkgHR5KeF5y",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/test/sql/copy/parquet/test_copy_parquet.test",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/v1.5.4/test/sql/copy/parquet/test_copy_parquet.test\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "869e302680a36e080344998622fb4821e3d6003fb37cf8c52de53638a4cf3d94"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:45.808Z",
+      "call_id": "call_zVObYqR8ChEdV3aHAEHWlzk1",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://api.github.com/repos/duckdb/duckdb/git/trees/v1.5.4?recursive=1",
+        "lineno": null
+      },
+      "resolved_url": "https://api.github.com/repos/duckdb/duckdb/git/trees/v1.5.4?recursive=1\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "c0d1ff802b424bde442a815963807d6f9aced95ab302685501df61bb2af3a42c"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:49.628Z",
+      "call_id": "call_pevU0i2cCpUD8fCQgY6aBMrY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/tree/v1.5.4/tools/pythonpkg",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/tree/v1.5.4/tools/pythonpkg\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "2cc5e943b46bf20787132057c783ef2f1df3030c3d9f248e0d0b8026ea8c5f35"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:05:49.628Z",
+      "call_id": "call_pevU0i2cCpUD8fCQgY6aBMrY",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/duckdb/duckdb/tree/v1.5.4/test/sql",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/duckdb/duckdb/tree/v1.5.4/test/sql\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "15c97c85a1737261a9a03b7d5e8e5c7bc12d15789ab92cb12a590b4d865a05a2"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:15.812Z",
+      "call_id": "call_16QY2LjDlSupppVVKYk76BKQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/pyproject.toml",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/pyproject.toml",
+      "status": "numbered content returned",
+      "visible_line_count": 444,
+      "first_visible_line": 0,
+      "last_visible_line": 443,
+      "output_section_sha256": "363b909b5d6cd489daf0bb1a2c68441ce016cd9ed471cd69875423f67a9add16"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:15.812Z",
+      "call_id": "call_16QY2LjDlSupppVVKYk76BKQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 5,
+      "first_visible_line": 0,
+      "last_visible_line": 4,
+      "output_section_sha256": "ef7654246eeb9e1926712a5f85096a416ec4bed109bf0b3083d66d4f6fe8cd1c"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:15.812Z",
+      "call_id": "call_16QY2LjDlSupppVVKYk76BKQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/duckdb/__init__.py",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/duckdb/__init__.py",
+      "status": "numbered content returned",
+      "visible_line_count": 162,
+      "first_visible_line": 0,
+      "last_visible_line": 161,
+      "output_section_sha256": "2e5658909f5bf2f49200898ab42851e3f4fa581c3411e227c1fa3c744cf1dd3d"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:15.812Z",
+      "call_id": "call_16QY2LjDlSupppVVKYk76BKQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/tests/fast/api/test_config.py",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/tests/fast/api/test_config.py",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "2a46118d343db72ed3ee677b3313001596a985d1b401dd6404593daf41e45378"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:15.812Z",
+      "call_id": "call_16QY2LjDlSupppVVKYk76BKQ",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/tests/fast/api/test_duckdb_execute.py",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb-python/v1.5.4/tests/fast/api/test_duckdb_execute.py",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "1eca0f46cccccf2ad7550b55dfd2fe2951d41b6ef768f7b49d7cd365101a3c44"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:40.720Z",
+      "call_id": "call_dcrgD0qjNURKuMIKbQMVy68u",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/copy/csv/csv_memory_management.test_slow",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/copy/csv/csv_memory_management.test_slow",
+      "status": "numbered content returned",
+      "visible_line_count": 39,
+      "first_visible_line": 0,
+      "last_visible_line": 38,
+      "output_section_sha256": "72ab35be7209352fd361a85406fe8abd5c5b89a85c011c1f1f85b9957819f56d"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:40.720Z",
+      "call_id": "call_dcrgD0qjNURKuMIKbQMVy68u",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/storage/buffer_manager/larger_than_memory_aggregate.test_slow",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/storage/buffer_manager/larger_than_memory_aggregate.test_slow",
+      "status": "numbered content returned",
+      "visible_line_count": 54,
+      "first_visible_line": 0,
+      "last_visible_line": 53,
+      "output_section_sha256": "66c6da3f21cd7ffc2c4300f479cc56c643b56f33f20b9a0700f7f202afeb6d27"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:40.720Z",
+      "call_id": "call_dcrgD0qjNURKuMIKbQMVy68u",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/copy/parquet/writer/parquet_write_memory_usage.test",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/copy/parquet/writer/parquet_write_memory_usage.test",
+      "status": "numbered content returned",
+      "visible_line_count": 27,
+      "first_visible_line": 0,
+      "last_visible_line": 26,
+      "output_section_sha256": "be913732b1df1cccde67a47e3c74ca96218e02aae1bd5998b61ec611c2499fdb"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:06:40.720Z",
+      "call_id": "call_dcrgD0qjNURKuMIKbQMVy68u",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/copy/parquet/parquet_hive.test",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/duckdb/duckdb/08e34c447bae34eaee3723cac61f2878b6bdf787/test/sql/copy/parquet/parquet_hive.test",
+      "status": "numbered content returned",
+      "visible_line_count": 170,
+      "first_visible_line": 0,
+      "last_visible_line": 169,
+      "output_section_sha256": "6c21b4e365c68dc162387ebdf681d65a553ae9f1a445ed4337ed61c459b37a68"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:07:00.358Z",
+      "call_id": "call_TbKhOmQrGJyIxwUL3AQXPwqq",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn193search8",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/2024/07/09/memory-management",
+      "status": "numbered content returned",
+      "visible_line_count": 50,
+      "first_visible_line": 70,
+      "last_visible_line": 121,
+      "output_section_sha256": "42d7be6cf0cd8e7a971cdc91e69892eb61ae493c1955c9ce13546c48165ef603"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:07:00.358Z",
+      "call_id": "call_TbKhOmQrGJyIxwUL3AQXPwqq",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn192search7",
+        "lineno": null
+      },
+      "resolved_url": "https://www.duckdb.org/docs/current/clients/python/data_ingestion",
+      "status": "numbered content returned",
+      "visible_line_count": 144,
+      "first_visible_line": 456,
+      "last_visible_line": 643,
+      "output_section_sha256": "c391ee8f283f671fcf0f555c414a71b05e18025e79392f65b23dfb5fe3d6ccf9"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:07:00.358Z",
+      "call_id": "call_TbKhOmQrGJyIxwUL3AQXPwqq",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn193search1",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/docs/stable/data/partitioning/partitioned_writes",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "cf665fafce4dbf8574e1e3f6caa044271ab5b56296079e855d93a55d7769e213"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:07:00.358Z",
+      "call_id": "call_TbKhOmQrGJyIxwUL3AQXPwqq",
+      "operation": "open",
+      "request": {
+        "ref_id": "turn196search5",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/docs/lts/data/parquet/overview",
+      "status": "numbered content returned",
+      "visible_line_count": 285,
+      "first_visible_line": 423,
+      "last_visible_line": 756,
+      "output_section_sha256": "8905e5e225c3361abadc7ae254eb78c58ca6ea337e672cd323706f465fbbe372"
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "timestamp": "2026-09-26T08:07:00.358Z",
+      "call_id": "call_TbKhOmQrGJyIxwUL3AQXPwqq",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://duckdb.org/docs/stable/clients/python/overview",
+        "lineno": null
+      },
+      "resolved_url": "https://duckdb.org/docs/stable/clients/python/overview",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "68a4b40bafe00b44875fe6c921d05b0fad9e65b4a45007c9c0b80aa60959bb4c"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:05:44.789Z",
+      "call_id": "call_u7hETPTRd99XfypiWY5jgdht",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/releases/tag/v12.33.2",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/releases/tag/v12.33.2\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "2a9fd55b177ff5fe17f2a77aeb506f9fb78c9620f6ad988bb955ba7af07988fe"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:05:44.789Z",
+      "call_id": "call_u7hETPTRd99XfypiWY5jgdht",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/package.json\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "3f4468674c800040ccfb20d6d3f1a2d1f15400ac5a76b7548d630ff0450185c2"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:05:44.789Z",
+      "call_id": "call_u7hETPTRd99XfypiWY5jgdht",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/src/manager.js",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/src/manager.js\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "866622cbcdc9ff7b11efd01933fedc2f492711f78adca0a766ac799c6a8f79c9"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:05:44.789Z",
+      "call_id": "call_u7hETPTRd99XfypiWY5jgdht",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/LICENSE\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "0a17528f26bae3caff55d23c990779bd6e5eff2f6a20c0329ba1e7cb19eee938"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:05:44.789Z",
+      "call_id": "call_u7hETPTRd99XfypiWY5jgdht",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/test/worker.test.js",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/timgit/pg-boss/v12.33.2/test/worker.test.js\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "e6665e50bfc851a7067f27b78926d5053784d1764bf648ab9b127385238c7da9"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:05:44.789Z",
+      "call_id": "call_u7hETPTRd99XfypiWY5jgdht",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://raw.githubusercontent.com/graphile/worker/v0.18.0/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://raw.githubusercontent.com/graphile/worker/v0.18.0/package.json",
+      "status": "numbered content returned",
+      "visible_line_count": 137,
+      "first_visible_line": 0,
+      "last_visible_line": 136,
+      "output_section_sha256": "347e450f1b3d042b2f31b042a2d501b4c1c977964578dbf3d15e6f9f079213c8"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:04.430Z",
+      "call_id": "call_2aZBUJOMMGeI8Yz8XNQL0C6g",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/src/boss.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/boss.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 1207,
+      "first_visible_line": 0,
+      "last_visible_line": 1286,
+      "output_section_sha256": "83c9c71d8e46cd738e525e138493bc2f464d0353534b506189b8bc94197b28a5"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:04.430Z",
+      "call_id": "call_2aZBUJOMMGeI8Yz8XNQL0C6g",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/src/plans.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/plans.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "1609a1fca59ed1276568e92aa40b156f4b9bdec1bea3fa1c95fbddf7d1c047df"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:04.430Z",
+      "call_id": "call_2aZBUJOMMGeI8Yz8XNQL0C6g",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "1476cf05bf070404f7b9b69413713926f48593110ad2594b5170bfd94e32a0ea"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:04.430Z",
+      "call_id": "call_2aZBUJOMMGeI8Yz8XNQL0C6g",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/LICENSE",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/LICENSE",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "2abe92d37c114118178339ef53dc5358abccbbbf0dcd6834cde9fd0c64a7bc81"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:04.430Z",
+      "call_id": "call_2aZBUJOMMGeI8Yz8XNQL0C6g",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/package.json",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/package.json",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "d221adf5bce3621cfce3989585eeb94290cb2700598e24fe9fecdb78153a01ec"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view0",
+        "pattern": "async send("
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/boss.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "bd755a0427a0a5268c9816ce8be9f7275860df4b087f9712309392075b58ef70"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view0",
+        "pattern": "async work("
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/boss.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "9134a1aaf33f89b779b629a7d304b9116bb975b0337c9a893be9306debcdd7d2"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view0",
+        "pattern": "async start("
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/boss.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 113,
+      "first_visible_line": 2441,
+      "last_visible_line": 2553,
+      "output_section_sha256": "87651892584eb1a219d2124a420f114dfed1a56638668c784b5d2460e7ec0bb1"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view0",
+        "pattern": "SKIP LOCKED"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/boss.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "ba1e1ae8e1a768aca8654b82e88a3f227d306d8c0dc76739e19249c4fc15e175"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view2",
+        "pattern": "process concurrently"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "fd4500393501c6b93a1440ec2300f55debe4f147ba51707200dd4a1ac7feda59"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view2",
+        "pattern": "startAfter"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "05edc6f3c50d4271af8c3cf2ad5bc221cf14e2b4af08884d18e6d4041e3a903c"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view3",
+        "pattern": "MIT License"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/LICENSE",
+      "status": "numbered content returned",
+      "visible_line_count": 131,
+      "first_visible_line": 134,
+      "last_visible_line": 267,
+      "output_section_sha256": "d875bed2893c9fa2002ab9fca8a938fcd90b03216d16aba79c3fc5a0690545e8"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view4",
+        "pattern": "\"node\": \">=22.12.0\""
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/package.json",
+      "status": "numbered content returned",
+      "visible_line_count": 328,
+      "first_visible_line": 175,
+      "last_visible_line": 503,
+      "output_section_sha256": "e5364f19b64e3dc9286bead9ba1cad75a33c8b834b0d5a8787ddcdb1b9f41f28"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view4",
+        "pattern": "\"version\": \"12.34.0\""
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/package.json",
+      "status": "numbered content returned",
+      "visible_line_count": 362,
+      "first_visible_line": 124,
+      "last_visible_line": 496,
+      "output_section_sha256": "d482eabde1b0951b667871377a94a1e51f782851c2767f06e51ac168956ce31c"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:09.887Z",
+      "call_id": "call_9taxPEPHucMtByoWBWNmMxxH",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view4",
+        "pattern": "\"license\": \"MIT\""
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/package.json",
+      "status": "numbered content returned",
+      "visible_line_count": 87,
+      "first_visible_line": 511,
+      "last_visible_line": 597,
+      "output_section_sha256": "b31bcf622be3add6eef96d1c3951e6fc075ca832b3ac853fe3c39fef63814fec"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:21.522Z",
+      "call_id": "call_BeuxvSbXsvy3MkQjpqlc3cnF",
+      "operation": "click",
+      "request": {
+        "ref_id": "turn202view0",
+        "id": 72
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/tree/12.34.0/src:",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "5088d90c63cc16e2a629634aa41099778eb5bb665879cb20d9527916b938489a"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:21.522Z",
+      "call_id": "call_BeuxvSbXsvy3MkQjpqlc3cnF",
+      "operation": "click",
+      "request": {
+        "ref_id": "turn202view2",
+        "id": 64
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/tree/12.34.0:",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "423cd86622cd41e4b31c92d49ad10f65670950295af0df80a3fb5444693923b0"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:29.956Z",
+      "call_id": "call_CpJvTdBJVddnH2N4q1xsamIG",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view1",
+        "pattern": "SKIP LOCKED"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/plans.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "5fef1567838ac5dd66b6631c88e0804e243744f031e8eec288a1c082d1b786f8"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:29.956Z",
+      "call_id": "call_CpJvTdBJVddnH2N4q1xsamIG",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view1",
+        "pattern": "start_after"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/plans.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 245,
+      "first_visible_line": 3223,
+      "last_visible_line": 3891,
+      "output_section_sha256": "e0191353fda887da7d322fab0d57d247c4cca92b579d6bfa24d9561acc64a267"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:29.956Z",
+      "call_id": "call_CpJvTdBJVddnH2N4q1xsamIG",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view2",
+        "pattern": "setTimeout"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "64d7a620da15186ae86fc911a773d6c11cf19423bd7c65d8bf0108a75c8c2c86"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:29.956Z",
+      "call_id": "call_CpJvTdBJVddnH2N4q1xsamIG",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view2",
+        "pattern": "work("
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 609,
+      "first_visible_line": 0,
+      "last_visible_line": 702,
+      "output_section_sha256": "24b4af929a7ef6f3399fb9960a985c5bbc79915e0785ef6bb723eb3e3fd07a98"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:29.956Z",
+      "call_id": "call_CpJvTdBJVddnH2N4q1xsamIG",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view2",
+        "pattern": "new PgBoss"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "674fae183ef9514eeb993dbfa2f198a0d6d81327a8288e97682a1b472ac78e97"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:29.956Z",
+      "call_id": "call_CpJvTdBJVddnH2N4q1xsamIG",
+      "operation": "find",
+      "request": {
+        "ref_id": "turn202view2",
+        "pattern": "parallel"
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/workerTest.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "3f8281951507f1c00bc07123aedcc62749f9571ec47276506860c74c49dc47e8"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:35.871Z",
+      "call_id": "call_pcT7UT5R19PEWUnUyBUyZqEj",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/src/worker.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/worker.ts",
+      "status": "numbered content returned",
+      "visible_line_count": 731,
+      "first_visible_line": 0,
+      "last_visible_line": 810,
+      "output_section_sha256": "ce8b52d24d852bdd9b36194b32bcc9229b94f837c8e9979b03069594c35896be"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:35.871Z",
+      "call_id": "call_pcT7UT5R19PEWUnUyBUyZqEj",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/src/manager.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/src/manager.ts",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "0ac32070584de6cb711e7de6d93ac26990a8f485cdcacf098d3ce18c86b07b36"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:35.871Z",
+      "call_id": "call_pcT7UT5R19PEWUnUyBUyZqEj",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/test/managerTest.ts",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/test/managerTest.ts\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "2414b527000113d75a295feefc878ce56ce4681a3589efacbed00a43417a8659"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:35.871Z",
+      "call_id": "call_pcT7UT5R19PEWUnUyBUyZqEj",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/docs/readme.md",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/docs/readme.md\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "4e6771531d4bc8a53bfd8a39c42982b36ca3344be7ecff0fb089a3616ed7669b"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:35.871Z",
+      "call_id": "call_pcT7UT5R19PEWUnUyBUyZqEj",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://github.com/timgit/pg-boss/blob/12.34.0/docs/api/jobs.md",
+        "lineno": null
+      },
+      "resolved_url": "https://github.com/timgit/pg-boss/blob/12.34.0/docs/api/jobs.md",
+      "status": "response without numbered content",
+      "visible_line_count": 0,
+      "first_visible_line": null,
+      "last_visible_line": null,
+      "output_section_sha256": "9babdcc532c49dbb818e9c8e49ef354cff0503a2a32b7dfeb1e65ccebb6a4153"
+    },
+    {
+      "agent": "closure_queue_v9",
+      "timestamp": "2026-09-26T08:06:45.647Z",
+      "call_id": "call_lZXHfVRDfRhO1LrU5536LJSn",
+      "operation": "open",
+      "request": {
+        "ref_id": "https://api.github.com/repos/timgit/pg-boss/git/trees/12.34.0?recursive=1",
+        "lineno": null
+      },
+      "resolved_url": "https://api.github.com/repos/timgit/pg-boss/git/trees/12.34.0?recursive=1\",\"lineno\":null}",
+      "status": "failed",
+      "visible_line_count": 1,
+      "first_visible_line": 0,
+      "last_visible_line": 0,
+      "output_section_sha256": "43d5c0797d9aa3f82e5626b8dd5bb4aa3963cbd87ee90657c138db0a8218f10d"
+    }
+  ]
+}

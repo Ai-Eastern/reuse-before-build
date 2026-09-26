@@ -1,0 +1,308 @@
+{
+  "scope": "Eight fresh subject starts plus two continuation turns; twenty case executions across V8/V9, not twenty independent runs.",
+  "final_skill_sha256": "f52a422ad7f78425410d3824ecc4a1d6f7c7c5c9540533b8f22eabe230b83c31",
+  "fresh_starts": [
+    {
+      "agent": "closure_queue_v8",
+      "case": "changed-requirement",
+      "arm": "skill",
+      "changed_files": [],
+      "tool_calls": 24,
+      "network_call_candidates": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "reviewer_exit": null
+    },
+    {
+      "agent": "closure_analytics_v8",
+      "case": "analytics",
+      "arm": "skill",
+      "changed_files": [],
+      "tool_calls": 23,
+      "network_call_candidates": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "reviewer_exit": null
+    },
+    {
+      "agent": "closure_snapshot_a_v8",
+      "case": "snapshot-a",
+      "arm": "skill",
+      "changed_files": [
+        "DESIGN.md"
+      ],
+      "tool_calls": 6,
+      "network_call_candidates": [],
+      "reviewer_exit": null
+    },
+    {
+      "agent": "closure_snapshot_b_v8",
+      "case": "snapshot-b",
+      "arm": "skill",
+      "changed_files": [
+        "DESIGN.md"
+      ],
+      "tool_calls": 5,
+      "network_call_candidates": [],
+      "reviewer_exit": null
+    },
+    {
+      "agent": "closure_snapshot_a_clarified_v8",
+      "case": "snapshot-a",
+      "arm": "skill",
+      "changed_files": [
+        "DESIGN.md"
+      ],
+      "tool_calls": 5,
+      "network_call_candidates": [],
+      "reviewer_exit": null
+    },
+    {
+      "agent": "closure_small_v8",
+      "case": "small-edit",
+      "arm": "skill",
+      "changed_files": [
+        "README.md"
+      ],
+      "tool_calls": 7,
+      "network_call_candidates": [],
+      "reviewer_exit": null
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "changed-requirement",
+      "arm": "skill",
+      "changed_files": [],
+      "tool_calls": 24,
+      "network_call_candidates": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "reviewer_exit": null
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "analytics",
+      "arm": "skill",
+      "changed_files": [],
+      "tool_calls": 16,
+      "network_call_candidates": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "reviewer_exit": null
+    }
+  ],
+  "continuations": [
+    {
+      "agent": "closure_analytics_v9",
+      "case": "small-edit",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "README.md"
+      ]
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "covered-test",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": []
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "covered-variant",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": []
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "test-gap",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "test/retry.test.mjs"
+      ]
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "local-failure",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "src/retry.mjs"
+      ]
+    },
+    {
+      "agent": "closure_analytics_v9",
+      "case": "local-take",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_analytics_v9-continuation.json",
+      "changed_files": [
+        "src/status-service.mjs",
+        "test/status-service.test.mjs"
+      ]
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "unchanged-resume",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": []
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "dirty-resume",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": []
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "optional-timeout",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": [
+        "src/status-service.mjs",
+        "test/retry.test.mjs"
+      ]
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "authority-resume",
+      "batch": "closure-regression-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": []
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "snapshot-a",
+      "batch": "closure-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": []
+    },
+    {
+      "agent": "closure_queue_v9",
+      "case": "snapshot-b",
+      "batch": "closure-v9-20260926",
+      "context": "continuation",
+      "export": "closure_queue_v9-continuation.json",
+      "changed_files": []
+    }
+  ],
+  "failed_dispatches": [
+    {
+      "agent": "closure_snapshot_a_v9",
+      "result": "agent thread limit reached",
+      "model_started": false
+    }
+  ],
+  "prepared_but_unexecuted": "All manifest entries not named in fresh_starts or continuations; includes old V8 core entries and full-Skill control arms. No outcomes inferred.",
+  "sanitization": "Private reasoning, system/developer messages, encrypted content and remote page bodies excluded. Local paths replaced. Remote responses retain calls/URLs/hashes; continuation prompt transcriptions labeled.",
+  "files": {
+    "closure_analytics_v8.json": "3153a742d4bd12640d82fcef52987e773254b657b418ed2b84efede48384a02f",
+    "closure_analytics_v9-continuation.json": "969198cb3d3f1fb19a24f2f8f9de8176245e88ceea6fb46d52300dd0b2838521",
+    "closure_analytics_v9.json": "7600fb9c41933ed477ab2639608c470f89b541f1a68ce51cffc0eac6cd4eef4a",
+    "closure_queue_v8.json": "9882a6a34c32b67832af682905056bf48d1d232ec98c222a4dc872f888ea9019",
+    "closure_queue_v9-continuation.json": "54ac8ec6b0a97d00016d0f6a7aa351359afb9ef8ccddcde1c07af0b0ac3c99f2",
+    "closure_queue_v9.json": "da792b9738c597357b8618406bcc8c09349cebede1b585bbf53d5e078f27bf25",
+    "closure_small_v8.json": "31746b1b6ee8c760c4a77fcd45f64aaf67e370f54cdcea8f180f9b2e93d003f9",
+    "closure_snapshot_a_clarified_v8.json": "f58024e96768918478e2b2e6922f63d596588e1a8311d86b674fa3c330b5cf15",
+    "closure_snapshot_a_v8.json": "9ace06a937059dc5fe544ec6dfafc2e7f3f000a42ed8b9d17e1d7a6f16f9100f",
+    "closure_snapshot_b_v8.json": "406ffcc21c73efcb81f7a57151233dd2bb188df929b6a204fd8dd7860a413481",
+    "continuation-index.json": "6cf17441c7b790c21b1c3c86f620c4b917968606123a476b2f8a5c6f28569126",
+    "index.json": "94a4e4e44f0d07b7f7dab93c947e8e9de28aa54f5b8ebf3c613fa577b8d36616",
+    "initial-gate-preparer.py.txt": "776b3dd286e64cea9f19c1bc95ff22aab16431fee9117bbdc679554e180480c4",
+    "input-manifests.json": "bb55ff2a993edb8d413899923b178e4222f057743a2079c7dcda44d48faa23a1",
+    "inspection-receipts.json": "80753723093a996fe440758b2355c8e676a7fbea3dc1a76fd272285fde3a0d85",
+    "regression-preparer.py.txt": "6d3ee1b3f3fac53df81800d14532690fa653372e4cc3125f506cf35fb04fd647",
+    "REPORT.md": "a52dfec1442b673c8d41b633eb4d63604c7abc1ced093163c27ad7a105f73300",
+    "review-assessment.json": "1447ef415fab28613d46693fcb6f2e43a60b5b48f18f291307bee8d262f2aa63",
+    "review-plan.md": "a1002804e3ccc932d7e65cd575a5fd34627df84ca2b658dcb2ca3b0c08a59a90",
+    "reviewer-checks.json": "9a8af7dcac9a22b69ca663eaa53bd272202de02b60b6d2379925d6f16a3bd5e6",
+    "skill-v8.md": "e53cad8cdb6843bc11802eb411a82fed2628cd553e056871229f298f99b72e15",
+    "skill-v9.md": "f52a422ad7f78425410d3824ecc4a1d6f7c7c5c9540533b8f22eabe230b83c31"
+  }
+}

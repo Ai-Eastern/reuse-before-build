@@ -1,0 +1,100 @@
+{
+  "scope": "Independent reviewer replays and semantic Git states, not additional model trials.",
+  "runtime": "v24.18.0",
+  "replays": [
+    {
+      "case": "covered-test",
+      "replay": {
+        "command": "node --test --test-reporter=tap",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8109\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.141\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 87.7014\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "covered-variant",
+      "replay": {
+        "command": "node --test --test-reporter=tap",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 1.0618\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1626\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 87.7416\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "test-gap",
+      "replay": {
+        "command": "node --test --test-reporter=tap",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8093\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1535\n  type: 'test'\n  ...\n# Subtest: throws the final error object after the configured number of attempts\nok 3 - throws the final error object after the configured number of attempts\n  ---\n  duration_ms: 0.2632\n  type: 'test'\n  ...\n# Subtest: rejects zero attempts without calling the operation\nok 4 - rejects zero attempts without calling the operation\n  ---\n  duration_ms: 0.6462\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 83.4637\n",
+        "stderr": ""
+      },
+      "mutation": {
+        "source": "evals/results/2026-09-21/luna-search-timing/first-error-mutant.mjs",
+        "sha256": "21a153c9131e713404112e6ccc5054b6d8f9fa18b91c0129b3c60d216c3cfd12",
+        "replay": {
+          "command": "node --test --test-reporter=tap",
+          "exit_code": 1,
+          "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8025\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.146\n  type: 'test'\n  ...\n# Subtest: throws the final error object after the configured number of attempts\nnot ok 3 - throws the final error object after the configured number of attempts\n  ---\n  duration_ms: 0.5095\n  type: 'test'\n  location: '<task-workspace>\\\\work\\\\closure-gap-mutation-v9-20260926\\\\test\\\\retry.test.mjs:27:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    The validation function is expected to return \"true\". Received false\n    \n    Caught error:\n    \n    Error: first failure\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  stack: |-\n    async TestContext.<anonymous> (file:///<task-workspace>/work/closure-gap-mutation-v9-20260926/test/retry.test.mjs:30:3)\n    async Test.run (node:internal/test_runner/test:1332:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:911:7)\n  ...\n# Subtest: rejects zero attempts without calling the operation\nok 4 - rejects zero attempts without calling the operation\n  ---\n  duration_ms: 0.1483\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 3\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 85.6577\n",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "case": "local-failure",
+      "replay": {
+        "command": "node --test --test-reporter=tap",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.7752\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1411\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 84.5841\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "local-take",
+      "replay": {
+        "command": "node --test --test-reporter=tap",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8292\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1556\n  type: 'test'\n  ...\n# Subtest: fetchStatus retries reader failures up to success and calls it without arguments\nok 3 - fetchStatus retries reader failures up to success and calls it without arguments\n  ---\n  duration_ms: 0.8228\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 109.712\n",
+        "stderr": ""
+      }
+    },
+    {
+      "case": "optional-timeout",
+      "replay": {
+        "command": "node --test --test-reporter=tap",
+        "exit_code": 0,
+        "stdout": "TAP version 13\n# Subtest: returns the first successful result without another attempt\nok 1 - returns the first successful result without another attempt\n  ---\n  duration_ms: 0.8375\n  type: 'test'\n  ...\n# Subtest: the default permits two failures before a successful third attempt\nok 2 - the default permits two failures before a successful third attempt\n  ---\n  duration_ms: 0.1698\n  type: 'test'\n  ...\n# Subtest: fetchStatus retries a reader twice, calling it with no arguments\nok 3 - fetchStatus retries a reader twice, calling it with no arguments\n  ---\n  duration_ms: 0.6377\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 86.8689\n",
+        "stderr": ""
+      }
+    }
+  ],
+  "git_states": [
+    {
+      "case": "local-take",
+      "initial_head": "8bd5cc42dca661e0bb84cefb1fb121921fc46948",
+      "final_head": "8bd5cc42dca661e0bb84cefb1fb121921fc46948",
+      "initial_status": "",
+      "final_status": " M src/status-service.mjs\n?? test/status-service.test.mjs\n"
+    },
+    {
+      "case": "dirty-resume",
+      "initial_head": "da24aa23beaac0865f2e3702f102254ecc5b78c4",
+      "final_head": "da24aa23beaac0865f2e3702f102254ecc5b78c4",
+      "initial_status": " M src/retry.mjs\n",
+      "final_status": " M src/retry.mjs\n"
+    },
+    {
+      "case": "optional-timeout",
+      "initial_head": "bbcb8d331c576117c14fe961bff5771eba67f691",
+      "final_head": "bbcb8d331c576117c14fe961bff5771eba67f691",
+      "initial_status": "",
+      "final_status": " M src/status-service.mjs\n M test/retry.test.mjs\n"
+    },
+    {
+      "case": "authority-resume",
+      "initial_head": "2ebad46b818df6df2da5b97e43f24c40d710f596",
+      "final_head": "2ebad46b818df6df2da5b97e43f24c40d710f596",
+      "initial_status": "",
+      "final_status": ""
+    }
+  ]
+}

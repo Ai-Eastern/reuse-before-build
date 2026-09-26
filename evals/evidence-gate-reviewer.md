@@ -38,6 +38,13 @@ not corroboration. Check an authoritative revision mapping across repositories;
 matching version labels alone are not that mapping. Do not require runtime
 integration for a static design decision or reward blanket refusal.
 
+For a multi-step architecture, check the decisive input, processing and output
+capabilities separately. Evidence for one step does not cover another, and
+rolling documentation does not pin a capability to the selected release. A
+relevant version-linked executable example or test can suffice; do not demand
+every internal function or an end-to-end runtime test. Compare inspected
+runtime requirements with the environment actually supplied by the task.
+
 Grade separately: appropriate discovery, actual inspection, evidence quality,
 decision matching that evidence, and respected task scope. A missing source
 can justify an unresolved candidate; it does not validate that candidate or

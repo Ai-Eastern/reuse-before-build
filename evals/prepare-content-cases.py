@@ -26,10 +26,7 @@ def prepare(destination, previous_skill):
             def write(path, value):
                 path.write_text(value + '\n', encoding='utf-8', newline='\n')
 
-            write(root / 'TASK.md', gate['LIMITER'] + '\n\n'
-                  '这是一个假设性的离线设计练习。将所提供的候选文件和模拟响应作为本场景的全部证据。'
-                  '请区分对所提供快照的决策与对真实包或上游发布存在性的判断；'
-                  '不要从虚构提供方或 URL 推断真实来源。')
+            write(root / 'TASK.md', gate['SNAPSHOT_TASK'])
             (root / 'SKILL.md').write_bytes(previous if arm == 'control' else (repo / 'SKILL.md').read_bytes())
             write(root / 'README.md', '# Supplied candidate materials\n\n'
                   'Synthetic offline workspace; no production implementation or installed dependencies.\n'

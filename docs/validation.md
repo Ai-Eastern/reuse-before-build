@@ -6,6 +6,36 @@ GPT-5.6 Luna / medium comparison and GPT-6 Luna / high follow-up. Follow-ups did
 on the final revision. These observations imply neither a release tag nor
 universal host compatibility.
 
+## Live research and core regression — 2026-09-26, GPT-6 Luna / high
+
+The [closure report](../evals/results/2026-09-26/luna6-closure/REPORT.md)
+records eight fresh subject starts (six V8, two V9) and two continuation turns.
+V9 adds a bounded check linking each decisive pipeline capability to inspected,
+version-linked evidence. Its standalone core is 150 lines and about 3,372
+`o200k_base` tokens, 69 more than V8; it has no runtime dependency.
+
+The defined V9 set contains two fresh live designs and twelve local cases.
+The host's new-agent limit forced the local cases into two existing subject
+sessions, six per continuation. All twelve passed scoped review: already-covered
+tests stayed unchanged, missing tests distinguished final-error identity, local
+reuse preserved reader arguments, and resume checks respected current content
+and original authorization. Six reviewer replays passed; the existing first-error
+mutant failed the intended new test. Replays are not extra model trials.
+
+Queue research supports a conditional design, with actual deployment versions
+and integration unverified. Analytics retrieved version-linked CSV/Parquet tests
+but used an ungrouped aggregate test to support grouped aggregation; its adoption
+claim remains insufficiently supported. Both real license bodies and the valid
+binding-to-core gitlink were returned. The initial fixture ambiguity, reviewer
+corrections and unsuccessful model outcomes remain recorded.
+
+The positive offline task now distinguishes hypothetical snapshot assessment
+from real package adoption, and distribution labels from copyright-holder names.
+Positive/negative fixtures still differ only by the supplied license. No native
+automatic-trigger, real compaction, other-host, package-integration or performance
+result follows. Historical header-only/revision-map probes were not rerun on V9.
+This is not an all-pass result or fourteen independent fresh-context trials.
+
 ## Returned content and claim accuracy — 2026-09-26, GPT-6 Luna / high
 
 The [returned-content report](../evals/results/2026-09-26/luna6-content/REPORT.md)
@@ -23,7 +53,7 @@ missing-license, covered-test and revision-map checks passed their scoped
 review; complete-snapshot shared the initial scope ambiguity. The local test
 case changed no files and passed its existing two tests.
 
-The core is 148 lines, about 3,303 `o200k_base` tokens (123 more than V7), with
+That historical V8 core is 148 lines, about 3,303 `o200k_base` tokens (123 more than V7), with
 no runtime dependency. Its frozen hash is:
 
 ```text

@@ -1,0 +1,110 @@
+[
+  {
+    "agent": "closure_analytics_v9",
+    "case": "small-edit",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_analytics_v9-continuation.json",
+    "changed_files": [
+      "README.md"
+    ]
+  },
+  {
+    "agent": "closure_analytics_v9",
+    "case": "covered-test",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_analytics_v9-continuation.json",
+    "changed_files": []
+  },
+  {
+    "agent": "closure_analytics_v9",
+    "case": "covered-variant",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_analytics_v9-continuation.json",
+    "changed_files": []
+  },
+  {
+    "agent": "closure_analytics_v9",
+    "case": "test-gap",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_analytics_v9-continuation.json",
+    "changed_files": [
+      "test/retry.test.mjs"
+    ]
+  },
+  {
+    "agent": "closure_analytics_v9",
+    "case": "local-failure",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_analytics_v9-continuation.json",
+    "changed_files": [
+      "src/retry.mjs"
+    ]
+  },
+  {
+    "agent": "closure_analytics_v9",
+    "case": "local-take",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_analytics_v9-continuation.json",
+    "changed_files": [
+      "src/status-service.mjs",
+      "test/status-service.test.mjs"
+    ]
+  },
+  {
+    "agent": "closure_queue_v9",
+    "case": "unchanged-resume",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_queue_v9-continuation.json",
+    "changed_files": []
+  },
+  {
+    "agent": "closure_queue_v9",
+    "case": "dirty-resume",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_queue_v9-continuation.json",
+    "changed_files": []
+  },
+  {
+    "agent": "closure_queue_v9",
+    "case": "optional-timeout",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_queue_v9-continuation.json",
+    "changed_files": [
+      "src/status-service.mjs",
+      "test/retry.test.mjs"
+    ]
+  },
+  {
+    "agent": "closure_queue_v9",
+    "case": "authority-resume",
+    "batch": "closure-regression-v9-20260926",
+    "context": "continuation",
+    "export": "closure_queue_v9-continuation.json",
+    "changed_files": []
+  },
+  {
+    "agent": "closure_queue_v9",
+    "case": "snapshot-a",
+    "batch": "closure-v9-20260926",
+    "context": "continuation",
+    "export": "closure_queue_v9-continuation.json",
+    "changed_files": []
+  },
+  {
+    "agent": "closure_queue_v9",
+    "case": "snapshot-b",
+    "batch": "closure-v9-20260926",
+    "context": "continuation",
+    "export": "closure_queue_v9-continuation.json",
+    "changed_files": []
+  }
+]

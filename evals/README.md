@@ -12,8 +12,10 @@ The script reuses the timing fixture/checkpoints and prepares seven model
 inputs: two previous/current pairs for live architecture research, two
 current-only synthetic offline candidates, and an existing-test regression.
 It launches no models. The offline candidates differ only by the supplied
-license; their provider metadata is fictional and does not establish real
-upstream provenance. A small helper directory from timing preparation may
+license. Their tasks explicitly evaluate hypothetical supplied snapshots,
+separately from real package adoption. The provider field identifies a
+simulated distribution label; it is not the license's copyright-holder field.
+Neither establishes real upstream provenance. A small helper directory from timing preparation may
 also exist; only `gate-manifest.json` lists the seven planned model runs.
 
 Give fresh agents at the batch's declared model/effort only their own `TASK.md`, `SKILL.md`,
@@ -62,6 +64,15 @@ The [2026-09-26 returned-content report](results/2026-09-26/luna6-content/REPORT
 records ten fresh GPT-6 Luna / high runs, including the original scope-confounded
 positive cases and a separate clarified pair. Both Skill versions passed the
 focused content checks; no causal improvement or live-research result follows.
+
+## Live closure and continuation regression
+
+The [closure report](results/2026-09-26/luna6-closure/REPORT.md) preserves eight
+fresh starts and two six-case continuation turns. The V9 local cases passed
+scoped review; queue design has conditional source support, while analytics
+selection remains partial. Do not count a continuation case as a fresh subject
+or infer a success rate. The report records the host limit, fixture changes,
+review corrections and full execution inventory; older outcomes are unchanged.
 
 ## Search-timing evaluation
 
