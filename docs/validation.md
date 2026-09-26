@@ -6,6 +6,33 @@ new GPT-5.6 Luna / medium comparison. Follow-ups did not rerun every scenario
 on the final revision. These observations imply neither a release tag nor
 universal host compatibility.
 
+## Candidate inspection — 2026-09-26
+
+The [new evidence-gate report](../evals/results/2026-09-26/evidence-gate/REPORT.md)
+records **11 additional GPT-5.6 Luna / medium runs**, verified from actual host
+runtime settings. Two fresh previous/current pairs exercised queue and CSV
+analytics designs; three local regressions checked supplied candidates and
+already-covered tests. Four targeted follow-ups used the final revision:
+
+```text
+62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c
+```
+
+The final revision replaced generic verification labels with artifact-specific
+receipts. Both live follow-ups read versioned implementation and license
+contents, improving on search-only selection. The queue design still lacked
+versioned test/call-site corroboration; the analytics design lacked usable
+test contents and did not establish the relationship between core and Python
+binding revisions. The offline missing-license case blocked dependency adoption
+but mixed conceptual Borrow and local Build labels. These remain partial
+results, not a reliably enforced adoption gate.
+
+The complete offline fixture remained usable; the V4 local-test regression
+kept files unchanged and passed two tests. That local regression was not rerun
+on the final revision. No runtime integration, performance, automatic activation,
+or cross-host claims follow from these observations. The report retains every
+run, failed fetch, frozen Skill revision, and the input/output evidence.
+
 ## Architecture discovery — 2026-09-21 (historical architecture revision)
 
 A fresh-context Codex desktop subagent explicitly loaded the architecture
@@ -52,7 +79,7 @@ compares the full Skill body with no full body, not a model without guidance.
 | --- | --- | --- |
 | V1 | `591bb93753616250d04cd6635069015bb2f7ffa8a92e24154fda5482b4e1c355` | Both arms stayed local in five local scenarios. Both made a redundant coverage edit. Treatment searched after changed requirements but selected Borrow without source/license inspection. Its final-error test also failed to distinguish different errors. |
 | V2 | `9b953ba824a9ed5004db7982945c94673c3aea272dff42c5ea4fb4a0b7172fc4` | Original covered task and first-success transfer treatment runs reused tests without edits. Transfer control rewrote already-sufficient assertions. |
-| V3 (published with this report) | `a77d13420dddd2608d623941983c0b0e7dd5ab8dc9f7e44fa300d14425400534` | Test-gap follow-up used distinct errors and caught a reviewer-injected first-error defect. Architecture follow-up still skipped required source/license inspection despite the new explicit gate. |
+| V3 (2026-09-21 revision) | `a77d13420dddd2608d623941983c0b0e7dd5ab8dc9f7e44fa300d14425400534` | Test-gap follow-up used distinct errors and caught a reviewer-injected first-error defect. Architecture follow-up still skipped required source/license inspection despite the new explicit gate. |
 
 The V1 treatment's tests passed 4/4 even against a deliberately wrong
 first-error implementation. V3's tests passed 4/4 on the correct source and

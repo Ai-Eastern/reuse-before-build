@@ -1,5 +1,31 @@
 # Small behavior evaluations
 
+## External-candidate evidence gate
+
+To compare two full Skill versions, use Python 3.10+ and Node.js 22+:
+
+```sh
+python evals/prepare-evidence-gate.py /absolute/existing-parent/gate-run evals/results/2026-09-21/luna-search-timing/skill-v3.md
+```
+
+The script reuses the timing fixture/checkpoints and prepares seven model
+inputs: two previous/current pairs for live architecture research, two
+current-only synthetic offline candidates, and an existing-test regression.
+It launches no models. The offline candidates differ only by the supplied
+license; their provider metadata is fictional and does not establish real
+upstream provenance. A small helper directory from timing preparation may
+also exist; only `gate-manifest.json` lists the seven planned model runs.
+
+Give fresh GPT-5.6 Luna / medium agents only their own `TASK.md`, `SKILL.md`,
+and workspace. Both comparison arms load a full Skill; do not describe this
+as a no-Skill control. Keep the [reviewer criteria](evidence-gate-reviewer.md)
+and previous outcomes out of their contexts. Preserve actual tool results,
+runtime settings, input hashes, and unsuccessful outcomes. Save new results
+in a new dated location; preparation alone is not behavior validation.
+
+The [2026-09-26 report](results/2026-09-26/evidence-gate/REPORT.md) records
+eleven executed comparisons/follow-ups, including incomplete inspection.
+
 ## Search-timing evaluation
 
 The current timing preparer requires Python 3.10+ and the standard library

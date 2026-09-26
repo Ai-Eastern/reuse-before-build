@@ -2,6 +2,8 @@
 
 ## Unreleased — next minor release
 
+- Replaced generic external-candidate checks with ordered inspection and concrete revision, metadata, implementation, corroboration, and license receipts. Design-only work still requires static evidence before selection.
+- Added eleven GPT-5.6 Luna / medium observations with previous/current comparisons and offline cases; versioned source reads improved, while incomplete corroboration remains documented.
 - Added distinguishable-input guidance for meaningful tests and an explicit provisional-candidate gate; recorded 17 GPT-5.6 Luna / medium runs, including initial failures, follow-ups, and the still-unreliable source/license inspection step.
 - Defined when to start, stop, and reopen candidate research; required direct reuse when existing assertions already cover the request.
 - Made architecture design and technology selection explicit entry points, with bounded GitHub and official-source discovery before selecting components.

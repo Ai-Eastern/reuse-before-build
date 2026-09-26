@@ -49,20 +49,16 @@ Check existing authorization before asking again. A blocked or approval-dependen
 Use external research when earlier paths leave a material gap, including before settling a new architecture or stack. Search GitHub repositories and official project or package sources using the required capabilities and environment constraints. Respect explicit local-only or offline scope.
 
 1. **Discover:** screen at most **3 candidates**, expanding to 5 only for a stated reason; merge aliases. Search results identify **unverified candidates**, not a selected stack.
-2. **Inspect:** for the **1–2 strongest candidates**, first resolve a release or commit, then open its manifest, license, and relevant implementation plus test or call site. Read actual contents at that revision before selecting it. A failed fetch is missing evidence; use an authoritative alternative when available. Search summaries, repository landing pages, and feature documentation alone cannot complete source inspection.
-3. **Record:** fill this receipt from the retrieved contents, before recommending the candidate. Use `missing` for anything not read; never fill a field with a future verification task or just the word `verified`.
+2. **Inspect:** after discovery, use tools to open the primary artifacts for the **1–2 strongest candidates**. Read the relevant contents, not just a search response, README, badge, or remembered fact. The next action after a promising search is inspection, before writing a final selection.
+3. **Record:** for each candidate you would recommend, complete these checks in the decision record or response. Include the inspected location and what it actually establishes; a URL alone is not evidence of inspection.
 
-```text
-Artifact: original repository/package + inspected release/commit
-Compatibility: manifest/metadata path + field/value + fit to the task
-Behavior: implementation path + symbol + inspected behavior/limit
-Corroboration: test or call-site path + what it demonstrates
-Rights: license/terms path + grant/obligations for this artifact
-```
+| Check | Required inspected evidence |
+| --- | --- |
+| Identity and compatibility | Original repository/package/provider, exact release or revision (API version for a service), and metadata establishing the required runtime/platform fit. |
+| Required behavior | Relevant implementation symbols and tests or call sites showing the needed contract and limits. For a closed-source service, inspect its official API contract and state that implementation evidence is unavailable. |
+| Reuse rights | The license/terms text covering the selected artifact and intended reuse, including material obligations. A repository badge is insufficient. |
 
-Keep the artifacts on the same revision, or explain their relationship. For a closed-source service, use its documented API version, official contract, examples and terms; explicitly mark implementation evidence unavailable rather than inventing it.
-
-4. **Decide:** check the receipt for missing or conflicting facts. Use `Take` or `Borrow` only when the applicable fields have inspected evidence and constraints fit. Otherwise keep the candidate **unverified** and perform the missing inspection within the research bound. If required evidence is unavailable, mark that candidate decision `Blocked` and name the missing fact. Continue independent design or assess a verified alternative; give any separate `Build` decision its own scope and grounds. Missing candidate evidence alone does not establish `Build`.
+4. **Decide:** mark each check `verified`, `missing`, or `conflict` from the inspected contents. Use `Take` or `Borrow` for an external candidate only when all applicable checks are verified and constraints fit. Otherwise keep it **unverified** and perform the missing inspection within the research bound. If required evidence is unavailable, mark that candidate decision `Blocked`, name the missing fact, and continue independent design work or assess a verified alternative. Missing evidence does not establish `Build`.
 
 **Design-only work still completes these static checks.** Installation and runtime integration tests can remain planned; source, compatibility, and rights checks cannot be moved into a future implementation plan to justify today's selection. An unverified candidate may appear as an option, but not as an adopted component in the architecture or final summary.
 

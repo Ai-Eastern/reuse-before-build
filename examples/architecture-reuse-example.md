@@ -10,10 +10,10 @@ Design durable webhook delivery for a new TypeScript service using PostgreSQL. T
 
 1. Check the project's available code, prior decisions, platform capabilities, and dependencies. Reuse a supported fit if one exists. A new project may have no implementation yet; that is a reason to look for relevant implementations, not evidence that the delivery engine must be written from scratch.
 2. If a material gap remains and network research is allowed, search GitHub and official repositories for durable job or webhook delivery implementations that fit the runtime and datastore constraints. Screen at most three initial candidates; do not turn the search into a popularity ranking.
-3. Deep-read the one or two strongest candidates. Trace how work is persisted, claimed, retried, acknowledged, and recovered. Inspect the actual API and relevant tests. Establish whether guarantees such as at-least-once execution cover this use case; do not infer them from a project description.
-4. Check compatibility and integration work: supported runtime and database versions, transaction boundaries, schema ownership, worker lifecycle, deployment needs, and failure visibility. Inspect maintenance evidence, provenance, and the license covering any dependency or code that would be reused.
+3. Resolve a release or commit for the one or two strongest candidates, then read its manifest, license, relevant implementation, and test or call site. Trace how work is persisted, claimed, retried, acknowledged, and recovered. Establish whether guarantees such as at-least-once execution cover this use case; do not infer them from a project description.
+4. Before selecting a component, record the inspected revision, compatibility fields, implementation symbols, corroborating test or call-site behavior, and license scope/obligations. A missing field remains missing even if a search result looks promising. Check integration work such as transaction boundaries, schema ownership, worker lifecycle, deployment needs, and failure visibility.
 
-Record actual source URLs, revisions, relevant symbols or contracts, and inspected test locations in the real decision. This illustration supplies none of those facts. Existing upstream tests are reusable evidence about their covered behavior; they do not prove that the proposed integration works.
+Record actual source URLs, revisions, relevant symbols or contracts, and inspected test locations in the real decision. This illustration supplies none of those facts. Keep an incompletely inspected candidate unverified; if a required source is unavailable, block that candidate's selection while continuing independent design. Existing upstream tests are reusable evidence about their covered behavior; they do not prove that the proposed integration works.
 
 ## Turn evidence into architecture boundaries
 
@@ -30,6 +30,8 @@ The resulting proposal would explain why an existing engine can own durable exec
 ## Design handoff and verification boundary
 
 Deliver the component boundaries, selected or rejected candidates with their evidence, integration cost, license obligations, and unresolved checks. Keep the implementation step separate from this architecture-only request.
+
+Design-only scope postpones installation and runtime integration tests. It does not postpone the source, compatibility, and license inspection needed to justify a component selection.
 
 Plan focused checks for the proposed integration: restart recovery, attempt limits, duplicate delivery, and tenant isolation. Reuse the selected implementation's relevant tests or fixtures where applicable and state which application guarantees still need coverage. **These checks are planned, not executed.** Preserve the decision and its open questions in the project's existing design record for the next session.
 

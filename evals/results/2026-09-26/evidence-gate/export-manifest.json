@@ -1,0 +1,33 @@
+{
+  "completed_model_runs": 11,
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "medium",
+  "runtime_source": "Actual host turn_context events for every exported turn, checked by the collector.",
+  "transformations": [
+    "Only task dispatches, observable tool calls/results, user-facing final answers and file snapshots are exported.",
+    "Private reasoning, system/developer messages, host tool descriptions and internal chat metadata are excluded.",
+    "Local workspace paths are normalized; export files use LF. Recorded input hashes preserve runtime bytes.",
+    "Public remote page bodies are omitted; URLs, output hashes, sizes and syntax-error flags remain.",
+    "Inspection receipts identify content returned versus failed or unconfirmed opens, not endorsement of agent claims."
+  ],
+  "files_sha256": {
+    "gate_analytics_current.json": "08ecd3322d88f232565436e22c56dc246f8bbb3d59e211fee9a4d017bf612fef",
+    "gate_analytics_previous.json": "cfa6f98e34fdd9160ca87c3c26ee16b47caa90207b95285843e3325e9c435441",
+    "gate_analytics_v5.json": "4d87369a56c72617698ae28d515d5a63239c139746abf2bd64f7b0ad1d8d8045",
+    "gate_covered.json": "8b85e1bf85d92e8d9de12150598a0c042b06f6419ba1a714c7ec2bfe49297bb4",
+    "gate_queue_current.json": "5aab41f23faf4329f394982ff000160e52dfbcd95c79f92c4dd5ccf12f544808",
+    "gate_queue_previous.json": "1bc0ef2bedd7ee46d303e1fe3310af221fdafe41e87f2950692f2fae504bec10",
+    "gate_queue_v5.json": "6ea8310a66a8796021f2b5d36530eb531a87eee462867fce3a623c57cdab8bd5",
+    "gate_snapshot_a.json": "80fd26f1267c6c61974f494dab01aa675e2c550ad4d08e8d45e752eeed65f635",
+    "gate_snapshot_a_v5.json": "d79800a371ad29a889aeaee6be8ef3429a43314f44378c249e9ab2b0cfc6efc0",
+    "gate_snapshot_b.json": "6fcdd98af07bbf5bb76bfc581221719f207ccc846c94c13ee9ee438509a868a7",
+    "gate_snapshot_b_v5.json": "ecd78a471668a2d7c77e88615f69b757a3a22cb88709a08f7d0432452d5b4466",
+    "index.json": "c5271b33581b997194c090ea7994622e632336f2eabc68eeb65cc7399f08ced3",
+    "inspection-receipts.json": "5482c1130ff3baaa3a76cf1f225c6c4eb64e4074e41d363b5f4605349c3bc92e",
+    "REPORT.md": "95ec38af332915fb8f64f99b1af219041bf31f5e4c6703bfd5cc43a42df4c7c1",
+    "skill-v4.md": "55506701d7435b9be4080cb6f053904fd6c47534e273634c91be73294da7b141",
+    "skill-v5.md": "62651b60cc1ed43af2d8d8d6aa7a2a58dbbec46a834b56bd1139dc9b3e353f7c",
+    "v4-prepared-inputs.json": "b4c41614821bff746c5910413cae1ec0b37c9b9e16f36040e149c12b457e2f1e",
+    "v5-prepared-inputs.json": "7c0fe0b357545c92d4f1beb0803c1cf61c22b489f497d91c5c49a9ece075615f"
+  }
+}

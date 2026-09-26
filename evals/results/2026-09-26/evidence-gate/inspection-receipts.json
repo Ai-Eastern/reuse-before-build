@@ -1,0 +1,392 @@
+[
+  {
+    "agent": "gate_queue_current",
+    "call_id": "call_5mCbm6wiVH9MNlyjGTuigEtM",
+    "result": "content returned",
+    "reported_total_lines": 89,
+    "visible_numbered_lines": 59,
+    "error": null,
+    "returned_section_sha256": "dc04cc6d9cc3d2d9a38171faddf026c4370cc24590e4c200f292a179e90f1671",
+    "requested_ref": "turn47search9"
+  },
+  {
+    "agent": "gate_queue_current",
+    "call_id": "call_5mCbm6wiVH9MNlyjGTuigEtM",
+    "result": "content returned",
+    "reported_total_lines": 101,
+    "visible_numbered_lines": 47,
+    "error": null,
+    "returned_section_sha256": "6877ec6a491e7d62073176c387448b96142413ffcb73b44c8508b78aee42b34c",
+    "requested_ref": "turn47search1"
+  },
+  {
+    "agent": "gate_queue_current",
+    "call_id": "call_5mCbm6wiVH9MNlyjGTuigEtM",
+    "result": "content returned",
+    "reported_total_lines": 83,
+    "visible_numbered_lines": 37,
+    "error": null,
+    "returned_section_sha256": "691bd84eaa9e8c3b810dc25f1fc6e4e0bc2b2cdbe3f2165db450788a42d56b92",
+    "requested_ref": "turn47search5"
+  },
+  {
+    "agent": "gate_queue_current",
+    "call_id": "call_5mCbm6wiVH9MNlyjGTuigEtM",
+    "result": "content returned",
+    "reported_total_lines": 267,
+    "visible_numbered_lines": 176,
+    "error": null,
+    "returned_section_sha256": "a40c5e086ea256253a8eb27bd9f973b07021bede4fd1653e1dc6a4194c6081ee",
+    "requested_ref": "turn47search4"
+  },
+  {
+    "agent": "gate_queue_current",
+    "call_id": "call_XgSnVrpukk1HkTZwcQD4G1j4",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://www.npmjs.com/package/graphile-worker: (403) Forbidden",
+    "returned_section_sha256": "2b65ba631e20e0b9ca934ec19aae5cc4a8b8ff22f43ab610864b3faf30c58a05",
+    "requested_ref": "https://www.npmjs.com/package/graphile-worker"
+  },
+  {
+    "agent": "gate_queue_current",
+    "call_id": "call_XgSnVrpukk1HkTZwcQD4G1j4",
+    "result": "content returned",
+    "reported_total_lines": 18,
+    "visible_numbered_lines": 18,
+    "error": null,
+    "returned_section_sha256": "237944d2878854272a2b313201018b2211d3b498c4c2a9c437d2a885ab2f17da",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/LICENSE.md"
+  },
+  {
+    "agent": "gate_queue_current",
+    "call_id": "call_XgSnVrpukk1HkTZwcQD4G1j4",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: URL https://pgboss.io/license is not accessible via this tool.",
+    "returned_section_sha256": "6756a2976bc5e051d3784cf35e6575113ad6665af96c3757bec30d3e09e2e5c0",
+    "requested_ref": "https://pgboss.io/license"
+  },
+  {
+    "agent": "gate_analytics_previous",
+    "call_id": "call_nnHVpIBDvapNESVjTXx01tmW",
+    "result": "content returned",
+    "reported_total_lines": 764,
+    "visible_numbered_lines": 134,
+    "error": null,
+    "returned_section_sha256": "319cccd871486fe8c9dadce8632713ee91e503b9c350b61ad45087f9b82ccc85",
+    "requested_ref": "https://duckdb.org/docs/current/clients/python/overview"
+  },
+  {
+    "agent": "gate_analytics_previous",
+    "call_id": "call_nnHVpIBDvapNESVjTXx01tmW",
+    "result": "content returned",
+    "reported_total_lines": 209,
+    "visible_numbered_lines": 131,
+    "error": null,
+    "returned_section_sha256": "9a6ca14e032aaa4938ed7c6d223a17a777f82c8e0e43ad827cded804d27c0129",
+    "requested_ref": "https://github.com/duckdb/duckdb/blob/main/LICENSE"
+  },
+  {
+    "agent": "gate_analytics_previous",
+    "call_id": "call_nnHVpIBDvapNESVjTXx01tmW",
+    "result": "content returned",
+    "reported_total_lines": 261,
+    "visible_numbered_lines": 54,
+    "error": null,
+    "returned_section_sha256": "2611ca0e05164fa66fa2e010dc7da54a73205fea0b4c37b784223c6a866bf303",
+    "requested_ref": "https://github.com/pola-rs/polars/blob/main/LICENSE"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_bjzzCGruoCw2DheDmi17DB9n",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://raw.githubusercontent.com/graphile/worker/main/packages/worker/package.json: (404) Not Found",
+    "returned_section_sha256": "c85493a17d02ba26a788393605847af7fc39e2092cacad0deb9baffcde725e84",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/packages/worker/package.json"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_bjzzCGruoCw2DheDmi17DB9n",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://raw.githubusercontent.com/graphile/worker/main/LICENSE: (404) Not Found",
+    "returned_section_sha256": "c29e277d882b218deed40002f3a3b05da5dfb00ee2900489d123c2dcc3052778",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/LICENSE"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_bjzzCGruoCw2DheDmi17DB9n",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://raw.githubusercontent.com/graphile/worker/main/packages/worker/src/sql/getJobs.ts: (404) Not Found",
+    "returned_section_sha256": "8e64773c83e3e2d2e62772385d143132e06328f7ff5ffce9619fd236990d4447",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/packages/worker/src/sql/getJobs.ts"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_bjzzCGruoCw2DheDmi17DB9n",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://raw.githubusercontent.com/graphile/worker/main/packages/worker/src/sql/failJobs.ts: (404) Not Found",
+    "returned_section_sha256": "4e2ca38f28f56a81579e064e007c3dfe313e6fdda8a52706a77906c5b3059205",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/packages/worker/src/sql/failJobs.ts"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_bjzzCGruoCw2DheDmi17DB9n",
+    "result": "content returned",
+    "reported_total_lines": 103,
+    "visible_numbered_lines": 103,
+    "error": null,
+    "returned_section_sha256": "e43bdc52dab73ee87e9adeae1538d9dc0d8cdf9dd51c5260429078a9cb3ce33e",
+    "requested_ref": "https://raw.githubusercontent.com/timgit/pg-boss/master/package.json"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_bjzzCGruoCw2DheDmi17DB9n",
+    "result": "content returned",
+    "reported_total_lines": 19,
+    "visible_numbered_lines": 19,
+    "error": null,
+    "returned_section_sha256": "de2d13e3692bebe1440d7af2a3eb240c684262e2db02d91dd1b21f46cacc19de",
+    "requested_ref": "https://raw.githubusercontent.com/timgit/pg-boss/master/LICENSE"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_hHXFhgqW3428dpDX4hMSXWwg",
+    "result": "content returned",
+    "reported_total_lines": 137,
+    "visible_numbered_lines": 137,
+    "error": null,
+    "returned_section_sha256": "61439207bb68f54a7145fcc05eb01fc3e09f5e604bfb0f6d461147151042fdc0",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/package.json"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_hHXFhgqW3428dpDX4hMSXWwg",
+    "result": "content returned",
+    "reported_total_lines": 18,
+    "visible_numbered_lines": 18,
+    "error": null,
+    "returned_section_sha256": "01f6cf58c9e494bfd8854e1a0436073c6109296f0626b4adb48a23c1aa53281e",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/LICENSE.md"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_hHXFhgqW3428dpDX4hMSXWwg",
+    "result": "content returned",
+    "reported_total_lines": 244,
+    "visible_numbered_lines": 244,
+    "error": null,
+    "returned_section_sha256": "f15cde23713073ebb2ba9e8a9e27d2474d6ca3a76bb7b5dfdec0d831d3b3d6a8",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/src/sql/getJobs.ts"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_hHXFhgqW3428dpDX4hMSXWwg",
+    "result": "content returned",
+    "reported_total_lines": 135,
+    "visible_numbered_lines": 135,
+    "error": null,
+    "returned_section_sha256": "a5817bb981082d4d3abd3f241d3a1d8e84e66ab3b5caa8464207959845acda00",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/main/src/sql/failJobs.ts"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_ryC9lXFW8sYH1h5BPCx127rI",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://raw.githubusercontent.com/timgit/pg-boss/master/src/plans.js: (404) Not Found",
+    "returned_section_sha256": "c3d1ab19c7633c16a536a8da3e9fcf644056a2e0198808b101c984df62be932d",
+    "requested_ref": "https://raw.githubusercontent.com/timgit/pg-boss/master/src/plans.js"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_ryC9lXFW8sYH1h5BPCx127rI",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://raw.githubusercontent.com/timgit/pg-boss/master/src/manager.js: (404) Not Found",
+    "returned_section_sha256": "f035d0aff9872a36b1ef40f04cbad9f869571dd8e848468b2662b7b5bb44a06a",
+    "requested_ref": "https://raw.githubusercontent.com/timgit/pg-boss/master/src/manager.js"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_ryC9lXFW8sYH1h5BPCx127rI",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://raw.githubusercontent.com/timgit/pg-boss/master/src/queue.js: (404) Not Found",
+    "returned_section_sha256": "b5fff9d420f5ef9c175a67109bdce2467097a2b2b2c2d12432af1d1cae8d3569",
+    "requested_ref": "https://raw.githubusercontent.com/timgit/pg-boss/master/src/queue.js"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_iCz0gSfgqsr6SpVI1sYHMNlQ",
+    "result": "content returned",
+    "reported_total_lines": 137,
+    "visible_numbered_lines": 137,
+    "error": null,
+    "returned_section_sha256": "384d2e4e9ccd5136ee1cbc924581c6d3327777b943469181a796328a849810b6",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/v0.18.0/package.json"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_iCz0gSfgqsr6SpVI1sYHMNlQ",
+    "result": "content returned",
+    "reported_total_lines": 18,
+    "visible_numbered_lines": 18,
+    "error": null,
+    "returned_section_sha256": "0ffd63c2fe861ba4975a67cfd54755c78535c0351d5ef15b1c4f53af9e14cca0",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/v0.18.0/LICENSE.md"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_iCz0gSfgqsr6SpVI1sYHMNlQ",
+    "result": "content returned",
+    "reported_total_lines": 244,
+    "visible_numbered_lines": 244,
+    "error": null,
+    "returned_section_sha256": "3aa0aa8c90c523ba1295f34ffb0db9a8596372ff8922c8700717bb2d17d18b64",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/v0.18.0/src/sql/getJobs.ts"
+  },
+  {
+    "agent": "gate_queue_v5",
+    "call_id": "call_iCz0gSfgqsr6SpVI1sYHMNlQ",
+    "result": "content returned",
+    "reported_total_lines": 135,
+    "visible_numbered_lines": 135,
+    "error": null,
+    "returned_section_sha256": "f8cc4e9d1b2ab532a4c3750db89bf163b3a9128c72ad4dea278a94e3bce2ab4c",
+    "requested_ref": "https://raw.githubusercontent.com/graphile/worker/v0.18.0/src/sql/failJobs.ts"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_7DmDX8THeaI7UF9Fc0vd0hms",
+    "result": "content returned",
+    "reported_total_lines": 814,
+    "visible_numbered_lines": 89,
+    "error": null,
+    "returned_section_sha256": "946e3c7f5db8b3e748f3c3cccb35fe83d3d862a24ba5328f89855ce8d29d3507",
+    "requested_ref": "turn64search3"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_7DmDX8THeaI7UF9Fc0vd0hms",
+    "result": "content returned",
+    "reported_total_lines": 234,
+    "visible_numbered_lines": 47,
+    "error": null,
+    "returned_section_sha256": "f7d3bf463109e214ae71300e5d1f743d6a881d829fc05737a5c1ef9a981d64a5",
+    "requested_ref": "turn65search10"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_7DmDX8THeaI7UF9Fc0vd0hms",
+    "result": "content returned",
+    "reported_total_lines": 662,
+    "visible_numbered_lines": 101,
+    "error": null,
+    "returned_section_sha256": "3b6a91884f45885504945dc5d58391e42271f4810148744b9eafa1d5bd2056c1",
+    "requested_ref": "turn64search8"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_7DmDX8THeaI7UF9Fc0vd0hms",
+    "result": "content returned",
+    "reported_total_lines": 285,
+    "visible_numbered_lines": 75,
+    "error": null,
+    "returned_section_sha256": "e7ba625db526cc677fb97af96d7f7e5ca6a8c4ffadbdb3977cf106527ec06b41",
+    "requested_ref": "turn65search0"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_7DmDX8THeaI7UF9Fc0vd0hms",
+    "result": "content returned",
+    "reported_total_lines": 1162,
+    "visible_numbered_lines": 50,
+    "error": null,
+    "returned_section_sha256": "ae2312311df79433d9f9d237d898e4b1c4165fb8691c8eaf4293f2ef20e1b380",
+    "requested_ref": "turn64search0"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_RJE0aMEgFspM17zUcIHIZIR0",
+    "result": "failed",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 1,
+    "error": "L0: Failed to fetch https://github.com/duckdb/duckdb/tree/v1.4.1: Failed to fetch restricted URL",
+    "returned_section_sha256": "7d4ce91009d1ac71d162f342d3d5e144a4f5ac8b45f351777f2f0e74a9cd56cd",
+    "requested_ref": "https://github.com/duckdb/duckdb/tree/v1.4.1"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_RJE0aMEgFspM17zUcIHIZIR0",
+    "result": "content returned",
+    "reported_total_lines": 209,
+    "visible_numbered_lines": 131,
+    "error": null,
+    "returned_section_sha256": "284327cdee8e9b639dff1ebfd5153ecf90413523ad6e947cd741562ebfca5a0e",
+    "requested_ref": "https://github.com/duckdb/duckdb/blob/v1.4.1/LICENSE?plain=1"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_RJE0aMEgFspM17zUcIHIZIR0",
+    "result": "content returned",
+    "reported_total_lines": 3606,
+    "visible_numbered_lines": 885,
+    "error": null,
+    "returned_section_sha256": "717fed12ef309d6c5e92b462f048ac2f4a23bb3a0ad02bbe3377292585967ea6",
+    "requested_ref": "https://github.com/duckdb/duckdb/blob/v1.4.1/src/execution/operator/aggregate/physical_hash_aggregate.cpp?plain=1"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_RJE0aMEgFspM17zUcIHIZIR0",
+    "result": "response without numbered content; not sufficient inspection evidence",
+    "reported_total_lines": 1,
+    "visible_numbered_lines": 0,
+    "error": null,
+    "returned_section_sha256": "6d75a4974e8747c9cd96bbdcecd2b827bda8bb3a8a266b722058ba8ce0c67771",
+    "requested_ref": "https://github.com/duckdb/duckdb/tree/v1.4.1/test/sql/aggregate?plain=1"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_L7MrOKCb2hPSFzaDJXUIdix2",
+    "result": "content returned",
+    "reported_total_lines": 939,
+    "visible_numbered_lines": 227,
+    "error": null,
+    "returned_section_sha256": "f5302943a29f13323db7913566ad3698a6ba186badb09a798a7202cdee25dd4e",
+    "requested_ref": "https://duckdb.org/docs/current/sql/statements/copy.html"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_L7MrOKCb2hPSFzaDJXUIdix2",
+    "result": "response without numbered content; not sufficient inspection evidence",
+    "reported_total_lines": 714,
+    "visible_numbered_lines": 0,
+    "error": null,
+    "returned_section_sha256": "73aa33b42292f09d0adef4eca5e8caa2dbc89ae9a34d4e9dcdfbf786921c4b15",
+    "requested_ref": "https://duckdb.org/docs/current/data/csv/overview"
+  },
+  {
+    "agent": "gate_analytics_v5",
+    "call_id": "call_L7MrOKCb2hPSFzaDJXUIdix2",
+    "result": "response without numbered content; not sufficient inspection evidence",
+    "reported_total_lines": 826,
+    "visible_numbered_lines": 0,
+    "error": null,
+    "returned_section_sha256": "bfc322d3063071f4fdc1acfd0e51a064a815767f731a143c52d961f63de5cd88",
+    "requested_ref": "https://duckdb.org/docs/current/data/parquet/overview"
+  }
+]
