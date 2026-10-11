@@ -8,18 +8,16 @@
   <a href="https://github.com/Ai-Eastern/reuse-before-build/commits/main/"><img src="https://img.shields.io/github/last-commit/Ai-Eastern/reuse-before-build/main?style=flat-square&amp;labelColor=24343b&amp;color=2f6b4f" alt="Last commit on public main"></a>
 </p>
 
-<p align="center"><strong>Discover implementations. Reuse code and tests. Resume with evidence.</strong></p>
-<p align="center">One skill folder · No service · No runtime dependency</p>
+<p align="center"><strong>An Agent Skill that makes your coding agent look for existing code, tests, and libraries to reuse before it writes new ones.</strong></p>
+<p align="center">For Claude Code, Codex, and other agents that support Agent Skills · No service · No runtime dependency</p>
 
-[中文](README.zh-CN.md) · [Install](#install) · [Try it](#try-it) · [Results](#results) · [Compatibility](docs/compatibility.md) · [MIT license](LICENSE)
+[中文](README.zh-CN.md) · [Install](#install) · [Try it](#try-it) · [How it works](#how-it-works) · [Results](#results) · [Compatibility](docs/compatibility.md)
 
-An Agent Skill that makes your coding agent **look for what already exists before it builds**: in your project, the standard library, your installed dependencies, and, when a real gap remains, GitHub and official sources. It then decides **Take, Borrow, or Build** from code it actually read, not from search snippets or memory.
-
-It targets three habits that cost you later: writing a helper next to one that already exists, adding tests that verify nothing new, and recommending a library whose code and license nobody checked.
+Coding agents tend to write a helper next to one that already exists, add tests that verify nothing new, or recommend a library whose code and license nobody read. This skill puts a short check in front of building: the agent searches your project, the standard library, and your installed dependencies, and looks at GitHub and official sources only when a real gap remains. It then decides to **Take** (use as is), **Borrow** (adapt), or **Build** (write only the missing part), citing what it actually read.
 
 ## What changes in practice
 
-**Already-covered behavior.** Same task and fixture, observed without and with the skill (GPT-5.6 Luna, 2026-09-21; [report](evals/results/2026-09-21/luna-search-timing/REPORT.md)):
+Same task and project, run without and with the skill (GPT-5.6 Luna, 2026-09-21; [report](evals/results/2026-09-21/luna-search-timing/REPORT.md)):
 
 ```text
 Request   Make sure retry returns on the first success without calling the operation again.
@@ -29,29 +27,17 @@ With      Pointed out that the existing assertion seen == [1] already proves a s
           changed nothing, and ran the existing tests.
 ```
 
-**Choosing a component for a new design** (illustrative workflow):
-
-```text
-Request   Design durable webhook delivery for a new service.
-Discover  Look for existing implementations on GitHub and in official repositories.
-Inspect   Read the core code, failure semantics, tests, and license at a pinned revision.
-Decide    Take a verified core, Borrow a suitable pattern, Build only the gap.
-Deliver   Show how those choices shape the architecture; label anything unverified.
-```
-
-See the [architecture example](examples/architecture-reuse-example.md). A design-only request produces a design; it does not authorize installing dependencies or writing code.
-
 ## When to use it
 
-- **Good fit:** choosing an architecture, library, or component; implementing a feature or helper that may already exist; adding or checking tests; resuming engineering work from a handoff or checkpoint.
-- **Not needed:** typo fixes, renames, and other small local edits. The skill keeps those to a quick local check.
-- **Invocation:** mention `reuse-before-build` in your request. Hosts that choose skills automatically may also load it when a task matches; on your first try, name it explicitly to confirm that it loads.
+- **Good fit:** choosing a library, framework, or architecture; implementing a feature or helper that may already exist; adding or checking tests; picking up work from a handoff.
+- **Not needed:** typos, renames, and other small edits. The skill keeps those to a quick local look.
+- **How to invoke:** mention `reuse-before-build` in your request. Some agents load it automatically when a task matches; name it explicitly the first time to make sure it loads.
 
 ## Install
 
-The installable unit is the [`skills/reuse-before-build`](skills/reuse-before-build/SKILL.md) folder: `SKILL.md`, the `references/` it reads on demand, and `LICENSE`. Copy the whole folder.
+Copy the [`skills/reuse-before-build`](skills/reuse-before-build/SKILL.md) folder into your agent's skills directory. Keep the whole folder: `SKILL.md` reads files from `references/` when it needs them.
 
-**Claude Code, for all your projects:**
+**Claude Code**, for all your projects (to install for one project, copy into that project's `.claude/skills/` instead):
 
 ```bash
 git clone --depth 1 https://github.com/Ai-Eastern/reuse-before-build.git /tmp/reuse-before-build
@@ -61,15 +47,13 @@ git clone --depth 1 https://github.com/Ai-Eastern/reuse-before-build.git /tmp/re
 cp -R /tmp/reuse-before-build/skills/reuse-before-build ~/.claude/skills/
 ```
 
-To install it for one project only, copy the folder into that project's `.claude/skills/` instead.
-
-**Codex, Claude Code, and other agents with the skills CLI** (run from your project):
+**Codex and other agents**, with the skills CLI (run in your project; needs Node.js ≥22.20.0):
 
 ```bash
 npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
 
-Replace `codex` with `claude-code` or another agent name. The CLI needs Node.js ≥22.20.0; the skill itself does not. For manual copies, PowerShell commands, and other hosts' folders, see the [compatibility guide](docs/compatibility.md#manual-installation).
+Replace `codex` with `claude-code` or another agent name. Paths for GitHub Copilot CLI, Cursor, Gemini CLI, OpenCode, and Windsurf, and Windows commands, are in the [compatibility guide](docs/compatibility.md#manual-installation).
 
 ## Try it
 
@@ -89,7 +73,7 @@ Show what to Take, Borrow, or Build and how that changes the architecture.
 Keep this to design; do not install dependencies or implement code.
 ```
 
-A good answer cites the files or sources it actually read and explains its choice. To practice first, use the included [retry-service project](evals/fixtures/retry-service/README.md). If the skill does not load, see [troubleshooting](docs/compatibility.md#troubleshooting).
+A good answer names the files or sources it actually read before it decides. To practice first, use the bundled [retry-service project](evals/fixtures/retry-service/README.md). If the skill does not load, see [troubleshooting](docs/compatibility.md#troubleshooting).
 
 ## How it works
 
@@ -103,31 +87,26 @@ A good answer cites the files or sources it actually read and explains its choic
 | **Blocked** | A fact the decision depends on is unavailable | Name the missing fact and keep doing independent work |
 | **Needs human approval** | The next step goes beyond what you authorized | Prepare it and ask first |
 
-- **Effort follows the event.** Local inspection comes first. External research starts only for a real capability or compatibility gap; a new session, a new file, or a failing test is not a reason to search again.
-- **Evidence over impressions.** Before adopting an outside library, the agent pins a revision and reads its manifest, license, implementation, and a test or call site. Candidates it could not fully read stay labeled *unverified*.
-- **Tests before new tests.** It reads the existing runner and assertions, extends them for real gaps, and leaves already-covered behavior alone. New tests use inputs that can tell a right answer from a plausible wrong one.
-- **Resume with evidence.** A handoff note or old test log is a claim to check against the current workspace, and it cannot grant new permissions. See the [checkpoint guide](skills/reuse-before-build/references/checkpoints.md).
+- **Local first.** It searches outside the project only for a real capability or compatibility gap. A new session, a new file, or a failing test is not a reason to search again.
+- **Evidence, not impressions.** Before adopting an outside library, it pins a version and reads the manifest, license, implementation, and a test or call site. Anything it could not read stays labeled *unverified*.
+- **Existing tests first.** It reads the current runner and assertions, extends them only for real gaps, and leaves covered behavior alone.
+- **Resume with checks.** A handoff note or old test result is a claim to verify against the current workspace, and it cannot grant new permissions.
 
-The rules live in [`SKILL.md`](skills/reuse-before-build/SKILL.md). Details the agent needs only in specific situations, such as inspecting an external candidate or writing a checkpoint, are in [`references/`](skills/reuse-before-build/references/external-candidates.md).
+The full rules are in [`SKILL.md`](skills/reuse-before-build/SKILL.md). Details for inspecting outside libraries and writing checkpoints are in [external-candidates.md](skills/reuse-before-build/references/external-candidates.md) and [checkpoints.md](skills/reuse-before-build/references/checkpoints.md).
 
 ## Results
 
 | What was checked | What we saw | Details |
 | --- | --- | --- |
-| Restructured skill vs. V13 — Claude Opus 5.5, 2026-10-11 | Both versions passed every check across 8 scenarios (17 runs), including the header-only evidence case that V12 failed on Codex. With full evidence, the restructured version still made an adoption decision instead of blocking. No measurable time or token difference. | [Report](evals/results/2026-10-11/claude-restructure/REPORT.md) |
-| Combining with a simplification skill (`ponytail`) — GPT-6 Luna / high, 2026-09-26, V13 | 8 of 8 explicit combination cases met the scoped criteria: existing tests and code were reused, real gaps were extended, no duplicate implementation or second test runner. Some verification commands repeated. | [Report](evals/results/2026-09-26/skill-combination/REPORT.md) |
-| Natural loading in the Codex app — GPT-6 Luna / high, 2026-09-26, V10–V12 | The skill loaded natively in most targeted cases. **Known weak spot:** with only response headers available, V12 still adopted the candidate in 2 of 3 runs (the no-skill control also did in 2 of 3). | [Report](evals/results/2026-09-26/native-host/REPORT.md) |
-| Core scenarios — GPT-6 Luna / high, 2026-09-26, V10 | 16 fresh-context scenarios met the scoped criteria, including test reuse, a gap test that caught a planted defect, stale-result detection, and handoff permission checks. | [Report](evals/results/2026-09-26/luna6-independent/REPORT.md) |
-| Inspecting candidates — GPT-5.6 Luna / medium, 2026-09-26 | 11 runs. Reading of versioned source and license files improved; corroborating tests were still incomplete in live designs. | [Report](evals/results/2026-09-26/evidence-gate/REPORT.md) |
-| Search timing and test reuse — GPT-5.6 Luna / medium, 2026-09-21 | 17 runs with no-skill controls. With the skill, sufficient tests were reused without edits and a new assertion caught a deliberately wrong implementation; both architecture trials still skipped source and license inspection. | [Report](evals/results/2026-09-21/luna-search-timing/REPORT.md) |
+| **This version vs. the previous one** — Claude Opus 5.5, 2026-10-11 | 8 scenarios, 17 runs: both versions passed every check, so the shorter rewrite showed no regression. With full evidence, this version still adopted a suitable library instead of blocking. | [Report](evals/results/2026-10-11/claude-restructure/REPORT.md) |
+| **With vs. without the skill** — earlier version, GPT-5.6 Luna, 2026-09-21 | 17 runs with no-skill controls. With the skill, the agent left already-sufficient tests alone and wrote an assertion that caught a deliberately wrong implementation. | [Report](evals/results/2026-09-21/luna-search-timing/REPORT.md) |
+| **Known weak spot** — checking outside libraries | Earlier versions sometimes recommended a library before reading its source and license: both architecture trials in the row above, and 2 of 3 header-only runs with V12 in the Codex app (the no-skill control also did in 2 of 3). On Claude, this version kept such a library unverified; it has not been retested on Codex. | [Report](evals/results/2026-09-26/native-host/REPORT.md) |
 
-Each row is a small sample on one host and model, not a success rate. Methods, file hashes, and preserved failures are in [validation](docs/validation.md).
+Each row is a small sample on one model, not a success rate. Earlier development rounds (V10–V13 on Codex), methods, and file hashes are in [validation](docs/validation.md).
 
 ## Use it with other skills
 
-When paired with a simplification skill such as `ponytail`, the agent shares one reuse decision and one verification plan, uses existing sufficient tests, and simplifies without dropping necessary evidence. See the [cooperation rules](docs/compatibility.md#combining-workflow-skills).
-
-Installation routes are documented for **Codex, Claude Code, GitHub Copilot CLI, Cursor, Gemini CLI, OpenCode, and Windsurf**. The [compatibility guide](docs/compatibility.md) separates documented support from observed behavior for each host.
+When paired with a simplification skill such as ponytail, the agent shares one reuse decision and one verification plan, uses existing sufficient tests, and simplifies without dropping necessary evidence. See the [cooperation rules](docs/compatibility.md#combining-workflow-skills).
 
 ## Explore and contribute
 
