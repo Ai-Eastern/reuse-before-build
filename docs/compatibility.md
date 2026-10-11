@@ -10,7 +10,7 @@ The installation matrix was checked against the linked documentation on **2026-0
 - **Installation checked:** a named installer and environment discovered and copied this skill successfully. This does not establish that an agent loaded or followed it.
 - **Behavior evaluated:** a recorded agent run checks a specific task and result. It applies to that revision, host, model, and environment only.
 
-The skill follows the [Agent Skills format](https://agentskills.io/specification) and needs only its own `SKILL.md`. Keep `LICENSE` with distributed copies. No plugin manifest, MCP server, hook, database, or bundled executable is required.
+The skill follows the [Agent Skills format](https://agentskills.io/specification). The installable unit is the [`skills/reuse-before-build/`](../skills/reuse-before-build/SKILL.md) folder: `SKILL.md`, the `references/` files it loads on demand, and `LICENSE`. Install the whole folder; `SKILL.md` alone misses the references. No plugin manifest, MCP server, hook, database, or bundled executable is required.
 
 ## Host matrix
 
@@ -19,7 +19,7 @@ Paths below are relative to the project root and end with `reuse-before-build/SK
 | Host / surface | Documented project directory | Revision-scoped evidence | Official reference |
 | --- | --- | --- | --- |
 | Codex local app / CLI / IDE | `.agents/skills/` | Native Windows app-server **0.158.0-alpha.2**, **GPT-6 Luna / high**: project discovery, natural loading and scoped behavior observations; [report](../evals/results/2026-09-26/native-host/REPORT.md). This does not cover every CLI/IDE/UI. Prior `skills@1.7.0` installation check is separate | [Codex skills](https://developers.openai.com/codex/skills/) |
-| Claude Code local CLI | `.claude/skills/` | Format documented; current revision not runtime-tested in Claude Code | [Claude Code skills](https://code.claude.com/docs/en/skills) |
+| Claude Code local CLI / desktop app | `.claude/skills/` (project) or `~/.claude/skills/` (personal) | Restructured revision compared with V13 on **Claude Opus 5.5** through isolated sub-agents with explicit loading, 2026-10-11; [report](../evals/results/2026-10-11/claude-restructure/REPORT.md). Native discovery not runtime-tested | [Claude Code skills](https://code.claude.com/docs/en/skills) |
 | GitHub Copilot CLI | `.github/skills/` or `.agents/skills/` | Format documented; current revision not runtime-tested in Copilot CLI | [Copilot skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills), [CLI installation](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills) |
 | Cursor local agent | `.cursor/skills/` or `.agents/skills/` | Format documented; not runtime-tested | [Cursor skills](https://cursor.com/docs/skills) |
 | Gemini CLI | `.gemini/skills/` or `.agents/skills/` | Format documented; not runtime-tested | [Gemini CLI skills](https://geminicli.com/docs/cli/skills/) |
@@ -52,11 +52,13 @@ The previous README reported manual exercises in Codex, Claude Code, and GitHub 
 
 The examples pin [Vercel's skills CLI 1.7.0](https://github.com/vercel-labs/skills/tree/v1.7.0). Its [package manifest](https://github.com/vercel-labs/skills/blob/v1.7.0/package.json) requires **Node.js >=22.20.0**. That requirement belongs to the optional installer, not to `reuse-before-build`.
 
-To install from GitHub, run from your target project:
+To install from GitHub, run from your target project. Use `--agent codex`, `--agent claude-code`, or another agent name from the installer's `--help`:
 
 ```bash
 npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
+
+The installer copies the folder that contains `SKILL.md`. Since the skill moved to `skills/reuse-before-build/`, that folder holds only the skill files, not the repository's documentation and evaluation records. This layout follows the installer's documented `skills/` search path; the move itself has not yet been re-run through the installer.
 
 For a local source installation, use a clean checkout or source archive. Run the following from a **separate consuming project**, replacing the source path with the absolute path to that checkout:
 
@@ -80,36 +82,37 @@ These commands use project scope and copy files. They do not request a global in
 
 ### Why GitHub CLI is not the recommended route
 
-In the local check with GitHub CLI **2.97.0**, discovery failed for this repository's root-level `SKILL.md`. The upstream report [cli/cli#13552](https://github.com/cli/cli/issues/13552) describes the same repository shape. This is a version-specific discovery limitation, not a claim that `gh skill` is generally unavailable. Use the checked installer or a manual copy; retest future GitHub CLI versions before documenting them as working here.
+In the local check with GitHub CLI **2.97.0**, discovery failed for this repository's then root-level `SKILL.md`. The upstream report [cli/cli#13552](https://github.com/cli/cli/issues/13552) describes the same repository shape. The skill now lives in `skills/reuse-before-build/`, which may avoid that limitation, but GitHub CLI has not been retested with the new layout. Use the installer or a manual copy until it is.
 
 ## Manual installation
 
-No Node.js is needed. Use a complete local checkout containing the revision you intend to install. The PowerShell copy below was checked in a separate local directory: both installed files matched their sources by SHA-256. POSIX instructions have not been executed on a Unix host in this validation run.
+No Node.js is needed. Use a complete local checkout containing the revision you intend to install, and copy the whole `skills/reuse-before-build` folder. The commands below were run on Windows (PowerShell and Git Bash) into a scratch project; the copied files matched their sources by SHA-256. They have not been executed on a Unix host.
 
-From your **target project**, install using the host's directory from the table. Replace the source path with your local checkout's location. For Codex:
+From your **target project**, install into the host's directory from the table. Replace the source path with your local checkout's location. For Codex:
 
 **PowerShell**
 
 ```powershell
 $skillSource = 'C:\path\to\reuse-before-build'
-$skillDir = Join-Path (Get-Location) '.agents/skills/reuse-before-build'
-New-Item -ItemType Directory -Force -Path $skillDir | Out-Null
-Copy-Item -LiteralPath (Join-Path $skillSource 'SKILL.md'), (Join-Path $skillSource 'LICENSE') -Destination $skillDir
+New-Item -ItemType Directory -Force -Path '.agents/skills' | Out-Null
+Copy-Item -Recurse -Force -LiteralPath (Join-Path $skillSource 'skills/reuse-before-build') -Destination '.agents/skills'
 ```
 
 **POSIX shell**
 
 ```sh
 skill_source=/path/to/reuse-before-build
-mkdir -p .agents/skills/reuse-before-build
-cp "$skill_source/SKILL.md" "$skill_source/LICENSE" .agents/skills/reuse-before-build/
+mkdir -p .agents/skills
+cp -R "$skill_source/skills/reuse-before-build" .agents/skills/
 ```
 
-Preserve the `reuse-before-build` folder name and keep `SKILL.md` directly inside it. Do not create an extra nested `reuse-before-build` folder. Examples, templates, and evaluation assets can stay in the source checkout.
+For Claude Code, use `.claude/skills` for one project or `~/.claude/skills` for all of your projects in place of `.agents/skills`.
+
+Preserve the `reuse-before-build` folder name and keep `SKILL.md` and `references/` directly inside it. Do not create an extra nested `reuse-before-build` folder. Examples and evaluation assets stay in the source checkout.
 
 For a personal installation, use the location documented by the host and confirm its discovery behavior. Current Codex documentation lists `~/.agents/skills/` for personal skills. Older instructions and some installers use `~/.codex/skills/` or `$CODEX_HOME/skills`; support depends on your installed version. This guide does not declare those locations invalid, remove existing installations, or require a global configuration change.
 
-Downloading a raw `main/SKILL.md` URL obtains the currently published file. It cannot deliver unpublished local changes. Preserve the matching license notice if using a downloaded file.
+Downloading only `SKILL.md` misses the `references/` files it points to. Copy the folder from a checkout or archive of the revision you want, and keep its license notice.
 
 ## Verify discovery and behavior
 
@@ -144,7 +147,7 @@ natural dual activation, universal compatibility or a causal improvement.
 
 ## Updating and removing
 
-For a manual copy, compare your installed files with the intended source revision before updating. Preserve local edits, replace this skill's `SKILL.md` and `LICENSE`, and repeat the discovery check. Optional documentation and evaluation assets can stay in the source checkout.
+For a manual copy, compare your installed files with the intended source revision before updating. Preserve local edits, replace the installed folder's `SKILL.md`, `references/`, and `LICENSE`, and repeat the discovery check. Versions before the folder layout had a single `SKILL.md`; replacing it with the whole folder is the complete update. Documentation and evaluation assets stay in the source checkout.
 
 For installer-managed copies, use the management commands documented for your installed `skills` version. Update and removal commands were not exercised in this validation run, so this page does not present them as tested procedures. A local-source installation is a copy: editing the source checkout does not automatically update the installed files.
 
@@ -157,7 +160,8 @@ To remove a manual installation, first confirm the exact installed `reuse-before
 | The skill is absent | Correct host directory, project opened in that environment, exact filename, valid frontmatter, and any workspace trust or administrator restrictions |
 | An old version runs | Compare the installed file with the source revision; check for a personal or plugin copy and the host's precedence rules |
 | Node.js is too old or unavailable | Use the manual copy path; the skill itself does not execute Node.js |
-| `gh skill` finds no skills | Check the root-level discovery limitation above and use a documented alternative |
+| `gh skill` finds no skills | GitHub CLI was only checked against the old root-level layout; use a documented alternative |
+| The agent cites rules it cannot find | Check that `references/` was copied next to `SKILL.md` |
 | Local installation says skipped | Run from a separate consuming project with an absolute source path; verify that the destination contains the intended file |
 | Installation worked but the agent skips the workflow | Invoke the skill explicitly, inspect which copy loaded, and record the host/model/task when reporting the issue |
 | External research is unavailable | Record the limitation; use valid local evidence where sufficient and identify any fact that still blocks the actual decision |

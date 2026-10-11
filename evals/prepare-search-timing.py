@@ -27,15 +27,36 @@ def snapshot(root):
             for p in sorted(root.rglob('*')) if p.is_file()}
 
 
+SKILL_DIR = Path(__file__).resolve().parent.parent / 'skills' / 'reuse-before-build'
+
+
+def skill_md(source=SKILL_DIR):
+    """Return the SKILL.md of a skill folder, or a single earlier SKILL.md file unchanged."""
+    source = Path(source)
+    return source / 'SKILL.md' if source.is_dir() else source
+
+
+def install_skill(root, source=SKILL_DIR):
+    """Copy SKILL.md and any references/ into a workspace root; a single file is also accepted."""
+    shutil.copy2(skill_md(source), root / 'SKILL.md')
+    references = Path(source) / 'references'
+    if references.is_dir():
+        shutil.copytree(references, root / 'references')
+
+
+def is_skill_file(relative):
+    return relative == 'SKILL.md' or relative.startswith('references/')
+
+
 def prepare(destination):
     repo = Path(__file__).resolve().parent.parent
     if not destination.is_absolute() or destination.exists():
         raise ValueError('Pass a new absolute directory; existing destinations are never overwritten')
     destination.parent.resolve(strict=True)
     destination.mkdir()
-    skill_hash = digest(repo / 'SKILL.md')
+    skill_hash = digest(skill_md())
     manifest = {'created_at_utc': datetime.now(timezone.utc).isoformat(),
-                'skill_sha256': skill_hash, 'cases': []}
+                'skill_sha256': skill_hash, 'skill_files': snapshot(SKILL_DIR), 'cases': []}
     for case, task in TASKS.items():
         roots = []
         for arm in ['control', 'skill']:
@@ -66,7 +87,7 @@ def prepare(destination):
                     'Completed: inspected the helper and existing assertions; ran the two baseline tests successfully.\n'
                     'Remaining: provide the user-facing conclusion; no implementation remains for the original requirement.\n', encoding='utf-8')
             if arm == 'skill':
-                shutil.copy2(repo / 'SKILL.md', root / 'SKILL.md')
+                install_skill(root)
             (root / 'TASK.md').write_text(task + '\n', encoding='utf-8')
             roots.append(root)
         # Keep shared task inputs byte-identical; timestamps and TAP durations are
@@ -75,7 +96,7 @@ def prepare(destination):
             shutil.copytree(roots[0] / 'context', roots[1] / 'context', dirs_exist_ok=True)
         control = snapshot(roots[0])
         treatment = snapshot(roots[1])
-        assert {k: v for k, v in treatment.items() if k != 'SKILL.md'} == control
+        assert {k: v for k, v in treatment.items() if not is_skill_file(k)} == control
         manifest['cases'].append({'id': case, 'task': task, 'arms': {
             arm: {'directory': str(root), 'initial_hashes': snapshot(root)}
             for arm, root in zip(['control', 'skill'], roots)
