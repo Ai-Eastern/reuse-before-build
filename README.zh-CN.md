@@ -5,7 +5,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-0969da?style=flat-square&amp;labelColor=24343b" alt="License: MIT"></a>
   <a href="https://agentskills.io/specification"><img src="https://img.shields.io/badge/Agent%20Skills-SKILL.md-2f6b4f?style=flat-square&amp;logo=markdown&amp;logoColor=white&amp;labelColor=24343b" alt="Agent Skills format: SKILL.md"></a>
-  <a href="https://github.com/Ai-Eastern/reuse-before-build/commits/main/"><img src="https://img.shields.io/github/last-commit/Ai-Eastern/reuse-before-build/main?style=flat-square&amp;labelColor=24343b&amp;color=2f6b4f" alt="Last commit on public main"></a>
+  <a href="https://github.com/Ai-Eastern/reuse-before-build/actions/workflows/validate.yml"><img src="https://github.com/Ai-Eastern/reuse-before-build/actions/workflows/validate.yml/badge.svg" alt="Validation status"></a>
 </p>
 
 <p align="center"><strong>一个 Agent Skill：让编码 Agent 在写新代码之前，先找已有的代码、测试和库来复用。</strong></p>
