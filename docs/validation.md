@@ -10,6 +10,19 @@ belongs to V10; it was not fully rerun on V12 or V13. Earlier results retain
 their original hashes. These observations imply neither a release tag nor
 universal host compatibility.
 
+## Restructured skill vs. V13 on Claude — 2026-10-11, Claude Opus 5.5
+
+The skill moved to `skills/reuse-before-build/` with a shorter `SKILL.md`
+(SHA-256 `e5f195fa…`) and two on-demand `references/` files. The
+[comparison report](../evals/results/2026-10-11/claude-restructure/REPORT.md)
+records 17 runs across 8 scenarios on isolated Claude sub-agents with explicit
+loading. Both versions passed every scripted and reviewer check (38/38 and
+34/34), including header-only evidence (adoption kept Blocked) and full
+evidence (bounded adoption, no over-blocking). Time and token use did not
+differ measurably. No no-skill control ran on Claude, grading was not blind,
+and native discovery through the Claude Code CLI was not exercised. Earlier
+Codex results below apply to their own hashes, not to this layout.
+
 ## Explicit Skill combination — 2026-09-26, GPT-6 Luna / high
 
 The [V13 combination report](../evals/results/2026-09-26/skill-combination/REPORT.md)

@@ -9,69 +9,69 @@
 </p>
 
 <p align="center"><strong>Discover implementations. Reuse code and tests. Resume with evidence.</strong></p>
-<p align="center">One self-contained <code>SKILL.md</code> · No service · No runtime dependency</p>
+<p align="center">One skill folder · No service · No runtime dependency</p>
 
-[中文](README.zh-CN.md) · [When to use it](#when-to-use-it) · [Quick start](#quick-start) · [Results](#recorded-results) · [Compatibility](docs/compatibility.md) · [MIT license](LICENSE)
+[中文](README.zh-CN.md) · [Install](#install) · [Try it](#try-it) · [Results](#results) · [Compatibility](docs/compatibility.md) · [MIT license](LICENSE)
 
-An Agent Skill that helps your coding agent **discover existing implementations before choosing an architecture or technology stack**, then decide what to **Take, Borrow, or Build**. When the project leaves a material gap, it searches GitHub and official repositories and inspects actual code, compatibility, integration cost, and license scope before recommending a direction.
+An Agent Skill that makes your coding agent **look for what already exists before it builds**: in your project, the standard library, your installed dependencies, and, when a real gap remains, GitHub and official sources. It then decides **Take, Borrow, or Build** from code it actually read, not from search snippets or memory.
 
-The same workflow checks existing code before implementation, existing coverage before new tests, and saved evidence before resuming a task. It guides the agent toward the smallest justified design or change, using the tools already available in your project and host.
+It targets three habits that cost you later: writing a helper next to one that already exists, adding tests that verify nothing new, and recommending a library whose code and license nobody checked.
 
-## What this looks like in practice
+## What changes in practice
 
-**Architecture discovery — illustrative workflow, not an executed evaluation:**
+**Already-covered behavior.** Same task and fixture, observed without and with the skill (GPT-5.6 Luna, 2026-09-21; [report](evals/results/2026-09-21/luna-search-timing/REPORT.md)):
+
+```text
+Request   Make sure retry returns on the first success without calling the operation again.
+          Keep production code unchanged.
+Without   Edited the test file to "strengthen" the first-success case: a diff, but no new coverage.
+With      Pointed out that the existing assertion seen == [1] already proves a single call,
+          changed nothing, and ran the existing tests.
+```
+
+**Choosing a component for a new design** (illustrative workflow):
 
 ```text
 Request   Design durable webhook delivery for a new service.
-Discover  Find relevant implementations on GitHub and in official repositories.
-Inspect   Read the core code, failure semantics, integration needs, and license.
+Discover  Look for existing implementations on GitHub and in official repositories.
+Inspect   Read the core code, failure semantics, tests, and license at a pinned revision.
 Decide    Take a verified core, Borrow a suitable pattern, Build only the gap.
-Deliver   Explain how those boundaries shape the architecture and its open checks.
+Deliver   Show how those choices shape the architecture; label anything unverified.
 ```
 
-The [architecture example](examples/architecture-reuse-example.md) shows the constraints and evidence needed for that decision. An architecture-only request produces a design; it does not authorize installing dependencies or writing implementation code.
-
-**Test reuse — observed on the prior revision (2026-09-20):** a recorded run on the small synthetic retry-service fixture explicitly loaded that version of the skill:
-
-```text
-Request   Cover the retry failure boundaries.
-Found     An existing retry function and test suite.
-Changed   Added 2 cases to the existing test file; production code unchanged.
-Verified  All 4 tests passed.
-```
-
-The result was a focused extension of the existing tests. Inspect the [actual diff](evals/results/2026-09-20/test-borrow.patch) and [test replay](evals/results/2026-09-20/test-borrow.tap). This observation applies to that earlier revision; see the dated results below.
+See the [architecture example](examples/architecture-reuse-example.md). A design-only request produces a design; it does not authorize installing dependencies or writing code.
 
 ## When to use it
 
-- **Tasks:** architecture and technology choices for a new project, substantial features, dependency choices, test coverage gaps, or continuing unfinished engineering work. Small edits get a brief local check.
-- **Invocation:** select or mention `reuse-before-build` to request the workflow. Hosts that support automatic skill selection may also load it when the task matches its description. Automatic selection is not guaranteed for every task; use an explicit first invocation to check that it loads. See [host discovery guidance](docs/compatibility.md#verify-discovery-and-behavior).
-- **Resuming work:** have the agent save an engineering record before handoff, then provide its path to the next session. It checks the record against current code and test evidence. Installing the skill does not save the whole conversation or recover information that was never recorded.
+- **Good fit:** choosing an architecture, library, or component; implementing a feature or helper that may already exist; adding or checking tests; resuming engineering work from a handoff or checkpoint.
+- **Not needed:** typo fixes, renames, and other small local edits. The skill keeps those to a quick local check.
+- **Invocation:** mention `reuse-before-build` in your request. Hosts that choose skills automatically may also load it when a task matches; on your first try, name it explicitly to confirm that it loads.
 
-## Quick start
+## Install
 
-From the **project where you want to use the skill**, run:
+The installable unit is the [`skills/reuse-before-build`](skills/reuse-before-build/SKILL.md) folder: `SKILL.md`, the `references/` it reads on demand, and `LICENSE`. Copy the whole folder.
+
+**Claude Code, for all your projects:**
+
+```bash
+git clone --depth 1 https://github.com/Ai-Eastern/reuse-before-build.git /tmp/reuse-before-build
+```
+
+```bash
+cp -R /tmp/reuse-before-build/skills/reuse-before-build ~/.claude/skills/
+```
+
+To install it for one project only, copy the folder into that project's `.claude/skills/` instead.
+
+**Codex, Claude Code, and other agents with the skills CLI** (run from your project):
 
 ```bash
 npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
 
-The optional installer needs **Node.js ≥22.20.0**. The skill itself does not. Prefer a manual copy? Put `SKILL.md` and `LICENSE` in `.agents/skills/reuse-before-build/` for Codex; see [copy commands and other host paths](docs/compatibility.md#manual-installation).
+Replace `codex` with `claude-code` or another agent name. The CLI needs Node.js ≥22.20.0; the skill itself does not. For manual copies, PowerShell commands, and other hosts' folders, see the [compatibility guide](docs/compatibility.md#manual-installation).
 
-<details>
-<summary>Install from a local checkout</summary>
-
-Use a clean checkout or source archive. From a separate consuming project, replace the source path and run:
-
-```bash
-npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-build --agent codex --copy -y
-```
-
-Do not run `add .` inside the skill source repository. See [local installation details](docs/compatibility.md#optional-installer).
-
-</details>
-
-Open the target project in your agent, select or mention `reuse-before-build`, and try a real task:
+## Try it
 
 ```text
 Use reuse-before-build to add retry support to the existing HTTP client.
@@ -89,77 +89,58 @@ Show what to Take, Borrow, or Build and how that changes the architecture.
 Keep this to design; do not install dependencies or implement code.
 ```
 
-The response should cite actual files or sources and explain its choice. See [loading checks](docs/compatibility.md#troubleshooting) if the skill is absent, or use the included [practice project](evals/fixtures/retry-service/README.md).
+A good answer cites the files or sources it actually read and explains its choice. To practice first, use the included [retry-service project](evals/fixtures/retry-service/README.md). If the skill does not load, see [troubleshooting](docs/compatibility.md#troubleshooting).
 
 ## How it works
 
-**Find existing work → Check fit and evidence → Choose the smallest scope → Verify.**
+**Find existing work → check that it really fits → choose the smallest scope → verify.**
 
-Search starts with local code and tests, then standard library or platform capabilities, installed dependencies, and external candidates when needed. For architecture or a new project's stack, a material gap can lead to discovery on GitHub and in official repositories before committing to components and boundaries. Inspect the strongest candidates' code and contracts; a README claim or search snippet does not establish fit.
-
-Research is event-scoped: an unresolved capability or compatibility gap can open external research, while a verified local fit closes it. Read the existing runner, actual assertions, fixtures, and exercised code before adding tests. An error, a new development phase, or a new session alone does not trigger a new survey.
-
-Finding a candidate starts inspection. Before selecting it, record the inspected release or revision, compatibility fields, implementation symbols, a test or call site, and the applicable license. Missing evidence keeps it an unverified option. Design-only work defers installation and integration tests, while still requiring these checks before component selection.
-
-Stop when the evidence is sufficient. Internet research is unnecessary when existing assets meet the need, and must respect user restrictions. External discovery depends on the host's existing search tools and network access; the skill provides neither. Small edits get a brief local check.
-
-| Decision | What happens next |
-| --- | --- |
-| **Take** | Use existing work that fits, then run the relevant verification. |
-| **Borrow** | Adapt an existing implementation, test, or pattern; make the change boundary explicit. |
-| **Build** | Create the missing behavior after checking reasonable reuse options. |
-
-If the selected path lacks necessary evidence and has no verified alternative, report **Blocked**. If a specific next action exceeds existing authorization, report **Needs human approval**. One rejected candidate does not block another supported path.
-
-### Keep decisions useful across sessions
-
-Before a handoff, preserve the task's goal, workspace state, reusable work, decisions, verification, and next step. Use the project's existing record or the optional [checkpoint template](templates/reuse-checkpoint.md), and provide its path to the next session.
-
-On resumption, check that record against the current request and workspace. Keep conclusions that still apply; revisit the ones affected by changes. A handoff summary does not grant new permissions. This depends on accessible records, not automatic memory or a universal compaction hook.
-
-## Recorded results
-
-**Combining Skills — 2026-09-26, GPT-6 Luna / high.** [Eight explicit combination cases](evals/results/2026-09-26/skill-combination/REPORT.md) passed on V13 with ponytail read before or after this Skill. Agents reused sufficient tests and existing code, extended genuine gaps, and kept design records without adding duplicate implementations or runners. Some verification commands repeated; natural dual activation and other hosts were not tested.
-
-**Known limits remain.** The [earlier native-host trials](evals/results/2026-09-26/native-host/REPORT.md) include two V12 cases that adopted a candidate before reading required evidence, and a successful real-source task that did not load this Skill. The V13 combination check does not resolve those failures. Manual compaction and fresh-session handoff were observed; automatic context-pressure compaction and production integration remain untested.
-
-**Historical V10 core — 2026-09-26, GPT-6 Luna / high.** The [V10 evaluation](evals/results/2026-09-26/luna6-independent/REPORT.md) passed the scoped behavior criteria in **16 separate fresh contexts** on the same Skill revision: two live designs, twelve local scenarios and two evidence-boundary probes. Agents reused sufficient tests, added a missing test that caught a deliberate defect, checked historical results and respected handoff permissions. Analytics kept adoption blocked at an unverified resource limit; queue design retained deployment conditions. The report records a minor wording issue and command inefficiencies. These results belong to V10, not a full core rerun on the current revision; they establish neither automatic activation nor a success rate. [Earlier failures and continuation-only coverage](evals/results/2026-09-26/luna6-closure/REPORT.md) remain available.
-
-**Candidate inspection — 2026-09-26, GPT-5.6 Luna / medium.** [11 additional runs](evals/results/2026-09-26/evidence-gate/REPORT.md) tested ordered inspection and concrete evidence receipts. Final follow-ups retrieved versioned source and license files; offline cases distinguished licensed fixtures from candidates without rights evidence. Complete corroboration still failed in live designs, so these are improvements with documented limits, not an all-pass result.
-
-**Search timing and test reuse — 2026-09-21, GPT-5.6 Luna / medium.** [17 recorded runs](evals/results/2026-09-21/luna-search-timing/REPORT.md) include controls and follow-ups. Stronger rules helped the model reuse sufficient tests without edits and write an assertion that caught a deliberately wrong implementation. Changed requirements prompted external research after local inspection. Candidate source/license inspection still failed in both architecture trials. The report preserves failures and revision hashes; this is a small exploratory comparison, not a success-rate claim.
-
-**Architecture discovery — 2026-09-21, architecture revision (historical).** A fresh-context agent explicitly loaded that revision to design a Node.js/PostgreSQL job service without adding Redis. It screened three candidates, inspected two in depth, and proposed component boundaries with pinned source references and planned integration checks. It installed no dependencies and ran no runtime tests. Inspect the [design](evals/results/2026-09-21/architecture-result.md), [sources](evals/results/2026-09-21/architecture-sources.json), and [review receipt](evals/results/2026-09-21/architecture-review.json). This is one source-backed proposal, not a verified deployment.
-
-Two separate fresh-context runs explicitly loaded the **prior revision (2026-09-20)** on a small synthetic retry-service fixture. These records apply to that earlier Skill hash:
-
-| Scenario | Observed result | Evidence |
+| Decision | When | What happens next |
 | --- | --- | --- |
-| **Extend existing tests** | Added 2 cases to the existing suite; production code unchanged; **4/4 passed**. | [Diff](evals/results/2026-09-20/test-borrow.patch) · [Replay](evals/results/2026-09-20/test-borrow.tap) |
-| **Resume after source changed** | Detected stale passing evidence despite unchanged HEAD; reported **1 pass, 1 failure**; left the workspace unchanged. | [Receipt](evals/results/2026-09-20/dirty-resume.json) · [Replay](evals/results/2026-09-20/dirty-resume.tap) |
+| **Take** | Existing work already does what is needed | Use it and run the relevant check |
+| **Borrow** | Existing code, tests, or a pattern fit with adaptation | Name what is reused and make the smallest change |
+| **Build** | Nothing reasonable fits after searching | Build only the missing part and note rejected options |
+| **Blocked** | A fact the decision depends on is unavailable | Name the missing fact and keep doing independent work |
+| **Needs human approval** | The next step goes beyond what you authorized | Prepare it and ask first |
 
-The second fixture deliberately contains a regression; detecting it is the expected outcome. These are two bounded observations, with no control run, success-rate estimate, or token-savings claim. See [setup, evidence, and remaining coverage](docs/validation.md).
+- **Effort follows the event.** Local inspection comes first. External research starts only for a real capability or compatibility gap; a new session, a new file, or a failing test is not a reason to search again.
+- **Evidence over impressions.** Before adopting an outside library, the agent pins a revision and reads its manifest, license, implementation, and a test or call site. Candidates it could not fully read stay labeled *unverified*.
+- **Tests before new tests.** It reads the existing runner and assertions, extends them for real gaps, and leaves already-covered behavior alone. New tests use inputs that can tell a right answer from a plausible wrong one.
+- **Resume with evidence.** A handoff note or old test log is a claim to check against the current workspace, and it cannot grant new permissions. See the [checkpoint guide](skills/reuse-before-build/references/checkpoints.md).
 
-## Use it with your agent
+The rules live in [`SKILL.md`](skills/reuse-before-build/SKILL.md). Details the agent needs only in specific situations, such as inspecting an external candidate or writing a checkpoint, are in [`references/`](skills/reuse-before-build/references/external-candidates.md).
 
-When paired with a simplification skill such as `ponytail`, share one reuse decision and use existing sufficient tests; simplify the implementation without dropping necessary evidence. See the [cooperation rules](docs/compatibility.md#combining-workflow-skills).
+## Results
 
-Installation routes are documented for **Codex, Claude Code, GitHub Copilot CLI, Cursor, Gemini CLI, OpenCode, and Windsurf**. Evidence varies by host: documented format support, checked installation, and observed behavior are different claims.
+| What was checked | What we saw | Details |
+| --- | --- | --- |
+| Restructured skill vs. V13 — Claude Opus 5.5, 2026-10-11 | Both versions passed every check across 8 scenarios (17 runs), including the header-only evidence case that V12 failed on Codex. With full evidence, the restructured version still made an adoption decision instead of blocking. No measurable time or token difference. | [Report](evals/results/2026-10-11/claude-restructure/REPORT.md) |
+| Combining with a simplification skill (`ponytail`) — GPT-6 Luna / high, 2026-09-26, V13 | 8 of 8 explicit combination cases met the scoped criteria: existing tests and code were reused, real gaps were extended, no duplicate implementation or second test runner. Some verification commands repeated. | [Report](evals/results/2026-09-26/skill-combination/REPORT.md) |
+| Natural loading in the Codex app — GPT-6 Luna / high, 2026-09-26, V10–V12 | The skill loaded natively in most targeted cases. **Known weak spot:** with only response headers available, V12 still adopted the candidate in 2 of 3 runs (the no-skill control also did in 2 of 3). | [Report](evals/results/2026-09-26/native-host/REPORT.md) |
+| Core scenarios — GPT-6 Luna / high, 2026-09-26, V10 | 16 fresh-context scenarios met the scoped criteria, including test reuse, a gap test that caught a planted defect, stale-result detection, and handoff permission checks. | [Report](evals/results/2026-09-26/luna6-independent/REPORT.md) |
+| Inspecting candidates — GPT-5.6 Luna / medium, 2026-09-26 | 11 runs. Reading of versioned source and license files improved; corroborating tests were still incomplete in live designs. | [Report](evals/results/2026-09-26/evidence-gate/REPORT.md) |
+| Search timing and test reuse — GPT-5.6 Luna / medium, 2026-09-21 | 17 runs with no-skill controls. With the skill, sufficient tests were reused without edits and a new assertion caught a deliberately wrong implementation; both architecture trials still skipped source and license inspection. | [Report](evals/results/2026-09-21/luna-search-timing/REPORT.md) |
 
-The [compatibility guide](docs/compatibility.md) records each host's paths and verification status. The skill uses the file, search, and test tools already available in your agent.
+Each row is a small sample on one host and model, not a success rate. Methods, file hashes, and preserved failures are in [validation](docs/validation.md).
+
+## Use it with other skills
+
+When paired with a simplification skill such as `ponytail`, the agent shares one reuse decision and one verification plan, uses existing sufficient tests, and simplifies without dropping necessary evidence. See the [cooperation rules](docs/compatibility.md#combining-workflow-skills).
+
+Installation routes are documented for **Codex, Claude Code, GitHub Copilot CLI, Cursor, Gemini CLI, OpenCode, and Windsurf**. The [compatibility guide](docs/compatibility.md) separates documented support from observed behavior for each host.
 
 ## Explore and contribute
 
 - **Start with an example:** [discover implementations for an architecture](examples/architecture-reuse-example.md), [reuse code](examples/take-example.md), [adapt code](examples/borrow-example.md), [build a missing piece](examples/build-example.md), [reuse tests](examples/test-reuse-example.md), or [resume work](examples/resume-example.md).
 - **Inspect decision boundaries:** [missing evidence](examples/blocked-example.md) and [authorization boundaries](examples/needs-approval-example.md). These guides are illustrative; recorded runs are linked above.
-- **Help improve it:** [report a reproducible case](https://github.com/Ai-Eastern/reuse-before-build/issues/new/choose), check a host, or [run an evaluation](evals/README.md). Include the revision, host/model, task, expected result, and sanitized evidence.
+- **Help improve it:** [report a reproducible case](https://github.com/Ai-Eastern/reuse-before-build/issues/new/choose), check a host, or [run an evaluation](evals/README.md). Include the revision, host and model, task, expected result, and sanitized evidence.
 
 <details>
 <summary>Scope and limits</summary>
 
-This is an instruction workflow; behavior depends on the host and model. It adds no tools or runtime enforcement and does not guarantee lower cost. External research requires the agent's existing network access. Evidence checks do not replace security or legal review.
+This is an instruction workflow; behavior depends on the host and model. It adds no tools or runtime enforcement and does not guarantee lower cost. External research needs the agent's existing network access. Evidence checks do not replace security or legal review.
 
-Recovery covers the current task's engineering state. It does not index unrelated conversations, provide global memory, or grant additional permissions. Examples, templates, and evaluation assets are optional; the core instructions live in [SKILL.md](SKILL.md).
+Resuming covers the current task's engineering state. It does not index unrelated conversations, provide global memory, or grant additional permissions. Examples and evaluation assets are optional; the skill itself is the [`skills/reuse-before-build`](skills/reuse-before-build/SKILL.md) folder.
 
 </details>
 

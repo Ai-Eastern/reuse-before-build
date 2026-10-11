@@ -14,7 +14,7 @@ TASK = ('评估供应商 wrapper 2.0.0 是否能原样用于 Node.js 22 的异�
 
 
 def prepare(destination, previous_skill):
-    previous = previous_skill.read_bytes()
+    previous = gate['timing']['skill_md'](previous_skill).read_bytes()
     if not destination.is_absolute() or destination.exists():
         raise ValueError('Pass a new absolute directory; existing destinations are never overwritten')
     destination.parent.resolve(strict=True)
@@ -33,7 +33,7 @@ def prepare(destination, previous_skill):
             write(path, json.dumps(value, indent=2))
 
         write(root / 'TASK.md', TASK)
-        (root / 'SKILL.md').write_bytes(previous if arm == 'control' else (repo / 'SKILL.md').read_bytes())
+        gate['timing']['install_skill'](root, previous_skill if arm == 'control' else gate['timing']['SKILL_DIR'])
         write(root / 'README.md', '# Supplied vendor materials\n\n'
               'This is a synthetic offline fixture with fictional providers and simulated revisions.\n'
               'core/ and wrapper/ are separately supplied source snapshots. No production implementation exists.\n'
@@ -57,15 +57,15 @@ def prepare(destination, previous_skill):
         for folder in [core, wrapper]:
             shutil.copy2(repo / 'LICENSE', folder / 'LICENSE')
         runs.append({'case': 'revision-map', 'arm': arm, 'initial_hashes': gate['snapshot'](root)})
-    assert {k: v for k, v in runs[0]['initial_hashes'].items() if k != 'SKILL.md'} == {
-        k: v for k, v in runs[1]['initial_hashes'].items() if k != 'SKILL.md'}
+    assert {k: v for k, v in runs[0]['initial_hashes'].items() if not gate['timing']['is_skill_file'](k)} == {
+        k: v for k, v in runs[1]['initial_hashes'].items() if not gate['timing']['is_skill_file'](k)}
     manifest = {'previous_skill_sha256': hashlib.sha256(previous).hexdigest(),
-                'current_skill_sha256': gate['timing']['digest'](repo / 'SKILL.md'), 'planned_runs': runs}
+                'current_skill_sha256': gate['timing']['digest'](gate['timing']['skill_md']()), 'planned_runs': runs}
     (destination / 'gate-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps({'directory': str(destination), 'prepared_model_runs': len(runs), 'models_launched': 0}))
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        raise SystemExit('Usage: python evals/prepare-revision-case.py <new-absolute-directory> <previous-SKILL.md>')
+        raise SystemExit('Usage: python evals/prepare-revision-case.py <new-absolute-directory> <previous-SKILL.md-or-skill-folder>')
     prepare(Path(sys.argv[1]), Path(sys.argv[2]))

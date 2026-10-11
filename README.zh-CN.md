@@ -9,69 +9,67 @@
 </p>
 
 <p align="center"><strong>发现已有实现，复用代码与测试，带着证据接续任务。</strong></p>
-<p align="center">一个自足的 <code>SKILL.md</code> · 无需服务 · 无运行时依赖</p>
+<p align="center">一个 Skill 文件夹 · 无需服务 · 无运行时依赖</p>
 
-[English](README.md) · [何时使用](#何时使用) · [快速开始](#快速开始) · [实际结果](#实际结果) · [工具兼容](docs/compatibility.md) · [MIT 许可](LICENSE)
+[English](README.md) · [安装](#安装) · [试用](#试用) · [实际结果](#实际结果) · [工具兼容](docs/compatibility.md) · [MIT 许可](LICENSE)
 
-让编码 Agent **在架构设计或新项目技术选型前，先发现已有实现**，再判断哪些可以 **Take · 直接复用、Borrow · 借鉴适配、Build · 自行补齐**。项目现有成果留下实质缺口时，它会检索 GitHub 和官方仓库，检查真实代码、兼容性、集成成本与许可范围，再提出方案。
+这是一个 Agent Skill，让编码 Agent **动手之前先找已有成果**：先查项目本身、标准库和已安装的依赖；仍有实质缺口时，再查 GitHub 和官方来源。然后依据实际读过的代码决定 **Take（直接复用）、Borrow（借鉴适配）还是 Build（自行补齐）**，而不是依据搜索摘要或记忆。
 
-同一套流程也用于写代码前检查已有实现、补测试前检查现有覆盖、接续任务前核对历史证据。它引导 Agent 形成有依据的最小设计或改动，使用项目与宿主已经具备的工具开展工作。
+它针对三种事后要付代价的习惯：已有辅助函数却再写一个；新增的测试没有验证任何新东西；推荐一个没人读过代码和许可证的库。
 
-## 用起来是什么效果
+## 用起来有什么不同
 
-**架构发现——流程示意，并非已执行的评估：**
-
-```text
-用户要求：为新服务设计持久化 webhook 投递。
-发现候选：在 GitHub 和官方仓库查找相关实现。
-检查依据：阅读核心代码、失败语义、集成要求和许可。
-形成决策：直接复用已核实的核心，借鉴适用模式，只补缺失部分。
-设计交付：说明复用边界如何影响架构，以及还有哪些检查未完成。
-```
-
-[架构示例](examples/architecture-reuse-example.md)展示了做出这些判断所需的约束与证据。仅要求架构设计时，交付物仍是设计，不代表授权安装依赖或编写实现代码。
-
-**测试复用——旧版本（2026-09-20）的实际观察：** 下面是小型重试服务模拟项目中的一次评估，Agent 显式加载了当时版本的 Skill：
+**已被覆盖的行为。** 同一任务、同一练习项目，分别在不加载和加载 Skill 时观察（GPT-5.6 Luna，2026-09-21；[报告](evals/results/2026-09-21/luna-search-timing/REPORT.md)）：
 
 ```text
-用户要求：补齐重试失败边界的测试。
-Agent 找到：已有的重试函数和测试套件。
-实际改动：在原测试文件增加 2 个用例，生产代码未变。
-验证结果：4 个测试全部通过。
+要求      确保 retry 首次成功时立即返回、不再调用 operation，保持生产代码不变。
+不加载    修改测试文件来"强化"首次成功的用例：产生了改动，但没有新增覆盖。
+加载后    指出现有断言 seen == [1] 已经证明只调用一次，不改任何文件，并运行现有测试。
 ```
 
-最终交付是在现有测试上的针对性补充。可以查看[实际差异](evals/results/2026-09-20/test-borrow.patch)和[测试复核日志](evals/results/2026-09-20/test-borrow.tap)。这项观察对应当时版本，具体日期和范围见下方实际结果。
+**为新设计选组件**（流程示意）：
+
+```text
+要求      为新服务设计持久化 webhook 投递。
+发现      在 GitHub 和官方仓库查找已有实现。
+检查      在固定版本上阅读核心代码、失败语义、测试和许可证。
+决策      直接复用已核实的核心，借鉴适用的模式，只补缺失部分。
+交付      说明这些选择如何影响架构，未核实的候选明确标出。
+```
+
+参见[架构示例](examples/architecture-reuse-example.md)。只要求设计时，交付物就是设计，不代表授权安装依赖或编写代码。
 
 ## 何时使用
 
-- **适用任务：** 新项目架构与技术选型、开发较大功能、选择依赖、补齐测试覆盖，或接续未完成的工程任务。小改动只做简短的本地检查。
-- **如何调用：** 明确选择或提及 `reuse-before-build`，即可要求使用这套流程。支持自动选择 Skill 的宿主，也可能按任务与描述的匹配程度加载它；并非每次任务都保证自动调用，首次使用建议明确点名检查是否加载。详见[宿主加载说明](docs/compatibility.md#verify-discovery-and-behavior)。
-- **如何接续：** 交接前让 Agent 保存工程记录，下一会话提供记录路径；Agent 再将记录与当前代码、测试证据核对。安装 Skill 本身不会保存全部对话，也无法找回从未记录的信息。
+- **适合：** 选择架构、库或组件；实现可能已经存在的功能或辅助函数；新增或检查测试；从交接记录或检查点接续工程任务。
+- **不需要：** 改错别字、重命名等小的本地改动。Skill 只会对它们做简短的本地检查。
+- **如何调用：** 在请求里提到 `reuse-before-build`。能自动选择 Skill 的宿主也可能在任务匹配时自动加载；第一次使用时建议明确点名，确认它已加载。
 
-## 快速开始
+## 安装
 
-在**需要使用 Skill 的项目**中打开终端，执行：
+要安装的是 [`skills/reuse-before-build`](skills/reuse-before-build/SKILL.md) 文件夹：`SKILL.md`、按需读取的 `references/` 和 `LICENSE`。请复制整个文件夹。
+
+**Claude Code，对所有项目生效：**
+
+```bash
+git clone --depth 1 https://github.com/Ai-Eastern/reuse-before-build.git /tmp/reuse-before-build
+```
+
+```bash
+cp -R /tmp/reuse-before-build/skills/reuse-before-build ~/.claude/skills/
+```
+
+只想对单个项目生效时，改为复制到该项目的 `.claude/skills/`。
+
+**用 skills CLI 安装到 Codex、Claude Code 或其他 Agent**（在你的项目目录下执行）：
 
 ```bash
 npx skills@1.7.0 add Ai-Eastern/reuse-before-build --skill reuse-before-build --agent codex --copy -y
 ```
 
-可选安装器要求 **Node.js ≥22.20.0**，Skill 本身不需要。也可以手动将 `SKILL.md` 和 `LICENSE` 放到 Codex 项目的 `.agents/skills/reuse-before-build/`；详见[复制命令与其他工具目录](docs/compatibility.md#manual-installation)。
+把 `codex` 换成 `claude-code` 或其他 Agent 名称即可。这个 CLI 需要 Node.js ≥22.20.0，Skill 本身不需要。手动复制、PowerShell 命令和其他工具的目录，见[兼容指南](docs/compatibility.md#manual-installation)。
 
-<details>
-<summary>从本地工作副本安装</summary>
-
-使用干净的工作副本或源码包。在另一个需要使用 Skill 的项目中，替换来源路径后执行：
-
-```bash
-npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-build --agent codex --copy -y
-```
-
-不要在 Skill 源仓库内执行 `add .`，详见[本地安装说明](docs/compatibility.md#optional-installer)。
-
-</details>
-
-在 Agent 中打开目标项目，明确选择或提及 `reuse-before-build`，然后给它一个真实任务：
+## 试用
 
 ```text
 使用 reuse-before-build，给已有 HTTP 客户端增加重试支持。
@@ -88,77 +86,58 @@ npx skills@1.7.0 add "<absolute-path-to-clean-checkout>" --skill reuse-before-bu
 本次只做设计，不安装依赖或编写实现代码。
 ```
 
-结果应引用实际文件或来源，并解释选择。无法加载时参照[加载排查](docs/compatibility.md#troubleshooting)，也可以先用仓库中的[练习项目](evals/fixtures/retry-service/README.md)尝试。
+好的回答会引用它实际读过的文件或来源，并解释为什么这样选。想先练手，可以用仓库里的 [retry-service 练习项目](evals/fixtures/retry-service/README.md)。加载不了时，参照[排查说明](docs/compatibility.md#troubleshooting)。
 
 ## 工作方式
 
-**先找已有成果 → 核对适用性与证据 → 选择最小范围 → 验证。**
+**先找已有成果 → 核对是否真正适用 → 选择最小范围 → 验证。**
 
-按本地代码与测试、标准库或平台能力、已安装依赖的顺序检查，必要时再查外部候选。架构设计或新项目选型存在实质缺口时，在确定组件与边界前查找 GitHub 和官方仓库中的实现。深入检查最合适候选的代码与契约，README 声明或搜索摘要不能证明适用。
+| 决策 | 何时 | 接下来做什么 |
+| --- | --- | --- |
+| **Take · 直接复用** | 已有成果已经满足需求 | 直接使用，并运行相关检查 |
+| **Borrow · 借鉴适配** | 已有代码、测试或模式稍加调整即可适用 | 说明复用了什么，做最小改动 |
+| **Build · 自行补齐** | 检索后没有合理可用的方案 | 只补缺失部分，并记录否决的选项 |
+| **Blocked · 受阻** | 决策依赖的事实无法获得 | 说明缺什么，继续做不受影响的工作 |
+| **Needs human approval · 需要批准** | 下一步超出你已授权的范围 | 准备好方案，先征求同意 |
 
-外部检索按事件范围触发：只有未解决的能力或兼容性缺口才会开启外部研究，已验证的本地适配即可停止。新增测试前先阅读现有运行器、真实断言、夹具和实际执行路径。单独出现错误、新阶段或新会话，不会触发新的候选调研。
+- **投入随事件而定。** 先做本地检查。只有出现真实的能力或兼容性缺口才做外部检索；新会话、新文件或测试失败，本身都不是重新检索的理由。
+- **凭证据，不凭印象。** 采用外部库之前，Agent 会固定一个版本，读它的清单、许可证、实现，以及一个测试或调用位置。没能完整读到的候选，一律标为"未核实"。
+- **先用现有测试。** 先读现有的测试运行器和断言，只为真实缺口扩展测试，已覆盖的行为不重复加测试。新测试的输入要能区分正确结果和看似合理的错误结果。
+- **带着证据接续。** 交接记录或旧的测试日志只是需要和当前工作区核对的说法，不能授予新的权限。参见[检查点说明](skills/reuse-before-build/references/checkpoints.md)。
 
-找到候选后继续核查：选型前记录实际读取的版本或修订、兼容性字段、实现符号、测试或调用位置，以及适用许可证。缺证据的候选保留为待核验选项。“只做设计”可以暂缓安装和集成测试，但仍需完成这些核查才能确定组件。
-
-证据充分即可停止。现有成果已满足需求时，无需联网检索；检索也必须遵守用户限制。外部发现依赖宿主已有的检索工具和网络访问能力，Skill 不提供这些工具或权限。小改动只做简短的本地检查。
-
-| 决策 | 接下来做什么 |
-| --- | --- |
-| **Take · 直接复用** | 使用已满足需求的成果，并做相关验证。 |
-| **Borrow · 借鉴适配** | 扩展已有实现、测试或模式，明确改动边界。 |
-| **Build · 新建** | 检查合理复用选项后，只补齐缺失的行为。 |
-
-所选路径缺少必要证据、且没有已验证替代方案时，报告 **Blocked**。具体下一步超出现有授权时，报告 **Needs human approval**。一个候选不适用，不会阻止另一条已有证据支持的路径。
-
-### 让工程决策跨会话继续有效
-
-交接前，保留目标、工作区状态、可复用成果、决策、验证和下一步。优先使用项目已有记录，也可采用[检查点模板](templates/reuse-checkpoint.md)，并把记录路径提供给接续会话。
-
-恢复时，将记录与当前请求、工作区重新核对：保留仍适用的结论，只复查受变化影响的部分。交接摘要不会新增授权。接续依赖可读取的记录，不保证自动记忆或自动捕获宿主的上下文压缩事件。
+规则写在 [`SKILL.md`](skills/reuse-before-build/SKILL.md) 中。只在特定情况下才需要的细节，比如检查外部候选、编写检查点，放在 [`references/`](skills/reuse-before-build/references/external-candidates.md) 里。
 
 ## 实际结果
 
-**Skill 组合实测——2026-09-26，GPT-6 Luna / high。** V13 与 ponytail 按两种顺序读取，[8 个显式组合案例](evals/results/2026-09-26/skill-combination/REPORT.md)均通过限定标准：复用充分的测试与现有代码，补充真实缺口，保留设计记录，没有新增重复实现或第二套执行器。仍有少量重复验证命令；双方自然触发和其他宿主未测。
-
-**已知限制仍保留。** [此前原生宿主测试](evals/results/2026-09-26/native-host/REPORT.md)中，V12 有两例在必要证据未读完时就采用候选；一例真实源码任务行为正确，但未加载本 Skill。V13 的组合测试没有解决这些问题。手动上下文压缩与新会话交接已观察到；上下文满载后的自动压缩和生产集成仍未验证。
-
-**历史 V10 核心实测——2026-09-26，GPT-6 Luna / high。** [V10 评估](evals/results/2026-09-26/luna6-independent/REPORT.md)在同一版 Skill 上完成 **16 个独立新上下文场景，均通过限定范围内的行为标准**：两个联网设计、十二个本地场景和两个证据边界检查。已有测试得到复用，缺口补测能抓住故意引入的缺陷，历史结果和交接权限得到核对。数据分析在资源限制未验证时保留阻止采用状态，队列设计保留部署条件。报告同时记录了一处措辞问题和多余命令；这 16 项属于 V10，不是当前修订的核心全量重跑，也不代表自动触发或稳定成功率。[此前失败及接续式回归记录](evals/results/2026-09-26/luna6-closure/REPORT.md)均保留。
-
-**候选核验——2026-09-26，GPT-5.6 Luna / medium。** [新增 11 次实测](evals/results/2026-09-26/evidence-gate/REPORT.md)检查分步核验与具体证据记录。最终复测已读取固定版本的源码和许可证；离线场景能区分有许可的样例与缺少权利证据的候选。真实选型中仍有交叉验证缺项，因此记录为有改进、仍有边界，未宣称全部通过。
-
-**搜索时机与测试复用——2026-09-21，GPT-5.6 Luna / medium。** [17 次实测](evals/results/2026-09-21/luna-search-timing/REPORT.md)包含对照与复测。补强规则后，模型能在已有测试充分覆盖时不改文件，并写出能捕获故意错误实现的断言；需求变化时，会先检查本地再搜索外部候选。两次架构试跑仍未完成候选源码与许可证核查。报告保留失败、版本哈希与评估边界；这是小样本探索，不是成功率承诺。
-
-**架构发现——2026-09-21，历史架构修订。** 一个新上下文 Agent 显式加载该修订，为 Node.js/PostgreSQL 后台任务服务做选型，要求不增加 Redis。它初筛三个候选、深入检查两个，引用固定修订的源码提出组件边界和待执行的集成检查；未安装依赖、未运行运行时测试。可以查看[设计结果](evals/results/2026-09-21/architecture-result.md)、[来源](evals/results/2026-09-21/architecture-sources.json)和[复核记录](evals/results/2026-09-21/architecture-review.json)。这是一次有源码依据的设计建议，不代表部署已经验证。
-
-另外两个新上下文 Agent 在小型重试服务模拟项目中，显式加载了 **旧版本（2026-09-20）** 后完成以下任务。这些记录仅对应当时的 Skill 哈希：
-
-| 场景 | 实际观察 | 证据 |
+| 检查内容 | 观察到的结果 | 详情 |
 | --- | --- | --- |
-| **扩展已有测试** | 原测试文件新增 2 个用例，生产代码未变，**4/4 通过**。 | [差异](evals/results/2026-09-20/test-borrow.patch) · [复核日志](evals/results/2026-09-20/test-borrow.tap) |
-| **源码变更后接续** | HEAD 未变，但识别出旧的通过结果已失效；报告 **1 通过、1 失败**，未修改工作区。 | [记录](evals/results/2026-09-20/dirty-resume.json) · [复核日志](evals/results/2026-09-20/dirty-resume.tap) |
+| 重构版与 V13 对比：Claude Opus 5.5，2026-10-11 | 8 个场景共 17 次运行，两个版本通过了全部检查，包括 V12 在 Codex 上失败过的“只有响应头”场景。证据完整时，重构版仍会作出采用决定，而不是一律阻止。耗时和 token 没有可测的差异。 | [报告](evals/results/2026-10-11/claude-restructure/REPORT.md) |
+| 与精简类 Skill（`ponytail`）组合使用：GPT-6 Luna / high，2026-09-26，V13 | 8 个显式组合案例全部满足限定标准：复用了已有测试和代码，补充了真实缺口，没有新增重复实现或第二套测试运行器。部分验证命令有重复。 | [报告](evals/results/2026-09-26/skill-combination/REPORT.md) |
+| 在 Codex 应用中自然加载：GPT-6 Luna / high，2026-09-26，V10–V12 | 大多数目标案例中 Skill 能原生加载。**已知弱点：** 只有响应头可用时，V12 仍有 2/3 的运行采用了候选（不加载 Skill 的对照组也是 2/3）。 | [报告](evals/results/2026-09-26/native-host/REPORT.md) |
+| 核心场景：GPT-6 Luna / high，2026-09-26，V10 | 16 个新上下文场景满足限定标准，包括复用测试、补测能抓住故意植入的缺陷、识别过期结果、核对交接权限。 | [报告](evals/results/2026-09-26/luna6-independent/REPORT.md) |
+| 候选检查：GPT-5.6 Luna / medium，2026-09-26 | 11 次运行。固定版本的源码和许可证读取有所改善；真实设计中的测试佐证仍不完整。 | [报告](evals/results/2026-09-26/evidence-gate/REPORT.md) |
+| 检索时机与测试复用：GPT-5.6 Luna / medium，2026-09-21 | 17 次运行，含不加载 Skill 的对照组。加载 Skill 后，充分的现有测试被直接复用而不改文件，新断言能抓住故意写错的实现；两次架构试跑仍跳过了源码和许可证检查。 | [报告](evals/results/2026-09-21/luna-search-timing/REPORT.md) |
 
-第二个场景刻意引入了回归，识别失败就是预期行为。这是两次有界观察，没有对照实验，不代表普遍成功率或 token 节省比例。详见[评估方法、证据与覆盖边界](docs/validation.md)。
+每一行都是单一宿主和模型上的小样本，不是成功率。方法、文件哈希和保留的失败记录见[验证说明](docs/validation.md)。
 
-## 与你的 Agent 配合使用
+## 与其他 Skill 配合使用
 
-与 `ponytail` 等精简类 Skill 同用时，共享一次复用决策，已有测试足够就直接使用；在证据充分的方案中精简实现。详见[协作规则](docs/compatibility.md#combining-workflow-skills)。
+与 `ponytail` 等精简类 Skill 同用时，共享一次复用决策和一套验证计划；已有测试足够就直接使用；精简实现时不丢掉必要的证据。详见[协作规则](docs/compatibility.md#combining-workflow-skills)。
 
-已整理 **Codex、Claude Code、GitHub Copilot CLI、Cursor、Gemini CLI、OpenCode 和 Windsurf** 的安装路径。各工具的证据程度不同：文档支持格式、安装检查通过和实际行为验证，是不同的结论。
-
-[兼容指南](docs/compatibility.md)逐项记录了目录与验证状态。Skill 使用 Agent 原本具备的文件、检索和测试工具。
+已整理 **Codex、Claude Code、GitHub Copilot CLI、Cursor、Gemini CLI、OpenCode 和 Windsurf** 的安装路径。[兼容指南](docs/compatibility.md)逐项区分了"文档支持"和"实际观察到的行为"。
 
 ## 示例与贡献
 
 - **从具体任务开始：** [为架构发现已有实现](examples/architecture-reuse-example.md)、[复用代码](examples/take-example.md)、[适配代码](examples/borrow-example.md)、[补齐实现](examples/build-example.md)、[复用测试](examples/test-reuse-example.md)、[接续工作](examples/resume-example.md)。
 - **了解决策边界：** [证据不足](examples/blocked-example.md)、[授权边界](examples/needs-approval-example.md)。这些是说明性示例，实际运行记录见上方。
-- **帮助改进：** [提交可复现案例](https://github.com/Ai-Eastern/reuse-before-build/issues/new/choose)、验证一种工具，或[运行评估](evals/README.md)。附上修订、宿主与模型、任务、预期结果和脱敏证据。
+- **帮助改进：** [提交可复现案例](https://github.com/Ai-Eastern/reuse-before-build/issues/new/choose)、验证一种工具，或[运行评估](evals/README.md)。请附上修订、宿主与模型、任务、预期结果和脱敏证据。
 
 <details>
 <summary>范围与限制</summary>
 
 这是指令工作流，效果取决于宿主和模型。它不增加工具、不提供运行时强制拦截，也不保证降低成本。外部检索需要 Agent 已有的网络能力；证据检查不能替代安全或法律审查。
 
-接续只覆盖当前任务的工程状态，不索引无关对话、不提供全局记忆、不授予额外权限。示例、模板和评估资产均为可选；核心指令在 [SKILL.md](SKILL.md) 中。
+接续只覆盖当前任务的工程状态，不索引无关对话、不提供全局记忆、不授予额外权限。示例和评估资产均为可选；Skill 本身就是 [`skills/reuse-before-build`](skills/reuse-before-build/SKILL.md) 文件夹。
 
 </details>
 

@@ -10,7 +10,7 @@ gate = runpy.run_path(str(repo / 'evals/prepare-evidence-gate.py'))
 
 
 def prepare(destination, previous_skill):
-    previous = previous_skill.read_bytes()
+    previous = gate['timing']['skill_md'](previous_skill).read_bytes()
     if not destination.is_absolute() or destination.exists():
         raise ValueError('Pass a new absolute directory; existing destinations are never overwritten')
     destination.parent.resolve(strict=True)
@@ -27,7 +27,7 @@ def prepare(destination, previous_skill):
                 path.write_text(value + '\n', encoding='utf-8', newline='\n')
 
             write(root / 'TASK.md', gate['SNAPSHOT_TASK'])
-            (root / 'SKILL.md').write_bytes(previous if arm == 'control' else (repo / 'SKILL.md').read_bytes())
+            gate['timing']['install_skill'](root, previous_skill if arm == 'control' else gate['timing']['SKILL_DIR'])
             write(root / 'README.md', '# Supplied candidate materials\n\n'
                   'Synthetic offline workspace; no production implementation or installed dependencies.\n'
                   'candidate/ contains supplied source. retrieved/ contains simulated public-read responses\n'
@@ -48,11 +48,11 @@ def prepare(destination, previous_skill):
                 write(retrieved / (filename + '.response.txt'),
                       header + ('\n' + contents.rstrip() if include_contents else ''))
             runs.append({'case': case, 'arm': arm, 'initial_hashes': gate['snapshot'](root)})
-        assert {k: v for k, v in runs[-2]['initial_hashes'].items() if k != 'SKILL.md'} == {
-            k: v for k, v in runs[-1]['initial_hashes'].items() if k != 'SKILL.md'}
+        assert {k: v for k, v in runs[-2]['initial_hashes'].items() if not gate['timing']['is_skill_file'](k)} == {
+            k: v for k, v in runs[-1]['initial_hashes'].items() if not gate['timing']['is_skill_file'](k)}
     manifest = {
         'previous_skill_sha256': hashlib.sha256(previous).hexdigest(),
-        'current_skill_sha256': gate['timing']['digest'](repo / 'SKILL.md'),
+        'current_skill_sha256': gate['timing']['digest'](gate['timing']['skill_md']()),
         'planned_runs': runs,
         'preparation_source_sha256': {name: gate['timing']['digest'](repo / name) for name in [
             'evals/prepare-content-cases.py', 'evals/prepare-evidence-gate.py', 'evals/prepare-search-timing.py']}
@@ -63,5 +63,5 @@ def prepare(destination, previous_skill):
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        raise SystemExit('Usage: python evals/prepare-content-cases.py <new-absolute-directory> <previous-SKILL.md>')
+        raise SystemExit('Usage: python evals/prepare-content-cases.py <new-absolute-directory> <previous-SKILL.md-or-skill-folder>')
     prepare(Path(sys.argv[1]), Path(sys.argv[2]))

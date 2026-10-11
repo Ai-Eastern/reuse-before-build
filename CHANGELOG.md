@@ -2,6 +2,12 @@
 
 ## Unreleased — next minor release
 
+- Moved the skill to `skills/reuse-before-build/` (`SKILL.md`, `references/`, `LICENSE`) so installers copy only the skill, not the repository's documentation and evaluation records.
+- Rewrote `SKILL.md` as a shorter core (about 10 KB instead of 20 KB) that explains why each rule matters, includes a worked Reuse Decision example, and leaves out notes meant for human readers. External-candidate inspection and checkpoint/resume details moved to `references/external-candidates.md` and `references/checkpoints.md`, which the agent reads only when needed. The checkpoint template moved there from `templates/`.
+- Tightened the frontmatter description to say when to use the skill and when to skip it.
+- Rebuilt both READMEs around a before/after example, Claude Code and Codex installation, and a plain-language results table.
+- Updated the evaluation preparers, CI validation, and compatibility guide for the folder layout; preparers also accept an earlier single-file `SKILL.md` or a skill folder for comparisons.
+- Compared the restructured skill with V13 on Claude Opus 5.5: 17 runs across 8 scenarios; both versions passed every check, with no measurable time or token difference. No no-skill control ran, and grading was not blind.
 - Required inspectable cross-repository revision mappings, corroboration of the actual execution path, and final choices consistent with missing evidence. Kept independent design separate from blocked candidate adoption.
 - Recorded nine GPT-6 Luna / high observations across V5/V6/V7, including an unsupported defect claim, a substituted-test-path failure, and four final-version probes left unexecuted at the host's new-agent limit.
 - Replaced generic external-candidate checks with ordered inspection and concrete revision, metadata, implementation, corroboration, and license receipts. Design-only work still requires static evidence before selection.

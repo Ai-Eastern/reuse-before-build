@@ -3,13 +3,14 @@
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import {
-  cpSync, existsSync, mkdirSync, readFileSync, realpathSync, writeFileSync,
+  cpSync, existsSync, mkdirSync, readdirSync, readFileSync, realpathSync, writeFileSync,
 } from 'node:fs';
 import { dirname, isAbsolute, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const evalRoot = dirname(fileURLToPath(import.meta.url));
 const repoRoot = dirname(evalRoot);
+const skillRoot = join(repoRoot, 'skills', 'reuse-before-build');
 const scenarioIds = [
   '01-local-take', '02-small-edit', '03-test-borrow',
   '04-dirty-resume', '05-optional-timeout', '06-authority-resume',
@@ -26,7 +27,7 @@ realpathSync(dirname(workRoot));
 for (const source of [
   join(evalRoot, 'fixtures', 'retry-service'),
   join(evalRoot, 'scenarios', `${scenario}.md`),
-  join(repoRoot, 'SKILL.md'), join(repoRoot, 'LICENSE'),
+  join(skillRoot, 'SKILL.md'), join(repoRoot, 'LICENSE'),
 ]) {
   if (!existsSync(source)) throw new Error(`Missing input: ${source}`);
 }
@@ -34,7 +35,10 @@ for (const source of [
 mkdirSync(workRoot); // Exclusive: fails if another process creates it first.
 cpSync(join(evalRoot, 'fixtures', 'retry-service'), workRoot, { recursive: true });
 cpSync(join(evalRoot, 'scenarios', `${scenario}.md`), join(workRoot, 'TASK.md'));
-cpSync(join(repoRoot, 'SKILL.md'), join(workRoot, 'SKILL.md'));
+// SKILL.md links to references/ relative to itself, so both go to the work root.
+cpSync(join(skillRoot, 'SKILL.md'), join(workRoot, 'SKILL.md'));
+const skillReferences = join(skillRoot, 'references');
+if (existsSync(skillReferences)) cpSync(skillReferences, join(workRoot, 'references'), { recursive: true });
 cpSync(join(repoRoot, 'LICENSE'), join(workRoot, 'LICENSE'));
 
 const write = (path, data) => writeFileSync(join(workRoot, path), data);
@@ -87,7 +91,11 @@ git('init', '--template', emptyHooks, '--initial-branch', 'eval-baseline');
 git('add', '--', '.');
 git('commit', '-m', 'Add isolated evaluation fixture');
 
-const inputPaths = ['src/retry.mjs', 'src/status-service.mjs', 'test/retry.test.mjs', 'SKILL.md'];
+const referencePaths = existsSync(join(workRoot, 'references'))
+  ? readdirSync(join(workRoot, 'references')).sort().map((name) => `references/${name}`) : [];
+const inputPaths = [
+  'src/retry.mjs', 'src/status-service.mjs', 'test/retry.test.mjs', 'SKILL.md', ...referencePaths,
+];
 const inputHashes = Object.fromEntries(inputPaths.map((path) => [path,
   createHash('sha256').update(readFileSync(join(workRoot, path))).digest('hex'),
 ]));

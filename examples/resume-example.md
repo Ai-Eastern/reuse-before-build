@@ -21,5 +21,5 @@ result and leave source unchanged.
 The useful handoff preserves both the old evidence and its limits. It does
 not turn a previous success into a fresh run, repeat unrelated research, or
 silently fix code outside the request. See the optional
-[checkpoint template](../templates/reuse-checkpoint.md) and
+[checkpoint guide](../skills/reuse-before-build/references/checkpoints.md) and
 [recorded validation](../docs/validation.md).

@@ -34,8 +34,8 @@ simulated distribution label; it is not the license's copyright-holder field.
 Neither establishes real upstream provenance. A small helper directory from timing preparation may
 also exist; only `gate-manifest.json` lists the seven planned model runs.
 
-Give fresh agents at the batch's declared model/effort only their own `TASK.md`, `SKILL.md`,
-and workspace. Both comparison arms load a full Skill; do not describe this
+Give fresh agents at the batch's declared model/effort only their own `TASK.md`, `SKILL.md`
+(with `references/` when the Skill has them), and workspace. Both comparison arms load a full Skill; do not describe this
 as a no-Skill control. Keep the [reviewer criteria](evidence-gate-reviewer.md)
 and previous outcomes out of their contexts. Preserve actual tool results,
 runtime settings, input hashes, and unsuccessful outcomes. Save new results
@@ -140,7 +140,7 @@ python .\evals\prepare-search-timing.py 'D:\existing-work\luna-search-timing'
 ```
 
 It creates exactly seven control/skill pairs, records shared inputs and the
-current `SKILL.md` hash, and launches no agents or model processes. Give each
+current `SKILL.md` hash and skill file hashes, and launches no agents or model processes. Give each
 fresh model only its own workspace and `TASK.md`; treatment must load its
 local `SKILL.md`, while control must not load a Skill body. Use identical
 model/effort settings and permit public research in both arms. Keep the
@@ -179,7 +179,8 @@ node .\evals\prepare.mjs 04-dirty-resume 'D:\existing-work\run-04'
 ```
 
 The script copies only the fixture, that scenario as `TASK.md`, the current
-repository `SKILL.md`, and the project license. It initializes a local Git
+`skills/reuse-before-build/SKILL.md` with its `references/`, and the project license.
+To prepare an older revision for comparison, run the same script from a checkout of that revision. It initializes a local Git
 baseline with command-scoped identity and disabled hooks. It never changes
 global Git configuration, writes to an implicit home directory, adds a
 remote, or launches an agent. The script refuses existing destinations and
@@ -193,7 +194,7 @@ working source without committing. For the timeout scenario, it records a
 real timed-out local Node process explicitly labeled as a lookup simulation.
 
 Give a fresh evaluating agent access only to the prepared directory, ask it
-to load that directory's `SKILL.md`, and supply its `TASK.md`. Do not give it
+to load that directory's `SKILL.md` (it points to `references/` when needed), and supply its `TASK.md`. Do not give it
 `evals/reviewer.md`, this preparation script, prior reviewer conclusions, or
 other scenario inputs. Do not give it write access to the source repository.
 Use a fresh directory and context for each independent run.
